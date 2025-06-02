@@ -26,8 +26,7 @@ const Edit = () => {
             if (found) {
                 setTitle(found.title);
                 setDescription(found.description);
-                setImageUrl(found.imageUrl)
-                setPassword(found.password);
+                setImageUrl(found.imageUrl);
             }
         }
     }, [id]);

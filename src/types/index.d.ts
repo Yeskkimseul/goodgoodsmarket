@@ -3,8 +3,9 @@ export interface Goods {
     id: string,
     title: string,
     description: string,
+    category: string,
+    price: number,
     imageUrl:string,
-    likes: number,
-    password: string
+    likes: number
     /* 굿즈라는 타입이 형식을 지켜줌 */
 }

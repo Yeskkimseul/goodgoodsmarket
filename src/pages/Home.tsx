@@ -3,7 +3,7 @@ import GoodsCard from "../components/GoodsCard";
 import Layout from "../components/Layout";
 import { useGoods } from "../context/GoodsContext";
 import styles from './CardListLayout.module.css'
-import { Link } from "react-router-dom";
+import GoodsCategoryItem from "../components/GoodsCategoryItem";
 
 const Home = () => {
     //굿즈 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
@@ -71,8 +71,7 @@ const Home = () => {
             <div> 배너 슬라이드 </div>
 
             <div>
-                    굿즈 카테고리 컴포넌트
-                    (link 연결된 컴포넌트)
+                    <GoodsCategoryItem />
             </div>
 
             <div>

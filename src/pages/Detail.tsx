@@ -22,15 +22,6 @@ const Detail = () => {
         }
     }, [id]);
 
-    //비밀번호 확인
-    const handleCheckPassword = () => {
-        if (inputPw === goods?.password) { //?. ->옵셔널 체이닝 문법 / goods의 값과 일치하지않는 경우 null값을 안전하게 반환함 
-            setPwMatched(true);
-        } else {
-            alert('비밀번호가 틀렸습니다.');
-        }
-
-    }
 
     //배열 형태의 localStorage에서 특정 ID를 제거 하는 함수
     const removeIdFromStorageArray = (key: string, id: string) => {
@@ -78,16 +69,6 @@ const Detail = () => {
                         {
                             !pwMatched ? ( //pw가 true일 경우 
                                 <div style={{ marginTop: '20px' }}>
-                                    <form onSubmit={handleCheckPassword}>
-                                        <input type="password"
-                                            placeholder="비밀번호 입력"
-                                            value={inputPw}
-                                            onChange={(e) => setInputPw(e.target.value)}
-                                            className={styles.input}
-                                            autoComplete="off"
-                                        />
-                                        <button className={styles.button} type="submit">비밀번호 확인</button>
-                                    </form>
                                 </div>
                             )
                                 :
