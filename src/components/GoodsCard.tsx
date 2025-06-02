@@ -1,8 +1,8 @@
-import { Goods } from "../types"; //types -index
+import { Goods } from "../types";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styles from './GoodsCard.module.css'
-import { stringify } from "querystring";
+import styles from './GoodsCard.module.css';
+
 
 //props 타입 정리 (받을 데이터들)
 interface Props {
@@ -47,18 +47,17 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
 
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
-            <Link to={`/detail/${item.id}`} className={styles.link}>
+            <Link to={`/goodsdetail/${item.id}`} className={styles.link}>
                 <img src={item.imageUrl} alt={item.title} className={styles.image} />
                 <h3 className={styles.title}>{item.title}</h3>
+                <p className={styles.price}>{item.price.toLocaleString()}원</p>
             </Link>
-            {/* 좋아요 수 + 찜 버튼 영역 */}
             <div className={styles.cardFooter}>
-                <p className={styles.likes}>❤️ {item.likes}명 좋아요</p>
                 <button className={styles.likeButton} onClick={(e)=>{
-                    e.preventDefault();/* a링크 걸리지 않게 */
+                    e.preventDefault();
                     toggleLike();
                 }}>
-                    {liked ? '💖 찜했어요' : '🤍 찜하기'}
+                    {liked ? '💖' : '🤍'}
                 </button>
             </div>
         </div>

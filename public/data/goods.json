@@ -6,7 +6,17 @@
         "category": "인형",
         "price": 15000,
         "imageUrl": "/images/2.png",
-        "likes": 3
+        "likes": 3,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
     },
     {
         "id": "2",
@@ -15,7 +25,17 @@
         "category": "키링",
         "price": 5000,
         "imageUrl": "/images/3.png",
-        "likes": 7
+        "likes": 7,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
     },
     {
         "id": "3",
@@ -24,15 +44,35 @@
         "category": "포토카드",
         "price": 10000,
         "imageUrl": "/images/4.png",
-        "likes": 10
+        "likes": 10,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
     },
     {
         "id": "4",
         "title": "뉴진스 포토카드",
         "description": "멤버별 포카 세트",
         "category": "포토카드",
-        "price": 10000, 
+        "price": 10000,
         "imageUrl": "/images/4.png",
-        "likes": 5
+        "likes": 5,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
     }
 ]

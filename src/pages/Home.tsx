@@ -47,9 +47,16 @@ const Home = () => {
                 </button>
             </div>
 
-            {/* 굿즈 카드 리스트 영역 */}
-            <div className={styles.list}>
-                {
+            {/* 우리페이지 */}
+
+            <div> 배너 슬라이드 </div>
+
+            <div>
+                    <GoodsCategoryItem />
+            </div>
+
+            <div>
+                 {
                     displayedList.map((item) => (
                         <GoodsCard
                             key={item.id}
@@ -62,21 +69,6 @@ const Home = () => {
                         />
                     ))
                 }
-
-
-
-            </div>
-            {/* 우리페이지 */}
-
-            <div> 배너 슬라이드 </div>
-
-            <div>
-                    <GoodsCategoryItem />
-            </div>
-
-            <div>
-                굿즈 아이템 컴포넌트
-                (link 연결된 컴포넌트)
             </div>
             <div>
                 굿즈 커뮤니티 컴포넌트

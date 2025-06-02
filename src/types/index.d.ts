@@ -6,6 +6,12 @@ export interface Goods {
     category: string,
     price: number,
     imageUrl:string,
-    likes: number
+    likes: number,
+    createdAt: string,
+    views: number,
+    options: string[],
+    sellerimgUrl: string,
+    sellerName: string,
+    sellerTrust: number,
     /* 굿즈라는 타입이 형식을 지켜줌 */
 }
