@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload"; //업로드
 import Edit from "./pages/Edit"; //수정
@@ -12,7 +13,8 @@ function App() {
   return (
     <GoodsProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+         <Route path="/home" element={<Home />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/liked" element={<Liked />} />
