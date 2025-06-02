@@ -1,0 +1,41 @@
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.wrapper {
+  padding: 40px 0;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px;
+}
+
+.filterButton {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  background-color: #5c7aea;
+  transition: background-color 0.2s ease;
+}
+
+.filterButton.active {
+  background-color: #aaa;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #eee;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+}

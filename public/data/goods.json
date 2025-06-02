@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "title": "방탄소년단 미니 인형",
+        "description": "귀여운 BT21 캐릭터",
+        "imageUrl": "/images/2.png",
+        "likes": 3,
+        "password": "0000"
+    },
+    {
+        "id": "2",
+        "title": "세븐틴 키링",
+        "description": "랜덤 아크릴 키링",
+        "imageUrl": "/images/3.png",
+        "likes": 7,
+        "password": "0000"
+    },
+    {
+        "id": "3",
+        "title": "뉴진스 포토카드",
+        "description": "멤버별 포카 세트",
+        "imageUrl": "/images/4.png",
+        "likes": 10,
+        "password": "0000"
+    },
+    {
+        "id": "4",
+        "title": "뉴진스 포토카드",
+        "description": "멤버별 포카 세트",
+        "imageUrl": "/images/4.png",
+        "likes": 5,
+        "password": "0000"
+    }
+]

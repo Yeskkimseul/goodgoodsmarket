@@ -1,8 +1,8 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +10,166 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  /* space */
+  --space4: 0.25rem;
+  /* 4px */
+  --space8: 0.5rem;
+  /* 8px */
+  --space16: 1rem;
+  /* 16px */
+  --space24: 1.5rem;
+  /* 24px */
+  --space32: 2rem;
+  /* 32px */
+  --space40: 2.5rem;
+  /* 40px */
+  --space56: 3.5rem;
+  /* 56px */
+
+  /* fontsize */
+  --font-h1: clamp(1.5rem, 3.26vw, 1.625rem);
+  --font-h2: clamp(1.25rem, 2.73vw, 1.375rem);
+  --font-h3: clamp(1.125rem, 2.47vw, 1.25rem);
+  --font-h4: clamp(0.875rem, 1.95vw, 1rem);
+  --font-h5: clamp(0.75rem, 1.69vw, 0.875rem);
+
+  --font-subtit1: clamp(1.125rem, 2.47vw, 1.25rem);
+  --font-subtit2: clamp(1rem, 2.21vw, 1.125rem);
+
+  --font-body1: clamp(1rem, 2.21vw, 1.125rem);
+  --font-body2: clamp(0.875rem, 1.95vw, 1rem);
+
+  --font-button: clamp(0.875rem, 1.95vw, 1rem);
+  --font-caption: clamp(0.75rem, 1.69vw, 0.875rem);
+
+  /* color */
+
+  --main-mint: #1DC6A7;
+
+  --sub-lightmint: #64D8C3;
+  --sub-green: #60ed7b;
+  --sub-neongreen: #0DCC54;
+  --sub-deepgreen: #269145;
+
+  --point-deeppink: #EC8899;
+  --point-pink: #fbb6b9;
+  --point-neonyellow: #e1fe45;
+
+  --bg-white: #fff;
+  --bg-disabled: #f4f3fe;
+  --bg-lightE: #eee;
+  --bg-gray: #dadada;
+
+  --stroke-focused: #005c4b;
+  --stroke-grey: #b6b6b6;
+  --stroke-lightE: #eee;
+
+  --text-black: #111;
+  --text-white: #fff;
+  --text-grey: #8a8a8a;
+  --text-lightgrey: #b6b6b6;
+  --text-disabled: #759496;
+  --text-validation: #ffd632;
+  --text-error: #ee4040;
+  --text-success: #269145;
+
+  --button-bgdefault: #1DC6A7;
+  --button-textdefault: #fff;
+  --button-bghover: #0DB899;
+  --button-strokefocused: #005c4b;
+  --button-bgactive: #00a788;
+  --button-bgdisabled: #e1e9e9;
+  --button-textdisabled: #759496;
+  --button-bgsecondary: #dffff6;
+  --button-textsecondary: #00a788;
+
+  --fields-form: #f5fffc;
+  --fields-text: #111;
+  --fields-discription: #8a8a8a;
+  --fields-strokehover: #8abeb4;
+  --fields-strokefocused: #005c4b;
+  --fields-textdisabled: #759496;
+  --fields-strokevalidation: #ffd632;
+  --fields-bgvalidation: #fffbeb;
+  --fields-bgerror: #fff8f8;
+  --fields-strokeerror: #ec8899;
+  --fields-textdisabled: #759496;
+
+}
+
+h1 {
+  font-size: var(--font-h1);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: var(--font-h2);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: var(--font-h3);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+h4 {
+  font-size: var(--font-h4);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+h5 {
+  font-size: var(--font-h5);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+.subtit1 {
+  font-size: var(--font-subtit1);
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+.subtit2 {
+  font-size: var(--font-subtit2);
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+body {
+  font-size: var(--font-body1);
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.body2 {
+  font-size: var(--font-body2);
+  font-weight: 400;
+  line-height: 160%;
+}
+
+button {
+  font-size: var(--font-button);
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
+.caption {
+  font-size: var(--font-caption);
+  font-weight: 400;
+  line-height: 125%;
 }

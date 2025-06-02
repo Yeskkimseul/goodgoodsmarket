@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Upload from "./pages/Upload"; //업로드
+import Edit from "./pages/Edit"; //수정
+import Detail from "./pages/Detail"; //상세페이지
+import Liked from "./pages/Liked"; //찜한굿즈보기
+import Popular from "./pages/Popular"; //인기굿즈보기
+import About from "./pages/About"; //소개
+import { GoodsProvider } from "./context/GoodsContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GoodsProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/liked" element={<Liked />} />
+        <Route path="/popular" element={<Popular />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/upload" element={<Upload />} />
+      </Routes>
+    </GoodsProvider>
   );
 }
 
