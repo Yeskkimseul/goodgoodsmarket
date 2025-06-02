@@ -3,6 +3,7 @@ import GoodsCard from "../components/GoodsCard";
 import Layout from "../components/Layout";
 import { useGoods } from "../context/GoodsContext";
 import styles from './CardListLayout.module.css'
+import { Link } from "react-router-dom";
 
 const Home = () => {
     //굿즈 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
@@ -26,7 +27,7 @@ const Home = () => {
                     //localstorage에도 똑같이 저장 = 새로고침해도 유지되게
                 })
         }
-        if(liked) setLikedIds(JSON.parse(liked));
+        if (liked) setLikedIds(JSON.parse(liked));
     }, [setGoodsList])
     //보여줄 리스트 결정 : 찜필터 on이면 찜한 것만 보여주기
     const displayedList = showOnlyLiked
@@ -61,6 +62,26 @@ const Home = () => {
                         />
                     ))
                 }
+
+
+
+            </div>
+            {/* 우리페이지 */}
+
+            <div> 배너 슬라이드 </div>
+
+            <div>
+                    굿즈 카테고리 컴포넌트
+                    (link 연결된 컴포넌트)
+            </div>
+
+            <div>
+                굿즈 아이템 컴포넌트
+                (link 연결된 컴포넌트)
+            </div>
+            <div>
+                굿즈 커뮤니티 컴포넌트
+                (link 연결된 컴포넌트)
             </div>
         </Layout>
     )

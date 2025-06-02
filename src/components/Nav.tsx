@@ -6,21 +6,25 @@ const Nav = () => {
         <nav className={`${styles.nav} inner`}>
             <ul className={styles.menu}>
                 <li>
-                    <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        굿굿마켓
-                    </NavLink>
-                </li>
-                     <li>
-                    <NavLink to="/popular" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        인기굿즈
+                    <NavLink to="/home" className={({ isActive }) => (isActive ? styles.active : '')}>
+                        홈
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/upload" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        업로드
+                    <NavLink to="/community" className={({ isActive }) => (isActive ? styles.active : '')}>
+                        커뮤니티
                     </NavLink>
                 </li>
-
+                <li>
+                    <NavLink to="/chat" className={({ isActive }) => (isActive ? styles.active : '')}>
+                        채팅
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/mypage" className={({ isActive }) => (isActive ? styles.active : '')}>
+                        마이페이지
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     )

@@ -66,6 +66,7 @@ code {
   --stroke-focused: #005c4b;
   --stroke-grey: #b6b6b6;
   --stroke-lightE: #eee;
+  --stroke-Red: #A20000;
 
   --text-black: #111;
   --text-white: #fff;
@@ -86,16 +87,16 @@ code {
   --button-bgsecondary: #dffff6;
   --button-textsecondary: #00a788;
 
-  --fields-form: #f5fffc;
+  --fields-form: #F4F4F4;
   --fields-text: #111;
   --fields-discription: #8a8a8a;
-  --fields-strokehover: #8abeb4;
-  --fields-strokefocused: #005c4b;
+  --fields-strokehover: #DADADA;
+  --fields-strokefocused: #B6B6B6;
   --fields-textdisabled: #759496;
   --fields-strokevalidation: #ffd632;
   --fields-bgvalidation: #fffbeb;
   --fields-bgerror: #fff8f8;
-  --fields-strokeerror: #ec8899;
+  --fields-strokeerror: #FF4040;
   --fields-textdisabled: #759496;
 
 }
