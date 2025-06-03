@@ -13,10 +13,16 @@ const Community = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        //커뮤니티 데이터 불러오기
-        fetch('data/commu.json')
-            .then((res) => res.json())
-            .then((data) => setCommuList(data));
+        const stored = localStorage.getItem('commuList'); //저장된 커뮤니티 데이터
+        if (stored) {
+            setCommuList(JSON.parse(stored)); //로컬 스토리지에 있으면 그걸 쓰고
+        }
+        else {
+            //커뮤니티 데이터 불러오기
+            fetch('data/commu.json')
+                .then((res) => res.json())
+                .then((data) => setCommuList(data));
+        }
     }, []);
 
     return (
@@ -42,7 +48,7 @@ const Community = () => {
                             >
                                 게시글 등록
                             </button>
-                              <button
+                            <button
                                 onClick={() => {
                                     navigate("/community/mycommu");
                                     close();
