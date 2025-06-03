@@ -155,7 +155,8 @@ const GoodsUpload = () => {
                                 {conditionOptions.map(opt => (
                                     <label key={opt} style={{ display: "block" }}>
                                         <input
-                                            type="checkbox"
+                                            type="radio"
+                                            name="condition"
                                             checked={selectedCondition.includes(opt)}
                                             onChange={() => handleCheck(opt, selectedCondition, setSelectedCondition)}
                                         />
@@ -166,7 +167,8 @@ const GoodsUpload = () => {
                                 {itemOptions.map(opt => (
                                     <label key={opt} style={{ display: "block" }}>
                                         <input
-                                            type="checkbox"
+                                            type="radio"
+                                            name="condition2"
                                             checked={selectedItem.includes(opt)}
                                             onChange={() => handleCheck(opt, selectedItem, setSelectedItem)}
                                         />
@@ -177,7 +179,8 @@ const GoodsUpload = () => {
                                 {deliveryOptions.map(opt => (
                                     <label key={opt} style={{ display: "block" }}>
                                         <input
-                                            type="checkbox"
+                                            type="radio"
+                                            name="condition3"
                                             checked={selectedDelivery.includes(opt)}
                                             onChange={() => handleCheck(opt, selectedDelivery, setSelectedDelivery)}
                                         />
