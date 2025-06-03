@@ -1,0 +1,24 @@
+.listContainer {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 16px;
+  cursor: grab;
+  user-select: none;
+  /* scroll-behavior: smooth; */
+}
+
+.listContainer:active {
+  cursor: grabbing;
+}
+
+.listItem {
+  flex: 0 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.listContainer::-webkit-scrollbar {
+  display: none;
+}
