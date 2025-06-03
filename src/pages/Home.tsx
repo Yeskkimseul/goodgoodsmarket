@@ -4,6 +4,8 @@ import Layout from "../components/Layout";
 import { useGoods } from "../context/GoodsContext";
 import styles from './CardListLayout.module.css'
 import GoodsCategoryItem from "../components/GoodsCategoryItem";
+import CommuCard from "../components/CommuCard";
+import { Commu } from "../types/commu";
 
 const Home = () => {
     //굿즈 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
@@ -34,10 +36,19 @@ const Home = () => {
         ? goodsList.filter((item) => likedIds.includes(item.id)) /* 찜한 굿즈만 걸리게끔 필터 */
         : goodsList;
 
+        //커뮤니티 리스트 상태 추가
+            const [commuList, setCommuList] = useState<Commu[]>([]);
+    useEffect(() => {
+        //커뮤니티 데이터 불러오기
+        fetch('data/commu.json')
+            .then((res) => res.json())
+            .then((data) => setCommuList(data));
+    },[]);
+
     return (
         <Layout>
             {/* 상단 찜 갯수/필터 버튼 */}
-            <div className={styles.topBar}>
+           {/*  <div className={styles.topBar}>
                 <span className={styles.likeCount}>
                     💖 찜한 굿즈: {likedIds.length}개
                 </span>
@@ -45,9 +56,9 @@ const Home = () => {
                     className={styles.filterButton}>
                     {showOnlyLiked ? '전체 보기' : '찜한 굿즈만 보기'}
                 </button>
-            </div>
+            </div> */}
 
-            {/* 우리페이지 */}
+         
 
             <div> 배너 슬라이드 </div>
 
@@ -57,7 +68,7 @@ const Home = () => {
 
             <div>
                  {
-                    displayedList.map((item) => (
+                     displayedList.slice(0, 4).map((item) => (
                         <GoodsCard
                             key={item.id}
                             item={item}
@@ -71,8 +82,15 @@ const Home = () => {
                 }
             </div>
             <div>
-                굿즈 커뮤니티 컴포넌트
-                (link 연결된 컴포넌트)
+                {
+                    commuList.slice(0, 4).map((item) => (
+                        <CommuCard
+                            key={item.id}
+                            item={item}
+                            className={styles.card}
+                        />
+                    ))
+                }
             </div>
         </Layout>
     )

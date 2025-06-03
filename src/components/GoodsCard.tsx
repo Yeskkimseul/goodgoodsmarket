@@ -37,23 +37,25 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
         const updatedGoodsList = goodsList.map((g) =>
             g.id === item.id ? {
                 ...g,
-                likes: liked ? Math.max(g.likes -1, 0) //좋아요수가 0보다 작아지지 않게
+                likes: liked ? Math.max(g.likes - 1, 0) //좋아요수가 0보다 작아지지 않게
                     : g.likes + 1,
             } : g
         )
         setGoodsList(updatedGoodsList);
         localStorage.setItem('goodsList', JSON.stringify(updatedGoodsList));
     }
-
+      console.log(item)
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
             <Link to={`/goodsdetail/${item.id}`} className={styles.link}>
                 <img src={item.imageUrl} alt={item.title} className={styles.image} />
                 <h3 className={styles.title}>{item.title}</h3>
-                <p className={styles.price}>{item.price.toLocaleString()}원</p>
+                <p className={styles.price}>
+                    {(item.price ?? 0).toLocaleString()}원
+                </p>
             </Link>
             <div className={styles.cardFooter}>
-                <button className={styles.likeButton} onClick={(e)=>{
+                <button className={styles.likeButton} onClick={(e) => {
                     e.preventDefault();
                     toggleLike();
                 }}>

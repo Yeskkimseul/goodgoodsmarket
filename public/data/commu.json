@@ -1,0 +1,168 @@
+[
+    {
+        "id": "1",
+        "title": "이번 신상 굿즈 공유합니다~",
+        "description": "밍키 왕국에서 이번 시즌에 새로 런칭한 캐릭터!!\n기존 캐릭터 보다 그림체가 훨씬 예뻐졌어요!\n\n지금 한정판 세트 구매하면, 밍키왕국 박스에 포함된 악세사리도 같이 받을 수 있다고 합니다.",
+        "category": "굿즈 소식",
+        "imageUrl": "/images/commuimgs/commuimg1.png",
+        "likes": 12,
+        "createdAt": "2025-06-03T10:00:00Z",
+        "views": 87,
+        "tags": [
+            "#굿즈"
+        ],
+        "userimgUrl": "/images/users/user1.png",
+        "userName": "굿즈왕",
+        "commentsNum": 3,
+        "comments": [
+            {
+                "id": "c1",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "밍키러버",
+                "content": "진짜 예뻐요! 정보 감사합니다~",
+                "createdAt": "2025-06-03T11:00:00Z"
+            },
+            {
+                "id": "c2",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈초보",
+                "content": "한정판 세트 어디서 살 수 있나요?",
+                "createdAt": "2025-06-03T11:10:00Z"
+            },
+            {
+                "id": "c3",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈수집가",
+                "content": "악세사리까지 주는 건 처음 알았어요!",
+                "createdAt": "2025-06-03T11:20:00Z"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "굿즈 할인 정보 공유",
+        "description": "오늘부터 일주일간 공식몰에서 20% 할인 이벤트 진행 중입니다! 놓치지 마세요.",
+        "category": "굿즈 소식",
+        "imageUrl": "/images/commuimgs/commuimg1.png",
+        "likes": 5,
+        "createdAt": "2025-06-02T09:00:00Z",
+        "views": 45,
+        "tags": [
+            "#굿즈",
+            "#할인"
+        ],
+        "userimgUrl": "/images/users/user1.png",
+        "userName": "세일정보",
+        "commentsNum": 2,
+        "comments": [
+            {
+                "id": "c4",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈덕후",
+                "content": "정보 감사합니다! 바로 구매했어요.",
+                "createdAt": "2025-06-02T10:00:00Z"
+            },
+            {
+                "id": "c5",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈초보",
+                "content": "할인 언제까지인가요?",
+                "createdAt": "2025-06-02T10:30:00Z"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "내가 직접 만든 굿즈 자랑해요!",
+        "description": "직접 디자인한 키링이에요! 색감이랑 재질에 신경 많이 썼어요. 실제로 받아보니 더 예뻐서 만족 중입니다 :)",
+        "category": "굿즈 자랑",
+        "imageUrl": "/images/commuimgs/commuimg1.png",
+        "likes": 21,
+        "createdAt": "2025-06-01T15:30:00Z",
+        "views": 102,
+        "tags": [
+            "#굿즈",
+            "#키링",
+            "#자작"
+        ],
+        "userimgUrl": "/images/users/user1.png",
+        "userName": "키링장인",
+        "commentsNum": 2,
+        "comments": [
+            {
+                "id": "c6",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈러버",
+                "content": "진짜 예뻐요! 어디서 제작하셨나요?",
+                "createdAt": "2025-06-01T16:00:00Z"
+            },
+            {
+                "id": "c7",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "키링수집가",
+                "content": "구매 가능한가요?",
+                "createdAt": "2025-06-01T16:10:00Z"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "굿즈 정리하다가 발견한 레어템",
+        "description": "예전에 한정판으로 나왔던 포토카드인데, 아직도 소장 중이에요! 혹시 이거 갖고 계신 분 있나요?",
+        "category": "굿즈 자랑",
+        "imageUrl": "/images/commuimgs/commuimg1.png",
+        "likes": 8,
+        "createdAt": "2025-05-30T13:20:00Z",
+        "views": 67,
+        "tags": [
+            "#굿즈",
+            "#포토카드",
+            "#레어템"
+        ],
+        "userimgUrl": "/images/users/user1.png",
+        "userName": "레어템수집가",
+        "commentsNum": 1,
+        "comments": [
+            {
+                "id": "c8",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "포카덕후",
+                "content": "저도 있어요! 반갑네요 ㅎㅎ",
+                "createdAt": "2025-05-30T14:00:00Z"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "title": "굿즈 배송 너무 느려요ㅠㅠ",
+        "description": "공식몰에서 주문했는데 2주째 배송이 안 오네요... 다들 배송 얼마나 걸리셨나요?",
+        "category": "자유게시판",
+        "imageUrl": "/images/commuimgs/commuimg1.png",
+        "likes": 1,
+        "createdAt": "2025-06-02T18:40:00Z",
+        "views": 41,
+        "tags": [
+            "#굿즈",
+            "#배송"
+        ],
+        "userimgUrl": "/images/users/user1.png",
+        "userName": "배송기다림",
+        "commentsNum": 2,
+        "comments": [
+            {
+                "id": "c9",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈왕",
+                "content": "저도 2주 넘게 걸렸어요ㅠㅠ 힘내세요!",
+                "createdAt": "2025-06-02T19:00:00Z"
+            },
+            {
+                "id": "c10",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "굿즈초보",
+                "content": "요즘 배송이 다 느린가봐요...",
+                "createdAt": "2025-06-02T19:10:00Z"
+            }
+        ]
+    }
+]
