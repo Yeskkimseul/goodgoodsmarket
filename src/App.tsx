@@ -9,10 +9,14 @@ import ChatDetail from "./pages/ChatDetail"; //채팅상세
 import Community from "./pages/Community"; //커뮤니티
 import CommuDetail from "./pages/CommuDetail"; //커뮤니티 상세보기
 import CommuUpload from "./pages/CommuUpload"; //커뮤니티업로드
+import MyCommu from "./pages/MyCommu"; //내 커뮤니티
 import Mypage from "./pages/Mypage"; //마이페이지
+import MyDeals from "./pages/MyDeals"; //내 거래내역
 import Liked from "./pages/Liked"; //찜
 
+import { CommuProvider } from "./context/CommuContext";
 
+/* 수정 전 참고용 페이지들 */
 import Upload from "./pages/Upload"; //업로드
 import Edit from "./pages/Edit"; //수정
 import Detail from "./pages/Detail"; //상세페이지
@@ -24,27 +28,35 @@ function App() {
   return (
 
     <GoodsProvider>
-      <Routes>
-        <Route path="/" element={<Login />} />
-         <Route path="/home" element={<Home />} />
-         <Route path="/community" element={<Community />} />
-         <Route path="/goodscategory/:id" element={<GoodsCategory />} />
-         <Route path="/goodsdetail/:id" element={<GoodsDetail />} />
-        <Route path="/goodsupload" element={<GoodsUpload />} />
-         <Route path="/chat" element={<Chat />} />
-        <Route path="/chatdetail" element={<ChatDetail />} />
-         <Route path="/mypage" element={<Mypage />} />
-         <Route path="/commudetail/:id" element={<CommuDetail />} />
-        <Route path="/commuupload" element={<CommuUpload />} />
-        <Route path="/liked" element={<Liked />} />
+      <CommuProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
+          <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
+          <Route path="/home/goodsupload" element={<GoodsUpload />} />
+
+          <Route path="/community" element={<Community />} />
+          <Route path="/community/commudetail/:id" element={<CommuDetail />} />
+          <Route path="/community/mycommu" element={<MyCommu />} />
+          <Route path="/community/commuupload" element={<CommuUpload />} />
+
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/chat/chatdetail" element={<ChatDetail />} />
+
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/liked" element={<Liked />} />
+          <Route path="/mypage/mydeals" element={<MyDeals />} />
 
 
-        <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/popular" element={<Popular />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/upload" element={<Upload />} />
-      </Routes>
+
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/popular" element={<Popular />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/upload" element={<Upload />} />
+        </Routes>
+      </CommuProvider>
     </GoodsProvider>
   );
 }

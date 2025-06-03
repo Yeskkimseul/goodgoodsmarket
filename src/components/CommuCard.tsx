@@ -14,7 +14,7 @@ const CommuCard = ({ item, className }: Props) => {
 
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
-            <Link to={`/commudetail/${item.id}`} className={styles.link}>
+            <Link to={`/community/commudetail/${item.id}`} className={styles.link}>
                 <h3 className={styles.title}>{item.title}</h3>
                 <p className={styles.userName}>{item.userName}</p>
                 <div className="styles.underline">

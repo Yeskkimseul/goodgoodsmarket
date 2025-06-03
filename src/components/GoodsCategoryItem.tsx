@@ -20,7 +20,7 @@ const GoodsCategoryItem = () => {
         <ul>
             {categories.map((category) => (
                 <li key={category.id}>
-                    <Link to={`/goodscategory/${category.id}`}>
+                    <Link to={`/home/goodscategory/${category.id}`}>
                         {category.name}
                     </Link>
                 </li>

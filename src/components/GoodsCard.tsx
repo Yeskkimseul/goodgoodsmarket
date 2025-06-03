@@ -47,7 +47,7 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
       console.log(item)
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
-            <Link to={`/goodsdetail/${item.id}`} className={styles.link}>
+            <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}>
                 <img src={item.imageUrl} alt={item.title} className={styles.image} />
                 <h3 className={styles.title}>{item.title}</h3>
                 <p className={styles.price}>
