@@ -1,9 +1,24 @@
+
 .nav {
     height: 100%;
     display: flex;
     align-items: center;
 }
-
+/* .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  flex: none;
+}
+.menu li a {
+  flex-direction: column;
+  font-size: 0.85rem;
+} */
 .logo a {
   font-size: 1.4rem;
   color: #fff;
@@ -28,7 +43,7 @@
   height: 100%;
   align-items: center;
   text-decoration: none;
-  color: #fff;
+  color: #8A8A8A;
   border-radius: 10px 10px 0 0;
   transition: all 0.2s ease;
   padding: 2px 16px;
@@ -40,7 +55,8 @@
 }
 
 .active {
-  background-color: #FF6B81;
+  color: #111;
+
 }
 
 .button {

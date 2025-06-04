@@ -1,6 +1,7 @@
 import "../App.css"
 import Nav from "./Nav"
 
+
 const Layout = ({children} : {children : React.ReactNode}) => {
     //children 컴포넌트 안에 들어가는 컨텐츠
     return (

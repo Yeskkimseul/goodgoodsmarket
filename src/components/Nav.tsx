@@ -7,7 +7,16 @@ const Nav = () => {
             <ul className={styles.menu}>
                 <li>
                     <NavLink to="/home" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        홈
+                        {({ isActive }) => (
+                            <>
+                                <img
+                                    src={isActive ? "/images/nav/navhomeon.png" : "/images/nav/navhomeoff.png"}
+                                    alt="홈"
+                                    className={styles.icon}
+                                />
+                                홈
+                            </>
+                        )}
                     </NavLink>
                 </li>
                 <li>
