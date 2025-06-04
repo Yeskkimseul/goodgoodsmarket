@@ -10,7 +10,7 @@ const Layout = ({children} : {children : React.ReactNode}) => {
                 {children}
             </main>
             <footer>
-                                <Nav />
+                <Nav />
             </footer>
         </div>
     )

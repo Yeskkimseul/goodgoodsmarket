@@ -3,7 +3,7 @@ import styles from './Nav.module.css';
 
 const Nav = () => {
     return (
-        <nav className={`${styles.nav} inner`}>
+        <nav className={`${styles.nav} `}>
             <ul className={styles.menu}>
                 <li>
                     <NavLink to="/home" className={({ isActive }) => (isActive ? styles.active : '')}>

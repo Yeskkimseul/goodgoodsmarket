@@ -50,7 +50,7 @@ const Home = () => {
     const displayedList = showOnlyLiked
         ? goodsList.filter((item) => likedIds.includes(item.id)) /* 찜한 굿즈만 걸리게끔 필터 */
         : goodsList;
-
+console.log("전체 굿즈 개수:", displayedList.length);
 
 
     return (
@@ -75,9 +75,9 @@ const Home = () => {
                 <GoodsCategoryItem />
             </div>
 
-            <div className="goodgoodspick">
+            <div className={styles.goodgoodspick}>
                 {
-                    displayedList.slice(0, 4).map((item) => (
+                    displayedList.slice(0, 8).map((item) => (
                         <GoodsCard
                             key={item.id}
                             item={item}

@@ -20,6 +20,7 @@ body,
 #root {
   height: 100%;
   margin: 0;
+  background-color: #f5f6f8;
 }
 
 .layout {
@@ -31,8 +32,9 @@ body,
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(16px,20vw,78px);
   width: 100%;
+  background-color: #fff;
 }
 
 /* tab바 position css만 여기서 변경 -종현- */
@@ -49,7 +51,9 @@ body,
 
 }
 
+/* 하단 tab바 footer로 사용 css여기서 변경 -종현- */
 .layout footer {
+  max-width: 1200px;
   background-color: #ffffff;
   width: 100%;
   text-align: center;
@@ -57,8 +61,11 @@ body,
   color: #999;
   font-size: 14px;
   position: fixed;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
+  box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
+  z-index: 100;
 }
 
 
