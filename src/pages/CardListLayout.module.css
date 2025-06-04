@@ -60,6 +60,9 @@
   height: 452px;
   background-color: #f5f6f8;
   border-radius: 30px;
-  background-image: url('C:\team3\goodgoodsmarket\public\images\main_thumb.jpg');
   background-size: cover;
+}
+.mainThumb img{
+  border-radius: 30px;
+
 }

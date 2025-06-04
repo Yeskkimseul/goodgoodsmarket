@@ -72,8 +72,10 @@ console.log("전체 굿즈 개수:", displayedList.length);
                 {/* CardListLayout.module.css에서 mgt관련 .pageContent 수정 -종현- */}
             <div className={styles.pageContent}>
 
-            <div className={styles.mainThumb}></div>
-            
+            <div className={styles.mainThumb}>
+                <img src="/images/main_thumb.jpg" alt="굿즈 썸네일" />
+            </div>
+
             <div> 배너 슬라이드 </div>
 
             <div>
