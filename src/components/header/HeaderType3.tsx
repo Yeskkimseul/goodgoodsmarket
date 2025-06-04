@@ -13,9 +13,11 @@ const HeaderType3 = ({ onComplete }: { onComplete?: () => void }) => {
     return (
         <header className={styles.header}>
             <div className={styles.icon} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
-                <img src="/images/header/header_back.svg" alt="뒤로가기" />
+                <img src="/images/header/header_x.svg" alt="뒤로가기" />
             </div>
-            <div className={`${styles.done} cusor`} onClick={onComplete}>완료</div>
+            <div className={`${styles.icon} cusor`} onClick={onComplete}>
+                <img src='/images/header/header_check.svg' alt="완료" />
+            </div>
         </header>
     );
 };

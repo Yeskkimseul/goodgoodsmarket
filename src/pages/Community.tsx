@@ -5,6 +5,7 @@ import CommuCard from "../components/CommuCard";
 import styles from './CardListLayout.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/header/Header";
 
 const Community = () => {
 
@@ -27,6 +28,7 @@ const Community = () => {
 
     return (
         <Layout>
+            <Header type="type7"></Header>
             <div>
                 {
                     commuList.map((item) => (
