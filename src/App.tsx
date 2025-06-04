@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login"; //로그인
 import LoginEmail from "./pages/LoginEmail"; //이메일 로그인
+import LoginPhone from "./pages/LoginPhone"; //휴대폰 로그인
 import Home from "./pages/Home";  //홈
 import GoodsCategory from "./pages/GoodsCategory"; //굿즈 카테고리
 import GoodsDetail from "./pages/GoodsDetail"; //굿즈 상세보기
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login/email" element={<LoginEmail />} />
+          <Route path="/login/phone" element={<LoginPhone />} />
           
           <Route path="/home" element={<Home />} />
           <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />

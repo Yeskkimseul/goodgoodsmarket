@@ -54,3 +54,28 @@
     height: auto;
     cursor: pointer;
 }
+
+.phone {
+    display: flex;
+    gap: var(--space8);
+}
+
+.phonebtn {
+    width: 120px;
+
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+
+    padding: clamp(12px, 2vh, 14px) 0;
+    background-color: var(--button-bgdefault);
+    color: var(--button-textdefault);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}

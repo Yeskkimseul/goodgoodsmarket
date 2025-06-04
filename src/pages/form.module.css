@@ -38,7 +38,6 @@
   font-weight: 500;
   line-height: 125%;
   letter-spacing: -0.03em;
-
   width: 100%;
   padding: clamp(12px, 2vh, 14px) 0;
   background-color: var(--button-bgdefault);
@@ -54,6 +53,14 @@
 
 .button_big:hover {
   background-color: var(--button-bghover);
+}
+.button_big:disabled {
+  background-color: var(--button-bgdisabled);
+  color: var(--button-textdisabled);
+  cursor: not-allowed;
+}
+.button_big:active {
+  background-color: var(--button-active);
 }
 
 .preview {
