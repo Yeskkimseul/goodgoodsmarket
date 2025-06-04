@@ -76,11 +76,13 @@ console.log("전체 굿즈 개수:", displayedList.length);
                 <img src="/images/main_thumb.jpg" alt="굿즈 썸네일" />
             </div>
 
-            <div> 배너 슬라이드 </div>
+            {/* <div className={styles.bannertxt}> 배너 슬라이드 </div> */}
 
             <div>
                 <GoodsCategoryItem />
             </div>
+
+            <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 Pick </div>
 
             <div className={styles.goodgoodspick}>
                 {
@@ -97,6 +99,7 @@ console.log("전체 굿즈 개수:", displayedList.length);
                     ))
                 }
             </div>
+            <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
             <div>
                 {
                     commuList.slice(0, 4).map((item) => (

@@ -51,6 +51,7 @@
 
 
 /* header 제외 mgt 수정-종현- */
+/* home 섹션들 css수정 Home.tsx 참고 */
 .pageContent{
   margin-top: 160px;
 }
@@ -64,5 +65,17 @@
 }
 .mainThumb img{
   border-radius: 30px;
-
+}
+.goodgoodspick{
+  display: flex;
+  justify-content: flex-start;
+}
+.goodgoodspicktxt{
+  font-family: var(--sokcho);
+  font-size: 2rem;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.goodgoodspicktxt span{
+  color: var(--main-mint);
 }
