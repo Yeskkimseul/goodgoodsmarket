@@ -55,16 +55,24 @@
 .pageContent{
   margin-top: 160px;
 }
-.mainThumb{
-  margin-bottom: 80px;
+.mainThumb {
   width: 100%;
-  height: 452px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7; /* or your own ratio */
+  border-radius: 30px;
+  overflow: hidden;
   background-color: #f5f6f8;
-  border-radius: 30px;
   background-size: cover;
+  background-position: center;
+  margin-bottom: 80px;
 }
-.mainThumb img{
+.mainThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 30px;
+  display: block;
 }
 .goodgoodspick{
   display: flex;
