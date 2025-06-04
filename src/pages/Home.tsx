@@ -74,7 +74,7 @@ const Home = () => {
                 <GoodsCategoryItem />
             </div>
 
-            <div>
+            <div className="goodgoodspick">
                 {
                     displayedList.slice(0, 4).map((item) => (
                         <GoodsCard
