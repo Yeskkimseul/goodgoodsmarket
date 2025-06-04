@@ -2,6 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login"; //로그인
 import LoginEmail from "./pages/LoginEmail"; //이메일 로그인
 import LoginPhone from "./pages/LoginPhone"; //휴대폰 로그인
+import Join from "./pages/Join"; //회원가입
+import Joinmail from "./pages/Joinmail";//이메일 회원가입
+import Joinphone from "./pages/Joinphone";  //휴대폰 회원가입
 import Home from "./pages/Home";  //홈
 import GoodsCategory from "./pages/GoodsCategory"; //굿즈 카테고리
 import GoodsDetail from "./pages/GoodsDetail"; //굿즈 상세보기
@@ -38,7 +41,11 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login/email" element={<LoginEmail />} />
           <Route path="/login/phone" element={<LoginPhone />} />
+          <Route path="/join/phone" element={<Joinphone />} />
           
+          <Route path="/join" element={<Join />} />
+          <Route path="/join/mail" element={<Joinmail />} />
+
           <Route path="/home" element={<Home />} />
           <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
           <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
