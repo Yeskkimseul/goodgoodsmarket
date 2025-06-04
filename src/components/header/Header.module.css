@@ -1,10 +1,17 @@
 .header {
-    padding: 0 var(--space16);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: clamp(62px, 6vw, 103px);
     border-bottom: 1px solid var(--stroke-lightE);
+    position: fixed;
+    max-width: 1200px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-white);
+    z-index: 100;
+    padding: 0 var(--space16);
 }
 
 .icon img {
@@ -23,4 +30,10 @@
 
 .right img {
     width: var(--icon-size);
+}
+
+.right li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
