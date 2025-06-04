@@ -26,7 +26,7 @@
     width: clamp(80px, 6vw, 120px);
 }
 
-.inputlist {
+.con {
     display: flex;
     flex-direction: column;
     gap: var(--space40);
@@ -62,12 +62,10 @@
 
 .phonebtn {
     width: 120px;
-
     font-size: var(--font-button);
     font-weight: 500;
     line-height: 125%;
     letter-spacing: -0.03em;
-
     padding: clamp(12px, 2vh, 14px) 0;
     background-color: var(--button-bgdefault);
     color: var(--button-textdefault);
@@ -78,4 +76,25 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+}
+.phonebtn:hover{
+    background-color: var(--button-bghover);
+}
+.phonebtn:active{
+    /* background-color: var(--white);
+    border: 1px solid var(--stroke-grey);
+    color: var(--main-mint); */
+    background-color: var(--button-bgactive);
+}
+.phonebtn:disabled{
+    background-color: var(--button-bgdisabled);
+    color: var(--button-textdisabled);
+    cursor: not-allowed;
+}
+
+/* 연달아있는 inputlist */
+.inputboxlist{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
 }
