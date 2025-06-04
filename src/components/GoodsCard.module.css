@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: clamp(166px,25vw,243px);
+  width: clamp(166px, 25vw, 243px);
   height: auto;
   padding-bottom: var(--space4);
 }
@@ -19,7 +19,7 @@
   /* padding: 16px; */
 }
 
-.cardTop{
+.cardTop {
   position: relative;
   width: 100%;
   height: clamp(166px, 25vw, 243px);
@@ -45,7 +45,8 @@
   transition: 0.15s ease;
   background: none;
   position: absolute;
-  bottom: 11px; right: 11px;
+  bottom: 11px;
+  right: 11px;
 }
 
 .likeButton:hover {
@@ -62,7 +63,7 @@
   font-weight: 600;
   margin-top: 8px;
   margin-bottom: clamp(4px, 2vw, 8px);
-  color: var( --text-grey);
+  color: var(--text-grey);
 }
 
 
@@ -83,7 +84,8 @@
   transition: 0.15s ease;
   background: none;
   position: absolute;
-  bottom: 11px; right: 11px;
+  bottom: clamp(11px, 2vw, 16px);
+  right: clamp(11px, 2vw, 16px);
 }
 
 .likeButton:hover {
@@ -91,18 +93,11 @@
   transform: scale(1.02);
 }
 
-
-@media (max-width: 1200px) {
- 
-
+.heartIcon {
+  width: clamp(24px, 3vw, 38px);
+  height: clamp(24px, 3vw, 38px);
 }
 
-@media (max-width: 375) {
-  
+@media (max-width: 1200px) {}
 
-}
-
-
-
-
-
+@media (max-width: 375) {}

@@ -23,7 +23,7 @@ const LoginEmail = () => {
 
             <div className={Login.inner}>
 
-                <div className={Login.inputlist}>
+                <div className={Login.con}>
                     <div className={Login.title}>
                         <img src="/images/login/logoimg_small.svg" alt="logo" className={Login.logo} />
                         <h1>이메일로 로그인하기</h1>
