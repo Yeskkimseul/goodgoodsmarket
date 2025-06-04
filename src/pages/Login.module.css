@@ -1,7 +1,21 @@
 
+.wrapper{
+    padding: var(--space16);
+}
+
 .title{
     display: flex;
     gap: var(--space8);
     flex-direction: column;
     justify-content: left;
+}
+
+.logo{
+    width: clamp(80px,6vw,120px);
+}
+
+.inputbox{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
 }
