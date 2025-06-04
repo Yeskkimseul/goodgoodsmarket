@@ -6,16 +6,11 @@ const Layout = ({children} : {children : React.ReactNode}) => {
     //children 컴포넌트 안에 들어가는 컨텐츠
     return (
         <div className="layout">
-            <header>
-                <Nav />
-            </header>
             <main className="inner">
                 {children}
             </main>
             <footer>
-                <div className="inner">
-                    ⓒ 2025 Goodstalk. All rights reserved. 
-                </div>
+                                <Nav />
             </footer>
         </div>
     )
