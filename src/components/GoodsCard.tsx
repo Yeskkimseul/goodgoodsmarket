@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from './GoodsCard.module.css';
 
 
+
 //props 타입 정리 (받을 데이터들)
 interface Props {
     item: Goods;
@@ -48,20 +49,24 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
             <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}>
+            <div className={styles.cardTop}>
                 <img src={item.imageUrl} alt={item.title} className={styles.image} />
+                <button className={styles.likeButton} onClick={(e) => {
+                    e.preventDefault();
+                    toggleLike();
+                }}>
+                    <img
+                        src={liked ? process.env.PUBLIC_URL + '/images/icon/heart_on.svg' : process.env.PUBLIC_URL + '/images/icon/heart_off.svg'}
+                        alt={liked ? '좋아요 취소' : '좋아요'}
+                        style={{ width: 24, height: 24 }}
+                    />
+                </button>
+            </div>
                 <h3 className={styles.title}>{item.title}</h3>
                 <h3 className={styles.price}>
                     {(item.price ?? 0).toLocaleString()}원
                 </h3>
             </Link>
-            <div className={styles.cardFooter}>
-                <button className={styles.likeButton} onClick={(e) => {
-                    e.preventDefault();
-                    toggleLike();
-                }}>
-                    {liked ? '💖' : '🤍'}
-                </button>
-            </div>
         </div>
     )
 }
