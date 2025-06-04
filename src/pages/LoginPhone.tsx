@@ -53,7 +53,7 @@ const LoginPhone = () => {
                         </div>
                     </div>{/*전화번호 입력 */}
 
-                </div>{/* inputlist */}
+                </div>{/* con */}
 
                 <div className={style.button_big}
                     onClick={() => navigate('/home')}
