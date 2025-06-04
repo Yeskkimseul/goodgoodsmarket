@@ -37,15 +37,11 @@ body,
 
 /* tab바 position css만 여기서 변경 -종현- */
 .layout header {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+/*   width: 100%;
   background-color: #ffffff;
   font-size: 1.1rem;
   height: 62px;
-  box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
-  
+  box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04); */
 }
 
 .layout main {
@@ -54,10 +50,15 @@ body,
 }
 
 .layout footer {
+  background-color: #ffffff;
+  width: 100%;
   text-align: center;
-  padding: 20px 0;
+  padding: 0;
   color: #999;
   font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 
