@@ -15,7 +15,6 @@ const HeaderType3: React.FC = () => {
             <div className={styles.icon} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
                 <img src="/images/header/header_back.svg" alt="뒤로가기" />
             </div>
-            <h3>프로필 관리</h3>
             <Link to="/mypage">
                 <div className={styles.done}>완료</div>
             </Link>
