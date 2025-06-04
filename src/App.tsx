@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login"; //로그인
+import LoginEmail from "./pages/LoginEmail"; //이메일 로그인
 import Home from "./pages/Home";  //홈
 import GoodsCategory from "./pages/GoodsCategory"; //굿즈 카테고리
 import GoodsDetail from "./pages/GoodsDetail"; //굿즈 상세보기
@@ -31,6 +32,8 @@ function App() {
       <CommuProvider>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/login/email" element={<LoginEmail />} />
+          
           <Route path="/home" element={<Home />} />
           <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
           <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />

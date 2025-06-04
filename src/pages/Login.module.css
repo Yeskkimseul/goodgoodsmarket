@@ -1,0 +1,7 @@
+
+.title{
+    display: flex;
+    gap: var(--space8);
+    flex-direction: column;
+    justify-content: left;
+}
