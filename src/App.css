@@ -26,12 +26,25 @@ body,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 .inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+}
+
+/* tab바 position css만 여기서 변경 -종현- */
+.layout header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 1.1rem;
+  height: 62px;
+  box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
 }
 
 .layout main {
@@ -59,6 +72,6 @@ body,
   .layout header {
     font-size: 1rem;
     white-space: nowrap;
-    height: 46px;
+    height: 60px;
   }
 }

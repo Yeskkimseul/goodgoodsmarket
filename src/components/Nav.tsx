@@ -7,22 +7,58 @@ const Nav = () => {
             <ul className={styles.menu}>
                 <li>
                     <NavLink to="/home" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        홈
+                        {({ isActive }) => (
+                            <>
+                                <img
+                                    src={isActive ? "/images/nav/navhomeon.png" : "/images/nav/navhomeoff.png"}
+                                    alt="홈"
+                                    className={styles.icon}
+                                />
+                                홈
+                            </>
+                        )}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to="/community" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        커뮤니티
+                        {({ isActive }) => (
+                            <>
+                                <img
+                                    src={isActive ? "/images/nav/navcomuon.png" : "/images/nav/navcomuoff.png"}
+                                    alt="커뮤니티"
+                                    className={styles.icon}
+                                />
+                                커뮤니티
+                            </>
+                        )}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to="/chat" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        채팅
+                        {({ isActive }) => (
+                            <>
+                                <img
+                                    src={isActive ? "/images/nav/navchaton.png" : "/images/nav/navchatoff.png"}
+                                    alt="채팅"
+                                    className={styles.icon}
+                                />
+                                채팅
+                            </>
+                        )}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to="/mypage" className={({ isActive }) => (isActive ? styles.active : '')}>
-                        마이페이지
+                        {({ isActive }) => (
+                            <>
+                                <img
+                                    src={isActive ? "/images/nav/navmypageon.png" : "/images/nav/navmypageoff.png"}
+                                    alt="마이페이지"
+                                    className={styles.icon}
+                                />
+                                마이페이지
+                            </>
+                        )}
                     </NavLink>
                 </li>
             </ul>

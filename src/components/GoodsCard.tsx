@@ -50,9 +50,9 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
             <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}>
                 <img src={item.imageUrl} alt={item.title} className={styles.image} />
                 <h3 className={styles.title}>{item.title}</h3>
-                <p className={styles.price}>
+                <h3 className={styles.price}>
                     {(item.price ?? 0).toLocaleString()}원
-                </p>
+                </h3>
             </Link>
             <div className={styles.cardFooter}>
                 <button className={styles.likeButton} onClick={(e) => {
