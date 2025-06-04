@@ -74,5 +74,82 @@
         "sellerimgUrl": "/images/seller1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
+    },
+    {
+        "id": "5",
+        "title": "아이브 포토카드",
+        "description": "아이브 포카 세트",
+        "category": "포토카드",
+        "price": 12000,
+        "imageUrl": "/images/4.png",
+        "likes": 8,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
+    },
+    {
+        "id": "6",
+        "title": "아이브 포토카드",
+        "description": "아이브 포카 세트",
+        "category": "포토카드",
+        "price": 12000,
+        "imageUrl": "/images/4.png",
+        "likes": 8,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
+    },
+    {
+        "id": "7",
+        "title": "아이브 포토카드",
+        "description": "아이브 포카 세트",
+        "category": "포토카드",
+        "price": 12000,
+        "imageUrl": "/images/4.png",
+        "likes": 8,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
+    },
+    {
+        "id": "8",
+        "title": "아이브 포토카드",
+        "description": "아이브 포카 세트",
+        "category": "포토카드",
+        "price": 12000,
+        "imageUrl": "/images/4.png",
+        "likes": 8,
+        "createdAt": "2023-10-01T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 70
     }
+    
 ]
