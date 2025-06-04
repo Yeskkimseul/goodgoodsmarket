@@ -3,6 +3,7 @@ import { Goods } from "../types";
 import GoodsCard from "../components/GoodsCard";
 import Layout from "../components/Layout";
 import styles from "./CardListLayout.module.css"
+import Header from "../components/header/Header";
 
 const Popular = () => {
     const [goodsList, setGoodsList] = useState<Goods[]>([]);
@@ -21,6 +22,7 @@ const Popular = () => {
     },[])
     return (
         <Layout>
+            <Header type="type2"></Header>
             <h2 style={{marginBlock:20}}>인기 굿즈 순</h2>
             <div className={styles.list}>
                 {goodsList.map((item) =>(

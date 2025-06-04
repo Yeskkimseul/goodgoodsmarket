@@ -1,21 +1,81 @@
-
-.wrapper{
-    padding: var(--space16);
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.title{
+.inner {
+    width: 420px;
+    margin: 0 auto;
+    padding: var(--space16);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
     display: flex;
     gap: var(--space8);
     flex-direction: column;
     justify-content: left;
 }
 
-.logo{
-    width: clamp(80px,6vw,120px);
+.logo {
+    width: clamp(80px, 6vw, 120px);
 }
 
-.inputbox{
+.inputlist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space40);
+}
+
+/* 비밀번호용 inputbox */
+.inputbox {
     display: flex;
     flex-direction: column;
     gap: var(--space8);
+}
+
+.password {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.inicon {
+    position: absolute;
+    top: 50%;
+    right: var(--space16);
+    transform: translateY(-50%);
+    width: clamp(18px, 2vw, 20px);
+    height: auto;
+    cursor: pointer;
+}
+
+.phone {
+    display: flex;
+    gap: var(--space8);
+}
+
+.phonebtn {
+    width: 120px;
+
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+
+    padding: clamp(12px, 2vh, 14px) 0;
+    background-color: var(--button-bgdefault);
+    color: var(--button-textdefault);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }

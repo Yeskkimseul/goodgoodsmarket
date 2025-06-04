@@ -1,0 +1,26 @@
+.header {
+    padding: 0 var(--space16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: clamp(62px, 6vw, 103px);
+    border-bottom: 1px solid var(--stroke-lightE);
+}
+
+.icon img {
+    width: clamp(24px, 2.5vw, 32px);
+    height: clamp(24px, 2.5vw, 32px);
+}
+
+.logo img {
+    height: clamp(30px, 4vw, 46px);
+}
+
+.right {
+    display: flex;
+    gap: var(--space24);
+}
+
+.right img {
+    width: clamp(24px, 2.5vw, 32px);
+}

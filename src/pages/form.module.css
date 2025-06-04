@@ -12,12 +12,17 @@
 }
 
 .input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  width: 100%;
+  padding: clamp(14px,2vh,16px) clamp(16px,2vw,20px);
+  border-radius: 8px;
   background: var(--fields-form);
+  font-family: var(--pre);
+  font-size: var(--font-body1);
+  color : var(--fields-text);
+  font-weight: 400;
+  line-height: 160%;
 }
+
 
 .textarea {
   padding: 10px;
@@ -28,19 +33,34 @@
   resize: vertical;
 }
 
-.button {
-  padding: 12px;
-  background-color: #5C7AEA;
-  color: white;
+.button_big {
+  font-size: var(--font-button);
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+  width: 100%;
+  padding: clamp(12px, 2vh, 14px) 0;
+  background-color: var(--button-bgdefault);
+  color: var(--button-textdefault);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-.button:hover {
-  background-color: #3e4dd4;
+.button_big:hover {
+  background-color: var(--button-bghover);
+}
+.button_big:disabled {
+  background-color: var(--button-bgdisabled);
+  color: var(--button-textdisabled);
+  cursor: not-allowed;
+}
+.button_big:active {
+  background-color: var(--button-active);
 }
 
 .preview {
