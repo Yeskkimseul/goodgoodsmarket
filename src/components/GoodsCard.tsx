@@ -58,7 +58,7 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
                     <img
                         src={liked ? process.env.PUBLIC_URL + '/images/icon/heart_on.svg' : process.env.PUBLIC_URL + '/images/icon/heart_off.svg'}
                         alt={liked ? '좋아요 취소' : '좋아요'}
-                        style={{ width: 24, height: 24 }}
+                        className={styles.heartIcon}
                     />
                 </button>
             </div>
