@@ -7,11 +7,12 @@ import GoodsCategoryItem from "../components/GoodsCategoryItem";
 import CommuCard from "../components/CommuCard";
 import { useCommu } from "../context/CommuContext";
 import MainMoreBtn from "../components/MainMoreBtn";
+import Header from "../components/header/Header";
 
 const Home = () => {
     //굿즈 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
     const { goodsList, setGoodsList } = useGoods();
-    
+
     //커뮤니티 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
     const { commuList, setCommuList } = useCommu();
 
@@ -54,7 +55,7 @@ const Home = () => {
 
     return (
         <Layout>
-
+            <Header type="type7"></Header>
             {/* 상단 찜 갯수/필터 버튼 */}
             {/*  <div className={styles.topBar}>
                 <span className={styles.likeCount}>
