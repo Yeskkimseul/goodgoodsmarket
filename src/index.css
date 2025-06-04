@@ -153,6 +153,8 @@ body {
   --fields-strokeerror: #FF4040;
   --fields-textdisabled: #759496;
 
+  /* icon_size */
+  --icon-size: clamp(24px, 2.5vw, 32px);
 }
 
 h1 {

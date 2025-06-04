@@ -8,8 +8,8 @@
 }
 
 .icon img {
-    width: clamp(24px, 2.5vw, 32px);
-    height: clamp(24px, 2.5vw, 32px);
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 
 .logo img {
@@ -22,5 +22,5 @@
 }
 
 .right img {
-    width: clamp(24px, 2.5vw, 32px);
+    width: var(--icon-size);
 }
