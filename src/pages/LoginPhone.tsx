@@ -5,7 +5,7 @@ import style from '../pages/form.module.css'
 import { useNavigate } from 'react-router-dom';
 
 
-const LoginEmail = () => {
+const LoginPhone = () => {
 
     const [hide, setHide] = useState([true, true]);
 
@@ -68,4 +68,4 @@ const LoginEmail = () => {
         </div>
     )
 }
-export default LoginEmail;
+export default LoginPhone;
