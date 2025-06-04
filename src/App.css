@@ -2,6 +2,9 @@
 *{
     box-sizing: border-box;
 }
+.cusor{
+  cursor: pointer;
+}
 body {
   margin: 0;
   padding: 0;
@@ -28,6 +31,7 @@ body,
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  padding-top: clamp(62px, 6vw, 103px);;
 }
 
 .inner {

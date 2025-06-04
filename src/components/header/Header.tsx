@@ -11,16 +11,17 @@ type HeaderType = 'type1' | 'type2' | 'type3' | 'type4' | 'type5' | 'type6' | 't
 interface HeaderProps {
     type: HeaderType;
     title?: string;
+    onComplete?: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ type,title }) => {
+const Header = ({ type, title, onComplete }: HeaderProps) => {
     switch (type) {
         case 'type1':
-            return <HeaderType1 title={title || '필요한 제목으로 바꿔쓰시기'}/>;
+            return <HeaderType1 title={title || '필요한 제목으로 바꿔쓰시기'} />;
         case 'type2':
             return <HeaderType2 />;
         case 'type3':
-            return <HeaderType3 />;
+            return <HeaderType3 onComplete={onComplete} />;
         case 'type4':
             return <HeaderType4 />;
         case 'type5':
