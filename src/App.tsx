@@ -52,9 +52,9 @@ function App() {
 
     <GoodsProvider>
       <CommuProvider>
-        <>
+        {/* <>
           {loading ? <SplashScreen /> : <Login />}
-        </>
+        </> */}
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login/email" element={<LoginEmail />} />
