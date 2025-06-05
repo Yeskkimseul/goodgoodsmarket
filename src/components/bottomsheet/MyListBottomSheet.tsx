@@ -4,24 +4,24 @@ import BottomSheet from "./BottomSheet";
 import BottomSheetList from "./BottomSheetList";
 import { useNavigate } from "react-router-dom";
 
-interface CommuBottomSheetProps {
+interface MyListBottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-const CommuBottomSheet = ({ isOpen, onClose }: CommuBottomSheetProps) => {
+const MyListBottomSheet = ({ isOpen, onClose }: MyListBottomSheetProps) => {
     const navigate = useNavigate();
 
     const items: SheetItem[] = [
         {
-            label: "차단하기",
-            icon: <img src="/images/bottomsheet/bs_block.svg" alt="차단" />,
-            onClick: () => alert("차단 모달 오픈"),
+            label: "수정하기",
+            icon: <img src="/images/bottomsheet/bs_pen.svg" alt="수정" />,
+            onClick: () => navigate("#"),
         },
         {
-            label: "신고하기",
-            icon: <img src="/images/bottomsheet/bs_report.svg" alt="신고" />,
-            onClick: () => navigate("#"),
+            label: "삭제하기",
+            icon: <img src="/images/bottomsheet/bs_trash.svg" alt="삭제" />,
+            onClick: () => alert("삭제 모달 오픈"),
         },
     ];
 
@@ -32,4 +32,4 @@ const CommuBottomSheet = ({ isOpen, onClose }: CommuBottomSheetProps) => {
     );
 };
 
-export default CommuBottomSheet;
+export default MyListBottomSheet;

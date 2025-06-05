@@ -37,6 +37,7 @@ const ChatBottomSheet = ({ isOpen, onClose }: ChatBottomSheetProps) => {
             label: "채팅방 나가기",
             icon: <img src="/images/bottomsheet/bs_out.svg" alt="나가기" />,
             onClick: () => alert("모달 오픈"),
+            color: "var(--text-error)",
         },
     ];
 
