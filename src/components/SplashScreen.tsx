@@ -5,8 +5,15 @@ import Splash from "./SplashScreen.module.css"
 const SplashScreen = () => {
     //children 컴포넌트 안에 들어가는 컨텐츠
     return (
-        <div className="splash-container">
-         
+        <div className={Splash.wrapper}>
+            <div className={Splash.inner}>
+                <img src='/images/splash/logo.svg' alt='굿굿마켓' className={Splash.logo} />
+                <div className={Splash.center}>
+                    <img src="/images/splash/BE.svg" alt="BE" className={Splash.be} />
+                    <img src="/images/splash/centerimg.svg" alt="" className={Splash.centerimg} />
+                    <img src="/images/splash/YOURSELF.svg" alt="YOURSELF" className={Splash.yourself} />
+                </div>
+            </div>
         </div>
     )
 }
