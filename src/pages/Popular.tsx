@@ -22,7 +22,7 @@ const Popular = () => {
     },[])
     return (
         <Layout>
-            <Header type="type1" title=" "></Header>
+            <Header type="type7"></Header>
             <h2 style={{marginBlock:20}}>인기 굿즈 순</h2>
             <div className={styles.list}>
                 {goodsList.map((item) =>(
