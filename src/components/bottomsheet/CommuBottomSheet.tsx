@@ -4,12 +4,12 @@ import BottomSheet from "./BottomSheet";
 import BottomSheetList from "./BottomSheetList";
 import { useNavigate } from "react-router-dom";
 
-interface ChatBottomSheetProps {
+interface CommuBottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-const ChatBottomSheet = ({ isOpen, onClose }: ChatBottomSheetProps) => {
+const CommuBottomSheet = ({ isOpen, onClose }: CommuBottomSheetProps) => {
     const navigate = useNavigate();
 
     const items: SheetItem[] = [
@@ -47,4 +47,4 @@ const ChatBottomSheet = ({ isOpen, onClose }: ChatBottomSheetProps) => {
     );
 };
 
-export default ChatBottomSheet;
+export default CommuBottomSheet;
