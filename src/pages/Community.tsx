@@ -1,4 +1,5 @@
-import Layout from "../components/Layout";
+/* import Layout from "../components/Layout"; */
+import Nav from "../components/Nav";
 import { useEffect, useState } from "react";
 import { Commu } from "../types/commu";
 import CommuCard from "../components/CommuCard";
@@ -50,20 +51,20 @@ const Community = () => {
             : filteredList;
 
     return (
-        <Layout>
+        <div className={commustyles.container}>
             <Header type="type7" />
-            <div className={commustyles.inner}>
-            <div className={filterstyles.filterContainer}>
-                {filterList.map(f => (
-                    <button
-                        className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
-                        key={f.value}
-                        onClick={() => setFilter(f.value)}
-                    >
-                        {f.label}
-                    </button>
-                ))}
-            </div>
+            <div>
+                <div className={filterstyles.filterContainer}>
+                    {filterList.map(f => (
+                        <button
+                            className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
+                            key={f.value}
+                            onClick={() => setFilter(f.value)}
+                        >
+                            {f.label}
+                        </button>
+                    ))}
+                </div>
                 {
                     sortedList.map((item) => (
                         <CommuCard
@@ -97,7 +98,10 @@ const Community = () => {
                     )}
                 />
             </div>
-        </Layout>
+            <div className={commustyles.commuNav}>
+                <Nav />
+            </div>
+        </div>
     )
 
 }

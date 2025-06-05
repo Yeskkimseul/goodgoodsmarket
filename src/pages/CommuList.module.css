@@ -1,3 +1,15 @@
-.inner{
-      padding-top: clamp(60px, 6vw, 103px);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+}
+
+.commuNav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
 }

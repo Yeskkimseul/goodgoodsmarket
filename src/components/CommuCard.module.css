@@ -1,6 +1,8 @@
 .card {
     width: 100%;
     height: auto;
+    margin: 0 auto;
+
 }
 
 .link {
@@ -9,11 +11,11 @@
     display: flex;
     text-decoration: none;
     color: inherit;
-    /* padding: 16px; */
-    padding: 16px 0;
+    padding: 16px clamp(16px, 6vw, 78px);
     gap: clamp(6px, 1vw, 9px);
     flex-shrink: 0;
     border-bottom: 1px solid var(--stroke-lightE);
+    background: var(--bg-white);
 }
 
 .cardLeft {
@@ -24,19 +26,19 @@
 
 .categoryBox {
     display: inline-block;
-    padding:  clamp(4px, 1vw, 6px) clamp(6px, 1.5vw, 9px);
+    padding: clamp(4px, 1vw, 6px) clamp(6px, 1.5vw, 9px);
     background: var(--bg-lightE);
     border-radius: 9px;
     color: var(--text-grey);
     margin-bottom: clamp(6px, 1.5vw, 12px);
-    
+
 }
 
 .title {
-  margin-bottom: clamp(6px, 1.5vw, 12px);
-  font-size: clamp(16px, 4vw, 28px);
-  line-height: 125%;
-  font-weight: 600;
+    margin-bottom: clamp(6px, 1.5vw, 12px);
+    font-size: clamp(16px, 4vw, 28px);
+    line-height: 125%;
+    font-weight: 600;
 }
 
 .userName {
@@ -66,30 +68,30 @@
 }
 
 .image {
-   width: clamp(100px, 20vw, 146px);
-height: clamp(100px, 20vw, 146px);
+    width: clamp(100px, 20vw, 146px);
+    height: clamp(100px, 20vw, 146px);
     border-radius: 8px;
     object-fit: cover;
 }
 
-.commuRateText{
+.commuRateText {
     font-size: clamp(14px, 2vw, 18px);
     color: var(--text-lightgrey);
     line-height: 125%;
 
 }
-/* @media (max-width: 375px) {
+
+/*  @media (max-width: 375px) {
    .userName{
   font-size: var(--font-h5);
 
 } 
-}
+} */
 
 
 
 @media (max-width: 1200px) {
-     .userName{
-  font-size: var(--font-h5);
-
-} 
-} */
+    /*   .card{
+        padding: 0 320px;
+    } */
+}
