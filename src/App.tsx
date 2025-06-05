@@ -16,6 +16,7 @@ import CommuUpload from "./pages/CommuUpload"; //커뮤니티업로드
 import MyCommu from "./pages/MyCommu"; //내 커뮤니티
 import Mypage from "./pages/Mypage"; //마이페이지
 import MyDeals from "./pages/MyDeals"; //내 거래내역
+import WriteReview from "./pages/WriteReview";//리뷰 작성
 import Liked from "./pages/Liked"; //찜
 import Alarm from "./pages/Alarm"; //알림보기
 
@@ -61,7 +62,9 @@ function App() {
           <Route path="/liked" element={<Liked />} />
           <Route path="/mypage/alarm" element={<Alarm />} />
           <Route path="/mypage/mydeals" element={<MyDeals />} />
+          <Route path="/writereview" element={<WriteReview />} />
 
+          {/* 수정 전 참고용 페이지들 */}
 
 
           <Route path="/edit/:id" element={<Edit />} />
