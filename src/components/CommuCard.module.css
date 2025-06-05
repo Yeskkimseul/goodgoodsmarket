@@ -29,11 +29,14 @@
     border-radius: 9px;
     color: var(--text-grey);
     margin-bottom: clamp(6px, 1.5vw, 12px);
-
+    
 }
 
 .title {
   margin-bottom: clamp(6px, 1.5vw, 12px);
+  font-size: clamp(16px, 4vw, 28px);
+  line-height: 125%;
+  font-weight: 600;
 }
 
 .userName {
