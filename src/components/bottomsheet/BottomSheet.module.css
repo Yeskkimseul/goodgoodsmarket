@@ -9,11 +9,13 @@
 }
 
 .sheet {
+  max-width: 1200px;
   width: 100%;
-  max-height: 70%;
+  margin: 0 auto;
+  height: auto;
   background: white;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   padding: 20px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.3s ease-out;
