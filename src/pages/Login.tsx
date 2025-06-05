@@ -1,16 +1,33 @@
 import style from '../pages/form.module.css'
 import Logins from '../pages/Login.module.css'
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SplashScreen from '../components/SplashScreen';
 
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    //스플래시화면
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500); //3초 후에 로딩 완료
+
+    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
+  }, []);
+
+  if (loading) {
+  return <SplashScreen />;
+}
+
 
   return (
     <div className={Logins.wrapper}>
+ 
       <div className={Logins.inner}>
 
         <div className={Logins.center}>
@@ -56,9 +73,9 @@ const Login = () => {
             </div>{/* social */}
             <div className={Logins.option}>
               <Link to='/join' className='caption'>회원가입</Link>
-            
+
               <Link to='#' className='caption'>비밀번호 재설정</Link>
-              
+
               <Link to='#' className='caption'>계정 찾기</Link>
 
               <Link to='#' className='caption'>문의하기</Link>
