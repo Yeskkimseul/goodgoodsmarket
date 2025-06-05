@@ -1,6 +1,6 @@
 /* Header빼고 나머지 전체 마진값 넣기 */
 .pageContent{
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 
@@ -9,14 +9,15 @@
   justify-content: center;
   margin-bottom: 40px;
   width: 100%;
-  height: 104px;
+  height: 5vw; 
 }
 
 .tableft,
 .tabright {
+  position: relative;
   padding: 10px 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,13 +25,27 @@
   align-items: center;
   color: var(--stroke-grey);
 }
-
+/* .tableft::after,
+.tabright::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-black);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+} */
 .active {
-  border-bottom: 2px solid var(--text-black);
   color: var(--text-black);
+  border-bottom: 1px solid #000;
 
 }
-
+/* .active::after {
+  transform: scaleX(1);
+} */
 .tabContent {
   text-align: center;
   font-size: 1.2rem;
@@ -39,8 +54,10 @@
 
 
 /* tab inner padding적용 해제 */
-.tab {
+/* .tab {
   position: relative;
   left: calc(-1 * var(--tab-horizontal-padding, clamp(16px, 20vw, 78px)));
   width: calc(100% + var(--tab-horizontal-padding, clamp(16px, 20vw, 78px)) * 2);
-}
+}  */
+
+

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import styles from './Tab.module.css';
+import GoodsCard from "../../components/GoodsCard";
+
 
 const DefaultTab: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'exchange' | 'buy'>('exchange');
 
   return (
     <div>
-      <div className={styles.tab}>
+      <div className={styles.tab} >
         <div
           className={`${styles.tableft} ${activeTab === 'exchange' ? styles.active : ''}`}
           onClick={() => setActiveTab('exchange')}

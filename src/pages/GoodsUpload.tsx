@@ -5,6 +5,7 @@ import { Goods } from "../types";
 import styles from "./form.module.css"
 import { useGoods } from "../context/GoodsContext";
 import { uploadToCloudinary } from "../utils/cloudinary";
+import Header from "../components/header/Header";
 
 const conditionOptions = ["새 상품", "중고"];
 const itemOptions = ["없음", "일부 포함", "전체 포함"];
@@ -105,20 +106,21 @@ const GoodsUpload = () => {
     // navigate('/');
     return (
         <Layout>
+            <Header type="type1" />
             <div>
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <label>
-                        이미지 업로드
-                        <input type="file" accept="image/*" onChange={handleImageChange} />
+                    <label className={styles.imguploadlabel}>
+                       
+                        <input type="file" accept="image/*" onChange={handleImageChange} className={styles.imgupload}/>
                     </label>
                     {imageUrl && <img src={imageUrl} alt="업로드 미리보기" className={styles.previewImage} />}
                     <label>
-                        제목
+                        상품명
                         <input
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            placeholder="굿즈 제목을 입력하세요"
+                            placeholder="상품명을 입력해주세요."
                         />
                     </label>
                     <label>
@@ -132,12 +134,12 @@ const GoodsUpload = () => {
                         </select>
                     </label>
                     <label>
-                        가격
+                        판매가
                         <input
                             type="number"
                             value={price}
                             onChange={(e) => setPrice(Number(e.target.value))}
-                            placeholder="가격을 입력하세요"
+                            placeholder="가격을 입력해주세요."
                         />
                     </label>
                     <label>
