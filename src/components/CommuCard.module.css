@@ -1,7 +1,6 @@
 .card {
     width: 100%;
     height: auto;
-    background: #ccc;
 }
 
 .link {
@@ -13,14 +12,81 @@
     /* padding: 16px; */
     padding: 16px clamp(16px, 3vw, 78px);
     gap: clamp(6px, 1vw, 9px);
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--stroke-lightE);
 }
-.cardLeft{
-    flex: 1;
+
+.cardLeft {
+    flex: 1 0 0 auto;
     width: 100%;
-    background: #ddd;
+    height: auto;
 }
+
+.categoryBox {
+    display: inline-block;
+    padding:  clamp(4px, 1vw, 6px) clamp(6px, 1.5vw, 9px);
+    background: var(--bg-lightE);
+    border-radius: 9px;
+    color: var(--text-grey);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
+
+}
+
+.title {
+  margin-bottom: clamp(6px, 1.5vw, 12px);
+}
+
+.userName {
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 125%;
+    font-weight: 500;
+    margin-bottom: clamp(4px, 0.5vw, 9px);
+    color: var(--text-lightgrey);
+
+}
+
+.underline {
+    display: flex;
+    gap: clamp(10px, 2vw, 15px);
+}
+
+.commuRate {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 1vw, 9px);
+
+}
+
+.commuListIcon {
+    width: clamp(14px, 2vw, 18px);
+    height: clamp(14px, 2vw, 18px);
+}
+
 .image {
-    width: clamp(100px, 10vw, 146px);
-    height: clamp(100px, 10vw, 146px);
+   width: clamp(100px, 6vw, 146px);
+height: clamp(100px, 6vw, 146px);
     border-radius: 8px;
+    object-fit: cover;
 }
+
+.commuRateText{
+    font-size: clamp(14px, 2vw, 18px);
+    color: var(--text-lightgrey);
+    line-height: 125%;
+
+}
+/* @media (max-width: 375px) {
+   .userName{
+  font-size: var(--font-h5);
+
+} 
+}
+
+
+
+@media (max-width: 1200px) {
+     .userName{
+  font-size: var(--font-h5);
+
+} 
+} */
