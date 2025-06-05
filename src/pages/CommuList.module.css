@@ -1,0 +1,3 @@
+.inner{
+      padding-top: clamp(60px, 6vw, 103px);
+}

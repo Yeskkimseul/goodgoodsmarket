@@ -66,8 +66,8 @@
 }
 
 .image {
-   width: clamp(100px, 6vw, 146px);
-height: clamp(100px, 6vw, 146px);
+   width: clamp(100px, 20vw, 146px);
+height: clamp(100px, 20vw, 146px);
     border-radius: 8px;
     object-fit: cover;
 }

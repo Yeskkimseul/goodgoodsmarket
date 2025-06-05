@@ -13,5 +13,6 @@ export interface Goods {
     sellerimgUrl: string,
     sellerName: string,
     sellerTrust: number,
+    isExchangeable: boolean ,
     /* 굿즈라는 타입이 형식을 지켜줌 */
 }

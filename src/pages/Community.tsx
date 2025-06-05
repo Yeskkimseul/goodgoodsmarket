@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Commu } from "../types/commu";
 import CommuCard from "../components/CommuCard";
 import styles from './CardListLayout.module.css';
+import commustyles from './CommuList.module.css';
+import filterstyles from './filter.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
@@ -11,6 +13,14 @@ const Community = () => {
 
     //커뮤니티 리스트 상태 추가
     const [commuList, setCommuList] = useState<Commu[]>([]);
+    const [filter, setFilter] = useState<string>('추천');
+    const filterList = [
+        { label: '추천', value: '추천' },
+        { label: '인기', value: '인기' },
+        { label: '굿즈 소식', value: '굿즈 소식' },
+        { label: '굿즈 자랑', value: '굿즈 자랑' },
+        { label: '자유게시판', value: '자유게시판' },
+    ];
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -26,12 +36,36 @@ const Community = () => {
         }
     }, []);
 
+    // 필터링/정렬 로직
+    const filteredList = commuList.filter(item => {
+        if (filter === '굿즈 소식') return item.category === '굿즈 소식';
+        if (filter === '굿즈 자랑') return item.category === '굿즈 자랑';
+        if (filter === '자유게시판') return item.category === '자유게시판';
+        return true;
+    });
+    const sortedList = filter === '추천'
+        ? [...filteredList].sort((a, b) => b.views - a.views)
+        : filter === '인기'
+            ? [...filteredList].sort((a, b) => b.likes - a.likes)
+            : filteredList;
+
     return (
         <Layout>
-            <Header type="type7"></Header>
-            <div>
+            <Header type="type7" />
+            <div className={commustyles.inner}>
+            <div className={filterstyles.filterContainer}>
+                {filterList.map(f => (
+                    <button
+                        className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
+                        key={f.value}
+                        onClick={() => setFilter(f.value)}
+                    >
+                        {f.label}
+                    </button>
+                ))}
+            </div>
                 {
-                    commuList.map((item) => (
+                    sortedList.map((item) => (
                         <CommuCard
                             key={item.id}
                             item={item}
