@@ -16,7 +16,8 @@
         ],
         "sellerimgUrl": "/images/seller1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isExchangeable" : true
     },
     {
         "id": "2",
