@@ -82,7 +82,7 @@ console.log("전체 굿즈 개수:", displayedList.length);
     modules={[Navigation, Pagination, Autoplay]}
     spaceBetween={10}
     slidesPerView={1}
-    navigation
+    /* navigation */
     pagination={{ clickable: true }}
     autoplay={{ delay: 3000 }}
     loop

@@ -87,3 +87,31 @@
 .goodgoodspicktxt span{
   color: var(--main-mint);
 }
+
+
+
+/* swiper pignation */
+
+/* swiper pagination 위치 조정 */
+.mainThumb {
+position: relative;
+padding-bottom: 100px;
+}
+
+:global(.swiper-pagination) {
+
+}
+
+/* 각 불릿(점) */
+:global(.swiper-pagination .swiper-pagination-bullet) {
+  background-color: var(--sub-lightmint);
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* 활성화된 불릿 */
+:global(.swiper-pagination .swiper-pagination-bullet-active) {
+  background-color: var(--main-mint);
+  opacity: 1;
+}
