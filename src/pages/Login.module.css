@@ -5,14 +5,16 @@
     flex-direction: column;
     background: var(--bg-white);
 }
+
 @media (max-width: 500px) {
-    html{
-       width: 100%;
-       height: 100%;
-       background: var(--bg-white);
-       overflow-x: hidden;
+    html {
+        width: 100%;
+        height: 100%;
+        background: var(--bg-white);
+        overflow-x: hidden;
     }
 }
+
 .inner {
     width: 420px;
     margin: 0 auto;
@@ -23,23 +25,39 @@
     justify-content: space-between;
 }
 
+
 .title {
+    margin-top: var(--space16);
     display: flex;
     gap: var(--space8);
     flex-direction: column;
     justify-content: left;
 }
 
+.title2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
+}
+
 .logo {
     width: clamp(80px, 6vw, 120px);
-    margin-top: clamp(62px, 6vw, 103px);
 }
 
 .con {
-    margin-top: var(--space16);
+    height: 100%;
+    margin-top: clamp(62px, 6vw, 103px);
     display: flex;
     flex-direction: column;
     gap: var(--space40);
+}
+.center {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: var(--space56);
+    justify-content: center;
 }
 
 /* 비밀번호용 inputbox */
@@ -87,23 +105,26 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-.phonebtn:hover{
+
+.phonebtn:hover {
     background-color: var(--button-bghover);
 }
-.phonebtn:active{
+
+.phonebtn:active {
     /* background-color: var(--white);
     border: 1px solid var(--stroke-grey);
     color: var(--main-mint); */
     background-color: var(--button-bgactive);
 }
-.phonebtn:disabled{
+
+.phonebtn:disabled {
     background-color: var(--button-bgdisabled);
     color: var(--button-textdisabled);
     cursor: not-allowed;
 }
 
 /* 연달아있는 inputlist */
-.inputboxlist{
+.inputboxlist {
     display: flex;
     flex-direction: column;
     gap: var(--space16);
