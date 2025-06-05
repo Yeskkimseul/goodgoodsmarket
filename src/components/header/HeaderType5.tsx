@@ -12,11 +12,11 @@ const HeaderType5: React.FC = () => {
 
     return (
         <header className={styles.header}>
-            <ul className={styles.icon} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
-                <li><img src="/images/header/header_back.svg" alt="뒤로가기" /></li>
-                <li>
+            <ul className={styles.icon}>
+                <li onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}><img src="/images/header/header_back.svg" alt="뒤로가기" /></li>
+                <li className={styles.avatar}>
                     <img src="/images/header/header_avatars.svg" alt="프로필사진" />
-                    <p>키링은 못참지</p>
+                    <h3>키링은 못참지</h3>
                 </li>
             </ul>
             <Link to="/mypage">

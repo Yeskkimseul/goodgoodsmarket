@@ -18,12 +18,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: var(--space16);
 }
 
 .icon img {
     width: var(--icon-size);
     height: var(--icon-size);
 }
+
 
 .logo img {
     height: clamp(30px, 4vw, 46px);
@@ -42,6 +44,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+li {
+    display: flex;
+
+}
+
+li.avatar {
+    gap: var(--space8);
+        align-items: center;
+    height: fit-content;
 }
 
 .done {
