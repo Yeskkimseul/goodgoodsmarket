@@ -1,4 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import SplashScreen from "./components/SplashScreen";
+
 import Login from "./pages/Login"; //로그인
 import LoginEmail from "./pages/LoginEmail"; //이메일 로그인
 import LoginPhone from "./pages/LoginPhone"; //휴대폰 로그인
@@ -30,17 +33,33 @@ import Detail from "./pages/Detail"; //상세페이지
 import Popular from "./pages/Popular"; //인기굿즈보기
 import About from "./pages/About"; //소개
 import { GoodsProvider } from "./context/GoodsContext";
+import { clear } from "console";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    //스플래시화면
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); //3초 후에 로딩 완료
+
+    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
+  }, []);
+
+
   return (
 
     <GoodsProvider>
       <CommuProvider>
+        <>
+          {loading ? <SplashScreen /> : <Login />}
+        </>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login/email" element={<LoginEmail />} />
           <Route path="/login/phone" element={<LoginPhone />} />
-          
+
           <Route path="/join" element={<Join />} />
 
           <Route path="/home" element={<Home />} />
