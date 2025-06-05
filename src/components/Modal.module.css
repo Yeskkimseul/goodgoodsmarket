@@ -16,8 +16,8 @@
 .modal {
     background: var(--bg-white);
     border-radius: 12px;
-    width: 343px;
-    height: 149px;
+    width: auto;
+    height: 155px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -30,20 +30,18 @@
     display: flex;
     flex-direction: column;
     gap: var(--space8);
-    flex: 2;
-    padding-top: 24px;
-    padding-left: 10px;
-    padding-right: 10px;
+    flex: 1.8;
+    padding: 24px 10px;
 }
 
 .modal p {
     color: var(--text-grey);
-    font-size: clamp(14px, 1.4vw, 16px);
+    font-size: clamp(16px, 1.5vw, 18px);
 }
 
 .buttons {
     display: flex;
-    flex: 1.3;
+    flex: 1.5;
     border-top: 1px solid var(--stroke-lightE);
 }
 
@@ -53,6 +51,7 @@ button {
     cursor: pointer;
     font-size: var(--font-button);
     background: none;
+    color: var(--text-black);
 }
 
 button.confirm {

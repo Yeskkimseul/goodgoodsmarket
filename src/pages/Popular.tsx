@@ -5,6 +5,8 @@ import Layout from "../components/Layout";
 import styles from "./CardListLayout.module.css"
 import HeaderType5 from "../components/header/HeaderType5";
 import ChatBottomSheet from "../components/bottomsheet/ChatBottomSheet";
+import CommuBottomSheet from "../components/bottomsheet/CommuBottomSheet";
+import MyListBottomSheet from "../components/bottomsheet/MyListBottomSheet";
 
 const Popular = () => {
     const [goodsList, setGoodsList] = useState<Goods[]>([]);
@@ -28,7 +30,7 @@ const Popular = () => {
 
     return (
         <Layout>
-            <ChatBottomSheet isOpen={isSheetOpen} onClose={closeSheet} />
+            <MyListBottomSheet isOpen={isSheetOpen} onClose={closeSheet} />
             {/* 여기서 onMoreClick에 openSheet 함수 전달 */}
             <HeaderType5 onMoreClick={openSheet} />
             <h2 style={{ marginBlock: 20 }}>인기 굿즈 순</h2>
