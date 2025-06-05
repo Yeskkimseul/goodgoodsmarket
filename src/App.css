@@ -42,7 +42,10 @@ body,
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(16px,20vw,78px);
+  padding-left:clamp(16px,20vw,78px);
+  padding-right:clamp(16px,20vw,78px);
+  padding-top: clamp(62px, 6vw, 103px);
+  padding-bottom: clamp(63px, 5vw, 70px);
   width: 100%;
   background-color: #fff;
 }
