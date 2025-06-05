@@ -22,6 +22,7 @@ const MyListBottomSheet = ({ isOpen, onClose }: MyListBottomSheetProps) => {
             label: "삭제하기",
             icon: <img src="/images/bottomsheet/bs_trash.svg" alt="삭제" />,
             onClick: () => alert("삭제 모달 오픈"),
+            color: "var(--text-error)",
         },
     ];
 
