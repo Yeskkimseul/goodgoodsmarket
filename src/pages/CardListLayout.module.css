@@ -62,7 +62,6 @@
   aspect-ratio: 16 / 7; /* or your own ratio */
   border-radius: 30px;
   overflow: hidden;
-  background-color: #f5f6f8;
   background-size: cover;
   background-position: center;
   margin-bottom: 80px;
@@ -114,4 +113,25 @@ padding-bottom: 100px;
 :global(.swiper-pagination .swiper-pagination-bullet-active) {
   background-color: var(--main-mint);
   opacity: 1;
+}
+
+
+@media (max-width: 375px) {
+  .pageContent{
+    margin-top: 96px;
+  }
+  .mainThumb {
+    position: relative;
+    padding-bottom: 0;
+    width: 100%;
+    height: 297px;
+    margin-bottom: 40px;
+  }
+  .mainThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+  }
 }

@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GoodsCard from "../components/GoodsCard";
 import Layout from "../components/Layout";
 import { useGoods } from "../context/GoodsContext";
@@ -13,130 +13,126 @@ import Header from "../components/header/Header";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-
 const Home = () => {
-    //굿즈 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
     const { goodsList, setGoodsList } = useGoods();
-
-    //커뮤니티 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
     const { commuList, setCommuList } = useCommu();
 
-    //내가 찜한 굿즈 id 목록 (localstorage 기반)
     const [likedIds, setLikedIds] = useState<string[]>([]);
+    const [showOnlyLiked, setshowOnlyLiked] = useState(false);
+    const [isMobile, setIsMobile] = useState(false); // ✅ 모바일 여부 판단용
 
-    //찜한 것만 보기 버튼 눌렀을때
-    const [showOnlyLiked, setshowOnlyLiked] = useState(false)
     useEffect(() => {
-        const stored = localStorage.getItem('goodsList'); //저장된 굿즈
+        const stored = localStorage.getItem('goodsList');
         const liked = localStorage.getItem('likes');
 
-        //로컬 스토리지에 있으면 그걸 쓰고
         if (stored) setGoodsList(JSON.parse(stored));
         else {
-            fetch('data/goods.json') //불러옴
-                .then((res) => res.json()) //json형식으로 바꾸기(자바스크립트 객체로 변환)
+            fetch('data/goods.json')
+                .then((res) => res.json())
                 .then((data) => {
-                    setGoodsList(data) //가져온 데이터를 화면에 보여줄 상태에 저장
+                    setGoodsList(data)
                     localStorage.setItem('goodsList', JSON.stringify(data));
-                    //localstorage에도 똑같이 저장 = 새로고침해도 유지되게
                 })
         }
         if (liked) setLikedIds(JSON.parse(liked));
-    }, [setGoodsList])
+    }, [setGoodsList]);
 
-    //커뮤니티 데이터 불러오기
     useEffect(() => {
         fetch('data/commu.json')
             .then((res) => res.json())
             .then((data) => setCommuList(data));
     }, [setCommuList]);
 
-    //보여줄 리스트 결정 : 찜필터 on이면 찜한 것만 보여주기
-    const displayedList = showOnlyLiked
-        ? goodsList.filter((item) => likedIds.includes(item.id)) /* 찜한 굿즈만 걸리게끔 필터 */
-        : goodsList;
-console.log("전체 굿즈 개수:", displayedList.length);
+    // ✅ 모바일 여부 체크
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
+    const displayedList = showOnlyLiked
+        ? goodsList.filter((item) => likedIds.includes(item.id))
+        : goodsList;
+
+    console.log("전체 굿즈 개수:", displayedList.length);
 
     return (
         <Layout>
-            <Header type="type7"></Header>
-            {/* 상단 찜 갯수/필터 버튼 */}
-            {/*  <div className={styles.topBar}>
-                <span className={styles.likeCount}>
-                    💖 찜한 굿즈: {likedIds.length}개
-                </span>
-                <button onClick={() => setshowOnlyLiked(!showOnlyLiked)}
-                    className={styles.filterButton}>
-                    {showOnlyLiked ? '전체 보기' : '찜한 굿즈만 보기'}
-                </button>
-            </div> */}
+            <Header type="type7" />
 
-
-
-                {/* CardListLayout.module.css에서 mgt관련 .pageContent 수정 -종현- */}
             <div className={styles.pageContent}>
+                {/* ✅ Swiper 슬라이드 - 모바일 이미지 대응 */}
+                <div className={styles.mainThumb}>
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 3000 }}
+                        loop
+                    >
+                        <SwiperSlide>
+                            <img
+                                src={isMobile ? "/images/mobile_thumb1.jpg" : "/images/main_thumb.jpg"}
+                                alt="굿즈 썸네일1"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src={isMobile ? "/images/mobile_thumb2.jpg" : "/images/main_thumb2.jpg"}
+                                alt="굿즈 썸네일2"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src={isMobile ? "/images/mobile_thumb3.jpg" : "/images/main_thumb3.jpg"}
+                                alt="굿즈 썸네일3"
+                            />
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
 
-<div className={styles.mainThumb}>
-  <Swiper
-    modules={[Navigation, Pagination, Autoplay]}
-    spaceBetween={10}
-    slidesPerView={1}
-    /* navigation */
-    pagination={{ clickable: true }}
-    autoplay={{ delay: 3000 }}
-    loop
-  >
-    <SwiperSlide>
-      <img src="/images/main_thumb.jpg" alt="굿즈 썸네일1" />
-    </SwiperSlide>
-    <SwiperSlide>
-      <img src="/images/main_thumb2.jpg" alt="굿즈 썸네일2" />
-    </SwiperSlide>
-    <SwiperSlide>
-      <img src="/images/main_thumb3.jpg" alt="굿즈 썸네일3" />
-    </SwiperSlide>
-  </Swiper>
-</div>
+                <div>
+                    <GoodsCategoryItem />
+                </div>
 
-            {/* <div className={styles.bannertxt}> 배너 슬라이드 </div> */}
+                <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 Pick </div>
 
-            <div>
-                <GoodsCategoryItem />
-            </div>
+                <div className={styles.goodgoodspick}>
+                    {
+                        displayedList.slice(0, 8).map((item) => (
+                            <GoodsCard
+                                key={item.id}
+                                item={item}
+                                likedIds={likedIds}
+                                setLikedIds={setLikedIds}
+                                goodsList={goodsList}
+                                setGoodsList={setGoodsList}
+                                className={styles.card}
+                            />
+                        ))
+                    }
+                </div>
 
-            <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 Pick </div>
-
-            <div className={styles.goodgoodspick}>
-                {
-                    displayedList.slice(0, 8).map((item) => (
-                        <GoodsCard
-                            key={item.id}
-                            item={item}
-                            likedIds={likedIds}
-                            setLikedIds={setLikedIds}
-                            goodsList={goodsList}
-                            setGoodsList={setGoodsList}
-                            className={styles.card}
-                        />
-                    ))
-                }
-            </div>
-            <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
-            <div>
-                {
-                    commuList.slice(0, 4).map((item) => (
-                        <CommuCard
-                            key={item.id}
-                            item={item}
-                            className={styles.card}
-                        />
-                    ))
-                }
-            </div>
-            <MainMoreBtn />
+                <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
+                <div>
+                    {
+                        commuList.slice(0, 4).map((item) => (
+                            <CommuCard
+                                key={item.id}
+                                item={item}
+                                className={styles.card}
+                            />
+                        ))
+                    }
+                </div>
+                <MainMoreBtn />
             </div>
         </Layout>
     )
 }
+
 export default Home;
