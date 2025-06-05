@@ -35,6 +35,7 @@ body {
         height: 100dvh;
         box-sizing: border-box;
     }
+
     .wrapper {
         min-height: 100dvh;
         width: 100vw;
@@ -58,6 +59,10 @@ body {
 
 .logo {
     width: clamp(80px, 6vw, 120px);
+}
+
+.logobig {
+    width: clamp(120px, 8vw, 160px);
 }
 
 .con {
@@ -149,4 +154,54 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--space16);
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
+
+.icon {
+    width: var(--icon-size);
+    height: auto;
+}
+
+/* Login 페이지 */
+.bottom{
+    width: 100%;
+}
+.textline{
+    display: flex;
+    width: 100%;
+    gap: var(--space8);
+    align-items: center;
+    color: var(--text-grey);
+}
+.Line{
+    flex: 1;
+    height: 1px;
+    background-color: var(--text-grey);
+}
+
+.social{
+    display: flex;
+    gap: var(--space16);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialicon{
+    width: clamp(40px, 6vw, 56px);
+    height: auto;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border: 1px solid var(--stroke-lightE);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }

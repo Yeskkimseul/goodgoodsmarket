@@ -3,7 +3,7 @@ import Login from '../pages/Login.module.css'
 import { Link } from 'react-router-dom';
 import style from '../pages/form.module.css'
 import { useNavigate } from 'react-router-dom';
-
+import Header from '../components/header/Header';
 
 const LoginEmail = () => {
 
@@ -20,7 +20,7 @@ const LoginEmail = () => {
 
     return (
         <div className={Login.wrapper}>
-
+            <Header type='type1' title='로그인' />
             <div className={Login.inner}>
 
                 <div className={Login.con}>
@@ -59,7 +59,7 @@ const LoginEmail = () => {
                 </div>{/* inputlist */}
 
                 <div className={style.button_big}
-                onClick={() => navigate('/home')}
+                    onClick={() => navigate('/home')}
                 >
                     로그인
                 </div>

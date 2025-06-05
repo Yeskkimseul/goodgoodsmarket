@@ -4,6 +4,8 @@ import style from '../pages/form.module.css';
 
 const Joininfo = () => {
     const [hide, setHide] = useState([true, true]);
+    // 에러 상태 추가: 비밀번호 설명 에러
+    const [pwDescError, setPwDescError] = useState(false);
 
     const onToggleHide = (index: number) => {
         setHide(prev => {
@@ -28,6 +30,15 @@ const Joininfo = () => {
         }
     };
 
+    // 외부에서 호출할 수 있도록 window에 함수 등록 (alert 후 설명 에러 표시)
+    React.useEffect(() => {
+        (window as any).setPwDescError = () => setPwDescError(true);
+        (window as any).resetPwDescError = () => setPwDescError(false);
+        return () => {
+            delete (window as any).setPwDescError;
+            delete (window as any).resetPwDescError;
+        };
+    }, []);
 
     return (
         <div className={Login.con} style={{ gap: "var(--space24)" }}>
@@ -78,13 +89,12 @@ const Joininfo = () => {
                             onClick={() => onToggleHide(0)} />
                     )}
                 </div>
-                    <div className={style.inputdiscription}>
-                        <div className={style.discriptionbullet}></div>
-                        <div className={style.discriptiontext}>
-                            영문, 특수문자 포함 10자 이상
-                            </div>
+                <div className={style.inputdiscription}>
+                    <div className={`${style.discriptionbullet} ${pwDescError ? style.error : ''}`}></div>
+                    <div className={`${style.discriptiontext} ${pwDescError ? style.error : ''}`}>
+                        {pwDescError ? "10자 이상 입력해주세요." : "영문, 특수문자 포함 10자 이상"}
                     </div>
-
+                </div>
             </div>{/* 비밀번호 입력 */}
 
 

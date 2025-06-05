@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import Login from '../pages/Login.module.css'
-import { Link } from 'react-router-dom';
 import style from '../pages/form.module.css'
+import Logins from '../pages/Login.module.css'
+import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { click } from '@testing-library/user-event/dist/click';
+import Header from '../components/header/Header';
 
-
-const LoginPhone = () => {
-
-   const [clickCount, setClickCount] = useState(0);
-
+const Login = () => {
+    const [hide, setHide] = useState([true, true]);
+    const [clickCount, setClickCount] = useState(0);
     let buttonText = '인증하기';
     let disabled = false;
-    if (clickCount ===1) {
+    if (clickCount === 1) {
         buttonText = '재발송';
     } else if (clickCount >= 2) {
         buttonText = '인증완료';
@@ -24,36 +22,62 @@ const LoginPhone = () => {
         }
     };
 
-   
+    const onToggleHide = (index: number) => {
+        setHide(prev => {
+            const newHide = [...prev];
+            newHide[index] = !newHide[index];
+            return newHide;
+        })
+    }
     const navigate = useNavigate();
 
+
     return (
-        <div className={Login.wrapper}>
+        <div className={Logins.wrapper}>
+            <Header type='type1' title='로그인' />
+            <div className={Logins.inner}>
 
-            <div className={Login.inner}>
-
-                <div className={Login.con}>
-                    <div className={Login.title}>
-                        <img src="/images/login/logoimg_small.svg" alt="logo" className={Login.logo} />
+                <div className={Logins.con}>
+                    <div className={Logins.title}>
+                        <img src="/images/login/logoimg_small.svg" alt="logo" className={Logins.logo} />
                         <h1>휴대폰으로 로그인하기</h1>
                     </div>
 
-                    <div className={Login.inputbox}>
+                    <div className={Logins.inputbox}>
                         <h4>
                             전화번호
                         </h4>
-                        <div className={Login.inputboxlist}>
-                        <div className={Login.phone}>
-                            <input type='number' className={style.input} placeholder='전화번호를 입력해주세요' value={'00000000000'} />
-                            <button className={Login.phonebtn}
-                            onClick={handleClick}
-                            disabled={disabled}>{buttonText}</button>
-                        </div>{/* phone */}
-                        <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' value={'1234'} />
+                        <div className={Logins.inputboxlist}>
+                            <div className={Logins.phone}>
+                                <input type='number' className={style.input} placeholder='전화번호를 입력해주세요' value={'00000000000'} />
+                            </div>{/* phone */}
+
                         </div>
                     </div>{/*전화번호 입력 */}
 
-                </div>{/* con */}
+                    <div className={Logins.inputbox}>
+                        <h4>
+                            비밀번호
+                        </h4>
+                        <div className={Logins.password}>
+                            <input type={hide[0] ? "password" : "text"} className={style.input} placeholder='비밀번호를 입력해주세요.' value={1234} />
+                            {hide[0] ? (
+                                <img
+                                    src="/images/icon/eye_off_20.svg"
+                                    alt='eye_off'
+                                    className={Logins.inicon}
+                                    onClick={() => onToggleHide(0)} />
+                            ) : (
+                                <img
+                                    src="/images/icon/eye_on_20.svg"
+                                    alt='eye_on'
+                                    className={Logins.inicon}
+                                    onClick={() => onToggleHide(0)} />
+                            )}
+                        </div>
+                    </div>{/* 비밀번호 입력 */}
+
+                </div>{/* inputlist */}
 
                 <div className={style.button_big}
                     onClick={() => navigate('/home')}
@@ -65,4 +89,4 @@ const LoginPhone = () => {
         </div>
     )
 }
-export default LoginPhone;
+export default Login;

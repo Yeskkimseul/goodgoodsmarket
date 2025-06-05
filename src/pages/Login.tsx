@@ -4,93 +4,52 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
-  const [hide, setHide] = useState([true, true]);
-  const [clickCount, setClickCount] = useState(0);
-  let buttonText = '인증하기';
-  let disabled = false;
-  if (clickCount === 1) {
-    buttonText = '재발송';
-  } else if (clickCount >= 2) {
-    buttonText = '인증완료';
-    disabled = true;
-  }
-  const handleClick = () => {
-    if (clickCount < 2) {
-      setClickCount(clickCount + 1);
-    }
-  };
 
-  const onToggleHide = (index: number) => {
-    setHide(prev => {
-      const newHide = [...prev];
-      newHide[index] = !newHide[index];
-      return newHide;
-    })
-  }
+const Login = () => {
   const navigate = useNavigate();
 
 
   return (
     <div className={Logins.wrapper}>
-
       <div className={Logins.inner}>
 
-        <div className={Logins.con}>
-          <div className={Logins.title}>
-            <img src="/images/login/logoimg_small.svg" alt="logo" className={Logins.logo} />
-            <h1>이메일로 로그인하기</h1>
-          </div>
+        <div className={Logins.center}>
+          <img src='/images/login/logoimg_big.svg' alt='굿굿마켓' className={Logins.logobig} />
 
-          <div className={Logins.inputbox}>
-            <h4>
-              이메일
-            </h4>
-            <input type='email' className={style.input} placeholder='abc@email.com' value={'admin@email.com'} />
-          </div>{/* 이메일 입력 */}
-          <div className={Logins.inputbox}>
-            <h4>
-              비밀번호
-            </h4>
-            <div className={Logins.password}>
-              <input type={hide[0] ? "password" : "text"} className={style.input} placeholder='비밀번호를 입력해주세요.' value={1234} />
-              {hide[0] ? (
-                <img
-                  src="/images/icon/eye_off_20.svg"
-                  alt='eye_off'
-                  className={Logins.inicon}
-                  onClick={() => onToggleHide(0)} />
-              ) : (
-                <img
-                  src="/images/icon/eye_on_20.svg"
-                  alt='eye_on'
-                  className={Logins.inicon}
-                  onClick={() => onToggleHide(0)} />
-              )}
-            </div>
-          </div>{/* 비밀번호 입력 */}
+          <div className={Logins.btns}>
+            <div className={style.button_big} onClick={() => navigate('/login/email')} style={{ backgroundColor: 'var(--text-black)' }}>
+              <img src='/images/icon/smartphone.svg' alt='휴대폰 아이콘' className={style.btn_icon} />
+              휴대폰으로 로그인 </div>
+            <div className={style.button_big} onClick={() => navigate('/login/phone')} style={{ backgroundColor: 'var(--bg-white)', color: 'var(--text-black)', border: '1px solid var(--stroke-lightE)' }}>
+              <img src='/images/icon/mail.svg' alt='이메일 아이콘' className={style.btn_icon} />
+              이메일로 로그인 </div>
+          </div>{/* btns */}
+          <div className={Logins.bottom}>
+            <div className={Logins.textline}>
+              <div className={Logins.Line}></div>
+              <div className='body2'>
+                또는
+              </div>
+              <div className={Logins.Line}></div>
+            </div>{/* textline */}
 
-          <div className={Logins.inputbox}>
-            <h4>
-              전화번호
-            </h4>
-            <div className={Logins.inputboxlist}>
-              <div className={Logins.phone}>
-                <input type='number' className={style.input} placeholder='전화번호를 입력해주세요' value={'00000000000'} />
-                <button className={Logins.phonebtn}
-                  onClick={handleClick}
-                  disabled={disabled}>{buttonText}</button>
-              </div>{/* phone */}
-              <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' value={'1234'} />
-            </div>
-          </div>{/*전화번호 입력 */}
-        </div>{/* inputlist */}
+            <div className={Logins.social}>
+              <div className={Logins.socialicon}>
+                <img src='/images/login/apple.svg' alt='애플 아이콘' className={Logins.icon} />
+              </div>
+                <div className={Logins.socialicon}>
+                <img src='/images/login/google.svg' alt='구글 아이콘' className={Logins.icon} />
+              </div>
+              <div className={Logins.socialicon} style={{backgroundColor: '#00C73C'}}>
+                <img src='/images/login/naver.svg' alt='네이버 아이콘' className={Logins.icon} />
+              </div>
+                <div className={Logins.socialicon}  style={{backgroundColor: '#1877F2'}}>
+                <img src='/images/login/facebook.svg' alt='페북 아이콘' className={Logins.icon} />
+              </div>
+              </div>{/* social */}
+          </div>{/* bottom */}
 
-        <div className={style.button_big}
-          onClick={() => navigate('/home')}
-        >
-          로그인
-        </div>
+        </div>{/* center */}
       </div>{/* inner */}
 
     </div>
