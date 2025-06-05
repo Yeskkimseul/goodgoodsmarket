@@ -53,7 +53,7 @@
 /* header 제외 mgt 수정-종현- */
 /* home 섹션들 css수정 Home.tsx 참고 */
 .pageContent{
-  margin-top: 160px;
+  margin-top: 40px;
 }
 .mainThumb {
   width: 100%;
