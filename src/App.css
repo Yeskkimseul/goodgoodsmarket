@@ -1,3 +1,9 @@
+
+/* swiper 호출 */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 /* 공통 레이아웃 */
 *{
     box-sizing: border-box;
