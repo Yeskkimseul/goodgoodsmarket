@@ -1,0 +1,25 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space4);
+}
+
+.icon img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.item {
+    height: fit-content;
+    padding: var(--space8);
+    display: flex;
+    align-items: center;
+    gap: var(--space16);
+    font-size: var(body1);
+    cursor: pointer;
+}
+
+.item span {
+    display: flex;
+    align-items: center;
+}
