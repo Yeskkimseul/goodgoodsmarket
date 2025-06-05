@@ -17,7 +17,7 @@ interface HeaderProps {
 const Header = ({ type, title, onComplete }: HeaderProps) => {
     switch (type) {
         case 'type1':
-            return <HeaderType1 title={title || '필요한 제목으로 바꿔쓰시기'} />;
+            return <HeaderType1 title={title || '포토카드'} />;
         case 'type2':
             return <HeaderType2 />;
         case 'type3':

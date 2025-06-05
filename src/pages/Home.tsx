@@ -94,7 +94,7 @@ console.log("전체 굿즈 개수:", displayedList.length);
       <img src="/images/main_thumb2.jpg" alt="굿즈 썸네일2" />
     </SwiperSlide>
     <SwiperSlide>
-      <img src="/images/main_thumb.jpg" alt="굿즈 썸네일3" />
+      <img src="/images/main_thumb3.jpg" alt="굿즈 썸네일3" />
     </SwiperSlide>
   </Swiper>
 </div>

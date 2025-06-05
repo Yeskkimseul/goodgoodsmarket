@@ -1,11 +1,15 @@
 import Layout from "../components/Layout";
+import DefaultTab from "../components/exchangebuy/DefalutTab";
+import Header from "../components/header/Header";
+import styles from '../components/exchangebuy/Tab.module.css';
 
 const GoodsCategory = () =>{
     return(
         <Layout>
-            <div>
-                굿즈카테고리페이지
-            </div>
+            <Header type="type1"></Header>
+      <div className={styles.pageContent}>
+        <DefaultTab />
+      </div>
         </Layout>
     )
 
