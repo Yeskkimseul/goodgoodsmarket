@@ -118,13 +118,13 @@ padding-bottom: 100px;
 
 @media (max-width: 500px) {
   .pageContent{
-    margin-top: 96px;
+    margin-top: 10%;
   }
   .mainThumb {
     position: relative;
     padding-bottom: 0;
     width: 100%;
-    height: 397px;
+    height: 77vw;
     margin-bottom: 40px;
   }
   .mainThumb img {
