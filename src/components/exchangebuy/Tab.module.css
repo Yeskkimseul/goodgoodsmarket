@@ -15,8 +15,6 @@
 .tableft,
 .tabright {
   padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #eee;
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
@@ -24,15 +22,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--stroke-grey);
 }
 
 .active {
-  background-color: #333;
-  color: white;
+  border-bottom: 2px solid var(--text-black);
+  color: var(--text-black);
+
 }
 
 .tabContent {
   text-align: center;
   font-size: 1.2rem;
   margin-top: 16px;
+}
+
+
+/* tab inner padding적용 해제 */
+.tab {
+  position: relative;
+  left: calc(-1 * var(--tab-horizontal-padding, clamp(16px, 20vw, 78px)));
+  width: calc(100% + var(--tab-horizontal-padding, clamp(16px, 20vw, 78px)) * 2);
 }

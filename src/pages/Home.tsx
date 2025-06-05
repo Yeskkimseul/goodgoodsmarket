@@ -46,7 +46,7 @@ const Home = () => {
     // ✅ 모바일 여부 체크
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
+            setIsMobile(window.innerWidth <= 500);
         };
         handleResize();
         window.addEventListener('resize', handleResize);
