@@ -9,6 +9,11 @@ import { useCommu } from "../context/CommuContext";
 import MainMoreBtn from "../components/MainMoreBtn";
 import Header from "../components/header/Header";
 
+/* swiper */
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+
 const Home = () => {
     //굿즈 전체 리스트와 바꾸는 함수 (전역에서 관리 중)
     const { goodsList, setGoodsList } = useGoods();
@@ -72,9 +77,27 @@ console.log("전체 굿즈 개수:", displayedList.length);
                 {/* CardListLayout.module.css에서 mgt관련 .pageContent 수정 -종현- */}
             <div className={styles.pageContent}>
 
-            <div className={styles.mainThumb}>
-                <img src="/images/main_thumb.jpg" alt="굿즈 썸네일" />
-            </div>
+<div className={styles.mainThumb}>
+  <Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    spaceBetween={10}
+    slidesPerView={1}
+    navigation
+    pagination={{ clickable: true }}
+    autoplay={{ delay: 3000 }}
+    loop
+  >
+    <SwiperSlide>
+      <img src="/images/main_thumb.jpg" alt="굿즈 썸네일1" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/main_thumb2.jpg" alt="굿즈 썸네일2" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/main_thumb.jpg" alt="굿즈 썸네일3" />
+    </SwiperSlide>
+  </Swiper>
+</div>
 
             {/* <div className={styles.bannertxt}> 배너 슬라이드 </div> */}
 
