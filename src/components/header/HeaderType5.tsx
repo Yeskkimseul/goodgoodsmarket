@@ -26,7 +26,7 @@ const HeaderType5: React.FC<HeaderProps> = ({ type, onMoreClick }) => {
         </li>
       </ul>
       {/* onMoreClick props를 이용해서 더보기 클릭 이벤트 전달 */}
-      <div onClick={onMoreClick} style={{ cursor: 'pointer' }}>
+      <div onClick={onMoreClick} className={styles.icon} style={{ cursor: 'pointer' }}>
         <img src="/images/header/header_more.svg" alt="더보기" />
       </div>
     </header>
