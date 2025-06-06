@@ -1,10 +1,9 @@
-/* import Layout from "../components/Layout"; */
-import Nav from "../components/Nav";
+import Layout from "../components/Layout";
 import { useEffect, useState } from "react";
 import { Commu } from "../types/commu";
 import CommuCard from "../components/CommuCard";
 import styles from './CardListLayout.module.css';
-import commustyles from './CommuList.module.css';
+// import commustyles from './CommuList.module.css';
 import filterstyles from './filter.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
@@ -51,7 +50,7 @@ const Community = () => {
             : filteredList;
 
     return (
-        <div className={commustyles.container}>
+        <Layout>
             <Header type="type7" />
             <div>
                 <div className={filterstyles.filterContainer}>
@@ -98,10 +97,7 @@ const Community = () => {
                     )}
                 />
             </div>
-            <div className={commustyles.commuNav}>
-                <Nav />
-            </div>
-        </div>
+        </Layout>
     )
 
 }
