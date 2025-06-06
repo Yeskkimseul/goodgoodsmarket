@@ -9,31 +9,39 @@ import SplashScreen from '../components/SplashScreen';
 const Login = () => {
   const navigate = useNavigate();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    // 최초 접속이면 true, 아니면 false
+    return !localStorage.getItem('splashShown');
+  });
 
   useEffect(() => {
-    //스플래시화면
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500); //3초 후에 로딩 완료
+    if (loading) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem('splashShown', 'true'); // 최초 1회만 저장
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
-    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
-  }, []);
 
   if (loading) {
-  return <SplashScreen />;
-}
+    return <SplashScreen />;
+  }
 
 
   return (
     <div className={Logins.wrapper}>
- 
+
       <div className={Logins.inner}>
 
         <div className={Logins.center}>
           <img src='/images/login/logoimg_big.svg' alt='굿굿마켓' className={Logins.logobig} />
 
           <div className={Logins.btns}>
+            <div className={style.button_big} onClick={() => alert('준비 중입니다~')} style={{ backgroundColor: '#FEE500', color: '#191919' }}>
+              <img src='/images/login/kakao.svg' alt='휴대폰 아이콘' className={style.btn_icon} />
+              카카오로 로그인 </div>
             <div className={style.button_big} onClick={() => navigate('/login/phone')} style={{ backgroundColor: 'var(--text-black)' }}>
               <img src='/images/icon/smartphone.svg' alt='휴대폰 아이콘' className={style.btn_icon} />
               휴대폰으로 로그인 </div>
@@ -51,17 +59,17 @@ const Login = () => {
             </div>{/* textline */}
 
             <div className={Logins.social}>
-              <div className={Logins.socialicon}>
+              <div className={Logins.socialicon} onClick={() => alert('준비 중입니다~')}>
                 <img src='/images/login/apple.svg' alt='애플 아이콘' className={Logins.icon} />
               </div>
-              <div className={Logins.socialicon}>
+              <div className={Logins.socialicon} onClick={() => alert('준비 중입니다~')}>
                 <img src='/images/login/google.svg' alt='구글 아이콘' className={Logins.icon} />
               </div>
-              <div className={Logins.socialicon} style={{ backgroundColor: '#00C73C' }}>
+              <div className={Logins.socialicon} style={{ backgroundColor: '#00C73C' }} onClick={() => alert('준비 중 입니다~')}>
                 <img src='/images/login/naver.svg' alt='네이버 아이콘' className={Logins.icon} />
               </div>
               <div
-                className={Logins.socialicon}
+                className={Logins.socialicon} onClick={() => alert('준비 중입니다~')}
                 style={{
                   background:
                     'radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0.00) 100%), radial-gradient(202.83% 136.37% at 84.5% 113.5%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%)'
