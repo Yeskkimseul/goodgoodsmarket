@@ -3,7 +3,7 @@ import styles from "./Modal.module.css";
 
 interface ModalProps {
     title: string;
-    description: string;
+    description: React.ReactNode;
     confirmText: string;
     onConfirm: () => void;
     onCancel: () => void;

@@ -53,7 +53,10 @@ const ChatBottomSheet = ({ isOpen, onClose }: ChatBottomSheetProps) => {
             <Modal
                 isOpen={isBlockModalOpen}
                 title="키링은 못참지 님을 차단하시겠습니까?"
-                description="차단 후, 상대의 게시글 조회와 채팅이 불가능합니다."
+                description={<>
+                    차단 후, 상대의 게시글 조회와 채팅이<br />
+                    불가능합니다.
+                </>}
                 confirmText="차단하기"
                 onConfirm={() => {
                     console.log("차단 완료!");/* 일단 콘솔로... */
