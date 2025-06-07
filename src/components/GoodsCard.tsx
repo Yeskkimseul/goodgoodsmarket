@@ -64,7 +64,9 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
             </div>
                 <h3 className={styles.title}>{item.title}</h3>
                 <h3 className={styles.price}>
-                    {(item.price ?? 0).toLocaleString()}원
+                     {item.isExchangeable
+                        ? '교환 희망 제품'
+                        : (item.price ?? 0).toLocaleString() + '원'}
                 </h3>
             </Link>
         </div>
