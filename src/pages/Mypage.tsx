@@ -1,12 +1,15 @@
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Header from "../components/header/Header";
 import formStyles from "./form.module.css";
 import mypageStyles from "./Mypage.module.css";
 import { useNavigate } from 'react-router-dom';
 import MypageList from "../components/MypageList";
+import Modal from "../components/Modal";
 
 const Mypage = () => {
     const navigate = useNavigate();
+    const [isLogoutModalOpen, setLogoutModalOpen] = useState(false);
 
     return (
         <Layout>
@@ -62,12 +65,25 @@ const Mypage = () => {
                 <div className={mypageStyles.bottom}>
                     <h4>02-1234-5678</h4>
                     <h5>운영시간 10:00 - 18:00</h5>
-                    <div className={formStyles.button} onClick={() => navigate("#")}>로그아웃</div>
+                    <div className={formStyles.button} onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
                 </div>
             </div>
+                    <Modal
+                isOpen={isLogoutModalOpen}
+                title="로그아웃"
+                description={<>
+                    정말 로그아웃할까요?
+                </>}
+                confirmText="로그아웃"
+                onConfirm={() => {
+                    navigate("/");
+                    setLogoutModalOpen(false);
+                }}
+                onCancel={() => setLogoutModalOpen(false)}
+            />
         </Layout>
-    )
+    );
 
-}
+};
 
 export default Mypage;
