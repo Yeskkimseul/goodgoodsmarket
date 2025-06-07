@@ -17,11 +17,13 @@ const Mypage = () => {
                     <div className={mypageStyles.right}>
                         <div className={mypageStyles.top}>
                             <h2 className={mypageStyles.name}>뱃지가 좋아</h2>
-                            <button className={formStyles.button} onClick={() => navigate("#")}>프로필 관리</button>
-                        </div>
+                            <div className={formStyles.button} onClick={() => navigate("#")}>프로필 관리</div>
+                        </div>{/* //.top */}
                         <p>trust붙일자리</p>
                     </div>{/* //.right */}
                 </div>{/* profile */}
+
+
                 <div className={mypageStyles.section}>
                     <div className={mypageStyles.title}>
                         거래
@@ -56,6 +58,12 @@ const Mypage = () => {
                     <MypageList leftContent={<p>앱 설정</p>} to="/어디로갈지 링크걸기" />
                     <MypageList leftContent={<p>고객센터</p>} to="/어디로갈지 링크걸기" />
                 </div>{/* //.section */}
+
+                <div className={mypageStyles.bottom}>
+                    <h4>02-1234-5678</h4>
+                    <h5>운영시간 10:00 - 18:00</h5>
+                    <div className={formStyles.button} onClick={() => navigate("#")}>로그아웃</div>
+                </div>
             </div>
         </Layout>
     )
