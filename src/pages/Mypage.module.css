@@ -1,0 +1,9 @@
+.title {
+    font-size: var(--font-subtit1);
+    padding: var(--space16) 0;
+    font-family: var(--sokcho);
+}
+
+.section {
+    padding: var(--space16) 0;
+}
