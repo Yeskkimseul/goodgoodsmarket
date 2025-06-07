@@ -31,7 +31,7 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
                     setOpen(false);
                 }}
             >
-                내 거래내역 보기
+                내 상품 관리
             </button>
             <button
                 className={styles.closeBtn}
