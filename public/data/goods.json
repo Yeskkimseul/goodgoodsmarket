@@ -17,7 +17,7 @@
         "sellerimgUrl": "/images/seller1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70,
-        "isExchangeable" : true
+        "isExchangeable": true
     },
     {
         "id": "2",
@@ -37,7 +37,7 @@
         "sellerimgUrl": "/images/seller1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70,
-        "isExchangeable" : false
+        "isExchangeable": false
     },
     {
         "id": "3",
@@ -152,6 +152,64 @@
         "sellerimgUrl": "/images/seller1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
+    },
+    {
+        "id": "9",
+        "title": "포켓몬 몬스터볼 플러시 인형",
+        "description": "몬스터볼 팝니다.",
+        "category": "인형",
+        "price": 16000,
+        "imageUrl": "./images/mydeals/sale1.png",
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아아",
+        "sellerTrust": 70
+    },
+    {
+        "id": "10",
+        "title": "포켓몬 몬스터볼 플러시 인형",
+        "description": "몬스터볼 팝니다.",
+        "category": "인형",
+        "price": 16000,
+        "imageUrl": "./images/mydeals/sale1.png",
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "11",
+        "title": "컬러그램 제로베이스원 콜라보 홀더",
+        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
+        "category": "기타",
+        "price": 16000,
+        "imageUrl": "./images/mydeals/sale1.png",
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
     }
-    
 ]
