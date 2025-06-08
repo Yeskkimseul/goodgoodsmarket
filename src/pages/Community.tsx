@@ -82,7 +82,7 @@ const Community = () => {
                                     close();
                                 }}
                             >
-                                게시글 등록
+                                글쓰기기
                             </button>
                             <button
                                 onClick={() => {
@@ -90,7 +90,7 @@ const Community = () => {
                                     close();
                                 }}
                             >
-                                내 등록글 보기
+                                내가 쓴 글글
                             </button>
                             <button onClick={close}>닫기</button>
                         </>
