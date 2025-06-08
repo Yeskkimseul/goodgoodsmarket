@@ -11,7 +11,7 @@ const TrustModal: React.FC<TrustModalProps> = ({ onClose }) => {
             <div className={Styles.modalContent} onClick={e => e.stopPropagation()}>
                 <div className={Styles.title}>
                     <h3>신뢰도 안내</h3>
-                    <div onClick={onClose} className={Styles.closeBtn}><img src="/images/mypage/modal_x.svg" alt="닫기" /></div>
+                    <div onClick={onClose} className={Styles.closeBtn}><img src="/images/mypage/modal_x.svg" alt="닫기" style={{ cursor: "pointer" }}/></div>
                 </div>{/* //.title */}
                 <div className={Styles.list}>
                     <img src="images/mypage/trust_gg.svg" alt="굿굿" />

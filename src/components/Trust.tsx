@@ -14,6 +14,7 @@ const Trust = () => {
                 <h5>신뢰지수 - <span>굿굿</span></h5>
                 <img src="/images/mypage/info.svg" alt="신뢰지수란?"
                     onClick={handleOpenModal}
+                    style={{ cursor: "pointer" }}
                 />
             </div>
             <div className={styles.chart}>
