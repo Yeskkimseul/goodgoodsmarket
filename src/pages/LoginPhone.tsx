@@ -8,8 +8,8 @@ import Header from '../components/header/Header';
 const Login = () => {
     const [hide, setHide] = useState([true, true]);
     const [clickCount, setClickCount] = useState(0);
-    const [phone, setPhone] = useState('');
-    const [password, setPassword] = useState('');
+    const [phone, setPhone] = useState('00000000000');
+    const [password, setPassword] = useState('1234');
     const [phoneError, setPhoneError] = useState(false);
     const [pwError, setPwError] = useState(false);
     let buttonText = '인증하기';

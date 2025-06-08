@@ -1,0 +1,11 @@
+.mypageList {
+    cursor:pointer;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--stroke-lightE);
+    padding: var(--space16) 0;
+}
+
+.icon {
+    width: var(--icon-size);
+}
