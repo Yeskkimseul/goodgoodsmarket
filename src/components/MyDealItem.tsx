@@ -28,23 +28,25 @@ const MyDealItem = ({ item, className }: Props) => {
                 <img src={item.imageUrl} alt={item.title} className={styles.image} />
             </div>
             <div className={styles.cardright}>
-                <div className={styles.title}>{item.title}</div>
-                <div className={styles.price}>
-                    {item.isExchangeable
-                        ? '교환 희망 제품'
-                        : (item.price ?? 0).toLocaleString() + '원'}
+                <div className={styles.righttop}>
+                    <div className={styles.title}>{item.title}</div>
+                    <div className={styles.price}>
+                        {item.isExchangeable
+                            ? '교환 희망 제품'
+                            : (item.price ?? 0).toLocaleString() + '원'}
+                    </div>
                 </div>
                 <div className={styles.date_like}>
                     <span className="caption">
                         {formatDate(item.createdAt)}
                     </span>
                     <div className={styles.heart}>
-                        <img src="/images/icon/heart_small.svg" alt="찜개수"/>
+                        <img src="/images/icon/heart_small.svg" alt="찜개수" />
                         {item.likes}
                     </div>
                 </div>
                 <div className={styles.btns}>
-                    <button className={forms.button_sm}>
+                    <button className={forms.button_sm} style={{ backgroundColor: 'var(--bg-lightE)', color: 'var(--text-grey)' }}>
                         삭제하기
                     </button>
                     <button className={forms.button_sm}>
