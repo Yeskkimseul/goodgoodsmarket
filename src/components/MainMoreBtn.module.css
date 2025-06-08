@@ -67,6 +67,7 @@
 
 
 .popup button {
+  width: 100%;
   padding: 16px;
   border: none;
   font-family: var(--pre);

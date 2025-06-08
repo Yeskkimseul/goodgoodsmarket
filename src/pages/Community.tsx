@@ -5,6 +5,7 @@ import CommuCard from "../components/CommuCard";
 import styles from './CardListLayout.module.css';
 // import commustyles from './CommuList.module.css';
 import filterstyles from './filter.module.css';
+import morestyles from '../components/MainMoreBtn.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
@@ -76,7 +77,8 @@ const Community = () => {
                 <MainMoreBtn
                     popupContent={({ close }: { close: () => void }) => (
                         <div>
-                            <button
+                            <button 
+                            className={morestyles.writeBtn}
                                 onClick={() => {
                                     navigate("/community/commuupload");
                                     close();
@@ -89,6 +91,7 @@ const Community = () => {
                                 게시글 등록
                             </button>
                             <button
+                              className={morestyles.viewBtn}
                                 onClick={() => {
                                     navigate("/community/mycommu");
                                     close();
@@ -100,7 +103,10 @@ const Community = () => {
                                 />
                                 내 등록글 보기
                             </button>
-                            <button onClick={close}>
+                            <button 
+                            className={morestyles.closeBtn}
+                            onClick={close}>
+                                  
                                  <img
                                     src="../../../images/icon/x_medium.svg"
                                     alt="닫기"
