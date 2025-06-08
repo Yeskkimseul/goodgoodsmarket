@@ -126,7 +126,7 @@
             {
                 "id": "c8",
                 "userimgUrl": "/images/users/user1.png",
-                "userName": "포카덕후",
+                "userName": "뱃지가좋아",
                 "content": "저도 있어요! 반갑네요 ㅎㅎ",
                 "createdAt": "2025-05-30T14:00:00Z"
             }
@@ -159,7 +159,7 @@
             {
                 "id": "c10",
                 "userimgUrl": "/images/users/user1.png",
-                "userName": "굿즈초보",
+                "userName": "뱃지가좋아",
                 "content": "요즘 배송이 다 느린가봐요...",
                 "createdAt": "2025-06-02T19:10:00Z"
             }
@@ -178,6 +178,29 @@
     "userimgUrl": "/images/users/user4.png",
     "userName": "라이트메이커",
     "commentsNum": 3,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "8",
+    "title": "뱃지를 좋아하게 된 이유",
+    "description": "이유가 필요할까요? ㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+    "category": "자유게시판",
+    "imageUrl": "/images/commuimgs/commuimg1.png",
+    "likes": 33,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 87,
+    "tags": ["#뱃지", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "뱃지가좋아",
+    "commentsNum": 1,
     "comments": [
       {
         "id": "c9",

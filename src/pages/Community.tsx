@@ -23,18 +23,27 @@ const Community = () => {
     ];
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const stored = localStorage.getItem('commuList'); //저장된 커뮤니티 데이터
-        if (stored) {
-            setCommuList(JSON.parse(stored)); //로컬 스토리지에 있으면 그걸 쓰고
-        }
-        else {
-            //커뮤니티 데이터 불러오기
-            fetch('data/commu.json')
-                .then((res) => res.json())
-                .then((data) => setCommuList(data));
-        }
-    }, []);
+   useEffect(() => {
+    const stored = localStorage.getItem('commuList');
+    if (stored) {
+        // commentsNum 동기화
+        const parsed = JSON.parse(stored).map((item: any) => ({
+            ...item,
+            commentsNum: item.comments ? item.comments.length : 0
+        }));
+        setCommuList(parsed);
+    } else {
+        fetch('data/commu.json')
+            .then((res) => res.json())
+            .then((data) => {
+                const updated = data.map((item: any) => ({
+                    ...item,
+                    commentsNum: item.comments ? item.comments.length : 0
+                }));
+                setCommuList(updated);
+            });
+    }
+}, []);
 
     // 필터링/정렬 로직
     const filteredList = commuList.filter(item => {
