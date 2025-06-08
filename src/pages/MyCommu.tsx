@@ -4,6 +4,7 @@ import { Commu } from "../types/commu";
 import MultiTab from "../components/exchangebuy/MultiTab";
 import Header from "../components/header/Header";
 import style from "./MyCommu.module.css"
+import MycommuItem from "../components/MycommuItem";
 
 const MyCommu = () => {
     const [myPostCount, setMyPostCount] = useState(0);
@@ -61,7 +62,9 @@ const MyCommu = () => {
                     <MultiTab tabs={['내 게시글', '내 댓글']}>
                         {(activeIndex) => (
                             activeIndex === 0 ? (
-                                <div>내 게시글 내용</div>
+                                <div>
+                               
+                                </div>
                             ) : activeIndex === 1 ? (
                                 <div>내 댓글 내용</div>
                             ) : null
