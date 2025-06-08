@@ -5,6 +5,7 @@ import formStyles from "./form.module.css";
 import mypageStyles from "./Mypage.module.css";
 import { useNavigate } from 'react-router-dom';
 import MypageList from "../components/MypageList";
+import Trust from "../components/Trust";
 import Modal from "../components/Modal";
 
 const Mypage = () => {
@@ -18,14 +19,12 @@ const Mypage = () => {
                 <div className={mypageStyles.profile}>
                     <img src="/images/mypage/profile.png" alt="프로필사진" className={mypageStyles.profileImage} />
                     <div className={mypageStyles.right}>
-                        <div className={mypageStyles.top}>
-                            <h2 className={mypageStyles.name}>뱃지가 좋아</h2>
-                            <div className={`${formStyles.button_sm} ${formStyles.width40}`}onClick={() => navigate("#")}>프로필 관리</div>
-                        </div>{/* //.top */}
-                        <p>trust붙일자리</p>
+                        <h2 className={mypageStyles.name}>뱃지가 좋아</h2>
+                        <div className={`${formStyles.button_sm} ${formStyles.width40}`} onClick={() => navigate("#")}>프로필 관리</div>
+
                     </div>{/* //.right */}
                 </div>{/* profile */}
-
+                <Trust/>
 
                 <div className={mypageStyles.section}>
                     <div className={mypageStyles.title}>
@@ -65,10 +64,10 @@ const Mypage = () => {
                 <div className={mypageStyles.bottom}>
                     <h4>02-1234-5678</h4>
                     <h5>운영시간 10:00 - 18:00</h5>
-                    <div className={`${formStyles.button_sm} ${formStyles.width30}`}onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
+                    <div className={`${formStyles.button_sm} ${formStyles.width30}`} onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
                 </div>
             </div>
-                    <Modal
+            <Modal
                 isOpen={isLogoutModalOpen}
                 title="로그아웃"
                 description={<>

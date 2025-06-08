@@ -1,6 +1,7 @@
 .profile {
     padding: var(--space16) 0;
     display: flex;
+    gap: var(--space16);
     align-items: center;
     justify-content: space-between;
 }
@@ -9,8 +10,10 @@
     width: clamp(91px, 12vw, 150px);
 }
 
-.top {
+.right {
+    width: clamp(230px, 25vw, 500px);
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
