@@ -5,20 +5,51 @@ import MultiTab from "../components/exchangebuy/MultiTab";
 import Header from "../components/header/Header";
 import style from "./MyCommu.module.css"
 import MycommuItem from "../components/MycommuItem";
+import MyCommentItem from "../components/MycommentItem";
 
 const MyCommu = () => {
     const [myPostCount, setMyPostCount] = useState(0);
     const [myCommentCount, setMyCommentCount] = useState(0);
     const [myPosts, setMyPosts] = useState<Commu[]>([]);
+    const [myComments, setMyComments] = useState<{ item: Commu, comment: any }[]>([]);
+    const [commuList, setCommuList] = useState<Commu[]>([]);
 
-    //게시글 삭제 로직직
-    const handleDelete = (id: string) => {
-        setMyPosts(prev => {
-            const updated = prev.filter(item => item.id !== id);
-            // localStorage 동기화 (선택)
-            localStorage.setItem('commuList', JSON.stringify(updated));
-            return updated;
+    // 게시글 삭제
+    const handleDeletePost = (id: string) => {
+        const updated = commuList.filter(item => item.id !== id);
+        setCommuList(updated);
+        setMyPosts(updated.filter(item => item.userName === "뱃지가좋아"));
+        localStorage.setItem('commuList', JSON.stringify(updated));
+    };
+
+    // 댓글 삭제
+    const handleDeleteComment = (commentId: string) => {
+        const updated = commuList.map(item => {
+            const newComments = Array.isArray(item.comments)
+                ? (item.comments as any[]).filter((c) => c.id !== commentId)
+                : [];
+            return {
+                ...item,
+                comments: newComments,
+                commentsNum: newComments.length
+            };
         });
+        setCommuList(updated);
+
+        // 내 댓글만 다시 모으기
+        const comments: { item: Commu, comment: any }[] = [];
+        updated.forEach(item => {
+            if (Array.isArray(item.comments)) {
+                (item.comments as any[]).forEach(comment => {
+                    if (comment.userName === "뱃지가좋아") {
+                        comments.push({ item, comment });
+                    }
+                });
+            }
+        });
+        setMyComments(comments);
+        setMyCommentCount(comments.length);
+        localStorage.setItem('commuList', JSON.stringify(updated));
     };
 
     useEffect(() => {
@@ -38,9 +69,29 @@ const MyCommu = () => {
                 setMyCommentCount(commentCount);
                 // 내 게시글 목록 저장
                 setMyPosts(data.filter(item => item.userName === "뱃지가좋아"));
+                setCommuList(data);
             });
     }, []);
 
+    useEffect(() => {
+        fetch('/data/commu.json')
+            .then(res => res.json())
+            .then((data: Commu[]) => {
+                // ...기존 게시글/댓글 수 코드...
+                // 내 댓글만 모으기
+                const comments: { item: Commu, comment: any }[] = [];
+                data.forEach(item => {
+                    if (item.comments && Array.isArray(item.comments)) {
+                        item.comments.forEach(comment => {
+                            if (comment.userName === "뱃지가좋아") {
+                                comments.push({ item, comment });
+                            }
+                        });
+                    }
+                });
+                setMyComments(comments);
+            });
+    }, []);
 
 
     return (
@@ -79,11 +130,15 @@ const MyCommu = () => {
                             activeIndex === 0 ? (
                                 <div>
                                     {myPosts.map(item => (
-                                        <MycommuItem key={item.id} item={item} onDelete={handleDelete} />
+                                        <MycommuItem key={item.id} item={item} onDelete={handleDeletePost} />
                                     ))}
                                 </div>
                             ) : activeIndex === 1 ? (
-                                <div>내 댓글 내용</div>
+                                <div>
+                                    {myComments.map(({ item, comment }) => (
+                                        <MyCommentItem key={comment.id} item={item} comment={comment} onDelete={handleDeleteComment} />
+                                    ))}
+                                </div>
                             ) : null
                         )}
                     </MultiTab>

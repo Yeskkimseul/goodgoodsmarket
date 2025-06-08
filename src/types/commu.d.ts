@@ -18,5 +18,5 @@ export interface Commu {
         userName: string,
         content: string,
         createdAt: string,
-    }
+    }[];
 }

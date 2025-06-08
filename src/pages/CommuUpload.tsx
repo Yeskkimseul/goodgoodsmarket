@@ -49,13 +49,7 @@ const CommuUpload = () => {
             userimgUrl: '',
             userName: '',
             commentsNum: 0,
-            comments: {
-                id: '',
-                userimgUrl: '',
-                userName: '',
-                content: '',
-                createdAt: new Date().toISOString(),
-            }
+            comments: []
         };
 
         //로컬 스토리지에 저장

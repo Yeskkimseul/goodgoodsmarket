@@ -36,9 +36,10 @@
 
 .title {
     margin-bottom: clamp(6px, 1.5vw, 12px);
-    font-size: clamp(16px, 4vw, 28px);
-    line-height: 125%;
+    font-size: var(--font-h3);
     font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.03em;
 }
 
 .userName {
@@ -116,8 +117,30 @@
     margin-bottom: var(--space8);
 }
 
-.commuIcon{
+.commuIcon {
     width: var(--icon-size);
     height: var(--icon-size);
     aspect-ratio: 1/1;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: var(--space8);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
+}
+
+.category {
+    display: inline-block;
+    color: var(--main-mint);
+
+}
+
+.tit {
+    font-weight: 500;
+    color: var(--text-grey);
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
 }
