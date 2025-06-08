@@ -1,45 +1,103 @@
-.mainMoreBtnWrap{
+.mainMoreBtnWrap {
   position: fixed;
-  bottom: 150px;
-  right: 16px;
+  bottom: clamp(136px, 10vh, 276px);
+  right: clamp(16px, 5vw, 36px);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: clamp(48px, 5vw, 60px);
+  height: clamp(48px, 5vw, 60px);
 }
 
-.moreBtnWrap {
+/* .moreBtnWrap {} */
+
+.pluseBtn {
   position: relative;
-  display: inline-block;
-}
-.mainMoreBtnWrap> button {
-  width: 48px;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  font-size: 2rem;
-  background: #333;
+  background: rgba(29, 198, 167, 0.9);
   color: #fff;
   border: none;
   cursor: pointer;
+  padding: 0;
+
 }
+
+.plusIcon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
 .popup {
-  position: absolute;
-  bottom: 0;
-  left: -120px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 16px;
+  position: relative;
+  bottom: 72px;
+  right: 0;
+  background: var(--main-mint);
+  border-radius: 10px;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.actionBtn, .closeBtn, .popup button {
-  padding: 8px 16px;
+
+.popupOpen {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+@keyframes popupFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.writeBtn,
+.viewBtn,
+.popup button {
+  padding: 16px;
   border: none;
-  border-radius: 8px;
-  background: #eee;
+  font-family: var(--pre);
   cursor: pointer;
+  color: var(--text-white);
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.viewBtn:hover {
+  background: var(--button-bghover);
+}
+
+.viewBtn:hover {
+  background: var(--button-bghover);
+}
+
+.closeBtn:hover {
+  background: var(--button-bghover);
+}
+
+
+@media screen and (min-width: 1200px) {
+  /* .mainMoreBtnWrap {
+    position: ab;
+  } */
 }

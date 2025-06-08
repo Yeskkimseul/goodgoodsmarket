@@ -75,13 +75,17 @@ const Community = () => {
                 }
                 <MainMoreBtn
                     popupContent={({ close }: { close: () => void }) => (
-                        <>
+                        <div>
                             <button
                                 onClick={() => {
                                     navigate("/community/commuupload");
                                     close();
                                 }}
                             >
+                                <img
+                                    src="../../../images/icon/edit_medium.svg"
+                                    alt="게시글등록"
+                                />
                                 게시글 등록
                             </button>
                             <button
@@ -90,10 +94,20 @@ const Community = () => {
                                     close();
                                 }}
                             >
+                                <img
+                                    src="../../../images/icon/book_medium.svg"
+                                    alt="내등록글보기"
+                                />
                                 내 등록글 보기
                             </button>
-                            <button onClick={close}>닫기</button>
-                        </>
+                            <button onClick={close}>
+                                 <img
+                                    src="../../../images/icon/x_medium.svg"
+                                    alt="닫기"
+                                />
+                                닫기
+                                </button>
+                       </div>
                     )}
                 />
             </div>
