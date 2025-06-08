@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { Commu } from "../types/commu";
-import Tab from "../components/exchangebuy/Tab";
+import MultiTab from "../components/exchangebuy/MultiTab";
 import Header from "../components/header/Header";
 import style from "./MyCommu.module.css"
 
@@ -58,7 +58,15 @@ const MyCommu = () => {
                     </div>
                 </div>{/* profilewrap */}
                 <div className="mycon">
-                   
+                    <MultiTab tabs={['내 게시글', '내 댓글']}>
+                        {(activeIndex) => (
+                            activeIndex === 0 ? (
+                                <div>내 게시글 내용</div>
+                            ) : activeIndex === 1 ? (
+                                <div>내 댓글 내용</div>
+                            ) : null
+                        )}
+                    </MultiTab>
                 </div>
             </div>
         </Layout>

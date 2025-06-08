@@ -29,14 +29,15 @@ const MultiTab: React.FC<MultiTabProps> = ({ tabs, children }) => {
     );
 };
 /* 사용 예시
- <MultiTab tabs={['교환', '구매', '나눔']}>
-    {(activeIndex) => {
-      if (activeIndex === 0) return <div>교환 탭 내용</div>;
-      if (activeIndex === 1) return <div>구매 탭 내용</div>;
-      if (activeIndex === 2) return <div>나눔 탭 내용</div>;
-      return null;
-    }}
-  </MultiTab>
+ <MultiTab tabs={['구매', '교환']}>
+  {(activeIndex) => (
+    activeIndex === 0 ? (
+      <div>구매 탭 내용</div>
+    ) : activeIndex === 1 ? (
+      <div>교환 탭 내용</div>
+    ) : null
+  )}
+</MultiTab>
   tab에서 한 번 더 부르지 않고 배열에 원하는 만큼 탭 이름 넣기 가능
 */
 export default MultiTab;
