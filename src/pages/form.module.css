@@ -156,6 +156,10 @@
   position: relative;
 }
 
+/* sm사이즈이되 width값 다른버전 */
+.button_sm.width30 {
+  width: 30%;
+}
 
 .button_sm:hover {
   background-color: var(--button-bghover);
@@ -177,6 +181,7 @@
   left: var(--space16);
   transform: translateY(-50%);
 }
+
 
 /* 이미지 input 수정 */
 .imguploadlabel{

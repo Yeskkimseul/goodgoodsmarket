@@ -65,7 +65,7 @@ const Mypage = () => {
                 <div className={mypageStyles.bottom}>
                     <h4>02-1234-5678</h4>
                     <h5>운영시간 10:00 - 18:00</h5>
-                    <div className={formStyles.button} onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
+                    <div className={`${formStyles.button_sm} ${formStyles.width30}`}onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
                 </div>
             </div>
                     <Modal
