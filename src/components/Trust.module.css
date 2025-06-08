@@ -1,0 +1,46 @@
+.trust {
+    padding: var(--space16) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: var(--space4);
+}
+
+.top span {
+    color: var(--main-mint);
+}
+
+.chart {
+    width: 100%;
+    position: relative;
+}
+
+.chart .chart_front {
+    width: 70%;
+    height: clamp(10px, 1.3vw, 15px);
+    border-radius: 100px;
+    background: var(--button-bgdefault);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.chart .chart_front img {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(24px, 5vw, 30px);
+}
+
+.chart .chart_bg {
+    width: 100%;
+    height: clamp(10px, 1.3vw, 15px);
+    border-radius: 100px;
+    background: var(--button-bgdisabled);
+}
