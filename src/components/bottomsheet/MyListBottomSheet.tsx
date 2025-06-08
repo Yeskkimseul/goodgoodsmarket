@@ -8,9 +8,10 @@ import { useNavigate } from "react-router-dom";
 interface MyListBottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
+    onDelete: () => void;
 }
 
-const MyListBottomSheet = ({ isOpen, onClose }: MyListBottomSheetProps) => {
+const MyListBottomSheet = ({ isOpen, onClose, onDelete }: MyListBottomSheetProps) => {
     const navigate = useNavigate();
     const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
 
@@ -43,7 +44,7 @@ const MyListBottomSheet = ({ isOpen, onClose }: MyListBottomSheetProps) => {
                 </>}
                 confirmText="삭제하기"
                 onConfirm={() => {
-                    console.log("삭제 완료!");/* 일단 콘솔로... */
+                    onDelete();
                     setDeleteModalOpen(false);
                     onClose();
                 }}

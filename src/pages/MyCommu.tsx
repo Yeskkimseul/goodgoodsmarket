@@ -9,6 +9,17 @@ import MycommuItem from "../components/MycommuItem";
 const MyCommu = () => {
     const [myPostCount, setMyPostCount] = useState(0);
     const [myCommentCount, setMyCommentCount] = useState(0);
+    const [myPosts, setMyPosts] = useState<Commu[]>([]);
+
+    //게시글 삭제 로직직
+    const handleDelete = (id: string) => {
+        setMyPosts(prev => {
+            const updated = prev.filter(item => item.id !== id);
+            // localStorage 동기화 (선택)
+            localStorage.setItem('commuList', JSON.stringify(updated));
+            return updated;
+        });
+    };
 
     useEffect(() => {
         fetch('/data/commu.json')
@@ -25,8 +36,12 @@ const MyCommu = () => {
                 }, 0);
                 setMyPostCount(postCount);
                 setMyCommentCount(commentCount);
+                // 내 게시글 목록 저장
+                setMyPosts(data.filter(item => item.userName === "뱃지가좋아"));
             });
     }, []);
+
+
 
     return (
         <Layout>
@@ -63,7 +78,9 @@ const MyCommu = () => {
                         {(activeIndex) => (
                             activeIndex === 0 ? (
                                 <div>
-                               
+                                    {myPosts.map(item => (
+                                        <MycommuItem key={item.id} item={item} onDelete={handleDelete} />
+                                    ))}
                                 </div>
                             ) : activeIndex === 1 ? (
                                 <div>내 댓글 내용</div>

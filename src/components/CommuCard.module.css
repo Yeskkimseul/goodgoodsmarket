@@ -106,3 +106,18 @@
     color: var(--button-textsecondary);
     margin-bottom: clamp(6px, 1.5vw, 12px);
 }
+
+.date {
+    color: var(--text-grey);
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space8);
+}
+
+.commuIcon{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    aspect-ratio: 1/1;
+}
