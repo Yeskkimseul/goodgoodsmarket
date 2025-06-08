@@ -5,6 +5,10 @@
     justify-content: space-between;
 }
 
+.profileImage {
+    width: clamp(91px, 12vw, 150px);
+}
+
 .top {
     display: flex;
     align-items: center;

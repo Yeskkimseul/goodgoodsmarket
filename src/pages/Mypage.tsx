@@ -20,7 +20,7 @@ const Mypage = () => {
                     <div className={mypageStyles.right}>
                         <div className={mypageStyles.top}>
                             <h2 className={mypageStyles.name}>뱃지가 좋아</h2>
-                            <div className={formStyles.button} onClick={() => navigate("#")}>프로필 관리</div>
+                            <div className={`${formStyles.button_sm} ${formStyles.width40}`}onClick={() => navigate("#")}>프로필 관리</div>
                         </div>{/* //.top */}
                         <p>trust붙일자리</p>
                     </div>{/* //.right */}

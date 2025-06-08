@@ -160,6 +160,9 @@
 .button_sm.width30 {
   width: 30%;
 }
+.button_sm.width40 {
+  width: 40%;
+}
 
 .button_sm:hover {
   background-color: var(--button-bghover);
