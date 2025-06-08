@@ -7,12 +7,12 @@
 .tab {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
   width: 100%;
 }
 
 .tableft,
-.tabright {
+.tabright,
+.tabbtn {
   position: relative;
   padding: var(--space16) 0;
   cursor: pointer;
@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   color: var(--stroke-grey);
-  border-bottom: 3px solid var(--bg-white)
+  border-bottom: 3px solid var(--stroke-lightE)
 }
 /* .tableft::after,
 .tabright::after {
@@ -46,9 +46,6 @@
   transform: scaleX(1);
 } */
 .tabContent {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 16px;
 }
 
 
