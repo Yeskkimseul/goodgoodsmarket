@@ -36,7 +36,7 @@ const GoodsCategory = () => {
         <MultiTab tabs={['구매', '교환']}>
           {(activeIndex) => (
             activeIndex === 0 ? (
-              <div>
+              <div style={{marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)'}}>
                 {filteredGoods
                   .filter(g => !g.isExchangeable)
                   .map(item => (
@@ -51,7 +51,7 @@ const GoodsCategory = () => {
                   ))}
               </div>
             ) : activeIndex === 1 ? (
-              <div>
+              <div style={{marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)'}}>
                 {filteredGoods
                   .filter(g => g.isExchangeable)
                   .map(item => (

@@ -211,5 +211,45 @@
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
+    },
+       {
+        "id": "12",
+        "title": "컬러그램 제로베이스원 콜라보 홀더",
+        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
+        "category": "인형",
+        "price": 16000,
+        "imageUrl": "/images/mydeals/sale1.png",
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "13",
+        "title": "컬러그램 제로베이스원 콜라보 홀더",
+        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
+        "category": "인형",
+        "price": 16000,
+        "imageUrl": "/images/mydeals/sale1.png",
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
     }
 ]
