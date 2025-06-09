@@ -8,6 +8,7 @@ import CommuCard from "../components/CommuCard";
 import { useCommu } from "../context/CommuContext";
 import MainMoreBtn from "../components/MainMoreBtn";
 import Header from "../components/header/Header";
+// import ChatbaseWidget from "../components/ChatbaseWidget";
 
 /* swiper */
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -130,6 +131,7 @@ const Home = () => {
                     }
                 </div>
                 <MainMoreBtn />
+
             </div>
         </Layout>
     )

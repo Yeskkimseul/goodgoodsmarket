@@ -38,7 +38,7 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
                     setOpen(false);
                 }}
             >
-                 <img
+                <img
                     src="../../../images/icon/edit_medium.svg"
                     alt="굿즈등록"
                 />
@@ -51,7 +51,7 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
                     setOpen(false);
                 }}
             >
-                 <img
+                <img
                     src="../../../images/icon/book_medium.svg"
                     alt="내거래글보기"
                 />
@@ -62,7 +62,7 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
                 onClick={() => setOpen(false)}
                 aria-label="닫기" //영역 접근성을 위한 aria-label 추가
             >
-                    <img
+                <img
                     src="../../../images/icon/x_medium.svg"
                     alt="닫기"
                 />
@@ -80,7 +80,8 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
     };
 
     return (
-            <div className={styles.mainMoreBtnWrap}>
+        <div className={styles.mainMoreBtnWrap}>
+            <div className={styles.mainMoreBtnContainer}>
                 <button
                     className={styles.pluseBtn}
                     onClick={() => (open ? handleClose() : handleOpen())}
@@ -98,6 +99,7 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
                 )}
                 {children}
             </div>
+        </div>
     );
 };
 
