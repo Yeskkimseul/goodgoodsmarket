@@ -1,5 +1,16 @@
 .mainMoreBtnWrap {
   position: fixed;
+  right: 0;
+  bottom: 0;
+
+  min-width: 375px;
+  max-width: 1200px;
+  /* background: #ccc; */
+}
+
+
+.mainMoreBtnContainer {
+  position: absolute;
   bottom: clamp(136px, 10vh, 276px);
   right: clamp(16px, 5vw, 36px);
   z-index: 1000;
@@ -9,6 +20,9 @@
   width: clamp(48px, 5vw, 60px);
 
 }
+
+
+
 
 /* .moreBtnWrap {} */
 
@@ -92,7 +106,7 @@
 
 .closeBtn:hover {
   background: var(--button-bghover);
-  border-radius: 0 0 10px 10px ;
+  border-radius: 0 0 10px 10px;
 }
 
 
