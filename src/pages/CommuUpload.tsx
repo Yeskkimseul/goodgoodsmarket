@@ -82,16 +82,14 @@ const CommuUpload = () => {
             />
             <Layout>
                 <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
-                    <label>
-                        게시글의 카테고리를 선택해주세요
+                    <label className={styles.categoryselect}>
                         <select value={category} onChange={(e) => setCategory(e.target.value)}>
                             {commuCategories.map(cat => (
                                 <option key={cat} value={cat}>{cat}</option>
                             ))}
                         </select>
                     </label>
-                    <label>
-                        제목
+                    <label className={styles.title}>
                         <input
                             type="text"
                             value={title}
@@ -100,31 +98,47 @@ const CommuUpload = () => {
                             placeholder="제목을 입력해주세요"
                         />
                     </label>
-                    <label>
-                        내용
+                    <label className={styles.txtarea}>
                         <textarea
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             required
-                            placeholder="굿굿마켓은 건전한 굿즈 문화를 지향합니다. 자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
+                            placeholder="굿굿마켓은 건전한 굿즈 문화를 지향합니다. 
+                            자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
                         />
                     </label>
-                    <label>
-                        사진
+
+                    <div className={styles.photovideo}>
+                    <label className={styles.photo}>
                         <input
                             type="file"
                             accept="image/*"
                             onChange={handleImageChange}
+                            style={{ display: "none" }}
                         />
+                            <div
+                                 className={styles.uploadareaphoto}  // CSS 파일에서 스타일링할 클래스
+                                 onChange={handleImageChange}
+                                 >
+                            </div>
+                        사진
                     </label>
-                    <label>
-                        동영상
+                    <label className={styles.video}>                     
                         <input
                             type="file"
                             accept="video/*"
                             onChange={handleImageChange}
+                            style={{ display: "none" }}
                         />
+                            <div
+                                 className={styles.uploadareavideo}  // CSS 파일에서 스타일링할 클래스
+                                 onChange={handleImageChange}
+                                 >
+                            </div>
+                        동영상
                     </label>
+                    </div>
+
                     {imageUrl && <img src={imageUrl} alt="업로드 미리보기" className={styles.previewImage} />}
                     <button type="submit" className={styles.submitButton}>
                         게시글 등록

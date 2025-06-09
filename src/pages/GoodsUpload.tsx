@@ -107,7 +107,7 @@ const handleOptionComplete = () => {
         const updated = [newGoods, ...existing];
         localStorage.setItem('goodsList', JSON.stringify(updated));
         setGoodsList(updated); // 컨텍스트 업데이트
-        navigate('/'); // 홈으로 이동
+        navigate('/home'); // 홈으로 이동
     };
     
     // setGoodsList((prev) => [...prev, newGoods]);
