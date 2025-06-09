@@ -27,7 +27,7 @@ const Home = () => {
 
         if (stored) setGoodsList(JSON.parse(stored));
         else {
-            fetch('data/goods.json')
+            fetch('/data/goods.json')
                 .then((res) => res.json())
                 .then((data) => {
                     setGoodsList(data)
