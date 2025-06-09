@@ -10,7 +10,6 @@ const ChatbaseWidget = () => {
   useEffect(() => {
     const scriptId = "R5jk6ydB6lnN4fTbS7Cy5";
 
-    // 이미 로드된 경우는 무시
     if (document.getElementById(scriptId)) return;
 
     const _chatbase = Object.assign((...args: any[]) => {
@@ -30,30 +29,33 @@ const ChatbaseWidget = () => {
     script.async = true;
     document.body.appendChild(script);
 
-    const style = document.createElement("style");
-    style.innerHTML = `
-      .chatbase-container {
-        left: 16px !important;
-        bottom: 24px !important;
-        right: auto !important;
-      }
-    `;
-    document.head.appendChild(style);
+    // ✅ 로드 후 위치 스타일 적용 (지연 적용)
+    const waitAndStyle = () => {
+      const interval = setInterval(() => {
+        const container = document.querySelector(".chatbase-container") as HTMLElement;
+        if (container) {
+          container.style.left = "auto";
+          container.style.right = "16px";
+          container.style.bottom = "100px";
+          container.style.top = "auto";
+          container.style.transform = "none";
+          clearInterval(interval);
+        }
+      }, 100);
+    };
+
+    waitAndStyle();
 
     return () => {
-      // 1. script 제거
       script.remove();
-      style.remove();
 
-      // 2. 위젯 DOM 제거 (iframe 포함)
       const iframe = document.querySelector("iframe[src*='chatbase']");
       if (iframe) {
         const wrapper = iframe.closest(".chatbase-container");
-        if (wrapper) wrapper.remove(); // Shadow DOM이 아니면 이걸로 제거
-        else iframe.remove(); // 혹시 모를 fallback
+        if (wrapper) wrapper.remove();
+        else iframe.remove();
       }
 
-      // 3. chatbase 전역 제거
       delete window.chatbase;
     };
   }, []);
