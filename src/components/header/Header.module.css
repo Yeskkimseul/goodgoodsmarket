@@ -62,3 +62,9 @@ li.avatar {
     font-size: var(--font-body1);
     color: var(--main-mint);
 }
+
+.search {
+    display: flex;
+    gap: var(--space32);
+    width: 100%;
+}

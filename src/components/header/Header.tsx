@@ -1,3 +1,4 @@
+import HeaderType0 from './HeaderType0';
 import HeaderType1 from './HeaderType1';
 import HeaderType2 from './HeaderType2';
 import HeaderType3 from './HeaderType3';
@@ -6,7 +7,7 @@ import HeaderType5 from './HeaderType5';
 import HeaderType6 from './HeaderType6';
 import DefaultHeader from './DefaultHeader';
 
-type HeaderType = 'type1' | 'type2' | 'type3' | 'type4' | 'type5' | 'type6' | 'type7';
+type HeaderType = 'type0' | 'type1' | 'type2' | 'type3' | 'type4' | 'type5' | 'type6' | 'type7';
 
 interface HeaderProps {
     type: HeaderType;
@@ -16,6 +17,8 @@ interface HeaderProps {
 
 const Header = ({ type, title, onComplete }: HeaderProps) => {
     switch (type) {
+        case 'type0':
+            return <HeaderType0 />;
         case 'type1':
             return <HeaderType1 title={title || '포토카드'} />;
         case 'type2':

@@ -7,7 +7,7 @@ const DefaultHeader: React.FC = () => {
     const navigate = useNavigate();
 
     const handleBack = () => {
-        navigate(-1); // ← 바로 이전 페이지로 이동
+        navigate("/home");
     };
 
     return (
