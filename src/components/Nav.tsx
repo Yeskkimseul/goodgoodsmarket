@@ -1,7 +1,24 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from './Nav.module.css';
 
 const Nav = () => {
+    const navigate = useNavigate();
+    const handleClick = (path: string) => {
+        console.log('a')
+        if (path.startsWith("/mypage")) {
+            // 💥 Chatbase DOM 수동 제거
+            const bubble = document.querySelector(".chatbase-bubble-container") as HTMLElement;
+            if (bubble) { bubble.remove(); }
+
+            const iframe = document.querySelector('iframe[src*="chatbase.co"]') as HTMLIFrameElement;
+            if (iframe) iframe.remove();
+
+            // 💥 필요 시 전역 상태도 초기화 가능 (optional)
+            // window.chatbase = undefined;
+        }
+
+        navigate(path);
+    };
     return (
         <nav className={`${styles.nav} `}>
             <ul className={styles.menu}>
@@ -60,6 +77,7 @@ const Nav = () => {
                             </>
                         )}
                     </NavLink>
+
                 </li>
             </ul>
         </nav>

@@ -34,22 +34,40 @@ import { GoodsProvider } from "./context/GoodsContext";
 import { clear } from "console";
 
 
-import ChatbaseWidget from "./components/ChatbaseWidget";
+// import ChatbaseWidget from "./components/ChatbaseWidget";
 
 
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
-  const hideChatbot = location.pathname.startsWith("/mypage") ||
-    location.pathname === "/liked" ||
-    location.pathname === "/writereview";
+  useEffect(() => {
+    const shouldHideChatbase = location.pathname.startsWith("/mypage");
+    const chatbaseButton = document.querySelector('#chatbase-bubble-button') as HTMLElement | null;
+    if (chatbaseButton) {
+      chatbaseButton.style.display = shouldHideChatbase ? 'none' : 'block';
+    }
+    const removeChatbase = () => {
+      const bubble = document.querySelector(".chatbase-bubble-container");
+      if (bubble) bubble.remove();
+
+      const iframe = document.querySelector('iframe[src*="chatbase.co"]');
+      if (iframe) iframe.remove();
+    };
+
+    if (shouldHideChatbase) {
+      removeChatbase();
+    }
+  }, [location.pathname]);
+
+  // ✅ /mypage 경로가 아닌 경우에만 Chatbase 보여주기
+  // const showChatbase = !location.pathname.startsWith("/mypage");
 
 
   return (
 
     <GoodsProvider>
       <CommuProvider>
-        {!hideChatbot && <ChatbaseWidget />}
+        {/* ✅ 조건부 삽입 */}
         {/* <>
           {loading ? <SplashScreen /> : <Login />}
         </> */}
