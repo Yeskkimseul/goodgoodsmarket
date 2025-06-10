@@ -86,11 +86,29 @@ const GoodsDetail = () => {
                         </p>
                     </div>
                     <ul className={style.titright}>
-                        <li className={style.goodsicon}>
-
+                        <li className={style.goodsRate}>
+                            <img src="/images/icon/eye_small.svg" alt="작은눈"
+                                className={style.goodsIcon}
+                            />
+                            <span className={style.goodsRateText}>{goods ? goods.views : 0}</span>
+                        </li>
+                        <li className={style.goodsRate}>
+                            <img src="/images/icon/heart_small.svg" alt="
+                            작은좋아요"
+                                className={style.goodsIcon}
+                            />
+                            <span className={style.goodsRateText}>{goods ? goods.likes : 0}</span>
                         </li>
                     </ul>
-                </div>
+                </div>{/* toptit */}
+                <div className={style.maintit}>
+                    <div className="subtit1">
+                        {goods ? goods.title : 0}
+                    </div>
+                    <h1>
+                        {goods ? goods.price : 0}원
+                    </h1>
+                </div>{/* maintit */}
             </div>{/* titbox */}
 
             <div className={style.bottom}>

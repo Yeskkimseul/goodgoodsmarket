@@ -55,7 +55,7 @@ const Community = () => {
         <Layout>
             <Header type="type7" />
             <div>
-                <div className={filterstyles.filterContainer}>
+                <div className={filterstyles.filterContainer} style={{position:"fixed", maxWidth:"1200px", width:"100%"}}>
                     {filterList.map(f => (
                         <button
                             className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
@@ -66,7 +66,7 @@ const Community = () => {
                         </button>
                     ))}
                 </div>
-                <div style={{padding:'0 var(--padding)'}}>
+                <div style={{padding:'clamp(64px,7.5vh,68px) var(--padding)'}}>
                 {
                     sortedList.map((item) => (
                         <CommuCard

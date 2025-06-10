@@ -1,3 +1,7 @@
+.con {
+    padding-bottom: 80px;
+}
+
 .bottom {
     position: fixed;
     left: 0;
@@ -71,7 +75,7 @@
 }
 
 /* 제목영역 */
-
+/* 카테고리, 시간, 조회수, 좋아요 */
 .titbox {
     display: flex;
     flex-direction: column;
@@ -85,6 +89,7 @@
     font-size: var(--font-caption);
     font-weight: 400;
     line-height: 125%;
+    justify-content: space-between;
 }
 
 .titleft {
@@ -102,4 +107,29 @@
     height: 2px;
     background: var(--text-lightgrey);
     border-radius: 50%;
+}
+
+.titright {
+    display: flex;
+    align-items: center;
+    gap: var(--space8);
+}
+
+.goodsRate {
+    display: flex;
+    gap: var(--space4);
+    align-items: center;
+}
+
+.goodsIcon {
+    width: clamp(14px, 2vw, 18px);
+    height: clamp(14px, 2vw, 18px);
+    object-fit: cover;
+}
+
+.maintit {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+    margin-top: var(--space16);
 }
