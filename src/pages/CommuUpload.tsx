@@ -48,9 +48,9 @@ const CommuUpload = () => {
             createdAt: new Date().toISOString(),
             views: 0,
             tags,
-            userimgUrl: '',
-            userName: '',
-            commentsNum: 0,
+            userimgUrl: '/images/seller1.png',
+            userName: '뱃지가좋아',
+            commentsNum: 70,
             comments: []
         };
 

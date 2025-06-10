@@ -1,5 +1,4 @@
 .chatList {
-  padding: 16px;
   background: #fff;
 }
 
@@ -25,13 +24,11 @@
 
 .chatItems {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .chatItem {
   display: flex;
-  padding: 12px 0;
+  padding: 16px clamp(16px, 4vw, 78px);
   border-bottom: 1px solid #f1f1f1;
   align-items: center;
 }
@@ -44,19 +41,32 @@
 .productImage img {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 15px;
   object-fit: cover;
 }
 
 .chatDot {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: inline-block;
   width: 10px;
   height: 10px;
-  background: red;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 1px solid #fff; 
+  background: #ff5252; /* 읽지 않음: 빨간색 */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.chatDotRead {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+   border: 1px solid #fff; 
+  background: var(--text-lightgrey); /* 읽음: 그레이 */
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .chatContent {
@@ -76,9 +86,9 @@
   gap: 6px;
 }
 
-.userAvatar {
-  width: 18px;
-  height: 18px;
+.userProfile {
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -88,12 +98,9 @@
 }
 
 .chatTime {
-  font-size: 12px;
-  color: #999;
+  color: var(--text-lightgrey);
 }
 
 .chatMessage {
-  font-size: 13px;
-  color: #666;
-  margin-top: 4px;
+  color: var(--text-grey);
 }

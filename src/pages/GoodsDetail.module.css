@@ -1,0 +1,19 @@
+.bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    padding: 0;
+    z-index: 100;
+}
+
+.bts {
+    display: flex;
+    padding: var(--space16) var(--padding);
+    gap: var(--space16);
+    box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}

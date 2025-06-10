@@ -91,7 +91,8 @@ const GoodsCategoryItem: React.FC<GoodsCategoryItemProps> = ({ idsToShow }) => {
             onTouchEnd={handleTouchEnd}>
             {filteredCategories.map((category) => (
                 <li key={category.id} className={styles.listItem}>
-                    <Link to={`/home/goodscategory/${category.id}`}>
+                    <Link to={`/home/goodscategory/${category.id}`
+                    } onClick={preventClickOnDrag}>
                         {category.imageUrl && (
                             <img
                                 src={category.imageUrl}
