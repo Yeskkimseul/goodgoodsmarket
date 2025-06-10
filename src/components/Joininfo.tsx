@@ -60,7 +60,7 @@ const Joininfo = () => {
                 </h4>
                 <div className={Login.inputboxlist}>
                     <div className={Login.phone}>
-                        <input type='email' className={style.input} placeholder='abc@email.com' required />
+                        <input type='email' className={style.input} placeholder='abc@email.com' style={{width: 'auto'}}  required />
                         <button className={Login.phonebtn}
                             onClick={handleClick}
                             disabled={disabled}>{buttonText}</button>

@@ -7,8 +7,8 @@ import Header from '../components/header/Header';
 
 const LoginEmail = () => {
     const [hide, setHide] = useState([true, true]);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('admin@email.com'); // 기본값 지정
+    const [password, setPassword] = useState('1234');      // 기본값 지정
     const [emailError, setEmailError] = useState(false);
     const [pwError, setPwError] = useState(false);
 

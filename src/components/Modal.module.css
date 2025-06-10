@@ -1,0 +1,59 @@
+/* Modal.module.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(58, 58, 58, 0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+.modal {
+    background: var(--bg-white);
+    border-radius: 12px;
+    width: 343px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 모바일이랑 웹의 모달 사이즈가 똑같으므로 px로 넣었습니다! */
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+    padding: 24px 10px;
+}
+
+.modal p {
+    color: var(--text-grey);
+    font-size: clamp(16px, 1.5vw, 18px);
+}
+
+.buttons {
+    display: flex;
+    height: 48px;
+    border-top: 1px solid var(--stroke-lightE);
+}
+
+button {
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-button);
+    background: none;
+    color: var(--text-black);
+}
+
+button.confirm {
+    color: var(--text-error);
+    border-left: 1px solid var(--stroke-lightE);
+}

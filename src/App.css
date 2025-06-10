@@ -39,6 +39,7 @@ body,
 }
 
 .inner {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding-left:clamp(16px,4vw,78px);

@@ -1,15 +1,15 @@
-/* import Layout from "../components/Layout"; */
-import Nav from "../components/Nav";
+import Layout from "../components/Layout";
 import { useEffect, useState } from "react";
 import { Commu } from "../types/commu";
 import CommuCard from "../components/CommuCard";
 import styles from './CardListLayout.module.css';
-import commustyles from './CommuList.module.css';
+// import commustyles from './CommuList.module.css';
 import filterstyles from './filter.module.css';
+import morestyles from '../components/MainMoreBtn.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
-import Chatbot from "../components/Chatbot";
+import ChatbaseWidget from "../components/ChatbaseWidget";
 
 const Community = () => {
 
@@ -52,61 +52,75 @@ const Community = () => {
             : filteredList;
 
     return (
-        <div>
-            <Chatbot />
-            <div className={commustyles.container}>
-
-                <Header type="type7" />
-                <div>
-                    <div className={filterstyles.filterContainer}>
-                        {filterList.map(f => (
-                            <button
-                                className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
-                                key={f.value}
-                                onClick={() => setFilter(f.value)}
+        <Layout>
+            <Header type="type7" />
+            <div>
+                <div className={filterstyles.filterContainer}>
+                    {filterList.map(f => (
+                        <button
+                            className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
+                            key={f.value}
+                            onClick={() => setFilter(f.value)}
+                        >
+                            {f.label}
+                        </button>
+                    ))}
+                </div>
+                {
+                    sortedList.map((item) => (
+                        <CommuCard
+                            key={item.id}
+                            item={item}
+                            className={styles.card}
+                        />
+                    ))
+                }
+                <MainMoreBtn
+                    popupContent={({ close }: { close: () => void }) => (
+                        <div>
+                            <button 
+                            className={morestyles.writeBtn}
+                                onClick={() => {
+                                    navigate("/community/commuupload");
+                                    close();
+                                }}
                             >
-                                {f.label}
+                                <img
+                                    src="../../../images/icon/edit_medium.svg"
+                                    alt="게시글등록"
+                                />
+                                게시글 등록
                             </button>
-                        ))}
-                    </div>
-                    {
-                        sortedList.map((item) => (
-                            <CommuCard
-                                key={item.id}
-                                item={item}
-                                className={styles.card}
-                            />
-                        ))
-                    }
-                    <MainMoreBtn
-                        popupContent={({ close }: { close: () => void }) => (
-                            <>
-                                <button
-                                    onClick={() => {
-                                        navigate("/community/commuupload");
-                                        close();
-                                    }}
-                                >
-                                    게시글 등록
+                            <button
+                              className={morestyles.viewBtn}
+                                onClick={() => {
+                                    navigate("/community/mycommu");
+                                    close();
+                                }}
+                            >
+                                <img
+                                    src="../../../images/icon/book_medium.svg"
+                                    alt="내등록글보기"
+                                />
+                                내 등록글 보기
+                            </button>
+                            <button 
+                            className={morestyles.closeBtn}
+                            onClick={close}>
+                                  
+                                 <img
+                                    src="../../../images/icon/x_medium.svg"
+                                    alt="닫기"
+                                />
+                                닫기
                                 </button>
-                                <button
-                                    onClick={() => {
-                                        navigate("/community/mycommu");
-                                        close();
-                                    }}
-                                >
-                                    내 등록글 보기
-                                </button>
-                                <button onClick={close}>닫기</button>
-                            </>
-                        )}
-                    />
-                </div>
-                <div className={commustyles.commuNav}>
-                    <Nav />
-                </div>
+                       </div>
+                    )}
+                />
+                
             </div>
-        </div>
+            <ChatbaseWidget />
+        </Layout>
     )
 
 }

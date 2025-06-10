@@ -1,0 +1,36 @@
+.profile {
+    padding: var(--space16) 0;
+    display: flex;
+    gap: var(--space16);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileImage {
+    width: clamp(91px, 12vw, 150px);
+}
+
+.right {
+    width: clamp(230px, 25vw, 500px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: var(--font-subtit1);
+    padding: var(--space16) 0;
+    font-family: var(--sokcho);
+}
+
+.section {
+    padding: var(--space16) 0;
+}
+
+.bottom {
+    padding: var(--space16) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
+    align-items: center;
+}

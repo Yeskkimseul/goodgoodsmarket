@@ -11,7 +11,7 @@
     display: flex;
     text-decoration: none;
     color: inherit;
-    padding: 16px clamp(16px, 6vw, 78px);
+    padding: 16px 0;
     gap: clamp(6px, 1vw, 9px);
     flex-shrink: 0;
     border-bottom: 1px solid var(--stroke-lightE);
@@ -36,9 +36,10 @@
 
 .title {
     margin-bottom: clamp(6px, 1.5vw, 12px);
-    font-size: clamp(16px, 4vw, 28px);
-    line-height: 125%;
+    font-size: var(--font-h3);
     font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.03em;
 }
 
 .userName {
@@ -94,4 +95,52 @@
     /*   .card{
         padding: 0 320px;
     } */
+}
+
+/* mycommuItem */
+
+.categoryBoxColor {
+    display: inline-block;
+    padding: clamp(4px, 1vw, 6px) clamp(6px, 1.5vw, 9px);
+    background: var(--button-bgsecondary);
+    border-radius: 9px;
+    color: var(--button-textsecondary);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
+}
+
+.date {
+    color: var(--text-grey);
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space8);
+}
+
+.commuIcon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    aspect-ratio: 1/1;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: var(--space8);
+    margin-bottom: clamp(6px, 1.5vw, 12px);
+}
+
+.category {
+    display: inline-block;
+    color: var(--main-mint);
+
+}
+
+.tit {
+    font-weight: 500;
+    color: var(--text-grey);
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
 }

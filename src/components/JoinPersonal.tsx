@@ -69,7 +69,7 @@ const JoinPersonal = () => {
                 </h4>
                 <div className={Login.inputboxlist}>
                     <div className={Login.phone}>
-                        <input type='email' className={style.input} placeholder='전화번호를 입력해주세요' required />
+                        <input type='text' className={style.input} style={{width: 'auto'}} placeholder='전화번호를 입력해주세요' required />
                         <button className={Login.phonebtn}
                             onClick={handleClick}
                             disabled={disabled}>{buttonText}</button>
