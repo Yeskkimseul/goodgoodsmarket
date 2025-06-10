@@ -7,7 +7,7 @@
 
 .profilewrap{
     background: var(--bg-white);
-    padding: var(--space16);
+    padding: var(--space16)  var(--padding);
     display: flex;
     flex-direction: column;
     gap: var(--space16);

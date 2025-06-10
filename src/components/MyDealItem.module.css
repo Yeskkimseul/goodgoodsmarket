@@ -1,7 +1,7 @@
 .card {
     display: flex;
     gap: var(--space16);
-    padding: var(--space16) 0;
+    padding: var(--space16) var(--padding);
     border-bottom: 1px solid var(--stroke-lightE);
     align-items: center;
     justify-content: flex-start;

@@ -10,7 +10,7 @@
     display: flex;
     text-decoration: none;
     color: inherit;
-    padding: 16px var(--padding);
+    padding: 16px 0;
     gap: clamp(6px, 1vw, 9px);
     flex-shrink: 0;
     border-bottom: 1px solid var(--stroke-lightE);
