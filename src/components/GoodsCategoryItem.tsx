@@ -16,13 +16,19 @@ const categories = [
     { id: "11", name: "기타", imageUrl: "/images/main_imgs/GoodsCategoryItem11.png" }
 ];
 
+interface GoodsCategoryItemProps {
+    idsToShow?: string[]; // 보여줄 id 배열, 없으면 전체
+}
 
-const GoodsCategoryItem = () => {
+const GoodsCategoryItem: React.FC<GoodsCategoryItemProps> = ({ idsToShow }) => {
     const containerRef = useRef<HTMLUListElement>(null);
     const isDragging = useRef(false);
     const dragStarted = useRef(false);
     let startX = 0;
     let scrollLeft = 0;
+    const filteredCategories = idsToShow
+        ? categories.filter(cat => idsToShow.includes(cat.id))
+        : categories;
 
     const handleMouseDown = (e: React.MouseEvent) => {
         if (!containerRef.current) return;
@@ -83,7 +89,7 @@ const GoodsCategoryItem = () => {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}>
-            {categories.map((category) => (
+            {filteredCategories.map((category) => (
                 <li key={category.id} className={styles.listItem}>
                     <Link to={`/home/goodscategory/${category.id}`}>
                         {category.imageUrl && (
