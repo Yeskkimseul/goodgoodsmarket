@@ -112,7 +112,7 @@ const CommuUpload = () => {
                         />
                     </label>
 
-                    <div className={styles.photovideo}>
+                <div className={styles.photovideo}>
                     <label className={styles.photo}>
                         <input
                             type="file"
@@ -145,8 +145,11 @@ const CommuUpload = () => {
                     <button type="submit" className={styles.submitButton}>
                         게시글 등록
                     </button>
+                    </div>
                 </form>
+                
             </Layout>
+            
         </>
     );
 };

@@ -1,0 +1,207 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 78px;
+}
+
+/* 카테고리 */
+
+.categoryselect{
+    width: 100%;
+    position: relative;
+    font-family: "Pretendard Variable";
+}
+
+
+.categoryselect select{
+    appearance: none; /* 기본 화살표 제거 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 16px 0;
+    padding: 16px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Pretendard Variable";
+}
+
+/* 가짜 화살표 */
+.categoryselect::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #555;
+}
+.categoryselect select:focus{
+    outline: none;
+}
+
+/* 제목 */
+
+.title{
+    width: 100%;
+}
+.title input{
+    width: 100%;
+    height: 62px;
+    font-size: 1.25rem;
+    font-family: "Pretendard Variable";
+    margin: 16px 0;
+    border: 1px solid #f4f4f4;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+
+}
+.title input:focus{
+    outline: none;
+
+}
+
+/* 내용 */
+
+.txtarea{
+    width: 100%;
+    height: 100%;
+    
+}
+.txtarea textarea{
+    width: 100%;
+    height: 522px;
+    white-space: pre-line;
+  font-size: 1.1rem;
+  border: none;
+  border: 1px solid #f4f4f4;
+  border-radius: 8px;
+  padding: 16px;
+    line-height: 2;
+  font-family: "Pretendard Variable";
+  
+}
+.txtarea textarea::placeholder{
+    line-height: 2;
+  font-size: 1.1rem;
+  font-family: "Pretendard Variable";
+}
+.txtarea textarea:focus{
+    outline: none;
+  font-size: 1.1rem;
+  font-family: "Pretendard Variable";
+
+}
+.txtarea textarea:focus::placeholder{
+    opacity: 0;
+}
+
+/* 사진 동영상 */
+
+.photovideo{
+    width: 100%;
+    height: 73px;
+    display: flex;
+    color: #999;
+    padding: 0 16px;
+    gap: 2%;
+}
+/* 미리보기 이미지 */
+.previewWrapper {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  /* 미리보기 이미지와 동일한 크기 */
+  height: 120px;
+}
+.previewWrapper button{
+    width: 18%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previewImage {
+  width: 133px;
+  height: 133px;
+  border-radius: 9px;
+  border: 1px solid var(--main-mint);
+}
+
+.closeButton {
+  position: absolute;
+  top: 2px;
+  right: -10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  line-height: 100%;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.closeButton:hover {
+  background: #e6e6e6;
+  color: white;
+}
+/* 사진 */
+
+
+.photo{
+display: flex;
+align-items: center;
+height: 100%;
+cursor: pointer;
+}
+.uploadareaphoto{
+    margin-right: 8px;
+    width: 20px;
+    height: 100%;
+    background-image: url(../../public/images/icon/cameralittle.svg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+
+}
+
+/* 동영상 */
+
+.video{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    cursor: pointer;
+}
+.uploadareavideo{
+    margin-right: 8px;
+    width: 20px;
+    height: 100%;
+    background-image: url(../../public/images/icon/videolittle.svg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+}
+
+button.submitButton{
+    all: unset; /* 버튼 기본 스타일 모두 제거 */
+    margin: 24px 0;
+    background-color: var(--main-mint);
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 8px;
+      cursor: pointer;
+  transition: .3s;
+}
+button.submitButton:hover{
+  background-color: var(--sub-lightmint);
+}
