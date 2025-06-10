@@ -46,8 +46,7 @@ body,
   position: relative;
   max-width: 100%;
   margin: 0;
-  /* padding-left:clamp(16px,4vw,78px);
-  padding-right:clamp(16px,4vw,78px); */
+  /* padding:0 clamp(16px,4vw,78px);*/
   padding-bottom: clamp(63px, 5vw, 70px);
   width: 100%;
   background-color: #fff;
