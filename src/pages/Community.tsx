@@ -9,6 +9,7 @@ import filterstyles from './filter.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
+import Chatbot from "../components/Chatbot";
 
 const Community = () => {
 
@@ -51,55 +52,59 @@ const Community = () => {
             : filteredList;
 
     return (
-        <div className={commustyles.container}>
-            <Header type="type7" />
-            <div>
-                <div className={filterstyles.filterContainer}>
-                    {filterList.map(f => (
-                        <button
-                            className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
-                            key={f.value}
-                            onClick={() => setFilter(f.value)}
-                        >
-                            {f.label}
-                        </button>
-                    ))}
+        <div>
+            <Chatbot />
+            <div className={commustyles.container}>
+
+                <Header type="type7" />
+                <div>
+                    <div className={filterstyles.filterContainer}>
+                        {filterList.map(f => (
+                            <button
+                                className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
+                                key={f.value}
+                                onClick={() => setFilter(f.value)}
+                            >
+                                {f.label}
+                            </button>
+                        ))}
+                    </div>
+                    {
+                        sortedList.map((item) => (
+                            <CommuCard
+                                key={item.id}
+                                item={item}
+                                className={styles.card}
+                            />
+                        ))
+                    }
+                    <MainMoreBtn
+                        popupContent={({ close }: { close: () => void }) => (
+                            <>
+                                <button
+                                    onClick={() => {
+                                        navigate("/community/commuupload");
+                                        close();
+                                    }}
+                                >
+                                    게시글 등록
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        navigate("/community/mycommu");
+                                        close();
+                                    }}
+                                >
+                                    내 등록글 보기
+                                </button>
+                                <button onClick={close}>닫기</button>
+                            </>
+                        )}
+                    />
                 </div>
-                {
-                    sortedList.map((item) => (
-                        <CommuCard
-                            key={item.id}
-                            item={item}
-                            className={styles.card}
-                        />
-                    ))
-                }
-                <MainMoreBtn
-                    popupContent={({ close }: { close: () => void }) => (
-                        <>
-                            <button
-                                onClick={() => {
-                                    navigate("/community/commuupload");
-                                    close();
-                                }}
-                            >
-                                게시글 등록
-                            </button>
-                            <button
-                                onClick={() => {
-                                    navigate("/community/mycommu");
-                                    close();
-                                }}
-                            >
-                                내 등록글 보기
-                            </button>
-                            <button onClick={close}>닫기</button>
-                        </>
-                    )}
-                />
-            </div>
-            <div className={commustyles.commuNav}>
-                <Nav />
+                <div className={commustyles.commuNav}>
+                    <Nav />
+                </div>
             </div>
         </div>
     )
