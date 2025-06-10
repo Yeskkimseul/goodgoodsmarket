@@ -50,7 +50,7 @@ const MyDealItem = ({ item, className, setGoodsList }: Props) => {
                 style={{ cursor: 'pointer' }}
             > {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
                 <div className={styles.cardLeft}>
-                    <img src={item.imageUrl} alt={item.title} className={styles.image} />
+                    <img src={item.imageUrl[0]} alt={item.title} className={styles.image} />
                 </div>
                 <div className={styles.cardright}>
                     <div className={styles.righttop}>

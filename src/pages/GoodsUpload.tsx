@@ -14,15 +14,15 @@ const deliveryOptions = ["직거래", "택배 거래"];
 const GoodsUpload = () => {
     const navigate = useNavigate();
     const { setGoodsList } = useGoods();
-const popupRef = useRef<HTMLDivElement>(null);
-const dropdownRef = useRef<HTMLDivElement>(null);   
+    const popupRef = useRef<HTMLDivElement>(null);
+    const dropdownRef = useRef<HTMLDivElement>(null);
     const categoryList = [
         "포토카드", "인형", "아크릴 굿즈", "문구류", "패션", "음반", "팬 라이트", "잡지", "티켓", "팬 메이드", "기타"
     ];
 
-/*     const [selectedCondition, setSelectedCondition] = useState<string[]>([]);
-    const [selectedItem, setSelectedItem] = useState<string[]>([]);
-    const [selectedDelivery, setSelectedDelivery] = useState<string[]>([]); */
+    /*     const [selectedCondition, setSelectedCondition] = useState<string[]>([]);
+        const [selectedItem, setSelectedItem] = useState<string[]>([]);
+        const [selectedDelivery, setSelectedDelivery] = useState<string[]>([]); */
 
     const [selectedCondition, setSelectedCondition] = useState<string>(""); // 상품 상태
     const [selectedItem, setSelectedItem] = useState<string>(""); // 구성품
@@ -41,7 +41,7 @@ const dropdownRef = useRef<HTMLDivElement>(null);
     const [price, setPrice] = useState<number | string>(0);
     const [optionLabel, setOptionLabel] = useState("옵션 추가");
 
-const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+    const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
     const handleCheck = (
         option: string,
         selected: string[],
@@ -54,60 +54,60 @@ const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
         );
     };
 
-const formatPrice = (value: string | number) => {
-  const numeric = typeof value === 'number' ? value.toString() : value.replace(/[^0-9]/g, '');
-  return numeric.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-};
+    const formatPrice = (value: string | number) => {
+        const numeric = typeof value === 'number' ? value.toString() : value.replace(/[^0-9]/g, '');
+        return numeric.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
 
     useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    
-    if (
-      showOptionPopup &&
-      popupRef.current &&
-      !popupRef.current.contains(event.target as Node)
-    ) {
-      setShowOptionPopup(false);
-      setShowCategoryDropdown(false);
-     
-    }
-  };
+        const handleClickOutside = (event: MouseEvent) => {
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [showOptionPopup, showCategoryDropdown]);
+            if (
+                showOptionPopup &&
+                popupRef.current &&
+                !popupRef.current.contains(event.target as Node)
+            ) {
+                setShowOptionPopup(false);
+                setShowCategoryDropdown(false);
+
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [showOptionPopup, showCategoryDropdown]);
 
 
     // 옵션 팝업 완료
     const handleOptionComplete = () => {
-    let finalDelivery = selectedDelivery;
-    if (selectedDelivery === '직거래' && directPlace) {
-        finalDelivery = `직거래 (${directPlace})`;
-    }
+        let finalDelivery = selectedDelivery;
+        if (selectedDelivery === '직거래' && directPlace) {
+            finalDelivery = `직거래 (${directPlace})`;
+        }
 
-    const allOptions = [selectedCondition, selectedItem, finalDelivery].filter(Boolean);
-    setOptions(allOptions);
-    setTimeout(() => setShowOptionPopup(false), 0); // 이벤트 루프 다음 틱에서 처리
-    setOptionLabel(allOptions.join(" · ")); // ← 버튼 텍스트 업데이트
-    setShowOptionPopup(false); // 팝업 닫기
-};
+        const allOptions = [selectedCondition, selectedItem, finalDelivery].filter(Boolean);
+        setOptions(allOptions);
+        setTimeout(() => setShowOptionPopup(false), 0); // 이벤트 루프 다음 틱에서 처리
+        setOptionLabel(allOptions.join(" · ")); // ← 버튼 텍스트 업데이트
+        setShowOptionPopup(false); // 팝업 닫기
+    };
 
 
-const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-  const files = e.target.files;
-  if (!files) return;
+    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const files = e.target.files;
+        if (!files) return;
 
-  const uploadPromises = Array.from(files).map(file => uploadToCloudinary(file));
-  
-  try {
-    const urls = await Promise.all(uploadPromises);
-    setImageUrls(prev => [...prev, ...urls]); // 기존 이미지 유지하면서 추가
-  } catch (err) {
-    alert('하나 이상의 이미지 업로드 실패');
-  }
-};
+        const uploadPromises = Array.from(files).map(file => uploadToCloudinary(file));
+
+        try {
+            const urls = await Promise.all(uploadPromises);
+            setImageUrls(prev => [...prev, ...urls]); // 기존 이미지 유지하면서 추가
+        } catch (err) {
+            alert('하나 이상의 이미지 업로드 실패');
+        }
+    };
 
     // 등록 또는 엔터로 제출시 실행
     const handleSubmit = async (e: React.FormEvent) => {
@@ -119,7 +119,7 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
             category,
             price,
             /* imageUrl, */
-            imageUrl: imageUrls[0], // 대표 이미지 하나만 저장
+            imageUrl: imageUrls, // 여러 장 저장 (배열)
             likes: 0,
             createdAt: new Date().toISOString(),
             views: 0,
@@ -127,6 +127,7 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
             sellerimgUrl: '',
             sellerName: '',
             sellerTrust: 0,
+             isExchangeable: false,
         } as Goods;
         // 로컬스토리지에 저장
 
@@ -145,7 +146,7 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         setGoodsList(updated); // 컨텍스트 업데이트
         navigate('/home'); // 홈으로 이동
     };
-    
+
     // setGoodsList((prev) => [...prev, newGoods]);
     // localStorage.setItem('goodsList', JSON.stringify([...JSON.parse(localStorage.getItem('goodsList') || '[]'), newGoods]));
     // navigate('/');
@@ -155,26 +156,26 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
             <div>
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.imgflex}>
-                    <label className={styles.imguploadlabel}>
-                       
-                        <input type="file" accept="image/*" multiple onChange={handleImageChange} className={styles.imgupload}/>
-                    </label>
-{imageUrls.map((url, index) => (
-  <div key={index} className={styles.previewWrapper}>
-    <button
-      type="button"
-      className={styles.closeButton}
-      onClick={() =>
-        setImageUrls((prev) => prev.filter((_, i) => i !== index))
-      }
-    >
-      &times;
-    </button>
-    <img src={url} alt={`업로드 미리보기 ${index + 1}`} className={styles.previewImage} />
-  </div>
-))}
+                        <label className={styles.imguploadlabel}>
+
+                            <input type="file" accept="image/*" multiple onChange={handleImageChange} className={styles.imgupload} />
+                        </label>
+                        {imageUrls.map((url, index) => (
+                            <div key={index} className={styles.previewWrapper}>
+                                <button
+                                    type="button"
+                                    className={styles.closeButton}
+                                    onClick={() =>
+                                        setImageUrls((prev) => prev.filter((_, i) => i !== index))
+                                    }
+                                >
+                                    &times;
+                                </button>
+                                <img src={url} alt={`업로드 미리보기 ${index + 1}`} className={styles.previewImage} />
+                            </div>
+                        ))}
                     </div>
-                    
+
                     <label className={`${styles.productname} ${styles.all}`}>
                         <p>상품명</p>
                         <input
@@ -186,115 +187,115 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     </label>
                     <label className={`${styles.categoryname} ${styles.all}`}>
                         <p>카테고리</p>
-                    <div className={styles.customDropdown} ref={dropdownRef}>
-                        <button
-                        type="button"
-                        className={styles.dropdownToggle}
-                        onClick={() => setShowCategoryDropdown((prev) => !prev)}
-                        >
-                        {category}
-                        <span className={styles.arrow}>▼</span>
-                        </button>
-                        {showCategoryDropdown && (
-                        <ul className={styles.dropdownMenu} >
-                            {categoryList.map((cat) => (
-                            <li
-                                key={cat}
-                                onClick={() => {
-                                setCategory(cat);
-                                setShowCategoryDropdown(false);
-                                }}
-                                className={`${styles.dropdownItem} ${category === cat ? styles.selected : ""}`}
+                        <div className={styles.customDropdown} ref={dropdownRef}>
+                            <button
+                                type="button"
+                                className={styles.dropdownToggle}
+                                onClick={() => setShowCategoryDropdown((prev) => !prev)}
                             >
-                                {cat}
-                            </li>
-                            ))}
-                        </ul>
-                        )}
-                    </div>
+                                {category}
+                                <span className={styles.arrow}>▼</span>
+                            </button>
+                            {showCategoryDropdown && (
+                                <ul className={styles.dropdownMenu} >
+                                    {categoryList.map((cat) => (
+                                        <li
+                                            key={cat}
+                                            onClick={() => {
+                                                setCategory(cat);
+                                                setShowCategoryDropdown(false);
+                                            }}
+                                            className={`${styles.dropdownItem} ${category === cat ? styles.selected : ""}`}
+                                        >
+                                            {cat}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
                     </label>
                     <label className={`${styles.sell} ${styles.all}`}>
                         <p>판매가</p>
                         <input
-                        type="text"
-                        inputMode="numeric"
-                        value={formatPrice(price)}
-                        onChange={(e) => {
-                            const rawValue = e.target.value.replace(/[^0-9]/g, '');
-                            setPrice(rawValue === '' ? '' : Number(rawValue));
-                        }}
-                        placeholder="가격을 입력해주세요."
+                            type="text"
+                            inputMode="numeric"
+                            value={formatPrice(price)}
+                            onChange={(e) => {
+                                const rawValue = e.target.value.replace(/[^0-9]/g, '');
+                                setPrice(rawValue === '' ? '' : Number(rawValue));
+                            }}
+                            placeholder="가격을 입력해주세요."
                         />
                     </label>
                     <label className={`${styles.dealoption} ${styles.all}`}>
-                    <p>거래 옵션</p>
-                    <div className={styles.popuparea}>
-                        <button
-                        type="button"
-                        onClick={() => setShowOptionPopup(prev => !prev)}
-                        className={styles.optionButton}
-                        >
-                        {optionLabel}
-                        </button>
-                        
+                        <p>거래 옵션</p>
+                        <div className={styles.popuparea}>
+                            <button
+                                type="button"
+                                onClick={() => setShowOptionPopup(prev => !prev)}
+                                className={styles.optionButton}
+                            >
+                                {optionLabel}
+                            </button>
+
                             {/* {options.map(opt => (<span key={opt} style={{ marginRight: 8 }}>{opt}</span>))} */}
-                        {/* 옵션팝업 */}
-                        {showOptionPopup && (
-                            <div className={styles.popup} ref={popupRef}>
-                                <h4>상품 상태</h4>
-                            {conditionOptions.map(opt => (
-                            <label key={opt} style={{ display: "block" }}>
-                                <input
-                                type="radio"
-                                name="condition"
-                                checked={selectedCondition === opt}
-                                onChange={() => setSelectedCondition(opt)}
-                                />
-                                {opt}
-                            </label>
-                            ))}
+                            {/* 옵션팝업 */}
+                            {showOptionPopup && (
+                                <div className={styles.popup} ref={popupRef}>
+                                    <h4>상품 상태</h4>
+                                    {conditionOptions.map(opt => (
+                                        <label key={opt} style={{ display: "block" }}>
+                                            <input
+                                                type="radio"
+                                                name="condition"
+                                                checked={selectedCondition === opt}
+                                                onChange={() => setSelectedCondition(opt)}
+                                            />
+                                            {opt}
+                                        </label>
+                                    ))}
 
-                            <h4 className={styles.txtmgt}>구성품</h4>
-                            {itemOptions.map(opt => (
-                            <label key={opt} style={{ display: "block" }}>
-                                <input
-                                type="radio"
-                                name="item"
-                                checked={selectedItem === opt}
-                                onChange={() => setSelectedItem(opt)}
-                                />
-                                {opt}
-                            </label>
-                            ))}
+                                    <h4 className={styles.txtmgt}>구성품</h4>
+                                    {itemOptions.map(opt => (
+                                        <label key={opt} style={{ display: "block" }}>
+                                            <input
+                                                type="radio"
+                                                name="item"
+                                                checked={selectedItem === opt}
+                                                onChange={() => setSelectedItem(opt)}
+                                            />
+                                            {opt}
+                                        </label>
+                                    ))}
 
-                            <h4 className={styles.txtmgt}>거래 방식</h4>
-                            {deliveryOptions.map(opt => (
-                            <label key={opt} style={{ display: "block" }}>
-                                <input
-                                type="radio"
-                                name="delivery"
-                                checked={selectedDelivery === opt}
-                                onChange={() => setSelectedDelivery(opt)}
-                                />
-                                {opt}
-                                {opt === "직거래" && selectedDelivery === "직거래" && (
-                                <input
-                                    type="text"
-                                    placeholder="거래 장소 입력"
-                                    value={directPlace}
-                                    onChange={(e) => setDirectPlace(e.target.value)}
-                                    className={styles.directPlaceInput}
-                                    style={{ marginLeft: 8 }}
-                                />
-                                )}
-                            </label>
-                            ))}
-                                <button type="button" onClick={handleOptionComplete}>
-                                    입력 완료
-                                </button>
-                            </div>
-                        )}
-                    </div>
+                                    <h4 className={styles.txtmgt}>거래 방식</h4>
+                                    {deliveryOptions.map(opt => (
+                                        <label key={opt} style={{ display: "block" }}>
+                                            <input
+                                                type="radio"
+                                                name="delivery"
+                                                checked={selectedDelivery === opt}
+                                                onChange={() => setSelectedDelivery(opt)}
+                                            />
+                                            {opt}
+                                            {opt === "직거래" && selectedDelivery === "직거래" && (
+                                                <input
+                                                    type="text"
+                                                    placeholder="거래 장소 입력"
+                                                    value={directPlace}
+                                                    onChange={(e) => setDirectPlace(e.target.value)}
+                                                    className={styles.directPlaceInput}
+                                                    style={{ marginLeft: 8 }}
+                                                />
+                                            )}
+                                        </label>
+                                    ))}
+                                    <button type="button" onClick={handleOptionComplete}>
+                                        입력 완료
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                     </label>
                     <div>
                         <label className={styles.goodstxt}>

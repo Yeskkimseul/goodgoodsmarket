@@ -28,8 +28,6 @@ import { CommuProvider } from "./context/CommuContext";
 
 /* 수정 전 참고용 페이지들 */
 import Upload from "./pages/Upload"; //업로드
-import Edit from "./pages/Edit"; //수정
-import Detail from "./pages/Detail"; //상세페이지
 import Popular from "./pages/Popular"; //인기굿즈보기
 import About from "./pages/About"; //소개
 import { GoodsProvider } from "./context/GoodsContext";
@@ -45,15 +43,6 @@ function App() {
   const hideChatbot = location.pathname.startsWith("/mypage") ||
     location.pathname === "/liked" ||
     location.pathname === "/writereview";
-
-  useEffect(() => {
-    //스플래시화면
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); //3초 후에 로딩 완료
-
-    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
-  }, []);
 
 
   return (
@@ -118,9 +107,6 @@ function App() {
 
           {/* 수정 전 참고용 페이지들 */}
 
-
-          <Route path="/edit/:id" element={<Edit />} />
-          <Route path="/detail/:id" element={<Detail />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/about" element={<About />} />
           <Route path="/upload" element={<Upload />} />

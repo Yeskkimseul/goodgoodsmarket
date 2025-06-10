@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import MultiTab from "../components/exchangebuy/MultiTab";
 import Header from "../components/header/Header";
@@ -22,9 +23,17 @@ const categories = [
 
 const GoodsCategory = () => {
   const { id } = useParams<{ id: string }>();
-  const { goodsList } = useGoods();
+  const { goodsList, setGoodsList } = useGoods();
   const category = categories.find(cat => cat.id === id);
   const categoryName = category ? category.name : "";
+
+    // likes 상태 관리
+  const [likedIds, setLikedIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    const liked = localStorage.getItem('likes');
+    if (liked) setLikedIds(JSON.parse(liked));
+  }, []);
 
   // 선택된 카테고리의 goods만 필터
   const filteredGoods = goodsList.filter(g => g.category === categoryName);
@@ -36,32 +45,32 @@ const GoodsCategory = () => {
         <MultiTab tabs={['구매', '교환']}>
           {(activeIndex) => (
             activeIndex === 0 ? (
-              <div style={{marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding:'0 var(--padding)'}}>
+              <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
                 {filteredGoods
                   .filter(g => !g.isExchangeable)
                   .map(item => (
                     <GoodsCard
                       key={item.id}
                       item={item}
-                      likedIds={[]} // 필요시 Home처럼 상태 관리
-                      setLikedIds={() => { }}
+                      likedIds={likedIds}
+                      setLikedIds={setLikedIds}
                       goodsList={goodsList}
-                      setGoodsList={() => { }}
+                      setGoodsList={setGoodsList}
                     />
                   ))}
               </div>
             ) : activeIndex === 1 ? (
-              <div style={{marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)',  padding:'0 var(--padding)'}}>
+              <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
                 {filteredGoods
                   .filter(g => g.isExchangeable)
                   .map(item => (
                     <GoodsCard
                       key={item.id}
                       item={item}
-                      likedIds={[]}
-                      setLikedIds={() => { }}
+                      likedIds={likedIds}
+                      setLikedIds={setLikedIds}
                       goodsList={goodsList}
-                      setGoodsList={() => { }}
+                      setGoodsList={setGoodsList}
                     />
                   ))}
               </div>

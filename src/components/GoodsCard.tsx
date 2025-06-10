@@ -50,7 +50,7 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
             <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}>
                 <div className={styles.cardTop}>
-                    <img src={item.imageUrl} alt={item.title} className={styles.image} />
+                   <img src={item.imageUrl[0]} alt={item.title} className={styles.image} />
                     <button className={styles.likeButton} onClick={(e) => {
                         e.preventDefault();
                         toggleLike();

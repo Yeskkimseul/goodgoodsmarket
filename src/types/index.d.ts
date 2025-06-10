@@ -5,7 +5,7 @@ export interface Goods {
     description: string,
     category: string,
     price: number,
-    imageUrl:string,
+    imageUrl:string[],
     likes: number,
     createdAt: string,
     views: number,
