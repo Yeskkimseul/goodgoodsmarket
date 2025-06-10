@@ -51,6 +51,7 @@ padding: clamp(6px, 2vw, 18px) clamp(10px, 1.8vw, 16px);
     align-items: center;
     gap: var(--space4);
     font-size: var(--font-caption);
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 459px) {
@@ -62,4 +63,10 @@ padding: clamp(6px, 2vw, 18px) clamp(10px, 1.8vw, 16px);
         gap: 0;
     }
 
+}
+
+@media screen and (max-width: 430px) {
+.modalContent {
+    width: 95%;
+}
 }

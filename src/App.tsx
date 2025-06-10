@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 
@@ -35,8 +35,16 @@ import About from "./pages/About"; //소개
 import { GoodsProvider } from "./context/GoodsContext";
 import { clear } from "console";
 
+
+import ChatbaseWidget from "./components/ChatbaseWidget";
+
+
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  const hideChatbot = location.pathname.startsWith("/mypage") ||
+    location.pathname === "/liked" ||
+    location.pathname === "/writereview";
 
   useEffect(() => {
     //스플래시화면
@@ -52,6 +60,7 @@ function App() {
 
     <GoodsProvider>
       <CommuProvider>
+        {!hideChatbot && <ChatbaseWidget />}
         {/* <>
           {loading ? <SplashScreen /> : <Login />}
         </> */}
@@ -62,20 +71,44 @@ function App() {
 
           <Route path="/join" element={<Join />} />
 
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={
+            <Home />} />
           <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
           <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
           <Route path="/home/goodsupload" element={<GoodsUpload />} />
 
           <Route path="/home/search" element={<Search />} />
 
-          <Route path="/community" element={<Community />} />
-          <Route path="/community/commudetail/:id" element={<CommuDetail />} />
-          <Route path="/community/mycommu" element={<MyCommu />} />
-          <Route path="/community/commuupload" element={<CommuUpload />} />
+          <Route path="/community" element={
+            <Community />
+          } />
+          <Route path="/community/commudetail/:id" element={
 
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/chat/chatdetail" element={<ChatDetail />} />
+            <CommuDetail />
+
+          } />
+          <Route path="/community/mycommu" element={
+
+            <MyCommu />
+
+          } />
+          <Route path="/community/commuupload" element={
+
+            <CommuUpload />
+
+          } />
+
+
+          <Route path="/chat" element={
+
+            <Chat />
+
+          } />
+          <Route path="/chat/chatdetail" element={
+
+            <ChatDetail />
+
+          } />
 
           <Route path="/mypage" element={<Mypage />} />
           <Route path="/liked" element={<Liked />} />
