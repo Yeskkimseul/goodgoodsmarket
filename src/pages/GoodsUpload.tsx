@@ -124,9 +124,9 @@ const GoodsUpload = () => {
             createdAt: new Date().toISOString(),
             views: 0,
             options,
-            sellerimgUrl: '',
-            sellerName: '',
-            sellerTrust: 0,
+            sellerimgUrl: '/images/seller1.png',
+            sellerName: '뱃지가좋아',
+            sellerTrust: 70,
              isExchangeable: false,
         } as Goods;
         // 로컬스토리지에 저장
