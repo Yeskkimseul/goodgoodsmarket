@@ -89,7 +89,7 @@ const Home = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src={isMobile ? "/images/mobile_thumb3.jpg" : "/images/main_thumb3.jpg"}
+                                src={isMobile ? "/images/mobile_thumb3.png" : "/images/main_thumb3.jpg"}
                                 alt="굿즈 썸네일3"
                             />
                         </SwiperSlide>
@@ -119,7 +119,7 @@ const Home = () => {
                 </div>
 
                 <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
-                <div>
+                <div style={{padding: '0 var(--padding)'}}>
                     {
                         commuList.slice(0, 4).map((item) => (
                             <CommuCard

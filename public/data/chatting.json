@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "username": "동네이장님",
+    "userProfile": "/images/user1.png",
+    "productImage": "/images/item1.jpg",
+    "message": "네, 서울역에서 직거래 가능합니다.",
+    "createdAt": "2025-06-10T09:45:00",
+    "unread": true,
+    "type": "판매"
+  },
+  {
+    "id": 2,
+    "username": "배송조회만37번",
+    "userProfile": "/images/user2.png",
+    "productImage": "/images/item2.jpg",
+    "message": "아직 재고 있습니다~",
+    "createdAt": "2025-06-10T08:00:00",
+    "unread": false,
+    "type": "구매"
+  },
+  {
+    "id": 3,
+    "username": "키링은못참지",
+    "userProfile": "/images/user3.png",
+    "productImage": "/images/item3.jpg",
+    "message": "거래 감사합니다!",
+    "createdAt": "2025-06-03T10:00:00",
+    "unread": false,
+    "type": "교환"
+  },
+  {
+    "id": 4,
+    "username": "포카수집러",
+    "userProfile": "/images/user4.png",
+    "productImage": "/images/item4.jpg",
+    "message": "직거래 가능할까요?",
+    "createdAt": "2025-06-07T16:30:00",
+    "unread": true,
+    "type": "판매"
+  },
+  {
+    "id": 5,
+    "username": "굿즈는생명",
+    "userProfile": "/images/user5.png",
+    "productImage": "/images/item5.jpg",
+    "message": "내일 발송 가능합니다!",
+    "createdAt": "2025-06-08T22:15:00",
+    "unread": false,
+    "type": "구매"
+  }
+]

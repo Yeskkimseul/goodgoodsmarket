@@ -66,6 +66,7 @@ const Community = () => {
                         </button>
                     ))}
                 </div>
+                <div style={{padding:'0 var(--padding)'}}>
                 {
                     sortedList.map((item) => (
                         <CommuCard
@@ -75,6 +76,8 @@ const Community = () => {
                         />
                     ))
                 }
+
+                </div>
                 <MainMoreBtn
                     popupContent={({ close }: { close: () => void }) => (
                         <div>

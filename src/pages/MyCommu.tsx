@@ -128,13 +128,13 @@ const MyCommu = () => {
                     <MultiTab tabs={['내 게시글', '내 댓글']}>
                         {(activeIndex) => (
                             activeIndex === 0 ? (
-                                <div>
+                                <div style={{padding: '0 var(--padding)'}}>
                                     {myPosts.map(item => (
                                         <MycommuItem key={item.id} item={item} onDelete={handleDeletePost} />
                                     ))}
                                 </div>
                             ) : activeIndex === 1 ? (
-                                <div>
+                                <div style={{padding: '0 var(--padding)'}}>
                                     {myComments.map(({ item, comment }) => (
                                         <MyCommentItem key={comment.id} item={item} comment={comment} onDelete={handleDeleteComment} />
                                     ))}
