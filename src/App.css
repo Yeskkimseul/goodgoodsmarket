@@ -4,12 +4,14 @@
 @import "swiper/css/pagination";
 
 /* 공통 레이아웃 */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-.cusor{
+
+.cusor {
   cursor: pointer;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -23,13 +25,23 @@ a {
   color: inherit;
 }
 
+::-webkit-scrollbar {
+	display: block;
+	width: 8px;
+	}
+
 html,
 body,
 #root {
-  overflow-y: scroll;
-  height: 100%;
   margin: 0;
   background-color: #f5f6f8;
+}
+html {
+	width: calc(100vw - 8px);
+    }
+    
+body {
+  overflow: hidden;
 }
 
 .layout {
@@ -60,21 +72,23 @@ body,
 
 /* 하단 tab바 footer로 사용 css여기서 변경 -종현- */
 .layout footer {
-  background-color: #ffffff;
-  width: 100%;
+  position: fixed;
   left: 0;
-  max-width: none;
+  bottom: 0;
+  width: 100vw;
   text-align: center;
   padding: 0;
   color: #999;
   font-size: 14px;
-  position: sticky;
-  bottom: 0;
-  box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
   z-index: 100;
 }
 
-
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0px -4px 4px 0px rgba(29, 198, 167, 0.04);
+}
 
 /* 반응형 레이아웃 */
 @media (max-width:450px) {
