@@ -67,9 +67,9 @@ const Join = () => {
 
     return (
         <div className={Login.wrapper}>
+                <Header type='type1' title='회원가입' />
 
             <div className={Login.inner}>
-                <Header type='type1' title='회원가입' />
 
                 {step === 0 && <JoinCheck ref={joinCheckRef} />}
                 {step === 1 && <Joininfo />}
