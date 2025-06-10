@@ -1,27 +1,28 @@
 .modalBackdrop {
-    position: fixed;
-    inset: 0;
-    /* background: rgba(0, 0, 0, 0.4); */
+    position: absolute;
+    inset: unset;
+    top: 100%;
+    left: 0;
+    /*     background: rgba(0, 0, 0, 0.4); */
+    width: 100%;
+    height: 100%;
     /* 영역보는 용도로 냅두기 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     /* 일단 가운데정렬 */
     z-index: 1000;
 }
 
 .modalContent {
     background: var(--bg-white);
-    padding: clamp(10px, 3.5vw, 33px) clamp(10px, 2vw, 22px);
+padding: clamp(6px, 2vw, 18px) clamp(10px, 1.8vw, 16px);
     border-radius: 12px;
     border: 1px solid var(--sub-lightmint);
     box-shadow: 0px 2.8px 4.2px 0px rgba(29, 198, 167, 0.12);
-    max-width: 1044px;
-    width: 90%;
+    max-width: 700px;
+    width: 80%;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--space24);
+    gap: var(--space8);
 }
 
 .modalContent .title {
@@ -42,14 +43,14 @@
 }
 
 .list img {
-    width: clamp(20px, 3.5vw, 34px);
+    width: clamp(20px, 3.5vw, 30px);
 }
 
 .list div {
     display: flex;
     align-items: center;
     gap: var(--space4);
-    font-size: var(--font-body2);
+    font-size: var(--font-caption);
 }
 
 @media screen and (max-width: 459px) {
@@ -58,7 +59,6 @@
     }
 
     .list div {
-        font-size: var(--font-caption);
         gap: 0;
     }
 

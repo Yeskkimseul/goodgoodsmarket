@@ -51,6 +51,7 @@ button {
     font-size: var(--font-button);
     background: none;
     color: var(--text-black);
+    font-family: var(--pre);
 }
 
 button.confirm {
