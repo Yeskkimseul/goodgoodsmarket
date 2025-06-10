@@ -12,7 +12,7 @@
 } */
 
 /* 정렬 */
-.form{
+.form {
   display: flex;
   flex-direction: column;
   padding: 60px 0;
@@ -51,10 +51,12 @@
   color: var(--fields-textdisabled);
   border: 1px solid var(--fields-disabled);
 }
-.input.errpr{
+
+.input.errpr {
   background: var(--fields-bgerror);
   border: 1px solid var(--fields-strokeerror);
 }
+
 /* 인풋 하단 설명글 묶음 */
 .inputdiscription {
   display: flex;
@@ -68,18 +70,22 @@
   border-radius: 100%;
   background-color: var(--main-mint);
 }
-.discriptionbullet.error{
+
+.discriptionbullet.error {
   background-color: var(--text-error);
 }
+
 .discriptiontext {
   font-size: var(--font-caption);
   font-weight: 400;
   line-height: 125%;
   color: var(--main-mint);
 }
-.discriptiontext.error{
+
+.discriptiontext.error {
   color: var(--text-error);
 }
+
 .textarea {
   width: 100%;
   padding: clamp(14px, 2vh, 16px) clamp(16px, 2vw, 20px);
@@ -128,11 +134,20 @@
   background-color: var(--button-active);
 }
 
-.btn_icon{
+.btn_icon {
   position: absolute;
   top: 50%;
   left: var(--space16);
   transform: translateY(-50%);
+}
+
+/* big 사이즈이되 width값 다른버전 */
+.button_big.width30 {
+  width: 30%;
+}
+
+.button_big.width40 {
+  width: 40%;
 }
 
 
@@ -162,6 +177,7 @@
 .button_sm.width30 {
   width: 30%;
 }
+
 .button_sm.width40 {
   width: 40%;
 }
@@ -180,7 +196,7 @@
   background-color: var(--button-bgactive);
 }
 
-.btn_icon{
+.btn_icon {
   position: absolute;
   top: 50%;
   left: var(--space16);
@@ -189,11 +205,12 @@
 
 
 /* 이미지 input 수정 */
-.imgflex{
+.imgflex {
   display: flex;
   gap: 17px;
 }
-.imguploadlabel{
+
+.imguploadlabel {
   width: 133px;
   height: 133px;
   background-color: #EFEFEF;
@@ -203,21 +220,26 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.imgupload{
-opacity: 0;
+
+.imgupload {
+  opacity: 0;
 }
+
 .previewWrapper {
   position: relative;
   display: inline-block;
-  width: 120px; /* 미리보기 이미지와 동일한 크기 */
+  width: 120px;
+  /* 미리보기 이미지와 동일한 크기 */
   height: 120px;
 }
-.previewImage{
+
+.previewImage {
   width: 133px;
   height: 133px;
   border-radius: 9px;
   border: 1px solid var(--main-mint);
 }
+
 .closeButton {
   position: absolute;
   top: 2px;
@@ -230,17 +252,19 @@ opacity: 0;
   z-index: 1;
   transition: background 0.3s ease;
 }
+
 .closeButton:hover {
   background: #e6e6e6;
   color: white;
 }
+
 /* 모든 기본 css */
 .all{
-   font-family: "Pretendard Variable";
   display: flex;
   gap: 17px;
 }
-.all p{
+
+.all p {
   width: 133px;
   height: 66px;
   display: flex;
@@ -253,7 +277,7 @@ opacity: 0;
 
 /* 상품명 */
 
-.productname input{
+.productname input {
   width: 85%;
   border: none;
   border-bottom: 1px solid #efefef;
@@ -261,22 +285,26 @@ opacity: 0;
   font-size: 1.2rem;
   color: #555;
 }
-.productname input::placeholder{
+
+.productname input::placeholder {
   font-size: 1.2rem;
 }
+
 .productname input:focus {
-  font-size: 1.2rem; /* 텍스트 크기 변경 */
+  font-size: 1.2rem;
+  /* 텍스트 크기 변경 */
   outline: none;
   border-bottom: 1px solid #7e7e7e;
 
 }
-.productname input:focus::placeholder{
+
+.productname input:focus::placeholder {
   opacity: 0;
 }
 
 /* 카테고리 */
 
-.categoryname select{
+.categoryname select {
   width: 85%;
   border: none;
   border-bottom: 1px solid #efefef;
@@ -286,7 +314,7 @@ opacity: 0;
   cursor: pointer;
 }
 
-.categoryname select:focus{
+.categoryname select:focus {
   outline: none;
   border-bottom: 1px solid #7e7e7e;
   color: var(--main-black);
@@ -294,32 +322,36 @@ opacity: 0;
 
 /* 판매가 */
 
-.sell input{
+.sell input {
   width: 85%;
   font-size: 1.2rem;
   color: #555;
   transition: all 0.3s ease;
 }
-.sell input{
+
+.sell input {
   border: none;
   border-bottom: 1px solid #efefef;
 }
-.sell input:focus{
+
+.sell input:focus {
   outline: none;
   color: var(--main-black);
   border-bottom: 1px solid #7e7e7e;
 
 }
-.sell input:focus::placeholder{
+
+.sell input:focus::placeholder {
   opacity: 0;
 }
 
 /* 거래 옵션 */
-.popuparea{
+.popuparea {
   width: 85%;
   position: relative;
 }
-.dealoption button{
+
+.dealoption button {
   width: 100%;
   height: 100%;
   display: flex;
@@ -327,29 +359,35 @@ opacity: 0;
   border-bottom: 1px solid #efefef;
   color: #555;
 }
-.options{
+
+.options {
   display: flex;
   flex-direction: column;
 }
-.position{
+
+.position {
   position: relative;
 
 }
-.popup{
+
+.popup {
   padding: 24px 16px;
   width: 100%;
   position: absolute;
   border-radius: 10px;
   background-color: #fff;
 }
-.popup h4{
+
+.popup h4 {
   font-size: 1.25rem;
   margin-bottom: 16px;
 }
-.popup label{
+
+.popup label {
   margin-top: 1%;
 }
-input.directPlaceInput{
+
+input.directPlaceInput {
   display: flex;
   width: calc(100% - 10px);
   height: 48px;
@@ -357,22 +395,26 @@ input.directPlaceInput{
   background-color: #F4F4F4;
   border-radius: 8px;
 }
-input.directPlaceInput::placeholder{
+
+input.directPlaceInput::placeholder {
   font-size: 0.9rem;
   padding: 8px;
 }
-input.directPlaceInput:focus{
+
+input.directPlaceInput:focus {
   font-size: 0.9rem;
   padding: 8px;
   outline: none;
   
 }
-input.directPlaceInput:focus::placeholder{
+
+input.directPlaceInput:focus::placeholder {
   opacity: 0;
   font-size: 0.9rem;
-  
+
 }
-.popup button{
+
+.popup button {
   margin-top: 32px;
   display: flex;
   justify-content: center;
@@ -384,11 +426,12 @@ input.directPlaceInput:focus::placeholder{
 }
 
 /* 굿즈 설명 글 */
-.goodstxt{
+.goodstxt {
   width: 100%;
   height: 522px;
 }
-.goodstxt textarea{
+
+.goodstxt textarea {
   width: 100%;
   height: 522px;
   background-color: #F4F4F4;
@@ -400,6 +443,7 @@ input.directPlaceInput:focus::placeholder{
   font-size: 1.1rem;
 }
 .goodstxt textarea::placeholder{
+  padding: 48px;
   font-size: 1.1rem;
   color: #B6B6B6;
   white-space: pre-line;
@@ -407,19 +451,22 @@ input.directPlaceInput:focus::placeholder{
    font-weight: 300;
    line-height: 3;
 }
-.goodstxt textarea:focus{
+
+.goodstxt textarea:focus {
   outline: none;
   padding: 48px;
   font-size: 1.1rem;
 }
-.goodstxt textarea:focus::placeholder{
+
+.goodstxt textarea:focus::placeholder {
   opacity: 0;
 }
 
 /* 등록 버튼 */
 
-button.upload{
-  all: unset; /* 버튼 기본 스타일 모두 제거 */
+button.upload {
+  all: unset;
+  /* 버튼 기본 스타일 모두 제거 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -430,6 +477,7 @@ button.upload{
   cursor: pointer;
   transition: .3s;
 }
-button.upload:hover{
+
+button.upload:hover {
   background-color: var(--sub-lightmint);
 }

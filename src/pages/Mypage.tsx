@@ -19,8 +19,8 @@ const Mypage = () => {
                 <div className={mypageStyles.profile}>
                     <img src="/images/mypage/profile.png" alt="프로필사진" className={mypageStyles.profileImage} />
                     <div className={mypageStyles.right}>
-                        <h2 className={mypageStyles.name}>뱃지가 좋아</h2>
-                        <div className={`${formStyles.button_sm} ${formStyles.width40}`} onClick={() => navigate("#")}>프로필 관리</div>
+                        <h3 className={mypageStyles.name}>뱃지가 좋아</h3>
+                        <div className={`${formStyles.button_big} ${formStyles.width40}`} onClick={() => navigate("#")}>프로필 관리</div>
 
                     </div>{/* //.right */}
                 </div>{/* profile */}
@@ -64,7 +64,7 @@ const Mypage = () => {
                 <div className={mypageStyles.bottom}>
                     <h4>02-1234-5678</h4>
                     <h5>운영시간 10:00 - 18:00</h5>
-                    <div className={`${formStyles.button_sm} ${formStyles.width30}`} onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
+                    <div className={`${formStyles.button_big} ${formStyles.width30}`} onClick={() => setLogoutModalOpen(true)}>로그아웃</div>
                 </div>
             </div>
             <Modal

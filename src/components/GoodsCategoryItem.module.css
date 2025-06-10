@@ -3,10 +3,11 @@
   gap: var(--space24);
   overflow-x: auto;
   white-space: nowrap;
-/*   padding-bottom: clamp(40px, 5vw, 80px); */
+  /*   padding-bottom: clamp(40px, 5vw, 80px); */
   cursor: grab;
   user-select: none;
-  /* scroll-behavior: smooth; */
+  padding: 0 clamp(16px, 4vw, 78px)
+    /* scroll-behavior: smooth; */
 }
 
 .listContainer:active {
