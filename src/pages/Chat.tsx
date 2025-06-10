@@ -1,58 +1,29 @@
-import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
+import { useEffect, useState } from "react";
+import { Commu } from "../types/commu";
+import CommuCard from "../components/CommuCard";
+import styles from './CardListLayout.module.css';
+// import commustyles from './CommuList.module.css';
+import filterstyles from './filter.module.css';
+import morestyles from '../components/MainMoreBtn.module.css';
+import MainMoreBtn from "../components/MainMoreBtn";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
-import ChatList from "../components/ChatList";
-import styles from "./filter.module.css";
-import type { Chat } from "../types/chatting";
 
-// 필터 탭 리스트 정의
-const filterList = [
-  { label: "전체", value: "전체" },
-  { label: "판매", value: "판매" },
-  { label: "구매", value: "구매" },
-  { label: "교환", value: "교환" },
-] as const;
-
-type TabType = (typeof filterList)[number]["value"];
 
 const Chat = () => {
-  const [chatData, setChatData] = useState<Chat[]>([]);
-  const [filter, setFilter] = useState<TabType>("전체");
 
-  // 데이터 불러오기
-  useEffect(() => {
-    fetch("/data/chatting.json")
-      .then((res) => res.json())
-      .then((data) => setChatData(data as Chat[]))
-      .catch((err) => console.error("chatting.json fetch 실패", err));
-  }, []);
 
-  // 필터 적용
-  const filteredChats =
-    filter === "전체" ? chatData : chatData.filter((chat) => chat.type === filter);
 
-  return (
-    <Layout>
-      <Header type="type6" />
-      <div>
-        <div className={styles.filterContainer}>
-          {filterList.map(({ label, value }) => (
-            <button
-              key={value}
-              onClick={() => setFilter(value)}
-              className={`${styles.filterButton} ${
-                filter === value ? styles.active : ""
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+    return (
+        <Layout>
+            <Header type="type7" />
+            <div>
+     
+            </div>
+        </Layout>
+    )
 
-        <ChatList chats={filteredChats} />
-      </div>
-    </Layout>
-  );
-};
+}
 
 export default Chat;
