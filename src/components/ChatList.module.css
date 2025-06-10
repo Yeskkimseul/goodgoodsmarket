@@ -1,0 +1,99 @@
+.chatList {
+  padding: 16px;
+  background: #fff;
+}
+
+.chatTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chatTab {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 18px;
+  background: #f0f0f0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.active {
+  background: #00c67c;
+  color: #fff;
+}
+
+.chatItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chatItem {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f1f1;
+  align-items: center;
+}
+
+.productImage {
+  position: relative;
+  margin-right: 12px;
+}
+
+.productImage img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.chatDot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.chatContent {
+  flex: 1;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.userAvatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.chatTime {
+  font-size: 12px;
+  color: #999;
+}
+
+.chatMessage {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
