@@ -9,7 +9,7 @@ import morestyles from '../components/MainMoreBtn.module.css';
 import MainMoreBtn from "../components/MainMoreBtn";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
-import ChatbaseWidget from "../components/ChatbaseWidget";
+
 
 const Community = () => {
 
@@ -119,7 +119,6 @@ const Community = () => {
                 />
                 
             </div>
-            <ChatbaseWidget />
         </Layout>
     )
 

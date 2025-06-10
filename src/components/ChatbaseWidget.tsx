@@ -9,6 +9,38 @@ declare global {
 const ChatbaseWidget = () => {
   useEffect(() => {
     const scriptId = "R5jk6ydB6lnN4fTbS7Cy5";
+    let script: HTMLScriptElement | null = null;
+
+    // 항상 cleanup을 먼저 실행 (SPA에서 재마운트 시 중복 방지)
+    const cleanup = () => {
+      // 스크립트 제거
+      const oldScript = document.getElementById(scriptId);
+      if (oldScript) oldScript.remove();
+
+      // 반복적으로 iframe, container 제거 시도 (최대 1초)
+      let tries = 0;
+      const maxTries = 10;
+      const interval = setInterval(() => {
+        let removed = false;
+        document.querySelectorAll("iframe[src*='chatbase']").forEach((iframe) => {
+          const wrapper = iframe.closest(".chatbase-container");
+          if (wrapper) {
+            wrapper.remove();
+            removed = true;
+          } else {
+            iframe.remove();
+            removed = true;
+          }
+        });
+        if (removed || ++tries >= maxTries) {
+          clearInterval(interval);
+        }
+      }, 100);
+
+      delete window.chatbase;
+    };
+
+    cleanup();
 
     if (document.getElementById(scriptId)) return;
 
@@ -23,7 +55,7 @@ const ChatbaseWidget = () => {
       },
     });
 
-    const script = document.createElement("script");
+    script = document.createElement("script");
     script.src = "https://www.chatbase.co/embed.min.js";
     script.id = scriptId;
     script.async = true;
@@ -46,18 +78,7 @@ const ChatbaseWidget = () => {
 
     waitAndStyle();
 
-    return () => {
-      script.remove();
-
-      const iframe = document.querySelector("iframe[src*='chatbase']");
-      if (iframe) {
-        const wrapper = iframe.closest(".chatbase-container");
-        if (wrapper) wrapper.remove();
-        else iframe.remove();
-      }
-
-      delete window.chatbase;
-    };
+    return cleanup;
   }, []);
 
   return null;
