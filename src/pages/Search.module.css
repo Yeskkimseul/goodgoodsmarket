@@ -1,6 +1,6 @@
 .recommend {
     display: flex;
-    gap: clamp(4px, 2vw, 10px);
+    gap: clamp(2px, 1vw, 10px);
     flex-wrap: wrap;
 }
 
@@ -11,5 +11,5 @@
 .recommend_wrap {
     display: flex;
     flex-direction: column;
-    gap: clamp(4px, 2vw, 10px);
+    gap: clamp(2px, 1vw, 10px);
 }
