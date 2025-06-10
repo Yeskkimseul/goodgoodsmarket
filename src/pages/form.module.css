@@ -365,11 +365,12 @@
 
 .dropdownItem:hover {
   background-color: var(--sub-lightmint);
-
+  color: #fff;
 }
 
 .selected {
   background-color: var(--sub-lightmint);
+  color: #fff;
 }
 
 /* 판매가 */

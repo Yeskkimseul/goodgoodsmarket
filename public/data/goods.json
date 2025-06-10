@@ -179,9 +179,9 @@
         "category": "인형",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 4,
+        "likes": 6,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 120,
+        "views": 68,
         "options": [
             "미개봉",
             "직거래",
@@ -199,9 +199,9 @@
         "category": "기타",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 4,
+        "likes": 2,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 120,
+        "views": 32,
         "options": [
             "미개봉",
             "직거래",
@@ -219,9 +219,9 @@
         "category": "인형",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 4,
+        "likes": 16,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 120,
+        "views": 94,
         "options": [
             "미개봉",
             "직거래",
@@ -239,9 +239,9 @@
         "category": "인형",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 4,
+        "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 120,
+        "views": 88,
         "options": [
             "미개봉",
             "직거래",
@@ -251,5 +251,265 @@
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": false
+    },
+    {
+        "id": "14",
+        "title": "BTS 앨범 자켓 포토카드 판매",
+        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
+        "category": "포토카드",
+        "price": 12500,
+        "imageUrl": ["/images/mydeals/sale2.png"],
+        "likes": 116,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 625,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "15",
+        "title": "레드벨벳 포토카드 판매",
+        "description": "아끼는 레드벨벳 포토카드 판매합니다. 상태 매우 좋습니다.",
+        "category": "포토카드",
+        "price": 25000,
+        "imageUrl": ["/images/mydeals/sale3.png"],
+        "likes": 49,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 240,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "16",
+        "title": "직접만든 포토카드 판매합니다",
+        "description": "전 세계 하나 밖에 없는 포토카드 팔아용.",
+        "category": "포토카드",
+        "price": 15000,
+        "imageUrl": ["/images/mydeals/sale4.png"],
+        "likes": 24,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 268,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "17",
+        "title": "엔시티 포토카드 -태일",
+        "description": "아끼는 우리 태일이 데려가실 분ㅠ.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale5.png"],
+        "likes": 3,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 53,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "18",
+        "title": "굿걸즈 포토카드 세트",
+        "description": "요즘 뜨고 있는 굿걸즈 포토카드 구하기 어렵습니다 하하.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale6.png"],
+        "likes": 31,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 132,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "19",
+        "title": "뉴진스 앨범 포토카드 세트",
+        "description": "개인적으로 뉴진스 해린 팬입니다ㅎ.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale7.png"],
+        "likes": 12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 92,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "20",
+        "title": "아린 포토카드 LP판",
+        "description": "LP판에 포토카드라니 신박하지 않나요.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale8.png"],
+        "likes": 16,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 112,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "21",
+        "title": "에스파 포토카드 교환 할 사람",
+        "description": "윈터 빼고 다 있어요 윈터 가지고 계시는 분ㅠ.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange1.png"],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 89,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "22",
+        "title": "아이돌 포토카드 교환해요!",
+        "description": "OO이 팬 분들 여기 모여라~.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange5.png"],
+        "likes": 12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 113,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "23",
+        "title": "포토카드 컬러 교환해요~",
+        "description": "포토카드 컬러별로 구비중입니당.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange2.png"],
+        "likes": 21,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 163,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "24",
+        "title": "전신이랑 얼굴샷 바꿀 사람?",
+        "description": "OO이 전신샷 많이 갖고 있어여 얼굴샷 가지고 계신 분~?.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange3.png"],
+        "likes": 28,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 183,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "25",
+        "title": "나나랑 교환 하실 분?",
+        "description": "나나 구해요ㅠ.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange4.png"],
+        "likes": 18,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 106,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "26",
+        "title": "포토카드랑 앨범 교환!",
+        "description": "포토카드 전 맴버 다 있습니다 앨범 교환 하실 분?.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale2.png"],
+        "likes": 42,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 254,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
     }
 ]
