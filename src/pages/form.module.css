@@ -236,6 +236,7 @@ opacity: 0;
 }
 /* 모든 기본 css */
 .all{
+   font-family: "Pretendard Variable";
   display: flex;
   gap: 17px;
 }
@@ -364,6 +365,7 @@ input.directPlaceInput:focus{
   font-size: 0.9rem;
   padding: 8px;
   outline: none;
+  
 }
 input.directPlaceInput:focus::placeholder{
   opacity: 0;
@@ -392,13 +394,18 @@ input.directPlaceInput:focus::placeholder{
   background-color: #F4F4F4;
   border: none;
   border-radius: 30px;
-}
-.goodstxt textarea::placeholder{
+  line-height: 3;
+  font-family: "Pretendard Variable";
   padding: 48px;
   font-size: 1.1rem;
+}
+.goodstxt textarea::placeholder{
+  font-size: 1.1rem;
   color: #B6B6B6;
-  line-height: 2;
   white-space: pre-line;
+   font-family: "Pretendard Variable";
+   font-weight: 300;
+   line-height: 3;
 }
 .goodstxt textarea:focus{
   outline: none;
