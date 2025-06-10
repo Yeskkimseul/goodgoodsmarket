@@ -13,6 +13,10 @@
     gap: var(--space16);
 }
 
+.left .img {
+    position: relative;
+}
+
 .left img {
     width: clamp(48px, 5vw, 62px);
 }
@@ -20,4 +24,25 @@
 .right {
     color: var(--text-lightgrey);
     font-size: var(--font-caption);
+}
+
+.badge {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.read {
+    color: #aaa;
+    /* 읽음 시 글자 색 */
+}
+
+.readText {
+    color: #bbb;
+    /* 읽음 시 본문 색 */
 }
