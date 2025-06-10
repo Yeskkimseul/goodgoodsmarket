@@ -1,6 +1,4 @@
-export type ChatType = "판매" | "구매" | "교환";
-
-export interface Chat {
+export interface Chatting {
   id: number;
   username: string;
   userProfile: string;

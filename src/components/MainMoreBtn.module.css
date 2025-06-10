@@ -2,7 +2,8 @@
   position: fixed;
   right: 50%;
   bottom: 0;
-  margin-right: clamp(-608px, calc(-600px - 2.5vw), -624px);
+  margin-right: clamp(-554px, calc(-50vw + 24px), -123.5px);
+  /* margin-right: clamp(-608px, calc(-600px - 2.5vw), -624px); */
 /*   min-width: 375px;
   max-width: 1200px; */
   background: #ccc;
