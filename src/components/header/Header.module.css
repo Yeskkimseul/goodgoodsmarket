@@ -4,7 +4,7 @@
     align-items: center;
     height: clamp(62px, 6vw, 103px);
     border-bottom: 1px solid var(--stroke-lightE);
-    position: sticky;
+    position: fixed;
     max-width: 1200px;
     width: 100%;
     top: 0;

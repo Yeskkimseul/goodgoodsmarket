@@ -1,0 +1,43 @@
+.listwrap {
+    border-bottom: 1px solid var(--stroke-lightE);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(16px, 5vw, 24px) var(--padding);
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: var(--space16);
+}
+
+.left .img {
+    position: relative;
+}
+
+.left img {
+    width: clamp(48px, 5vw, 62px);
+}
+
+.right {
+    color: var(--text-lightgrey);
+    font-size: var(--font-caption);
+}
+
+.badge {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: var(--text-error);
+    border: 2px solid var(--bg-white);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.read {
+    color: var(--text-grey);
+}

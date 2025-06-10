@@ -5,9 +5,12 @@
         "description": "수제 굿즈 수첩",
         "category": "문구류",
         "price": 12000,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_1.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_1.png",
+            "/images/main_postimgs/homeGoodsPick_2.png"
+        ],
         "likes": 3,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-01T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -25,7 +28,9 @@
         "description": "아크릴 굿즈 뱃지",
         "category": "아크릴 굿즈",
         "price": 5000,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_2.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_2.png"
+        ],
         "likes": 7,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -45,7 +50,9 @@
         "description": "아이돌 포토카드",
         "category": "포토카드",
         "price": 16000,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_3.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_3.png"
+        ],
         "likes": 10,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -64,7 +71,9 @@
         "description": "롤리팝 세트",
         "category": "문구류",
         "price": 8500,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_4.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_4.png"
+        ],
         "likes": 5,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -83,7 +92,9 @@
         "description": "OO 굿즈 인형",
         "category": "인형",
         "price": 12000,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_5.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_5.png"
+        ],
         "likes": 8,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -102,7 +113,9 @@
         "description": "OO 아크릴 키링",
         "category": "아크릴 굿즈",
         "price": 9800,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_6.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_6.png"
+        ],
         "likes": 8,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -121,7 +134,9 @@
         "description": "OOO 굿즈 스티커",
         "category": "문구류",
         "price": 3500,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_7.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_7.png"
+        ],
         "likes": 8,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -140,7 +155,9 @@
         "description": "레드 베어 굿즈 세트",
         "category": "기타",
         "price": 108000,
-        "imageUrl": ["/images/main_postimgs/homeGoodsPick_8.png"],
+        "imageUrl": [
+            "/images/main_postimgs/homeGoodsPick_8.png"
+        ],
         "likes": 8,
         "createdAt": "2023-10-01T12:00:00Z",
         "views": 120,
@@ -159,7 +176,9 @@
         "description": "몬스터볼 팝니다.",
         "category": "인형",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale1.png"],
+        "imageUrl": [
+            "/images/mydeals/sale1.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 120,
@@ -179,7 +198,7 @@
         "category": "인형",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 6,
+        "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 68,
         "options": [
@@ -199,7 +218,7 @@
         "category": "기타",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 2,
+        "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 32,
         "options": [
@@ -212,14 +231,14 @@
         "sellerTrust": 70,
         "isExchangeable": true
     },
-       {
+    {
         "id": "12",
         "title": "컬러그램 제로베이스원 콜라보 홀더",
         "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
         "category": "인형",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 16,
+        "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 94,
         "options": [
@@ -239,147 +258,7 @@
         "category": "인형",
         "price": 16000,
         "imageUrl": ["/images/mydeals/sale1.png"],
-        "likes": 11,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 88,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "14",
-        "title": "BTS 앨범 자켓 포토카드 판매",
-        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
-        "category": "포토카드",
-        "price": 12500,
-        "imageUrl": ["/images/mydeals/sale2.png"],
-        "likes": 116,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 625,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "15",
-        "title": "레드벨벳 포토카드 판매",
-        "description": "아끼는 레드벨벳 포토카드 판매합니다. 상태 매우 좋습니다.",
-        "category": "포토카드",
-        "price": 25000,
-        "imageUrl": ["/images/mydeals/sale3.png"],
-        "likes": 49,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 240,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "16",
-        "title": "직접만든 포토카드 판매합니다",
-        "description": "전 세계 하나 밖에 없는 포토카드 팔아용.",
-        "category": "포토카드",
-        "price": 15000,
-        "imageUrl": ["/images/mydeals/sale4.png"],
-        "likes": 24,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 268,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "17",
-        "title": "엔시티 포토카드 -태일",
-        "description": "아끼는 우리 태일이 데려가실 분ㅠ.",
-        "category": "포토카드",
-        "price": 23000,
-        "imageUrl": ["/images/mydeals/sale5.png"],
-        "likes": 3,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 53,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "18",
-        "title": "굿걸즈 포토카드 세트",
-        "description": "요즘 뜨고 있는 굿걸즈 포토카드 구하기 어렵습니다 하하.",
-        "category": "포토카드",
-        "price": 23000,
-        "imageUrl": ["/images/mydeals/sale6.png"],
-        "likes": 31,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 132,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "19",
-        "title": "뉴진스 앨범 포토카드 세트",
-        "description": "개인적으로 뉴진스 해린 팬입니다ㅎ.",
-        "category": "포토카드",
-        "price": 23000,
-        "imageUrl": ["/images/mydeals/sale7.png"],
-        "likes": 12,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 92,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": false
-    },
-    {
-        "id": "20",
-        "title": "아린 포토카드 LP판",
-        "description": "LP판에 포토카드라니 신박하지 않나요.",
-        "category": "포토카드",
-        "price": 23000,
-        "imageUrl": ["/images/mydeals/sale8.png"],
-        "likes": 16,
+        "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 112,
         "options": [
