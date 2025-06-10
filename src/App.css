@@ -80,6 +80,17 @@ html {
   flex: 1;
 }
 
+.position_chat{
+    position: fixed !important;
+      right: 50%  !important;
+      margin-right: clamp(-554px, calc(-50vw + 24px), -123.5px)!important;
+      bottom:clamp(76px, 12vh, 173px) !important;
+
+      transition: chatbase-bubble-button 0 linear !important;
+
+     
+}
+
 /* 하단 tab바 footer로 사용 css여기서 변경 -종현- */
 .layout footer {
   position: fixed;

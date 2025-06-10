@@ -1,0 +1,106 @@
+.chatList {
+  background: #fff;
+}
+
+.chatTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chatTab {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 18px;
+  background: #f0f0f0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.active {
+  background: #00c67c;
+  color: #fff;
+}
+
+.chatItems {
+  list-style: none;
+}
+
+.chatItem {
+  display: flex;
+  padding: 16px clamp(16px, 4vw, 78px);
+  border-bottom: 1px solid #f1f1f1;
+  align-items: center;
+}
+
+.productImage {
+  position: relative;
+  margin-right: 12px;
+}
+
+.productImage img {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.chatDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff; 
+  background: #ff5252; /* 읽지 않음: 빨간색 */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.chatDotRead {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+   border: 1px solid #fff; 
+  background: var(--text-lightgrey); /* 읽음: 그레이 */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.chatContent {
+  flex: 1;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.userProfile {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.chatTime {
+  color: var(--text-lightgrey);
+}
+
+.chatMessage {
+  color: var(--text-grey);
+}
