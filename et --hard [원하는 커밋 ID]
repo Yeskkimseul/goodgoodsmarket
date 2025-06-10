@@ -1,0 +1,629 @@
+[33mcommit 9f18bee214889b8ac19a4e2f3e49ec78176559ad[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 80d5e75 c1625b7
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 19:54:57 2025 +0900
+
+    로컬 변경사항 커밋
+
+[33mcommit 80d5e751bbbed66e7d66b089f8bd2daa7ebc3954[m
+Merge: 5a1ab8a 58dd844
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 19:52:15 2025 +0900
+
+    0610
+
+[33mcommit 5a1ab8ab5dab75558b0bf5c4b7575ccdbde9b769[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 19:47:36 2025 +0900
+
+    0610신종현 데이터 포토카드
+
+[33mcommit c1625b7e24d7cac7bfbb5e080183c8fc040d2526[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 19:45:57 2025 +0900
+
+    update
+
+[33mcommit 6b19e78454ed494aecaf603ebdcb0e832f265b40[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 19:19:18 2025 +0900
+
+    alarm_final
+
+[33mcommit f69e3579ffda08e746912820214ec2f8483c0135[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 19:13:23 2025 +0900
+
+    alarm
+
+[33mcommit 7faac95f6f756b31d77184c9b7c0915e6d1dad71[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 18:50:39 2025 +0900
+
+    update
+
+[33mcommit 4e97d5295e962f37fdf461ecf688c40782572d83[m
+Author: yulssemnim <skf1011@naver.com>
+Date:   Tue Jun 10 18:40:59 2025 +0900
+
+    chatbot change
+
+[33mcommit f70f0e919d35ffce84f83a6f19f00ec0a18714cc[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 17:56:04 2025 +0900
+
+    alarm
+
+[33mcommit 8ae529ae813fc8ba2a370586263c2440d186e5c8[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 17:43:29 2025 +0900
+
+    0610
+
+[33mcommit 62bea364ddc0b665ca60c4c82dd8311d6be2fb65[m
+Author: hyerinn <hy3riim@gmail.com>
+Date:   Tue Jun 10 16:53:05 2025 +0900
+
+    new
+
+[33mcommit 6b93d887cfb4ddcb1eb6bd886e80eaba43fa7512[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 16:46:52 2025 +0900
+
+    0610
+
+[33mcommit 2245ccf111d507f8d1697f224c24156db157cfe2[m
+Merge: 24ca86b 48f1f9f
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 16:46:37 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit 24ca86bba487814045e473a38df07e023268ed1f[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 16:46:34 2025 +0900
+
+    스타일 수정
+
+[33mcommit 48f1f9fb96fd1f1f8170d51081e0b64405a2b114[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 16:30:08 2025 +0900
+
+    font
+
+[33mcommit ffb8cdc4a765c220c00ff2c797b1ff15f90ae9b1[m
+Author: hyerinn <hy3riim@gmail.com>
+Date:   Tue Jun 10 16:27:36 2025 +0900
+
+    chat
+
+[33mcommit 81524a6d15e59e46beeacfaea8c81b07dd7fd622[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 16:04:37 2025 +0900
+
+    update
+
+[33mcommit c8393bf9d8e7e94eb99ba3b69573d04fbf99c914[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 15:59:45 2025 +0900
+
+    gap
+
+[33mcommit f702b18cb22cb8a38ee3f332aeed8ecec724d9e4[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 15:54:25 2025 +0900
+
+    search
+
+[33mcommit 6e23d19973c8002e8a799f90e210f884fa0c1b65[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 15:50:29 2025 +0900
+
+    update
+
+[33mcommit 7ec745be96b13b24b8ab858c0857f8b562e6ba7b[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 15:47:00 2025 +0900
+
+    update
+
+[33mcommit dd8d1eac53615940ac2883473c6dc5cceffdea9f[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 15:44:54 2025 +0900
+
+    update
+
+[33mcommit 4283ccece8dbc9bd47b0f0dec1ae036da492507d[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 15:42:34 2025 +0900
+
+    0610
+
+[33mcommit 89aa1322b7b5c21188cb9f62e7af758abfc98f53[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 15:34:42 2025 +0900
+
+    0610
+
+[33mcommit b37e8db78106a4e3139b3e9fa7e46f9127d6a848[m
+Merge: 13268ab b0dabc6
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 15:33:54 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit b0dabc67c7877ae5f061af09543e8670a0cd560f[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 15:19:27 2025 +0900
+
+    update
+
+[33mcommit 13268aba422a4130559f935ed5403a22bb927134[m
+Merge: ceb0cbe ba6f97e
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 14:53:14 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit ba6f97ea230e3ce149847c427a62e8f7117c7724[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 14:51:29 2025 +0900
+
+    update
+
+[33mcommit ddda4be8a7a2b88532407e69397ee537a3eaceae[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 14:37:25 2025 +0900
+
+    update
+
+[33mcommit ddbe5782c8fd13b0f3aca80171fcf721265e1083[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 14:36:59 2025 +0900
+
+    main
+
+[33mcommit 794632dcc0d39ad79c621b847863dec4275b20e7[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 14:32:34 2025 +0900
+
+    update
+
+[33mcommit 53e9a072cdb1f41028b11cb3a1ee6b4d1dd5762f[m
+Author: hyerinn <hy3riim@gmail.com>
+Date:   Tue Jun 10 14:31:56 2025 +0900
+
+    zindex
+
+[33mcommit 9c0db06f45e0a34e389095eead50f6ccbed1a0e4[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 14:17:23 2025 +0900
+
+    search1
+
+[33mcommit ceb0cbeb58d4f02d5a0740c8426ecac6d659606b[m
+Merge: 963c456 af62be5
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 13:24:27 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit 963c456a59bc7dadad9d577b96fdaa358fd0eeed[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 13:23:55 2025 +0900
+
+    내 변경사항 커밋 메시지
+
+[33mcommit af62be5b70d40b23f600e3935893792ddfd12105[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 13:22:07 2025 +0900
+
+    scrollbar add
+
+[33mcommit 7e3bbcfe43ee227b268ef4c1ce86e6c22a148aff[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 13:13:47 2025 +0900
+
+    되나봅시다
+
+[33mcommit 31b8be9bfcecb3ee295a77c9d88387c41035b96d[m
+Author: yulssemnim <skf1011@naver.com>
+Date:   Tue Jun 10 13:12:16 2025 +0900
+
+    'chat'
+
+[33mcommit 4213d36c36d7f0f707ff750547134527e3b01f8e[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 13:08:03 2025 +0900
+
+    update
+
+[33mcommit f8a537736709bf647ba7a6bc670a2d1539b1ce7b[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 13:04:36 2025 +0900
+
+    왜오류나
+
+[33mcommit 1dbf5c929dc647bb2012d9d5bf1abaa11bb33d4f[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 13:00:46 2025 +0900
+
+    modal
+
+[33mcommit dd1b663b6bb4b6886a75c3aa4e9a20c2bbfd9612[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 12:49:08 2025 +0900
+
+    잉
+
+[33mcommit d859fd0bbfc8357be6fbe4bb8571c2a7c4711443[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 12:42:39 2025 +0900
+
+    padding
+
+[33mcommit 727d12986cf746398548a0cb820906e7ec6ed5d7[m
+Merge: b6eea80 c5f9939
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 12:36:13 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit b6eea80062d07a528f549fc865ffd86bf2bf0ab1[m
+Author: xxvision <sjh6915@naver.com>
+Date:   Tue Jun 10 12:35:06 2025 +0900
+
+    내 변경사항 커밋 메시지
+
+[33mcommit c5f993956a2367c71704988f58c86981694e14dc[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 12:27:56 2025 +0900
+
+    update
+
+[33mcommit 7a9d4f4d38c69ecf7f7960b150df2b50c67d29bd[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Tue Jun 10 12:26:25 2025 +0900
+
+    mypage
+
+[33mcommit e3742fad346458f3c30913860884f020c2d046d7[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 12:16:29 2025 +0900
+
+    update
+
+[33mcommit a67c0ce3256a7706852a6501ba47783004955b2f[m
+Author: Yeskkimseul <yeslkim2@gamil.com>
+Date:   Tue Jun 10 12:09:44 2025 +0900
+
+    up
+
+[33mcommit 433424050a0dfc0b9e2c6052d05ef610ceaa66ed[m
+Author: hyerinn <hy3riim@gmail.com>
+Date:   Tue Jun 10 12:08:45 2025 +0900
+
+    layout
+
+[33mcommit 185bda4057decdd6ad8e302ee57737474ccfaaa7[m
+Author: yulssemnim <skf1011@naver.com>
+Date:   Tue Jun 10 12:07:23 2025 +0900
+
+    'right2'
+
+[33mcommit ddbcdb481d7d1757e435a688023ef80dcb03b4c8[m
+Author: yulssemnim <skf1011@naver.com>
+Date:   Tue Jun 10 12:03:36 2025 +0900
+
+    'right'
+
+[33mcommit 556b725a17d995a833f7ee65479df541048515b8[m
+Merge: a287c48 23e35ff
+Author: hyerinn <hy3riim@gmail.com>
+Date:   Tue Jun 10 11:51:20 2025 +0900
+
+    chatbot
+
+[33mcommit a287c485724af5c49c7490caeacfa2c8f1bfb5ec[m
+Author: hyerinn <hy3riim@gmail.com>
+Date:   Tue Jun 10 11:42:00 2025 +0900
+
+    update
+
+[33mcommit 23e35ffae17cb26c7c76dc98be6030c1345566b0[m
+Author: xxvision <xxvision>
+Date:   Mon Jun 9 17:15:29 2025 +0900
+
+    0609 신종현 굿즈,커뮤글 등록페이지 완
+
+[33mcommit 232fc99b8a557f167b240f9cbd3ae9faab497902[m
+Author: xxvision <xxvision>
+Date:   Mon Jun 9 16:17:25 2025 +0900
+
+    0609신종현 굿즈 등록 완료
+
+[33mcommit 58dd8443fd598853b7253ca1412be4c0d60243e1[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: xxvision <xxvision>
+Date:   Mon Jun 9 17:15:29 2025 +0900
+
+    0609 신종현 굿즈,커뮤글 등록페이지 완
+
+[33mcommit 0677ad730788f8d8b8b0d146592bdb99887c0db7[m
+Author: xxvision <xxvision>
+Date:   Mon Jun 9 16:17:25 2025 +0900
+
+    0609신종현 굿즈 등록 완료
+
+[33mcommit 62f185c9eea1f698e66386f56e2aac4e595d19da[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Mon Jun 9 14:57:38 2025 +0900
+
+    layout
+
+[33mcommit dd692ac6dc52739c30819e39e6cede463b3347fe[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Mon Jun 9 14:46:03 2025 +0900
+
+    update
+
+[33mcommit be0a35371d0b90a91c0ad2b0ebce6513c117d7af[m
+Merge: 8243a7a a74b7a2
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Mon Jun 9 14:36:13 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit 8243a7a2d4fd0c029ff814bd9d7f5b371b3ff12c[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Mon Jun 9 14:36:02 2025 +0900
+
+    fix detail
+
+[33mcommit a74b7a2ab601a5c5585d3124687f5d15c8f4c074[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Mon Jun 9 14:27:11 2025 +0900
+
+    layout
+
+[33mcommit 068ba1ff152f3a7a8b24cb12415efb1395172b63[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Mon Jun 9 14:18:56 2025 +0900
+
+    goods category update
+
+[33mcommit 40297bd3ab928bb7ac7eafdaa32073e98d0c9ddf[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Mon Jun 9 12:46:30 2025 +0900
+
+    headertype0
+
+[33mcommit b35a52c0705822fa62461544d6cd3a3b157b653e[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Sun Jun 8 22:44:58 2025 +0900
+
+    more btn
+
+[33mcommit 1273a337002dbf5b773b08e8555c48a3b1573e5b[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Sun Jun 8 22:25:34 2025 +0900
+
+    morebtn
+
+[33mcommit 04afd4417a5ca9e719a21a0653a824294f45fadd[m
+Merge: 1fc5c36 a8d102f
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Sun Jun 8 21:24:18 2025 +0900
+
+    layout
+
+[33mcommit 1fc5c365c7f7194912f29ededc10f5b04096d159[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Sun Jun 8 20:54:44 2025 +0900
+
+    layout
+
+[33mcommit a8d102fd6ab415bbd27665951df17dc372c3377b[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 19:43:24 2025 +0900
+
+    update mycommu
+
+[33mcommit b07b3904565749309bb21a32947a442ae21d5e46[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 19:12:40 2025 +0900
+
+    modal
+
+[33mcommit 7b76607f92f6a0f7df21c393b4fafb5fd96bd3a5[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 19:03:50 2025 +0900
+
+    update
+
+[33mcommit 4475c56c527c842102a57791224ff7a4a37e4fe0[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 18:53:53 2025 +0900
+
+    modal
+
+[33mcommit a5f7cde430000c2f482a61711e72c38150ec512b[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 17:50:23 2025 +0900
+
+    update
+
+[33mcommit 3a25a7b1cd964fd3c7356ba06a55677ac756364e[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 17:32:02 2025 +0900
+
+    update
+
+[33mcommit 98df9548a9ab9e4d89e6db0180038fe5f4716be2[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 17:25:17 2025 +0900
+
+    update tabs
+
+[33mcommit 8df17e8e951bfd10e7dfdc76a599ab5d31b45f67[m
+Merge: 446a7ef 2c6a8d4
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 17:08:05 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit 446a7ef38e995bec2a490fc19c28a8ffbc420dd8[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 17:07:53 2025 +0900
+
+    update
+
+[33mcommit 2c6a8d41e961f973b0db7a412a0fdfc55a9c9dba[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 17:04:54 2025 +0900
+
+    trust
+
+[33mcommit 9abbc03bc36e3a6b27a27b1d87fdb8edf7e5ae48[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 15:38:48 2025 +0900
+
+    fix detail
+
+[33mcommit a85f2b1e2a65cf26b19b27392d693d97118fddca[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 14:51:12 2025 +0900
+
+    update
+
+[33mcommit 36da6b1791a38ff976e625731ba134f591ac77cd[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 14:50:21 2025 +0900
+
+    update
+
+[33mcommit b35b188678b83661068b2bc1bb9de8d6bdb62295[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 13:42:28 2025 +0900
+
+    btn2
+
+[33mcommit d0b9d11a224c9926878da8ba3d1497eabfcc16f7[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 13:30:29 2025 +0900
+
+    btn
+
+[33mcommit c1918bd944590ec163954f208c191782463d3cdc[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sun Jun 8 12:52:41 2025 +0900
+
+    update
+
+[33mcommit c06b6221cbc52d2fe93164ca796fcddedd02c266[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 00:42:45 2025 +0900
+
+    mypage3
+
+[33mcommit 516fcb6cf230eb65e2dc90db87916316d3a92e18[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sun Jun 8 00:27:42 2025 +0900
+
+    mypage2
+
+[33mcommit 2fd62a2649e6025f44e1122d63bdd47b3020ef6a[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sat Jun 7 20:38:50 2025 +0900
+
+    mypage
+
+[33mcommit 467682d76975c402b8d8ab4657fd5fd622679d09[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 20:09:05 2025 +0900
+
+    update
+
+[33mcommit 464abc025df9d38a940bc853ec06e1c81067809d[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 18:22:25 2025 +0900
+
+    update
+
+[33mcommit 8da7c123f4d5a165a2678227a0520ff4945f7902[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 18:13:00 2025 +0900
+
+    update
+
+[33mcommit b7a2184f84edd00a6b8efcb0fa55dcdcac031259[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 18:00:33 2025 +0900
+
+    update
+
+[33mcommit 21d3e43003e8e158a79b8fa624c115a5b54bc0d8[m
+Merge: 7d5c4a7 d2a88aa
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 18:00:03 2025 +0900
+
+    Merge branch 'main' of https://github.com/Yeskkimseul/goodgoodsmarket
+
+[33mcommit d2a88aa073ece4f48aef0d3eda3173a0cdd0f99b[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Sat Jun 7 17:52:44 2025 +0900
+
+    commudetailheader
+
+[33mcommit 7d5c4a7f64a73c92b1778dadba7e751f13a192b8[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 17:51:50 2025 +0900
+
+    update
+
+[33mcommit 913fc0929560fc3349af5ac627fa230b65a942ef[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 17:38:34 2025 +0900
+
+    bug fix
+
+[33mcommit d0d94cee29cb015eabf13e82d20287acfc851fc0[m
+Author: Yeskkimseul <yeslkim2@gmail.com>
+Date:   Sat Jun 7 00:29:31 2025 +0900
+
+    detail fix
+
+[33mcommit c74261b147b596b8cb19b94a52f8654feca1287e[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Fri Jun 6 19:47:06 2025 +0900
+
+    update
+
+[33mcommit 785574b856d9415a7efb9539d920704e05b5ecec[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Fri Jun 6 16:58:07 2025 +0900
+
+    modal3
+
+[33mcommit 1cd2001a97aff0a23f577b99aa3696a3231b7f22[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Fri Jun 6 16:46:17 2025 +0900
+
+    modal3
+
+[33mcommit 64f8090c555b8bb9c8938632c3dddb2ef0f9d4b1[m
+Author: hyeriinn <hy3riim@gmail.com>
+Date:   Fri Jun 6 16:20:59 2025 +0900
+
+    commu 수정
+
+[33mcommit 1fafabf91afe679d416ee58d3db697610e69ae65[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Thu Jun 5 19:34:37 2025 +0900
+
+    modal2
+
+[33mcommit b644fbcdc8c8f093d490fb3db34128c848a6e245[m
+Author: ddiong2525 <choijw2005@naver.com>
+Date:   Thu Jun 5 19:17:39 2025 +0900
+
+    modal

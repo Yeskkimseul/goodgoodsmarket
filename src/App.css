@@ -68,6 +68,7 @@ html {
   max-width: 100%;
   margin: 0;
   /* padding:0 clamp(16px,4vw,78px);*/
+  padding-top: clamp(60px,6vw,100px);
   padding-bottom: clamp(63px, 5vw, 70px);
   width: 100%;
   background-color: #fff;

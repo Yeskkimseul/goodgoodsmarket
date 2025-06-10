@@ -20,7 +20,7 @@ const Header = ({ type, title, onComplete }: HeaderProps) => {
         case 'type0':
             return <HeaderType0 />;
         case 'type1':
-            return <HeaderType1 title={title || '포토카드'} />;
+            return <HeaderType1 title={title || '굿즈등록'} />;
         case 'type2':
             return <HeaderType2 />;
         case 'type3':
