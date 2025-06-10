@@ -35,7 +35,7 @@ const AlarmList: React.FC<AlarmListProps> = ({ leftContent, title, to, imgSrc, i
                     <div className={`subtit2 ${read ? styles.read : ""}`}>
                         {title}
                     </div>
-                    <div className={`body2 ${read ? styles.readText : ""}`}>{leftContent}</div>
+                    <div className={`body2 ${read ? styles.read : ""}`}>{leftContent}</div>
                 </div>{/* //.txt */}
             </div>{/* //.left */}
             <div className={styles.right}>

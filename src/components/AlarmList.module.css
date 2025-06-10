@@ -28,9 +28,10 @@
 
 .badge {
     display: inline-block;
-    width: 9px;
-    height: 9px;
-    background: red;
+    width: 11px;
+    height: 11px;
+    background: var(--text-error);
+    border: 2px solid var(--bg-white);
     border-radius: 50%;
     position: absolute;
     right: 0;
@@ -38,11 +39,5 @@
 }
 
 .read {
-    color: #aaa;
-    /* 읽음 시 글자 색 */
-}
-
-.readText {
-    color: #bbb;
-    /* 읽음 시 본문 색 */
+    color: var(--text-grey);
 }
