@@ -25,7 +25,7 @@ const TrustModal: React.FC<TrustModalProps> = ({ onClose }) => {
 
                 <div className={Styles.list}>
                     <img src="images/mypage/trust_ss.svg" alt="쏘쏘" />
-                    <div><h5>쏘쏘 - </h5> 신뢰도 50% 미만 : 거래 전에 한 번 더 확인해보세요.</div>
+                    <div><h5>쏘쏘 - </h5> 신뢰도 50% 미만 : 신중한 거래가 필요해요.</div>
                 </div>{/* //.list */}
 
             </div>
