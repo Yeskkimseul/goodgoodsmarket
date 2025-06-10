@@ -1,0 +1,15 @@
+.recommend {
+    display: flex;
+    gap: clamp(4px, 2vw, 10px);
+    flex-wrap: wrap;
+}
+
+.goodsCategory {
+    padding-bottom: var(--space16);
+}
+
+.recommend_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4px, 2vw, 10px);
+}

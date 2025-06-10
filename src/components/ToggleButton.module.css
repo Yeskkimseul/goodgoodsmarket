@@ -1,0 +1,16 @@
+.button {
+  padding: 12px 16px;/* 이건 웹이나 앱이나 똑같더라구요 */
+  border-radius: 50px;
+  background-color: var(--bg-lightE);
+  color: var(--text-grey);
+  cursor: pointer;
+  margin: 4px;
+  transition: all 0.2s ease;
+  font-size: var(--font-body2);
+  flex: 0 0 auto;
+}
+
+.selected {
+  background-color: var(--button-bgsecondary);
+  color: var(--button-textsecondary);
+}

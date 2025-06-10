@@ -52,7 +52,7 @@ li {
 
 li.avatar {
     gap: var(--space8);
-        align-items: center;
+    align-items: center;
     height: fit-content;
 }
 
@@ -65,4 +65,32 @@ li.avatar {
     display: flex;
     gap: var(--space32);
     width: 100%;
+}
+
+.searchInput {
+    height: clamp(45px, 5vw, 64px);
+}
+
+.suggestionList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-white);
+    border: 1px solid var(--stroke-lightE);
+    z-index: 100;
+    margin: 4px 0 0 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 4px;
+    font-size: var(--font-body2);
+}
+
+.suggestionItem {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestionItem:hover {
+    background-color: var(--bg-lightE);
 }
