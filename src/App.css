@@ -25,10 +25,6 @@ a {
   color: inherit;
 }
 
-::-webkit-scrollbar {
-	display: block;
-	width: 8px;
-	}
 
 html,
 body,
@@ -40,9 +36,22 @@ html {
 	width: calc(100vw - 8px);
     }
     
-body {
-  overflow: hidden;
+
+::-webkit-scrollbar {
+	display: block;
+	width: 8px;
+	}
+::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: var(--main-mint); /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
 }
+
+::-webkit-scrollbar-track {
+    background: rgba(29, 198, 167, 0.1);  /*스크롤바 뒷 배경 색상*/
+}
+
 
 .layout {
   display: flex;
