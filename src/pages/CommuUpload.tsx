@@ -141,24 +141,7 @@ const CommuUpload = () => {
                             </div>
                         동영상
                     </label>
-                    </div>
-
-                    {imageUrl && (
-                    <div className={styles.previewWrapper}>
-                        <button
-                        type="button"
-                        className={styles.closeButton}
-                        onClick={() => setImageUrl(null)} // 미리보기 제거
-                        >
-                        &times;
-                        </button>
-                        <img
-                        src={imageUrl}
-                        alt="업로드 미리보기"
-                        className={styles.previewImage}
-                        />
-                    </div>
-                    )}
+                    {imageUrl && <img src={imageUrl} alt="업로드 미리보기" className={styles.previewImage} />}
                     <button type="submit" className={styles.submitButton}>
                         게시글 등록
                     </button>
