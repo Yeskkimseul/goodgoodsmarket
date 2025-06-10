@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./ChatList.module.css";
-import type { Chat, ChatType } from "../types/chatting";
+import type { Chat } from "../types/chatting";
 
-const tabList = ["전체", "판매", "구매", "교환"] as const;
-type TabType = typeof tabList[number];
-
+//time
 function getTimeAgo(dateString: string): string {
   const now = new Date();
   const date = new Date(dateString);
@@ -16,61 +14,35 @@ function getTimeAgo(dateString: string): string {
   return `${Math.floor(diff / 86400)}일 전`;
 }
 
-const ChatList = () => {
-  const [activeTab, setActiveTab] = useState<TabType>("전체");
-  const [chatData, setChatData] = useState<Chat[]>([]);
+type ChatListProps = {
+  chats: Chat[];
+};
 
-  useEffect(() => {
-    fetch("/data/chatting.json")
-      .then((res) => res.json())
-      .then((data) => setChatData(data as Chat[]))
-      .catch((err) => console.error("chatting.json fetch 실패", err));
-  }, []);
-
-  const filteredChats =
-    activeTab === "전체"
-      ? chatData
-      : chatData.filter((chat) => chat.type === activeTab);
-
+const ChatList = ({ chats }: ChatListProps) => {
   return (
     <div className={styles.chatList}>
-      <div className={styles.chatTabs}>
-        {tabList.map((tab) => (
-          <button
-            key={tab}
-            className={`${styles.chatTab} ${
-              activeTab === tab ? styles.active : ""
-            }`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
       <ul className={styles.chatItems}>
-        {filteredChats.map((chat) => (
+        {chats.map((chat) => (
           <li key={chat.id} className={styles.chatItem}>
             <div className={styles.productImage}>
               <img src={chat.productImage} alt="상품" />
-              {chat.unread && <span className={styles.chatDot} />}
+              <span className={chat.unread ? styles.chatDot : styles.chatDotRead} />
             </div>
-
             <div className={styles.chatContent}>
               <div className={styles.chatHeader}>
                 <div className={styles.userInfo}>
                   <img
                     src={chat.userProfile}
                     alt={chat.username}
-                    className={styles.userAvatar}
+                    className={styles.userProfile}
                   />
-                  <span className={styles.username}>{chat.username}</span>
+                  <h4 className={styles.username}>{chat.username}</h4>
                 </div>
-                <span className={styles.chatTime}>
+                <span className={`caption ${styles.chatTime}`}>
                   {getTimeAgo(chat.createdAt)}
                 </span>
               </div>
-              <div className={styles.chatMessage}>{chat.message}</div>
+              <div className={`body2 ${styles.chatMessage}`}>{chat.message}</div>
             </div>
           </li>
         ))}
