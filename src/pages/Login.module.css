@@ -9,6 +9,7 @@ body {
 .wrapper {
     min-height: 100dvh;
     width: 100vw;
+    padding-top: clamp(60px, 6vw, 100px);
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -168,26 +169,28 @@ body {
 }
 
 /* Login 페이지 */
-.bottom{
+.bottom {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--space56);
 }
-.textline{
+
+.textline {
     display: flex;
     width: 100%;
     gap: var(--space8);
     align-items: center;
     color: var(--text-grey);
 }
-.Line{
+
+.Line {
     flex: 1;
     height: 1px;
     background-color: var(--text-grey);
 }
 
-.social{
+.social {
     display: flex;
     gap: var(--space16);
     width: 100%;
@@ -195,7 +198,7 @@ body {
     align-items: center;
 }
 
-.socialicon{
+.socialicon {
     width: clamp(40px, 6vw, 56px);
     height: auto;
     aspect-ratio: 1/1;
@@ -208,7 +211,7 @@ body {
     overflow: hidden;
 }
 
-.option{
+.option {
     display: flex;
     justify-content: space-evenly;
     color: var(--text-grey);
