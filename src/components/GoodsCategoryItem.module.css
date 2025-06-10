@@ -7,7 +7,7 @@
   cursor: grab;
   user-select: none;
   padding: 0 clamp(16px, 4vw, 78px);
-    /* scroll-behavior: smooth; */
+  /* scroll-behavior: smooth; */
 }
 
 .listContainer:active {
@@ -17,7 +17,10 @@
 .listItem {
   flex: 0 0 auto;
   text-align: center;
-  font-size: var(--font-button);
+  font-size: var(--font-h4);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
 }
 
 .listItem a {
