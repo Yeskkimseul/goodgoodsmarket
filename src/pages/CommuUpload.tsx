@@ -17,7 +17,9 @@ const CommuUpload = () => {
     const [category, setCategory] = useState(commuCategories[0]);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
+    /* const [imageUrl, setImageUrl] = useState(''); */
+    const [imageUrl, setImageUrl] = useState<string | null>(null);
+
     const [tags, setTags] = useState<string[]>([]);
     const formRef = useRef<HTMLFormElement>(null);
 
@@ -41,7 +43,7 @@ const CommuUpload = () => {
             title,
             description,
             category,
-            imageUrl,
+            imageUrl: imageUrl ?? '', // ← null일 경우 빈 문자열로 처리
             likes: 0,
             createdAt: new Date().toISOString(),
             views: 0,
@@ -76,11 +78,13 @@ const CommuUpload = () => {
 
     return (
         <>
-            <Header
+
+            <Layout>
+                <Header
                 type="type3"
                 onComplete={() => formRef.current?.requestSubmit()}
-            />
-            <Layout>
+                />
+                
                 <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
                     <label className={styles.categoryselect}>
                         <select value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -139,7 +143,22 @@ const CommuUpload = () => {
                     </label>
                     </div>
 
-                    {imageUrl && <img src={imageUrl} alt="업로드 미리보기" className={styles.previewImage} />}
+                    {imageUrl && (
+                    <div className={styles.previewWrapper}>
+                        <button
+                        type="button"
+                        className={styles.closeButton}
+                        onClick={() => setImageUrl(null)} // 미리보기 제거
+                        >
+                        &times;
+                        </button>
+                        <img
+                        src={imageUrl}
+                        alt="업로드 미리보기"
+                        className={styles.previewImage}
+                        />
+                    </div>
+                    )}
                     <button type="submit" className={styles.submitButton}>
                         게시글 등록
                     </button>

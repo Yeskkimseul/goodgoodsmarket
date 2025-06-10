@@ -50,19 +50,25 @@
     width: 100%;
     height: 522px;
     white-space: pre-line;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: none;
   background-color: #f4f4f4;
   border-radius: 8px;
-  padding: 16px;
+  padding: 48px;
+    line-height: 2;
+  font-family: "Pretendard Variable";
+  
 }
 .txtarea textarea::placeholder{
-    line-height: 1.5;
-  font-size: 1rem;
+    line-height: 2;
+  font-size: 1.1rem;
+  font-family: "Pretendard Variable";
 }
 .txtarea textarea:focus{
     outline: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-family: "Pretendard Variable";
+
 }
 .txtarea textarea:focus::placeholder{
     opacity: 0;
@@ -78,7 +84,45 @@
     padding: 0 16px;
     gap: 2%;
 }
+/* 미리보기 이미지 */
+.previewWrapper {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  /* 미리보기 이미지와 동일한 크기 */
+  height: 120px;
+}
+.previewWrapper button{
+    width: 18%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previewImage {
+  width: 133px;
+  height: 133px;
+  border-radius: 9px;
+  border: 1px solid var(--main-mint);
+}
 
+.closeButton {
+  position: absolute;
+  top: 2px;
+  right: -10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  line-height: 100%;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.closeButton:hover {
+  background: #e6e6e6;
+  color: white;
+}
 /* 사진 */
 
 
