@@ -40,7 +40,7 @@ const GoodsUpload = () => {
     const [category, setCategory] = useState(categoryList[0]);
     const [price, setPrice] = useState<number | string>(0);
     const [optionLabel, setOptionLabel] = useState("옵션 추가");
-
+    const [isNegotiable, setIsNegotiable] = useState(false);
     const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
     const handleCheck = (
         option: string,
@@ -95,19 +95,21 @@ const GoodsUpload = () => {
     };
 
 
-    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const files = e.target.files;
-        if (!files) return;
+const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const files = e.target.files;
+  if (!files) return;
 
-        const uploadPromises = Array.from(files).map(file => uploadToCloudinary(file));
+  const remainingSlots = 10 - imageUrls.length;
+  const filesToUpload = Array.from(files).slice(0, remainingSlots);
+  const uploadPromises = filesToUpload.map(file => uploadToCloudinary(file));
 
-        try {
-            const urls = await Promise.all(uploadPromises);
-            setImageUrls(prev => [...prev, ...urls]); // 기존 이미지 유지하면서 추가
-        } catch (err) {
-            alert('하나 이상의 이미지 업로드 실패');
-        }
-    };
+  try {
+    const urls = await Promise.all(uploadPromises);
+    setImageUrls(prev => [...prev, ...urls]);
+  } catch (err) {
+    alert('하나 이상의 이미지 업로드 실패');
+  }
+};
 
     // 등록 또는 엔터로 제출시 실행
     const handleSubmit = async (e: React.FormEvent) => {
@@ -157,8 +159,10 @@ const GoodsUpload = () => {
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.imgflex}>
                         <label className={styles.imguploadlabel}>
-
                             <input type="file" accept="image/*" multiple onChange={handleImageChange} className={styles.imgupload} />
+                                <div className={styles.counter}>
+                                    {imageUrls.length}/5
+                                </div>
                         </label>
                         {imageUrls.map((url, index) => (
                             <div key={index} className={styles.previewWrapper}>
@@ -216,16 +220,25 @@ const GoodsUpload = () => {
                     </label>
                     <label className={`${styles.sell} ${styles.all}`}>
                         <p>판매가</p>
+                    <input
+                        type="text"
+                        inputMode="numeric"
+                        value={formatPrice(price)}
+                        onChange={(e) => {
+                            const rawValue = e.target.value.replace(/[^0-9]/g, '');
+                            setPrice(rawValue === '' ? '' : Number(rawValue));
+                        }}
+                        placeholder="가격을 입력해주세요."
+                        
+                    />
+                    <label className={styles.checkboxLabel}>
                         <input
-                            type="text"
-                            inputMode="numeric"
-                            value={formatPrice(price)}
-                            onChange={(e) => {
-                                const rawValue = e.target.value.replace(/[^0-9]/g, '');
-                                setPrice(rawValue === '' ? '' : Number(rawValue));
-                            }}
-                            placeholder="가격을 입력해주세요."
+                            type="checkbox"
+                            checked={isNegotiable}
+                            onChange={(e) => setIsNegotiable(e.target.checked)}
                         />
+                        교환 거래 상품
+                    </label>
                     </label>
                     <label className={`${styles.dealoption} ${styles.all}`}>
                         <p>거래 옵션</p>

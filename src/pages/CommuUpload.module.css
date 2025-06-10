@@ -2,14 +2,22 @@
 .form{
     display: flex;
     flex-direction: column;
+    padding: 0 78px;
 }
 
 /* 카테고리 */
 
 .categoryselect{
     width: 100%;
+    position: relative;
+    font-family: "Pretendard Variable";
 }
+
+
 .categoryselect select{
+    appearance: none; /* 기본 화살표 제거 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
     margin: 16px 0;
     padding: 16px;
     width: 100%;
@@ -18,6 +26,20 @@
     background-color: #f4f4f4;
     border-radius: 8px;
     font-size: 1rem;
+    font-family: "Pretendard Variable";
+    
+}
+
+/* 가짜 화살표 */
+.categoryselect::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #555;
 }
 .categoryselect select:focus{
     outline: none;
@@ -30,9 +52,15 @@
 }
 .title input{
     width: 100%;
+    height: 62px;
     font-size: 1.25rem;
+    font-family: "Pretendard Variable";
     margin: 16px 0;
-    border: none;
+    border: 1px solid #f4f4f4;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+
 }
 .title input:focus{
     outline: none;
@@ -52,9 +80,9 @@
     white-space: pre-line;
   font-size: 1.1rem;
   border: none;
-  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
   border-radius: 8px;
-  padding: 48px;
+  padding: 16px;
     line-height: 2;
   font-family: "Pretendard Variable";
   
