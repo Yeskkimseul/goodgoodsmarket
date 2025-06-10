@@ -1,5 +1,5 @@
 .profile {
-    padding: var(--space16) 0;
+    padding: var(--space16) var(--padding);
     display: flex;
     gap: var(--space16);
     align-items: center;
@@ -25,7 +25,7 @@
 }
 
 .section {
-    padding: var(--space16) 0;
+    padding: var(--space16) var(--padding);
 }
 
 .bottom {

@@ -1,5 +1,5 @@
 .trust {
-    padding: var(--space16) 0;
+    padding: var(--space16) var(--padding);
     display: flex;
     flex-direction: column;
     gap: var(--space8);
