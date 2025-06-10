@@ -355,6 +355,7 @@
   overflow-y: auto;
   z-index: 10;
   color: #8a8a8a;
+  border: 2px solid #efefef;
 }
 
 .dropdownItem {
@@ -376,17 +377,19 @@
   position: relative;
 }
 .sell input {
-  width: 85%;
+  width: 100%;
+  height: 66px;
   font-size: 1.2rem;
   color: #555;
   transition: all 0.3s ease;
 }
-
 .sell input {
   border: none;
   border-bottom: 1px solid #efefef;
 }
-
+.sell input::placeholder{
+  font-family: "Pretendard Variable";
+}
 .sell input:focus {
   outline: none;
   color: var(--main-black);
@@ -412,9 +415,17 @@
 }
 
 
+.warningText {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
 
-
-
+.pricelimit{
+  width: 85%;
+  height: 66px;
+}
 
 
 /* 거래 옵션 */

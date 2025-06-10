@@ -42,6 +42,7 @@ const GoodsUpload = () => {
     const [optionLabel, setOptionLabel] = useState("옵션 추가");
     const [isNegotiable, setIsNegotiable] = useState(false);
     const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+    const [isPriceOverLimit, setIsPriceOverLimit] = useState(false);
     const handleCheck = (
         option: string,
         selected: string[],
@@ -99,15 +100,22 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const files = e.target.files;
   if (!files) return;
 
-  const remainingSlots = 10 - imageUrls.length;
-  const filesToUpload = Array.from(files).slice(0, remainingSlots);
-  const uploadPromises = filesToUpload.map(file => uploadToCloudinary(file));
+  const selectedFiles = Array.from(files);
+  const currentCount = imageUrls.length;
+  const totalCount = currentCount + selectedFiles.length;
+
+  if (totalCount > 5) {
+    alert('이미지는 최대 5장까지만 업로드할 수 있어요.');
+    return;
+  }
+
+  const uploadPromises = selectedFiles.map(file => uploadToCloudinary(file));
 
   try {
     const urls = await Promise.all(uploadPromises);
     setImageUrls(prev => [...prev, ...urls]);
   } catch (err) {
-    alert('하나 이상의 이미지 업로드 실패');
+    alert('하나 이상의 이미지 업로드에 실패했어요.');
   }
 };
 
@@ -220,17 +228,28 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     </label>
                     <label className={`${styles.sell} ${styles.all}`}>
                         <p>판매가</p>
+                        <div className={styles.pricelimit}>
                     <input
                         type="text"
                         inputMode="numeric"
                         value={formatPrice(price)}
                         onChange={(e) => {
-                            const rawValue = e.target.value.replace(/[^0-9]/g, '');
-                            setPrice(rawValue === '' ? '' : Number(rawValue));
-                        }}
-                        placeholder="가격을 입력해주세요."
+                        const rawValue = e.target.value.replace(/[^0-9]/g, '');
+                        const numericValue = rawValue === '' ? 0 : Number(rawValue);
                         
+                        if (numericValue > 100000000) {
+                            setIsPriceOverLimit(true);
+                        } else {
+                            setIsPriceOverLimit(false);
+                            setPrice(numericValue);
+                        }
+                        }}
+                        placeholder="가격을 입력해주세요.(숫자만 입력 가능)"
                     />
+                    {isPriceOverLimit && (
+                        <small className={styles.warningText}>최대 1억원까지 입력 가능합니다.</small>
+                    )}
+                    </div>
                     <label className={styles.checkboxLabel}>
                         <input
                             type="checkbox"
