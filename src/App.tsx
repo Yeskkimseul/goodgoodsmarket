@@ -56,23 +56,24 @@ function App() {
       }
     }
 
+    const path = location.pathname.toLowerCase();
     const shouldHideChatbase =
-      location.pathname === "/" ||
-      location.pathname === "" ||
-      location.pathname.startsWith("/mypage") ||
-      location.pathname.startsWith("/login/email") ||
-      location.pathname.startsWith("/login/phone") ||
-      location.pathname.startsWith("/join") ||
-      location.pathname.startsWith("/home/goodscategory") ||
-      location.pathname.startsWith("/home/goodsdetail") ||
-      location.pathname.startsWith("/home/goodsupload") ||
-      location.pathname.startsWith("/community/commudetail") ||
-      location.pathname.startsWith("/community/mycommu") ||
-      location.pathname.startsWith("/community/commuupload") ||
-      location.pathname.startsWith("/chat/chatdetail") ||
-      location.pathname === "/liked" ||
-      location.pathname.startsWith("/writereview") ||
-      location.pathname.startsWith("/about");
+      path === "/" ||
+      path === "" ||
+      path.startsWith("/mypage") ||
+      path.startsWith("/login/email") ||
+      path.startsWith("/login/phone") ||
+      path.startsWith("/join") ||
+      path.startsWith("/home/goodscategory") ||
+      path.startsWith("/home/goodsdetail") ||
+      path.startsWith("/home/goodsupload") ||
+      path.startsWith("/community/commudetail") ||
+      path.startsWith("/community/mycommu") ||
+      path.startsWith("/community/commuupload") ||
+      path.startsWith("/chat/chatdetail") ||
+      path === "/liked" ||
+      path.startsWith("/writereview") ||
+      path.startsWith("/about");
     hideChatbaseWithRetry(shouldHideChatbase);
   }, [location.pathname]);
 
