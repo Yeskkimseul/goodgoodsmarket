@@ -89,7 +89,7 @@ const Home = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src={isMobile ? "/images/mobile_thumb3.svg" : "/images/main_thumb3.jpg"}
+                                src={isMobile ? "/images/mobile_thumb3.png" : "/images/main_thumb3.jpg"}
                                 alt="굿즈 썸네일3"
                             />
                         </SwiperSlide>

@@ -6,7 +6,7 @@
   /*   padding-bottom: clamp(40px, 5vw, 80px); */
   cursor: grab;
   user-select: none;
-  padding: 0 clamp(16px, 4vw, 78px)
+  padding: 0 clamp(16px, 4vw, 78px);
     /* scroll-behavior: smooth; */
 }
 
