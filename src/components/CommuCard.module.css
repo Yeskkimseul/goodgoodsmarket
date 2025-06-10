@@ -2,7 +2,6 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-
 }
 
 .link {
@@ -11,7 +10,7 @@
     display: flex;
     text-decoration: none;
     color: inherit;
-    padding: 16px 0;
+    padding: 16px var(--padding);
     gap: clamp(6px, 1vw, 9px);
     flex-shrink: 0;
     border-bottom: 1px solid var(--stroke-lightE);
