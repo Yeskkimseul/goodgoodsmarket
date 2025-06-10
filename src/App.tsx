@@ -31,7 +31,7 @@ import Upload from "./pages/Upload"; //업로드
 import Popular from "./pages/Popular"; //인기굿즈보기
 import About from "./pages/About"; //소개
 import { GoodsProvider } from "./context/GoodsContext";
-import { clear } from "console";
+
 
 
 // import ChatbaseWidget from "./components/ChatbaseWidget";
@@ -41,26 +41,53 @@ function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
   useEffect(() => {
-    const shouldHideChatbase = location.pathname.startsWith("/mypage");
-    const chatbaseButton = document.querySelector('#chatbase-bubble-button') as HTMLElement | null;
-    if (chatbaseButton) {
-      chatbaseButton.style.display = shouldHideChatbase ? 'none' : 'block';
+    function hideChatbaseWithRetry(shouldHide: boolean, retry = 0) {
+      const chatbaseButton = document.querySelector('#chatbase-bubble-button') as HTMLElement | null;
+      if (chatbaseButton) {
+        chatbaseButton.style.display = shouldHide ? 'none' : 'block';
+        if (shouldHide) {
+          const bubble = document.querySelector(".chatbase-bubble-container");
+          if (bubble) bubble.remove();
+          const iframe = document.querySelector('iframe[src*="chatbase.co"]');
+          if (iframe) iframe.remove();
+        }
+      } else if (retry < 20) {
+        setTimeout(() => hideChatbaseWithRetry(shouldHide, retry + 1), 100);
+      }
     }
-    const removeChatbase = () => {
-      const bubble = document.querySelector(".chatbase-bubble-container");
-      if (bubble) bubble.remove();
 
-      const iframe = document.querySelector('iframe[src*="chatbase.co"]');
-      if (iframe) iframe.remove();
-    };
-
-    if (shouldHideChatbase) {
-      removeChatbase();
-    }
+    const shouldHideChatbase =
+      location.pathname === "/" ||
+      location.pathname === "" ||
+      location.pathname.startsWith("/mypage") ||
+      location.pathname.startsWith("/login/email") ||
+      location.pathname.startsWith("/login/phone") ||
+      location.pathname.startsWith("/join") ||
+      location.pathname.startsWith("/home/goodscategory") ||
+      location.pathname.startsWith("/home/goodsdetail") ||
+      location.pathname.startsWith("/home/goodsupload") ||
+      location.pathname.startsWith("/community/commudetail") ||
+      location.pathname.startsWith("/community/mycommu") ||
+      location.pathname.startsWith("/community/commuupload") ||
+      location.pathname.startsWith("/chat/chatdetail") ||
+      location.pathname === "/liked" ||
+      location.pathname.startsWith("/writereview") ||
+      location.pathname.startsWith("/about");
+    hideChatbaseWithRetry(shouldHideChatbase);
   }, [location.pathname]);
 
-  // ✅ /mypage 경로가 아닌 경우에만 Chatbase 보여주기
-  // const showChatbase = !location.pathname.startsWith("/mypage");
+  useEffect(() => {  
+    setTimeout(() => {
+      const chatbaseButton = document.querySelector('#chatbase-bubble-button') as HTMLElement | null;
+      if (chatbaseButton) chatbaseButton.style.display = 'none';
+      const bubble = document.querySelector(".chatbase-bubble-container");
+      if (bubble) bubble.remove();
+      const iframe = document.querySelector('iframe[src*="chatbase.co"]');
+      if (iframe) iframe.remove();
+    }, 300);
+  }, []);
+
+
 
 
   return (
