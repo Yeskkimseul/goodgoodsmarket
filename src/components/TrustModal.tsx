@@ -15,7 +15,7 @@ const TrustModal: React.FC<TrustModalProps> = ({ onClose }) => {
                 </div>{/* //.title */}
                 <div className={Styles.list}>
                     <img src="images/mypage/trust_gg.svg" alt="굿굿" />
-                    <div><h5>굿굿 - </h5>&nbsp;신뢰도 70% 이상 : 믿고 거래할 수 있어요!</div>
+                    <div><h5>굿굿 - </h5>&nbsp;&nbsp;신뢰도 70% 이상 : 믿고 거래할 수 있어요!</div>
                 </div>{/* //.list */}
 
                 <div className={Styles.list}>
