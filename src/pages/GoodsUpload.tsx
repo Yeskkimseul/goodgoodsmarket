@@ -36,6 +36,7 @@ const dropdownRef = useRef<HTMLDivElement>(null);
     const [description, setDescription] = useState('');
     /* const [imageUrl, setImageUrl] = useState(''); */
     const [imageUrl, setImageUrl] = useState<string | null>(null);
+    const [imageUrls, setImageUrls] = useState<string[]>([]);
     const [category, setCategory] = useState(categoryList[0]);
     const [price, setPrice] = useState<number | string>(0);
     const [optionLabel, setOptionLabel] = useState("옵션 추가");
@@ -94,16 +95,19 @@ const formatPrice = (value: string | number) => {
 };
 
 
-    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-        try {
-            const uploadUrl = await uploadToCloudinary(file);
-            setImageUrl(uploadUrl);
-        } catch (err) {
-            alert('업로드 실패');
-        }
-    };
+const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const files = e.target.files;
+  if (!files) return;
+
+  const uploadPromises = Array.from(files).map(file => uploadToCloudinary(file));
+  
+  try {
+    const urls = await Promise.all(uploadPromises);
+    setImageUrls(prev => [...prev, ...urls]); // 기존 이미지 유지하면서 추가
+  } catch (err) {
+    alert('하나 이상의 이미지 업로드 실패');
+  }
+};
 
     // 등록 또는 엔터로 제출시 실행
     const handleSubmit = async (e: React.FormEvent) => {
@@ -114,7 +118,8 @@ const formatPrice = (value: string | number) => {
             description,
             category,
             price,
-            imageUrl,
+            /* imageUrl, */
+            imageUrl: imageUrls[0], // 대표 이미지 하나만 저장
             likes: 0,
             createdAt: new Date().toISOString(),
             views: 0,
@@ -152,24 +157,22 @@ const formatPrice = (value: string | number) => {
                     <div className={styles.imgflex}>
                     <label className={styles.imguploadlabel}>
                        
-                        <input type="file" accept="image/*" onChange={handleImageChange} className={styles.imgupload}/>
+                        <input type="file" accept="image/*" multiple onChange={handleImageChange} className={styles.imgupload}/>
                     </label>
-                    {imageUrl && (
-                    <div className={styles.previewWrapper}>
-                        <button
-                        type="button"
-                        className={styles.closeButton}
-                        onClick={() => setImageUrl(null)}  // 미리보기 제거
-                        >
-                        &times;
-                        </button>
-                        <img
-                        src={imageUrl}
-                        alt="업로드 미리보기"
-                        className={styles.previewImage}
-                        />
-                    </div>
-                    )}
+{imageUrls.map((url, index) => (
+  <div key={index} className={styles.previewWrapper}>
+    <button
+      type="button"
+      className={styles.closeButton}
+      onClick={() =>
+        setImageUrls((prev) => prev.filter((_, i) => i !== index))
+      }
+    >
+      &times;
+    </button>
+    <img src={url} alt={`업로드 미리보기 ${index + 1}`} className={styles.previewImage} />
+  </div>
+))}
                     </div>
                     
                     <label className={`${styles.productname} ${styles.all}`}>
