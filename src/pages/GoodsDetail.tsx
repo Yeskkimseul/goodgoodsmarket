@@ -8,6 +8,7 @@ import { useParams, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper';
 import MultiTab from "../components/exchangebuy/MultiTab";
+import Trust from "../components/Trust";
 
 
 
@@ -175,6 +176,7 @@ const GoodsDetail = () => {
                                             </>
                                         )}
                                     </div>
+                                    <Trust />
                                 </div>
                             </div>
                         ) : null
