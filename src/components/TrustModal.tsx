@@ -7,6 +7,7 @@ type TrustModalProps = {
 
 const TrustModal: React.FC<TrustModalProps> = ({ onClose }) => {
     return (
+        <> <div className={Styles.modalbg} onClick={onClose}></div>
             <div className={Styles.modalBackdrop} onClick={onClose}>
                 <div className={Styles.modalContent} onClick={e => e.stopPropagation()}>
                     <div className={Styles.title}>
@@ -29,6 +30,7 @@ const TrustModal: React.FC<TrustModalProps> = ({ onClose }) => {
                     </div>{/* //.list */}
                 </div>
             </div>
+        </>
     );
 };
 

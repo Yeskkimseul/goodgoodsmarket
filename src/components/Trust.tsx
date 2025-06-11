@@ -9,6 +9,7 @@ const Trust = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
+
         <div className={styles.trust}>
             <div className={styles.top} style={{ position: "relative" }}>
                 <h5>신뢰지수 - <span>굿굿</span></h5>
