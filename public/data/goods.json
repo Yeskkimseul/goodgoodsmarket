@@ -193,16 +193,14 @@
     },
     {
         "id": "10",
-        "title": "포켓몬 몬스터볼 플러시 인형",
-        "description": "몬스터볼 팝니다.",
-        "category": "인형",
-        "price": 16000,
-        "imageUrl": [
-            "/images/mydeals/sale1.png"
-        ],
-        "likes": 4,
+        "title": "응답하라 1988 굿즈",
+        "description": "응답하라 1988 한정 굿즈 팔아요.",
+        "category": "기타",
+        "price": 5000,
+        "imageUrl": ["/images/mydeals/sale9.png"],
+        "likes": 14,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 68,
+        "views": 78,
         "options": [
             "미개봉",
             "직거래",
@@ -219,12 +217,10 @@
         "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
         "category": "기타",
         "price": 16000,
-        "imageUrl": [
-            "/images/mydeals/sale1.png"
-        ],
+        "imageUrl": ["/images/mydeals/sale1.png"],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 32,
+        "views": 63,
         "options": [
             "미개봉",
             "직거래",
@@ -237,16 +233,14 @@
     },
     {
         "id": "12",
-        "title": "컬러그램 제로베이스원 콜라보 홀더",
-        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
-        "category": "인형",
-        "price": 16000,
-        "imageUrl": [
-            "/images/mydeals/sale1.png"
-        ],
-        "likes": 4,
+        "title": "신비한 동물사전 BOOK CD",
+        "description": "신비한 동물사전 초판 BOOK CD입니다.",
+        "category": "기타",
+        "price": 20000,
+        "imageUrl": ["/images/mydeals/sale11.png"],
+        "likes": 3,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 94,
+        "views": 44,
         "options": [
             "미개봉",
             "직거래",
@@ -259,16 +253,14 @@
     },
     {
         "id": "13",
-        "title": "컬러그램 제로베이스원 콜라보 홀더",
-        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
-        "category": "인형",
-        "price": 16000,
-        "imageUrl": [
-            "/images/mydeals/sale1.png"
-        ],
-        "likes": 4,
+        "title": "잔나비 굿즈 일괄 판매",
+        "description": "잔나비 굿즈들 구경하고가세여~",
+        "category": "기타",
+        "price": 35000,
+        "imageUrl": ["/images/mydeals/sale12.png"],
+        "likes": 15,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 112,
+        "views": 150,
         "options": [
             "미개봉",
             "직거래",
@@ -590,5 +582,305 @@
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": false
+    },
+    {
+        "id": "36",
+        "title": "나는 문어 인형 팔아요",
+        "description": "나는 문어 인형 판매합니다.",
+        "category": "인형",
+        "price": 16000,
+        "imageUrl": ["/images/mydeals/sale13.png"],
+        "likes": 24,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 197,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "37",
+        "title": "토토로 친구 도도로 팝니다",
+        "description": "토토로 아닙니다 도도로 입니다^^.",
+        "category": "인형",
+        "price": 14500,
+        "imageUrl": ["/images/mydeals/sale14.png"],
+        "likes": 32,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 235,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "38",
+        "title": "못난이 인형 싸게 팝니다...",
+        "description": "못난이 좋아하시는 분?ㅎ.",
+        "category": "인형",
+        "price": 10000,
+        "imageUrl": ["/images/mydeals/sale15.png"],
+        "likes": 13,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 146,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "39",
+        "title": "아이돌 인형 컬렉션 세트 판매",
+        "description": "OO아이돌 인형 세트 팔아요",
+        "category": "인형",
+        "price": 50000,
+        "imageUrl": ["/images/mydeals/sale16.png"],
+        "likes": 33,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 368,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "40",
+        "title": "할로윈 한정판 미니 인형 판매",
+        "description": "할로윈 한정판 미니 인형 팝니다",
+        "category": "인형",
+        "price": 9800,
+        "imageUrl": ["/images/mydeals/sale17.png"],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 98,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "41",
+        "title": "미니 키링 인형 판매해요!",
+        "description": "미니 키링 좋아하시는 분?",
+        "category": "인형",
+        "price": 8500,
+        "imageUrl": ["/images/mydeals/sale18.png"],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 72,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "42",
+        "title": "인형 뽑기로 모은 인형들 판매",
+        "description": "인형 뽑기로 모은 인형들 판매합니당",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/mydeals/sale19.png"],
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 38,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "43",
+        "title": "이 친구 흰색 버전 있으신 분?",
+        "description": "흰색 버전 인형 구해요.",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange8.png"],
+        "likes": 12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 98,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "44",
+        "title": "밥톨이 밥순이랑 교환원해요",
+        "description": "밥톨이 밥순이 인형 교환 원해요.",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange9.png"],
+        "likes": 18,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "45",
+        "title": "할로윈 미니 인형들 교환해용",
+        "description": "잭오랜턴 미니 인형 갖고 계신분ㅠ.",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange10.png"],
+        "likes": 20,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 150,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "46",
+        "title": "OO 맴버 교환 구합니다",
+        "description": "다른 맴버 다 있습니다 OO만 없어요..ㅠ.",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange11.png"],
+        "likes": 25,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 200,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "47",
+        "title": "깨순이 깨돌이 서로 교환해요",
+        "description": "깨돌이 갖고 계신분 채팅 부탁드려요..!",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange12.png"],
+        "likes": 15,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 150,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "48",
+        "title": "기념일 캐릭터 교환 ㄱㄱ",
+        "description": "사진 가운데 초랭이 친구 있으신 분",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange13.png"],
+        "likes": 27,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 180,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "49",
+        "title": "더미베어 다른 버전 있으신 분?",
+        "description": "더미베어 다른 버전 구해요.",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange14.png"],
+        "likes": 33,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 241,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "50",
+        "title": "이 친구 파란색 버전 구해요",
+        "description": "노랑색이랑 파란색 바꾸실 분ㅠ",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": ["/images/myexchange/exchange15.png"],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 68,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
     }
 ]

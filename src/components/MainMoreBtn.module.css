@@ -13,8 +13,8 @@
 
 .mainMoreBtnContainer {
   position: absolute;
-  bottom: clamp(136px, 10vh, 276px);
-  right: clamp(16px, 5vw, 36px);
+  bottom: clamp(16px, 10vh, 276px);
+  /* right: clamp(16px, 5vw, 36px); */
   z-index: 1000;
   display: flex;
   flex-direction: column;
