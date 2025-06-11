@@ -62,12 +62,13 @@
   max-width: 100%;
   height: auto;
   /*   aspect-ratio: 16 / 7; */
-  border-radius: 30px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   margin-bottom: 80px;
   padding: 0 var(--padding);
+  position: relative;
+  /* background: #ccc; */
 }
 
 .mainThumb img {
@@ -96,18 +97,15 @@
   color: var(--main-mint);
 }
 
-
-
-/* swiper pignation */
-
 /* swiper pagination 위치 조정 */
-.mainThumb {
-  position: relative;
+:global(.swiper-pagination) {
+  position: static;
+  margin: var(--space16) auto 0 auto;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
-
-/* :global(.swiper-pagination) {
-
-} */
 
 /* 각 불릿(점) */
 :global(.swiper-pagination .swiper-pagination-bullet) {
@@ -115,6 +113,9 @@
   opacity: 0.6;
   border-radius: 50%;
   transition: background-color 0.3s ease;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
 }
 
 /* 활성화된 불릿 */
@@ -133,7 +134,7 @@
     position: relative;
     padding-bottom: 0;
     width: 100%;
-    height: 80vw;
+    height: auto;
     margin-bottom: 40px;
   }
 
@@ -143,5 +144,14 @@
     object-fit: cover;
     border-radius: 30px;
     display: block;
+  }
+
+  :global(.swiper-pagination) {
+    position: static;
+    margin: var(--space16) auto 0 auto;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
   }
 }

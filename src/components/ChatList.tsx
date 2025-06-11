@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
+import { Link } from "react-router-dom";
 
-//time
+// time
 function getTimeAgo(dateString: string): string {
     const now = new Date();
     const date = new Date(dateString);
@@ -24,27 +25,29 @@ const ChatList = ({ chats }: ChatListProps) => {
             <ul className={styles.chatItems}>
                 {chats.map((chat) => (
                     <li key={chat.id} className={styles.chatItem}>
-                        <div className={styles.productImage}>
-                            <img src={chat.productImage} alt="상품" />
-                            {chat.unread && <span className={styles.chatDot} />}
-                        </div>
-
-                        <div className={styles.chatContent}>
-                            <div className={styles.chatHeader}>
-                                <div className={styles.userInfo}>
-                                    <img
-                                        src={chat.userProfile}
-                                        alt={chat.username}
-                                        className={styles.userProfile}
-                                    />
-                                    <h4 className={styles.username}>{chat.username}</h4>
-                                </div>
-                                <span className={`caption ${styles.chatTime}`}>
-                                    {getTimeAgo(chat.createdAt)}
-                                </span>
+                        <Link to={`/chat/chatdetail/${chat.id}`} className={styles.link}>
+                            <div className={styles.productImage}>
+                                <img src={chat.productImage} alt="상품" />
+                                {chat.unread && <span className={styles.chatDot} />}
                             </div>
-                            <div className={`body2 ${styles.chatMessage}`}>{chat.message}</div>
-                        </div>
+
+                            <div className={styles.chatContent}>
+                                <div className={styles.chatHeader}>
+                                    <div className={styles.userInfo}>
+                                        <img
+                                            src={chat.userProfile}
+                                            alt={chat.username}
+                                            className={styles.userProfile}
+                                        />
+                                        <h4 className={styles.username}>{chat.username}</h4>
+                                    </div>
+                                    <span className={`caption ${styles.chatTime}`}>
+                                        {getTimeAgo(chat.createdAt)}
+                                    </span>
+                                </div>
+                                <div className={`body2 ${styles.chatMessage}`}>{chat.message}</div>
+                            </div>
+                        </Link>
                     </li>
                 ))}
             </ul>

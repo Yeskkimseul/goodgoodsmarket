@@ -71,7 +71,7 @@ const Home = () => {
                         modules={[Navigation, Pagination, Autoplay]}
                         spaceBetween={10}
                         slidesPerView={1}
-                        pagination={{ clickable: true }}
+                        pagination={{ el: '.swiper-pagination', clickable: true }}
                         autoplay={{ delay: 3000 }}
                         loop
                     >
@@ -83,17 +83,18 @@ const Home = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src={isMobile ? "/images/mobile_thumb2.jpg" : "/images/main_thumb2.jpg"}
+                                src={isMobile ? "/images/mobile_thumb2.jpg" : "/images/main_thumb2.png"}
                                 alt="굿즈 썸네일2"
                             />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src={isMobile ? "/images/mobile_thumb3.png" : "/images/main_thumb3.jpg"}
+                                src={isMobile ? "/images/mobile_thumb3.png" : "/images/main_thumb3.png"}
                                 alt="굿즈 썸네일3"
                             />
                         </SwiperSlide>
                     </Swiper>
+                    <div className="swiper-pagination"></div> {/* Swiper 아래에 직접 배치 */}
                 </div>
 
                 <div>
