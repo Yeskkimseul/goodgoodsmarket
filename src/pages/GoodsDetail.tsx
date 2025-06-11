@@ -4,16 +4,18 @@ import Header from "../components/header/Header";
 import Layout2 from "../components/Layout2";
 import { useEffect, useState, useRef } from "react";
 import { Goods } from "../types";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper';
 import MultiTab from "../components/exchangebuy/MultiTab";
 import Trust from "../components/Trust";
-
+import ReviewCard from "../components/ReviewCard";
+import { useReview } from "../context/ReviewContext";
 
 
 const GoodsDetail = () => {
-
+    const { reviews } = useReview();
+    const navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [goods, setGoods] = useState<Goods | null>(null);
     const [activeIndex, setActiveIndex] = useState(1);
@@ -47,6 +49,10 @@ const GoodsDetail = () => {
     const categoryId = goods
         ? categories.find(cat => cat.name === goods.category)?.id
         : "";
+
+    const sellerReviews = goods
+        ? reviews.filter(r => r.sellerName === goods.sellerName)
+        : [];
 
     useEffect(() => {
         fetch("/data/goods.json")
@@ -189,6 +195,12 @@ const GoodsDetail = () => {
                                     </div>
                                     <Trust trust={goods ? goods.sellerTrust : 0} />
                                 </div>
+                                {sellerReviews.map(review => (
+                                    <ReviewCard
+                                        key={review.id}
+                                        review={review}
+                                    />
+                                ))}
                             </div>
                         ) : null
                     )}

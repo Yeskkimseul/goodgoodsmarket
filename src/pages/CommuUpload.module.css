@@ -13,7 +13,6 @@
     font-family: "Pretendard Variable";
 }
 
-
 .categoryselect select{
     appearance: none; /* 기본 화살표 제거 */
     -webkit-appearance: none;
@@ -23,10 +22,10 @@
     width: 100%;
     height: 56px;
     border: none;
-    background-color: #f4f4f4;
     border-radius: 8px;
     font-size: 1rem;
     font-family: "Pretendard Variable";
+    
 }
 
 /* 가짜 화살표 */
@@ -42,6 +41,57 @@
 }
 .categoryselect select:focus{
     outline: none;
+}
+
+.customDropdown {
+  position: relative;
+  width: 100%;
+  /* 기타 스타일 */
+}
+
+.dropdownToggle {
+  margin-top: 16px;
+  width: 100%;
+  padding: 18px 20px;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.arrowIcon {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  /* 혹은 CSS로 삼각형 만들기 */
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 2px solid #f4f4f4;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover,
+.selected {
+    background-color: var(--sub-lightmint);
+    color: white;
 }
 
 /* 제목 */
