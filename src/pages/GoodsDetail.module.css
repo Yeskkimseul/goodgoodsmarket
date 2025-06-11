@@ -141,12 +141,8 @@
 .maintit {
     display: flex;
     flex-direction: column;
-    gap: clamp(42px, 14vh, 56px);
+    gap: var(--space8);
     margin-top: var(--space16);
-}
-
-h1 {
-    text-align: right;
 }
 
 .tabcon {
