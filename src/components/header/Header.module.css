@@ -25,6 +25,16 @@
     height: var(--icon-size);
 }
 
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back img {
+    width: clamp(24px, 2.5vw, 28px);
+}
+
 
 .logo img {
     height: clamp(30px, 4vw, 46px);
@@ -48,6 +58,13 @@
 li {
     display: flex;
 
+}
+
+.type5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space16);
 }
 
 li.avatar {

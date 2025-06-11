@@ -37,7 +37,7 @@ const HeaderType0: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.search}>
         <div
-          className={styles.icon}
+          className={styles.back}
           onClick={handleBack}
           style={{ cursor: 'pointer', justifyContent: 'center' }}
         >

@@ -6,7 +6,7 @@ const HeaderType6: React.FC = () => {
     return (
         <header className={styles.header}>
             <h1>
-                채팅
+                채..팅
             </h1>
         </header>
     );

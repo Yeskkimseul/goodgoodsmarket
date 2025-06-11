@@ -16,8 +16,8 @@ const HeaderType5: React.FC<HeaderProps> = ({ type, onMoreClick }) => {
 
   return (
     <header className={styles.header}>
-      <ul className={styles.icon}>
-        <li onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
+      <ul className={styles.type5}>
+        <li onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}className={styles.back}>
           <img src="/images/header/header_back.svg" alt="뒤로가기" />
         </li>
         <li className={styles.avatar}>

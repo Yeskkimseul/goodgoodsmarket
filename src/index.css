@@ -237,7 +237,7 @@ button {
 
 .sokcho {
   font-family: var(--sokcho);
-  font-size: var(--font-h3);
+  font-size: clamp(var(--font-h3),5vw,var(--font-h2));
   line-height: 125%;
   letter-spacing: -0.03em;
   font-weight: 400;
