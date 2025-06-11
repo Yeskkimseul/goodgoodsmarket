@@ -17,7 +17,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -39,7 +39,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -61,7 +61,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
     },
@@ -82,7 +82,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
     },
@@ -103,7 +103,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
     },
@@ -124,7 +124,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
     },
@@ -145,7 +145,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
     },
@@ -166,7 +166,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70
     },
@@ -187,8 +187,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
-        "sellerName": "뱃지가좋아아",
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "뱃지가좋아",
         "sellerTrust": 70
     },
     {
@@ -197,7 +197,9 @@
         "description": "몬스터볼 팝니다.",
         "category": "인형",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale1.png"],
+        "imageUrl": [
+            "/images/mydeals/sale1.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 68,
@@ -206,7 +208,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -217,7 +219,9 @@
         "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
         "category": "기타",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale1.png"],
+        "imageUrl": [
+            "/images/mydeals/sale1.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 32,
@@ -226,7 +230,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -237,7 +241,9 @@
         "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
         "category": "인형",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale1.png"],
+        "imageUrl": [
+            "/images/mydeals/sale1.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 94,
@@ -246,7 +252,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -257,7 +263,9 @@
         "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
         "category": "인형",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale1.png"],
+        "imageUrl": [
+            "/images/mydeals/sale1.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 112,
@@ -266,7 +274,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -277,7 +285,9 @@
         "description": "윈터 빼고 다 있어요 윈터 가지고 계시는 분ㅠ.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange1.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange1.png"
+        ],
         "likes": 8,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 89,
@@ -286,7 +296,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -297,7 +307,9 @@
         "description": "OO이 팬 분들 여기 모여라~.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange5.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange5.png"
+        ],
         "likes": 12,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 113,
@@ -306,7 +318,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -317,7 +329,9 @@
         "description": "포토카드 컬러별로 구비중입니당.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange2.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange2.png"
+        ],
         "likes": 21,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 163,
@@ -326,7 +340,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -337,7 +351,9 @@
         "description": "OO이 전신샷 많이 갖고 있어여 얼굴샷 가지고 계신 분~?.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange3.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange3.png"
+        ],
         "likes": 28,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 183,
@@ -346,7 +362,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -357,7 +373,9 @@
         "description": "나나 구해요ㅠ.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange4.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange4.png"
+        ],
         "likes": 18,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 106,
@@ -366,7 +384,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
@@ -377,7 +395,9 @@
         "description": "포토카드 전 맴버 다 있습니다 앨범 교환 하실 분?.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/mydeals/sale2.png"],
+        "imageUrl": [
+            "/images/mydeals/sale2.png"
+        ],
         "likes": 42,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 254,
@@ -386,7 +406,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/seller1.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
