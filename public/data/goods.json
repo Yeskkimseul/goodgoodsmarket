@@ -390,5 +390,185 @@
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
+    },
+    {
+        "id": "27",
+        "title": "2집 앨범 포토카드 있으신 분",
+        "description": "2집 앨범 OO 포토카드 구해여.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange6.png"],
+        "likes": 52,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 731,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "28",
+        "title": "앨범 수록 포토카드 구해요!",
+        "description": "다른건 다 있는데 수록 포토카드만 없어요ㅠ.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/myexchange/exchange7.png"],
+        "likes": 52,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 731,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "29",
+        "title": "레드밸벳 포토카드 판매",
+        "description": "레드밸벳 전 맴버 포토카드 팔아용.",
+        "category": "포토카드",
+        "price": 25000,
+        "imageUrl": ["/images/mydeals/sale3.png"],
+        "likes": 32,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 448,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "30",
+        "title": "직접 만든 포토카드 판매",
+        "description": "전 세계 하나 밖에없는 포토카드 팝니다.",
+        "category": "포토카드",
+        "price": 15000,
+        "imageUrl": ["/images/mydeals/sale4.png"],
+        "likes": 23,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 232,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "31",
+        "title": "엔시티 포토카드 -태일",
+        "description": "태일이 팬이신 분들~",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale5.png"],
+        "likes": 37,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 316,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "32",
+        "title": "엔시티 포토카드 -재현",
+        "description": "재현이 팬이신 분들~",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale5.png"],
+        "likes": 49,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 388,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "33",
+        "title": "굿걸즈 포토카드 세트",
+        "description": "굿걸즈 포토카드 세트 판매합니다.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale6.png"],
+        "likes": 22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 168,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "34",
+        "title": "뉴진스 앨범 포토카드 세트",
+        "description": "뉴진스 전 맴버 포토카드 있어용.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale7.png"],
+        "likes": 82,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 927,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "35",
+        "title": "아린 포토카드 LP판",
+        "description": "아린 정규 2집 LP판 포토카드 팔아요.",
+        "category": "포토카드",
+        "price": 23000,
+        "imageUrl": ["/images/mydeals/sale8.png"],
+        "likes": 35,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 228,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/seller1.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": false
     }
 ]
