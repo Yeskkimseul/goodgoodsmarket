@@ -12,7 +12,7 @@ const DefaultHeader: React.FC = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.icon} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
+            <div className={styles.back} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
                 <img src="/images/header/header_back.svg" alt="뒤로가기" />
             </div>
             <ul className={styles.right}>

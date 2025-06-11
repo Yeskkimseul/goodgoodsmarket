@@ -17,6 +17,7 @@ const GoodsDetail = () => {
     const { id } = useParams<{ id: string }>();
     const [goods, setGoods] = useState<Goods | null>(null);
     const [activeIndex, setActiveIndex] = useState(1);
+    const [showSnackbar, setShowSnackbar] = useState(false);
     const swiperRef = useRef<SwiperClass | null>(null);
 
     const categories = [
@@ -186,13 +187,23 @@ const GoodsDetail = () => {
 
             <div className={style.bottom}>
                 <div className={style.bts}>
-                    <div className={form.button_big} style={{ background: 'var(--bg-white)', color: 'var(--text-grey)', border: '1px solid var(--stroke-grey)' }}>
+                    <div className={form.button_big} style={{ background: 'var(--bg-white)', color: 'var(--text-grey)', border: '1px solid var(--stroke-grey)' }}
+                        onClick={() => {
+                            setShowSnackbar(true);
+                            setTimeout(() => setShowSnackbar(false), 3000);
+                        }}>
                         찜하기
                     </div>
                     <div className={form.button_big}>
                         채팅하기
                     </div>
                 </div>
+
+                {showSnackbar && (
+                    
+                        <div className={style.snackbar_wrap}><div className={style.snackbar}>찜 목록에 추가되었습니다.</div>
+                    </div>
+                )}
             </div>
         </Layout2>
     )
