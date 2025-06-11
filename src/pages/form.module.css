@@ -462,6 +462,11 @@
 .checkboxInput:checked + .customCheckbox::after {
   border-color: white;
 }
+.negotiableText {
+  font-family: "Pretendard Variable";
+}
+
+
 .warningText {
   color: red;
   font-size: 12px;
