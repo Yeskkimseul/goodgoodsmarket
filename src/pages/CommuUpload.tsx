@@ -19,21 +19,24 @@ const CommuUpload = () => {
     const [description, setDescription] = useState('');
     /* const [imageUrl, setImageUrl] = useState(''); */
     const [imageUrl, setImageUrl] = useState<string | null>(null);
-
+const [imageUrls, setImageUrls] = useState<string[]>([]);
     const [tags, setTags] = useState<string[]>([]);
     const formRef = useRef<HTMLFormElement>(null);
 
     // 이미지/동영상 업로드 핸들러
-    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-        try {
-            const uploadUrl = await uploadToCloudinary(file);
-            setImageUrl(uploadUrl);
-        } catch (error) {
-            alert("이미지 업로드에 실패했습니다.");
-        }
-    };
+const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (!files.length) return;
+
+    try {
+        const uploadPromises = files.map(file => uploadToCloudinary(file));
+        const uploadedUrls = await Promise.all(uploadPromises);
+        setImageUrls(prev => [...prev, ...uploadedUrls]);
+    } catch (error) {
+        alert("이미지 업로드에 실패했습니다.");
+    }
+};
+
 
     // 게시글 등록 핸들러
     const handleSubmit = async (e?: React.FormEvent) => {
@@ -43,7 +46,7 @@ const CommuUpload = () => {
             title,
             description,
             category,
-            imageUrl: imageUrl ?? '', // ← null일 경우 빈 문자열로 처리
+            imageUrl: imageUrls.length > 0 ? imageUrls[0] : '', // 첫 번째 이미지를 대표 이미지로 사용
             likes: 0,
             createdAt: new Date().toISOString(),
             views: 0,
@@ -141,11 +144,28 @@ const CommuUpload = () => {
                             </div>
                         동영상
                     </label>
-                    {imageUrl && <img src={imageUrl} alt="업로드 미리보기" className={styles.previewImage} />}
+                    </div>
+
+<div className={styles.previewList}>
+  {imageUrls.map((url, index) => (
+    <div key={index} className={styles.previewWrapper}>
+      <button
+        type="button"
+        className={styles.closeButton}
+        onClick={() =>
+          setImageUrls(prev => prev.filter((_, i) => i !== index))
+        }
+      >
+        &times;
+      </button>
+      <img src={url} alt={`업로드 미리보기 ${index + 1}`} className={styles.previewImage} />
+    </div>
+  ))}
+</div>
+
                     <button type="submit" className={styles.submitButton}>
                         게시글 등록
                     </button>
-                    </div>
                 </form>
                 
             </Layout>
