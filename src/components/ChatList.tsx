@@ -25,7 +25,7 @@ const ChatList = ({ chats }: ChatListProps) => {
             <ul className={styles.chatItems}>
                 {chats.map((chat) => (
                     <li key={chat.id} className={styles.chatItem}>
-                        <Link to={`/chat/chatdetail/${chat.id}`} className={styles.link}>
+                        <Link to={`/chat/chatdetail`} className={styles.link}>
                             <div className={styles.productImage}>
                                 <img src={chat.productImage} alt="상품" />
                                 {chat.unread && <span className={styles.chatDot} />}
