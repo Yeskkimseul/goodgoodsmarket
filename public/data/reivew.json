@@ -1,0 +1,18 @@
+[
+  {
+    "id": "r1",
+    "sellerName": "아이돌팬",
+    "reviewer": {
+      "name": "구매자1",
+      "img": "/images/users/user2.png"
+    },
+    "date": "2025-06-10",
+    "keywords": ["답장이 빨라요", "친절해요"],
+    "goods": {
+      "id": "1",
+      "title": "직접 만든 수첩 판매합니다.",
+      "imageUrl": "/images/main_postimgs/homeGoodsPick_1.png"
+    },
+    "recommend": 5
+  }
+]
