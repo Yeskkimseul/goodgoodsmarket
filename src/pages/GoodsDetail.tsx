@@ -18,7 +18,17 @@ const GoodsDetail = () => {
     const [goods, setGoods] = useState<Goods | null>(null);
     const [activeIndex, setActiveIndex] = useState(1);
     const [showSnackbar, setShowSnackbar] = useState(false);
+    const [snackbarVisible, setSnackbarVisible] = useState(false);
     const swiperRef = useRef<SwiperClass | null>(null);
+
+    const handleLike = () => {
+        setShowSnackbar(true);
+        setSnackbarVisible(true);
+        setTimeout(() => {
+            setSnackbarVisible(false); // fade-out 시작
+            setTimeout(() => setShowSnackbar(false), 300); // fade-out 끝나고 DOM 제거
+        }, 3000);
+    };
 
     const categories = [
         { id: "1", name: "포토카드" },
@@ -188,10 +198,7 @@ const GoodsDetail = () => {
             <div className={style.bottom}>
                 <div className={style.bts}>
                     <div className={form.button_big} style={{ background: 'var(--bg-white)', color: 'var(--text-grey)', border: '1px solid var(--stroke-grey)' }}
-                        onClick={() => {
-                            setShowSnackbar(true);
-                            setTimeout(() => setShowSnackbar(false), 3000);
-                        }}>
+                        onClick={handleLike}>
                         찜하기
                     </div>
                     <div className={form.button_big}>
@@ -200,8 +207,7 @@ const GoodsDetail = () => {
                 </div>
 
                 {showSnackbar && (
-                    
-                        <div className={style.snackbar_wrap}><div className={style.snackbar}>찜 목록에 추가되었습니다.</div>
+                    <div className={style.snackbar_wrap}><div className={snackbarVisible ? style.snackbar : style.snackbar_hide}>찜 목록에 추가되었습니다.</div>
                     </div>
                 )}
             </div>

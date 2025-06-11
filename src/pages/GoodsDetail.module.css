@@ -195,40 +195,32 @@
     letter-spacing: -0.03em;
 }
 
-
-.snackbar {
+.snackbar_wrap {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 var(--padding);
+    height: auto;
+    /* background: #ccc; */
     position: fixed;
-    /* width: calc(100% - var(--padding)); */
     bottom: clamp(40px, 10vh, 100px);
     /* 임시 */
     left: 50%;
     transform: translateX(-50%);
+}
+
+.snackbar,.snackbar_hide {
     background: rgba(17, 17, 17, 0.90);
     color: var(--text-white);
     border-radius: 30px;
-    animation: fadeInOut 3s;
     z-index: 999;
-    opacity: 0.95;
+    opacity: 1;
+    transition: opacity 0.3s;
     font-size: var(--font-caption);
     padding: var(--space8) var(--space16);
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.95;
-    }
-
-    90% {
-        opacity: 0.95;
-    }
-
-    100% {
-        opacity: 0;
-    }
+.snackbar_hide {
+    opacity: 0;
 }
 
 @media (max-width:768px) {
