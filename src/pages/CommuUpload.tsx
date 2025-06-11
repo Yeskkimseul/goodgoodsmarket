@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from './CommuUpload.module.css';
 import { useCommu } from "../context/CommuContext";
@@ -23,6 +23,9 @@ const [imageUrls, setImageUrls] = useState<string[]>([]);
     const [tags, setTags] = useState<string[]>([]);
     const formRef = useRef<HTMLFormElement>(null);
 
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
     // 이미지/동영상 업로드 핸들러
 const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
@@ -37,6 +40,17 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     }
 };
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowCategoryDropdown(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
     // 게시글 등록 핸들러
     const handleSubmit = async (e?: React.FormEvent) => {
@@ -89,13 +103,49 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                 />
                 
                 <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
-                    <label className={styles.categoryselect}>
-                        <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                            {commuCategories.map(cat => (
-                                <option key={cat} value={cat}>{cat}</option>
-                            ))}
-                        </select>
-                    </label>
+
+        {/* 기존 select 태그 대신 아래 커스텀 드롭다운 */}
+        <label className={styles.categoryselect}>
+          <div className={styles.customDropdown} ref={dropdownRef}>
+            <button
+              type="button"
+              className={styles.dropdownToggle}
+              onClick={() => setShowCategoryDropdown(prev => !prev) }
+              aria-haspopup="listbox"
+              aria-expanded={showCategoryDropdown}
+            >
+              {category}
+              <div className={styles.arrowIcon} />
+            </button>
+
+            {showCategoryDropdown && (
+              <ul
+                className={styles.dropdownMenu}
+                role="listbox"
+                tabIndex={-1}
+                aria-activedescendant={`option-${category}`}
+              >
+                {commuCategories.map(cat => (
+                  <li
+                    key={cat}
+                    id={`option-${cat}`}
+                    role="option"
+                    aria-selected={category === cat}
+                    className={`${styles.dropdownItem} ${category === cat ? styles.selected : ''}`}
+                    onClick={() => {
+                      setCategory(cat);
+                      setShowCategoryDropdown(false);
+                      setTimeout(() => setShowCategoryDropdown(false), 0); // 비동기적으로 닫힘 처리
+                    }}
+                  >
+                    {cat}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </label>
+
                     <label className={styles.title}>
                         <input
                             type="text"
@@ -146,22 +196,22 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     </label>
                     </div>
 
-<div className={styles.previewList}>
-  {imageUrls.map((url, index) => (
-    <div key={index} className={styles.previewWrapper}>
-      <button
-        type="button"
-        className={styles.closeButton}
-        onClick={() =>
-          setImageUrls(prev => prev.filter((_, i) => i !== index))
-        }
-      >
-        &times;
-      </button>
-      <img src={url} alt={`업로드 미리보기 ${index + 1}`} className={styles.previewImage} />
-    </div>
-  ))}
-</div>
+                    <div className={styles.previewList}>
+                    {imageUrls.map((url, index) => (
+                        <div key={index} className={styles.previewWrapper}>
+                        <button
+                            type="button"
+                            className={styles.closeButton}
+                            onClick={() =>
+                            setImageUrls(prev => prev.filter((_, i) => i !== index))
+                            }
+                        >
+                            &times;
+                        </button>
+                        <img src={url} alt={`업로드 미리보기 ${index + 1}`} className={styles.previewImage} />
+                        </div>
+                    ))}
+                    </div>
 
                     <button type="submit" className={styles.submitButton}>
                         게시글 등록
