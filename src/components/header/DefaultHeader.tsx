@@ -27,7 +27,7 @@ const DefaultHeader: React.FC = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Liked">
+                    <Link to="/liked">
                         <img src="/images/header/header_heart.svg" alt="bell" />
                     </Link>
                 </li>
