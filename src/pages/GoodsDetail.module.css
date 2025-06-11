@@ -28,6 +28,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: var(--space24);
+    padding: var(--space16) var(--padding);
 }
 
 /* 스와이퍼 */
@@ -89,7 +90,7 @@
     display: flex;
     flex-direction: column;
     margin-top: var(--space16);
-    padding: 0 var(--padding);
+    padding: 0 var(--space16);
     margin-bottom: var(--space24);
 }
 
@@ -161,20 +162,40 @@
     font-weight: 500;
     line-height: 125%;
     letter-spacing: -0.03em;
-    padding: var(--space4) var(--space8) ;
+    padding: var(--space4) var(--space8);
     border-radius: 8px;
     color: var(--point-deeppink);
     border: 1px solid var(--point-deeppink);
 }
 
-.userprofile{
+.userprofile {
     padding: var(--space16) 0;
+}
+
+.usertop {
+    display: flex;
+    gap: var(--space8);
+    align-items: center;
+}
+
+.sellerimg {
+    width: clamp(32px, 8vw, 46px);
+    border-radius: 50%;
+    border: 1px solid var(--stroke-lightE);
+}
+
+.sellername {
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
 }
 
 @media (max-width:768px) {
     .topcon {
         display: block;
         margin-bottom: 0;
+        padding: 0;
     }
 
     .itemswiper {
