@@ -60,25 +60,39 @@ const GoodsUpload = () => {
         return numeric.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      showOptionPopup &&
+      popupRef.current &&
+      !popupRef.current.contains(event.target as Node)
+    ) {
+      setShowOptionPopup(false);
+    }
+  };
 
-            if (
-                showOptionPopup &&
-                popupRef.current &&
-                !popupRef.current.contains(event.target as Node)
-            ) {
-                setShowOptionPopup(false);
-                setShowCategoryDropdown(false);
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [showOptionPopup]);
 
-            }
-        };
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      showCategoryDropdown &&
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setShowCategoryDropdown(false);
+    }
+  };
 
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [showOptionPopup, showCategoryDropdown]);
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [showCategoryDropdown]);
 
 
     // 옵션 팝업 완료
@@ -199,14 +213,14 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     </label>
                     <label className={`${styles.categoryname} ${styles.all}`}>
                         <p>카테고리</p>
-                        <div className={styles.customDropdown} ref={dropdownRef}>
+                        <div className={styles.customDropdown} ref={dropdownRef} >
                             <button
                                 type="button"
                                 className={styles.dropdownToggle}
                                 onClick={() => setShowCategoryDropdown((prev) => !prev)}
                             >
                                 {category}
-                                <span className={styles.arrow}>▼</span>
+                                <div className={styles.arrowIcon} />
                             </button>
                             {showCategoryDropdown && (
                                 <ul className={styles.dropdownMenu} >
@@ -216,6 +230,7 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                                             onClick={() => {
                                                 setCategory(cat);
                                                 setShowCategoryDropdown(false);
+                                                setTimeout(() => setShowCategoryDropdown(false), 0); // 비동기적으로 닫힘 처리
                                             }}
                                             className={`${styles.dropdownItem} ${category === cat ? styles.selected : ""}`}
                                         >
@@ -250,14 +265,16 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                         <small className={styles.warningText}>최대 1억원까지 입력 가능합니다.</small>
                     )}
                     </div>
-                    <label className={styles.checkboxLabel}>
-                        <input
-                            type="checkbox"
-                            checked={isNegotiable}
-                            onChange={(e) => setIsNegotiable(e.target.checked)}
-                        />
-                        교환 거래 상품
-                    </label>
+<label className={styles.checkboxLabel}>
+  <input
+    type="checkbox"
+    checked={isNegotiable}
+    onChange={(e) => setIsNegotiable(e.target.checked)}
+    className={styles.checkboxInput}
+  />
+  <span className={styles.customCheckbox}></span>
+  교환 거래 상품
+</label>
                     </label>
                     <label className={`${styles.dealoption} ${styles.all}`}>
                         <p>거래 옵션</p>

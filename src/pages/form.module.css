@@ -372,7 +372,14 @@
   background-color: var(--sub-lightmint);
   color: #fff;
 }
-
+.arrowIcon{
+  width: 20px;
+  height: 20px;
+  background-image: url(../../public/images/icon/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
 /* 판매가 */
 .sell{
   position: relative;
@@ -401,21 +408,60 @@
 .sell input:focus::placeholder {
   opacity: 0;
 }
+
 .checkboxLabel{
   display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
   font-size: 1.2rem;
   color: #999;
+  gap: 4px;
 }
 .checkboxLabel input{
   width: 30px;
   height: auto;
 }
+/* 기본 체크박스 숨기기 */
+.checkboxInput {
+  display: none;
+}
+/* 커스텀 박스 */
+.customCheckbox {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
 
+/* 체크 마크 항상 표시 */
+.customCheckbox::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 6px; 
+  width: 5px;
+  height: 10px;
+  border: solid #fff; /* 기본 체크 색상 */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: border-color 0.2s ease;
+}
 
+/* 체크됐을 때 배경색 + 체크 마크 색상 변경 */
+.checkboxInput:checked + .customCheckbox {
+  background-color: var(--main-mint);
+}
+
+.checkboxInput:checked + .customCheckbox::after {
+  border-color: white;
+}
 .warningText {
   color: red;
   font-size: 12px;
@@ -460,6 +506,7 @@
   position: absolute;
   border-radius: 10px;
   background-color: #fff;
+  border: 2px solid #efefef;
 }
 
 .popup h4 {
@@ -480,23 +527,29 @@ input.directPlaceInput {
   border: none;
   background-color: #F4F4F4;
   border-radius: 8px;
+  font-family: "Pretendard Variable";
 }
 
 input.directPlaceInput::placeholder {
   font-size: 0.9rem;
   padding: 8px;
+  font-family: "Pretendard Variable";
+
 }
 
 input.directPlaceInput:focus {
   font-size: 0.9rem;
   padding: 8px;
   outline: none;
+  font-family: "Pretendard Variable";
+
   
 }
 
 input.directPlaceInput:focus::placeholder {
   opacity: 0;
   font-size: 0.9rem;
+  font-family: "Pretendard Variable";
 
 }
 
