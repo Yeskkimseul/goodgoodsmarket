@@ -1,0 +1,58 @@
+.chatInputWrap{
+    width: 100%;
+    height: clamp(58px, 6vw, 74px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: clamp(8px, 2vw, 16px);
+    padding-bottom: clamp(8px, 2vw, 16px);
+    position: relative;
+}
+.chatInputWrap button{
+    width: 42px;
+    height: 42px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.icon{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-grey);
+}
+
+.input{
+    flex: 1;
+    height: clamp(42px, 6vw, 60px);
+    border-radius: 8px;
+    border: none;
+    background: var(--fields-form);
+    padding: 16px;
+}
+
+.input::placeholder {
+  color:var(  --fields-discription); 
+}
+
+.input:focus {
+  border: 1px solid var( --stroke-focused); 
+    outline: none;
+
+}
+
+.sendBtn{
+    position: absolute;
+    right: clamp(24px, 5vw, 32px);
+    top: 50%;
+    transform: translateY(-50%);
+}

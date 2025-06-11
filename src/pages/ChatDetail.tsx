@@ -13,7 +13,6 @@ function ChatDetail() {
 
     return (
         <Layout2>
-
             <HeaderType5 onMoreClick={openSheet} />
             <div>
 
