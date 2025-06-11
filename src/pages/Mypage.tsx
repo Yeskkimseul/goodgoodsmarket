@@ -11,7 +11,7 @@ import Modal from "../components/Modal";
 const Mypage = () => {
     const navigate = useNavigate();
     const [isLogoutModalOpen, setLogoutModalOpen] = useState(false);
-
+    const myTrust = 85;
     return (
         <Layout>
             <Header type="type7"></Header>
@@ -24,7 +24,7 @@ const Mypage = () => {
 
                     </div>{/* //.right */}
                 </div>{/* profile */}
-                <Trust/>
+                <Trust trust={myTrust}  />
 
                 <div className={mypageStyles.section}>
                     <div className={mypageStyles.title}>

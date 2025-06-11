@@ -24,13 +24,15 @@ import Liked from "./pages/Liked"; //찜
 import Alarm from "./pages/Alarm"; //알림보기
 
 
+import { GoodsProvider } from "./context/GoodsContext";
 import { CommuProvider } from "./context/CommuContext";
+import { ReviewProvider } from "./context/ReviewContext";
+
 
 /* 수정 전 참고용 페이지들 */
 import Upload from "./pages/Upload"; //업로드
 import Popular from "./pages/Popular"; //인기굿즈보기
 import About from "./pages/About"; //소개
-import { GoodsProvider } from "./context/GoodsContext";
 
 
 
@@ -77,7 +79,7 @@ function App() {
     hideChatbaseWithRetry(shouldHideChatbase);
   }, [location.pathname]);
 
-  useEffect(() => {  
+  useEffect(() => {
     setTimeout(() => {
       const chatbaseButton = document.querySelector('#chatbase-bubble-button') as HTMLElement | null;
       if (chatbaseButton) chatbaseButton.style.display = 'none';
@@ -95,68 +97,70 @@ function App() {
 
     <GoodsProvider>
       <CommuProvider>
-        {/* ✅ 조건부 삽입 */}
-        {/* <>
+        <ReviewProvider>
+          {/* ✅ 조건부 삽입 */}
+          {/* <>
           {loading ? <SplashScreen /> : <Login />}
         </> */}
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login/email" element={<LoginEmail />} />
-          <Route path="/login/phone" element={<LoginPhone />} />
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/login/email" element={<LoginEmail />} />
+            <Route path="/login/phone" element={<LoginPhone />} />
 
-          <Route path="/join" element={<Join />} />
+            <Route path="/join" element={<Join />} />
 
-          <Route path="/home" element={
-            <Home />} />
-          <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
-          <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
-          <Route path="/home/goodsupload" element={<GoodsUpload />} />
+            <Route path="/home" element={
+              <Home />} />
+            <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
+            <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
+            <Route path="/home/goodsupload" element={<GoodsUpload />} />
 
-          <Route path="/home/search" element={<Search />} />
+            <Route path="/home/search" element={<Search />} />
 
-          <Route path="/community" element={
-            <Community />
-          } />
-          <Route path="/community/commudetail/:id" element={
+            <Route path="/community" element={
+              <Community />
+            } />
+            <Route path="/community/commudetail/:id" element={
 
-            <CommuDetail />
+              <CommuDetail />
 
-          } />
-          <Route path="/community/mycommu" element={
+            } />
+            <Route path="/community/mycommu" element={
 
-            <MyCommu />
+              <MyCommu />
 
-          } />
-          <Route path="/community/commuupload" element={
+            } />
+            <Route path="/community/commuupload" element={
 
-            <CommuUpload />
+              <CommuUpload />
 
-          } />
+            } />
 
 
-          <Route path="/chat" element={
+            <Route path="/chat" element={
 
-            <Chat />
+              <Chat />
 
-          } />
-          <Route path="/chat/chatdetail" element={
+            } />
+            <Route path="/chat/chatdetail" element={
 
-            <ChatDetail />
+              <ChatDetail />
 
-          } />
+            } />
 
-          <Route path="/mypage" element={<Mypage />} />
-          <Route path="/liked" element={<Liked />} />
-          <Route path="/mypage/alarm" element={<Alarm />} />
-          <Route path="/mypage/mydeals" element={<MyDeals />} />
-          <Route path="/writereview" element={<WriteReview />} />
+            <Route path="/mypage" element={<Mypage />} />
+            <Route path="/liked" element={<Liked />} />
+            <Route path="/mypage/alarm" element={<Alarm />} />
+            <Route path="/mypage/mydeals" element={<MyDeals />} />
+            <Route path="/writereview" element={<WriteReview />} />
 
-          {/* 수정 전 참고용 페이지들 */}
+            {/* 수정 전 참고용 페이지들 */}
 
-          <Route path="/popular" element={<Popular />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/upload" element={<Upload />} />
-        </Routes>
+            <Route path="/popular" element={<Popular />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/upload" element={<Upload />} />
+          </Routes>
+        </ReviewProvider>
       </CommuProvider>
     </GoodsProvider>
   );

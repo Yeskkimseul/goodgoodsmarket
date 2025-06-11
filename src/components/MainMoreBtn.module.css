@@ -2,7 +2,7 @@
   position: fixed;
   right: 50%;
   bottom: 0;
-  margin-right: clamp(-554px, calc(-50vw + 24px), -123.5px);
+ margin-right: clamp(-554px, calc(-50vw + 24px), -123.5px);
   /* margin-right: clamp(-608px, calc(-600px - 2.5vw), -624px); */
 /*   min-width: 375px;
   max-width: 1200px; */
@@ -13,8 +13,8 @@
 
 .mainMoreBtnContainer {
   position: absolute;
-  bottom: clamp(16px, 10vh, 276px);
-  /* right: clamp(16px, 5vw, 36px); */
+  bottom: clamp(156px, 20vh, 296px);
+  right: 0px;
   z-index: 1000;
   display: flex;
   flex-direction: column;

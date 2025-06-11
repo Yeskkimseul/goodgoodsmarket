@@ -60,25 +60,39 @@ const GoodsUpload = () => {
         return numeric.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      showOptionPopup &&
+      popupRef.current &&
+      !popupRef.current.contains(event.target as Node)
+    ) {
+      setShowOptionPopup(false);
+    }
+  };
 
-            if (
-                showOptionPopup &&
-                popupRef.current &&
-                !popupRef.current.contains(event.target as Node)
-            ) {
-                setShowOptionPopup(false);
-                setShowCategoryDropdown(false);
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [showOptionPopup]);
 
-            }
-        };
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      showCategoryDropdown &&
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setShowCategoryDropdown(false);
+    }
+  };
 
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [showOptionPopup, showCategoryDropdown]);
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [showCategoryDropdown]);
 
 
     // 옵션 팝업 완료
@@ -199,14 +213,14 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     </label>
                     <label className={`${styles.categoryname} ${styles.all}`}>
                         <p>카테고리</p>
-                        <div className={styles.customDropdown} ref={dropdownRef}>
+                        <div className={styles.customDropdown} ref={dropdownRef} >
                             <button
                                 type="button"
                                 className={styles.dropdownToggle}
                                 onClick={() => setShowCategoryDropdown((prev) => !prev)}
                             >
                                 {category}
-                                <span className={styles.arrow}>▼</span>
+                                <div className={styles.arrowIcon} />
                             </button>
                             {showCategoryDropdown && (
                                 <ul className={styles.dropdownMenu} >
@@ -216,6 +230,7 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                                             onClick={() => {
                                                 setCategory(cat);
                                                 setShowCategoryDropdown(false);
+                                                setTimeout(() => setShowCategoryDropdown(false), 0); // 비동기적으로 닫힘 처리
                                             }}
                                             className={`${styles.dropdownItem} ${category === cat ? styles.selected : ""}`}
                                         >
@@ -230,34 +245,45 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                         <p>판매가</p>
                         <div className={styles.pricelimit}>
                     <input
-                        type="text"
-                        inputMode="numeric"
-                        value={formatPrice(price)}
-                        onChange={(e) => {
+                    type="text"
+                    inputMode="numeric"
+                      style={{
+                            fontFamily: isNegotiable ? "Pretendard Variable" : "기본폰트",
+                            }}
+                    value={
+                        isNegotiable ? "교환 거래 희망" : formatPrice(price)
+                    }
+                    onChange={(e) => {
+                        if (isNegotiable) return; // 교환 거래일 땐 입력 막기
+
                         const rawValue = e.target.value.replace(/[^0-9]/g, '');
                         const numericValue = rawValue === '' ? 0 : Number(rawValue);
-                        
+
                         if (numericValue > 100000000) {
-                            setIsPriceOverLimit(true);
+                        setIsPriceOverLimit(true);
                         } else {
-                            setIsPriceOverLimit(false);
-                            setPrice(numericValue);
+                        setIsPriceOverLimit(false);
+                        setPrice(numericValue);
                         }
-                        }}
-                        placeholder="가격을 입력해주세요.(숫자만 입력 가능)"
+                    }}
+                    placeholder="가격을 입력해주세요.(숫자만 입력 가능)"
+                    readOnly={isNegotiable}
                     />
                     {isPriceOverLimit && (
                         <small className={styles.warningText}>최대 1억원까지 입력 가능합니다.</small>
                     )}
                     </div>
                     <label className={styles.checkboxLabel}>
-                        <input
-                            type="checkbox"
-                            checked={isNegotiable}
-                            onChange={(e) => setIsNegotiable(e.target.checked)}
-                        />
-                        교환 거래 상품
+                    <input
+                        type="checkbox"
+                        checked={isNegotiable}
+                        onChange={(e) => setIsNegotiable(e.target.checked)}
+                        className={styles.checkboxInput}
+                    />
+                    <span className={styles.customCheckbox}></span>
+                    교환 거래 상품
                     </label>
+
                     </label>
                     <label className={`${styles.dealoption} ${styles.all}`}>
                         <p>거래 옵션</p>

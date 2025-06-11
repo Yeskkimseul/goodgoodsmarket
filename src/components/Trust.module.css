@@ -21,13 +21,13 @@
 }
 
 .chart .chart_front {
-    width: 70%;
-    height: clamp(10px, 1.3vw, 15px);
-    border-radius: 100px;
-    background: var(--button-bgdefault);
     position: absolute;
     left: 0;
     top: 0;
+    height: clamp(10px, 1.3vw, 15px);
+    border-radius: 100px;
+    background: var(--button-bgdefault);
+    transition: width 0.3s;
 }
 
 .chart .chart_front img {

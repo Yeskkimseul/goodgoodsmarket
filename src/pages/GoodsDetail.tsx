@@ -177,7 +177,7 @@ const GoodsDetail = () => {
                                             </>
                                         )}
                                     </div>
-                                    <Trust />
+                                    <Trust trust={goods ? goods.sellerTrust : 0} />
                                 </div>
                             </div>
                         ) : null
