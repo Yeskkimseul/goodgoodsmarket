@@ -1,65 +1,59 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import { Chatting } from "../types/chatting";
-import styles from './CardListLayout.module.css';
-import filterstyles from './filter.module.css';
-import { useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
 import ChatList from "../components/ChatList";
+import styles from "./filter.module.css";
+import type { Chatting } from "../types/chatting";
+import { Link } from "react-router-dom";
+
+// 필터 탭 리스트 정의
+const filterList = [
+  { label: "전체", value: "전체" },
+  { label: "판매", value: "판매" },
+  { label: "구매", value: "구매" },
+  { label: "교환", value: "교환" },
+] as const;
+
+type TabType = (typeof filterList)[number]["value"];
 
 const Chat = () => {
+  const [chatData, setChatData] = useState<Chatting[]>([]);
+  const [filter, setFilter] = useState<TabType>("전체");
 
-    const [chatList, setChatList] = useState<Chatting[]>([]);
-    const [filter, setFilter] = useState<string>('전체');
-    const filterList = [
-        { label: '전체', value: '전체' },
-        { label: '판매', value: '판매' },
-        { label: '구매', value: '구매' },
-        { label: '교환', value: '교환' },
-    ];
-    const navigate = useNavigate();
+  // 데이터 불러오기
+  useEffect(() => {
+    fetch("/data/chatting.json")
+      .then((res) => res.json())
+      .then((data) => setChatData(data as Chatting[]))
+      .catch((err) => console.error("chatting.json fetch 실패", err));
+  }, []);
 
-    useEffect(() => {
-        const stored = localStorage.getItem('chatList');
-        if (stored) {
-            setChatList(JSON.parse(stored));
-        } else {
-            //채팅 데이터 불러오기
-            fetch('data/chatting.json')
-                .then((res) => res.json())
-                .then((data) => setChatList(data));
-        }
-    }, []);
+  // 필터 적용
+  const filteredChats =
+    filter === "전체" ? chatData : chatData.filter((chat) => chat.type === filter);
 
-    // 필터링/정렬 로직
-    const filteredList = filter === '전체'
-        ? chatList
-        : chatList.filter(item => {
-            if (filter === '판매') return item.type === '판매';
-            if (filter === '구매') return item.type === '구매';
-            if (filter === '교환') return item.type === '교환';
-            return true;
-        });
+  return (
+    <Layout>
+      <Header type="type6" />
+      <div>
+        <div className={styles.filterContainer}>
+          {filterList.map(({ label, value }) => (
+            <button
+              key={value}
+              onClick={() => setFilter(value)}
+              className={`${styles.filterButton} ${
+                filter === value ? styles.active : ""
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
-
-    return (
-        <Layout>
-            <Header type="type6" />
-            <div className={filterstyles.filterContainer}>
-                {filterList.map(f => (
-                    <button
-                        className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
-                        key={f.value}
-                        onClick={() => setFilter(f.value)}
-                    >
-                        {f.label}
-                    </button>
-                ))}
-            </div>
-            <ChatList chats={filteredList} />
-        </Layout>
-    )
-
+        <ChatList chats={filteredChats} />
+      </div>
+    </Layout>
+  );
 };
 
 export default Chat;
