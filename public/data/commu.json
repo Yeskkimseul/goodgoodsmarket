@@ -233,5 +233,235 @@
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
+  },
+   {
+    "id": "10",
+    "title": "햄스터 인형에 빠져버린 나...",
+    "description": "여러분 햄스터 좋아하시나요..? 요즘 햄스터 인형에 빠져버렸어요! 너무 귀여워서 모으고 싶어요.",
+    "category": "자유게시판",
+    "imageUrl": "/images/commuimgs/commuimg9.png",
+    "likes": 10,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 87,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "햄햄토리",
+    "commentsNum": 11,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "11",
+    "title": "소녀시대 콘서트 티켓 모음",
+    "description": "제가 소녀시대 팬이라서 콘서트 티켓을 모으고 있어요! 혹시 다른 팬분들도 계신가요? 같이 공유해요~",
+    "category": "굿즈 자랑",
+    "imageUrl": "/images/commuimgs/commuimg10.png",
+    "likes": 21,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 121,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "태연팬",
+    "commentsNum": 13,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "12",
+    "title": "굿즈 사고싶다면? 여기로 가라!",
+    "description": "제가 소녀시대 팬이라서 콘서트 티켓을 모으고 있어요! 혹시 다른 팬분들도 계신가요? 같이 공유해요~",
+    "category": "굿즈 소식",
+    "imageUrl": "/images/commuimgs/commuimg11.png",
+    "likes": 16,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 88,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "굿즈지도",
+    "commentsNum": 6,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "13",
+    "title": "일본에서 구매한 과일나라 스티커",
+    "description": "일본에 여행가서 과일나라 스티커를 구매했어요! 너무 귀여워서 소장 중이에요. 혹시 일본에서 구매한 굿즈 있으신가요?",
+    "category": "굿즈 자랑",
+    "imageUrl": "/images/commuimgs/commuimg12.png",
+    "likes": 11,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 67,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "야채나라",
+    "commentsNum": 8,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "14",
+    "title": "작고 소중한 구르미 키링",
+    "description": "작고 소중한 구르미 키링이에요! 너무 귀여워서 항상 가방에 달고 다녀요. 혹시 다른 구르미 팬분들 계신가요?",
+    "category": "굿즈 자랑",
+    "imageUrl": "/images/commuimgs/commuimg13.png",
+    "likes": 18,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 106,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "몽글몽글",
+    "commentsNum": 10,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "15",
+    "title": "오늘 받은 굿즈 모음",
+    "description": "오늘 배송 온 굿즈들입니다! 혹시 다른 팬분들도 계신가요? 같이 공유해요~",
+    "category": "자유게시판",
+    "imageUrl": "/images/commuimgs/commuimg14.jpg",
+    "likes": 12,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 92,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "탐나는크루즈",
+    "commentsNum": 11,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "16",
+    "title": "[입고소식] 은혼 신규 굿즈 출시",
+    "description": "은혼 신규 굿즈 출시 되었다네요 다들 확인하셔요!",
+    "category": "굿즈 소식",
+    "imageUrl": "/images/commuimgs/commuimg15.jpg",
+    "likes": 33,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 191,
+    "tags": ["#인형", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "animate은혼",
+    "commentsNum": 21,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "17",
+    "title": "OO의 아이 신규 티셔츠 굿즈 출시",
+    "description": "OO의 아이 신규 티셔츠 굿즈 출시 되었다네요 다들 확인하셔요!",
+    "category": "굿즈 소식",
+    "imageUrl": "/images/commuimgs/commuimg16.png",
+    "likes": 28,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 112,
+    "tags": ["#패션", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "아이마이미",
+    "commentsNum": 11,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "18",
+    "title": "뮤직 밴드 내한 티켓 구매법",
+    "description": "뮤직 밴드 내한 티켓 구매하는 법 공유해요! 예매 팁이나 주의사항 있으면 댓글로 남겨주세요.",
+    "category": "자유게시판",
+    "imageUrl": "/images/commuimgs/commuimg17.png",
+    "likes": 18,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 102,
+    "tags": ["#티켓", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "락에빠져버렸어",
+    "commentsNum": 9,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
+  },
+   {
+    "id": "19",
+    "title": "지현 언니가 사용한 노트 정보 푼다",
+    "description": "지현 언니가 사용한 노트 정보 푼다! 이 노트는 정말 예쁘고 실용적이에요. 혹시 다른 팬분들도 계신가요? 같이 공유해요~",
+    "category": "자유게시판",
+    "imageUrl": "/images/commuimgs/commuimg18.png",
+    "likes": 22,
+    "createdAt": "2025-06-03T14:45:00Z",
+    "views": 98,
+    "tags": ["#문구류", "#굿즈"],
+    "userimgUrl": "/images/mypage/profile.png",
+    "userName": "지현언니팬",
+    "commentsNum": 8,
+    "comments": [
+      {
+        "id": "c9",
+        "userimgUrl": "/images/users/user5.png",
+        "userName": "콘서트러버",
+        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "createdAt": "2025-06-03T15:00:00Z"
+      }
+    ]
   }
 ]
