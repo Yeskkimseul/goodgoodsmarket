@@ -1,0 +1,50 @@
+.chatMessages {
+    width: 100%;
+    height: auto;
+    background:var( --fields-form);
+    color: var(--text-grey);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.warningMessage {
+    width: 100%;
+    background: var(--fields-bgvalidation);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.theCheat {
+    font-size: var(--font-h5);
+    text-decoration: underline;
+    color: var(--text-grey);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.chatTime {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: var(--text-lightgrey);
+}
+
+.time{
+    font-size: var(--font-caption);
+    color: var(--text-lightgrey);
+    padding: 0 6px;
+}
+
+.chatProfile{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
