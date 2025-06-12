@@ -1788,5 +1788,225 @@
         "sellerName": "타락파워전사",
         "sellerTrust": 80,
         "isExchangeable": true
+    },
+    {
+        "id": "90",
+        "title": "여우 캐릭터 굿즈 장갑 교환",
+        "description": "여우 캐릭터 굿즈 장갑 교환합니다\n같은 장갑중에 다른 굿즈 제품이랑 교환원해요ㅠ\n구성은 제품 단품이고 사용은 3주정도 해서 약간의 사용감 있습니다 참고해주세요ㅎ\n관심 있으신 분들 연락주세요!",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange34.png"
+        ],
+        "likes": 18,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 108,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "여우는팍스",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "91",
+        "title": "비룡이 캐릭터 굿즈 모자 교환해요",
+        "description": "비룡이 캐릭터 굿즈 모자 교환합니다\n다른 모자 굿즈들이랑 교환 원합니다!\n구성은 단품에 사용감은 3번정도 착용하였습니다\n관심 있으신 분들 연락주세요!",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange35.png"
+        ],
+        "likes": 4,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 48,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "요리하는비룡",
+        "sellerTrust": 40,
+        "isExchangeable": true
+    },
+    {
+        "id": "92",
+        "title": "아이스캣 슬리퍼 교환해요!",
+        "description": "아이스캣 슬리퍼 교환합니당\n파이어캣 가지고 계신분이랑 교환하고싶어요\n제품은 사용 한 번도 안한 새거입니다..!\n많은 연락주세요!",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange36.png"
+        ],
+        "likes": 24,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 107,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "파이어아이스",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "93",
+        "title": "체리소녀 굿즈 미니백 교환",
+        "description": "체리소녀 굿즈 미니백 교환합니다\n다른 패션 제품 굿즈랑 교환하고 싶어요\n한 번도 사용 안 한 새제품이에요!\n관심 있으신 분들 연락주세요~",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange37.png"
+        ],
+        "likes": 33,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 257,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "체리체리체인지",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "94",
+        "title": "가을소년 머플러 교환해용",
+        "description": "가을소년 머플러 교환합니다\n같은 머플러 제품이여도 좋고 다른 패션 제품도 좋습니다!\n한 번도 사용 안 한 새제품이여서 미개봉/새제품 원합니다!\n많은 연락주세요!",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange38.png"
+        ],
+        "likes": 19,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 98,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "체리체리체인지",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "95",
+        "title": "버추얼 아이돌 미니 앨범 판매합니다",
+        "description": "버추얼 아이돌 미니 앨범 판매합니다\n이번 신규 2집 미니 앨범입니다\n팬심으로 구매했던거라 구입하고 포장도 안 뜯었습니다 완전 새거에요\n많은 채팅 부탁드립니다",
+        "category": "음반",
+        "price": 18000,
+        "imageUrl": [
+            "/images/mydeals/sale41.png"
+        ],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 78,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "버추얼포에버",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "96",
+        "title": "제가 낸 노래 앨범 판매합니다",
+        "description": "안녕하세요 가수 이정재입니다.\n이번 신규 1집 발매 기념으로 싸게 가져가실 수 있도록 올려봅니다\n많은 사랑과 관심 부탁드립니다",
+        "category": "음반",
+        "price": 20000,
+        "imageUrl": [
+            "/images/mydeals/sale42.png"
+        ],
+        "likes": 6,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 58,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "가수이정재",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "97",
+        "title": "가수 파일럿 LP판 판매합니다",
+        "description": "이번 신인으로 데뷔한 가수 파일럿 LP판 판매합니다\n구매하고 음악은 다른 곳에서 들어서 한 번도 꺼내보지도 않은 새제품입니다.\n문의주세요",
+        "category": "음반",
+        "price": 23000,
+        "imageUrl": [
+            "/images/mydeals/sale43.png"
+        ],
+        "likes": 26,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 157,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "파일럿천재",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "98",
+        "title": "국제의 아이들 미니 앨범 판매합니다",
+        "description": "국제의 아이들 미니 앨범 판매합니다\n안에 친필 사인까지있어 희귀한 제품입니다\n구입하고 한 번만 열어보고 보관중이여서 완전 새거라고 봐도 무방한 새제품입니다ㅎ\n관심 있으신 분들 채팀 부탁드립니다",
+        "category": "음반",
+        "price": 31000,
+        "imageUrl": [
+            "/images/mydeals/sale44.png"
+        ],
+        "likes": 33,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 247,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "국제의 아이들",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "99",
+        "title": "사이보그 가수 제이 앨범 팔아용",
+        "description": "요즘 핫한 제이 앨범 판매합니다!\n안에 구성품들 다 있습니다.\n첫 앨범이기도하고 친필 사인도 들어가있어 프리미엄 쪼금 붙었습니다ㅎ\n관심 있으신 분들 채팀 부탁드립니다",
+        "category": "음반",
+        "price": 42000,
+        "imageUrl": [
+            "/images/mydeals/sale45.png"
+        ],
+        "likes": 12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 137,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "사이보그는미래다",
+        "sellerTrust": 50,
+        "isExchangeable": false
     }
 ]
