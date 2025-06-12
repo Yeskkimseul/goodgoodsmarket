@@ -2250,5 +2250,27 @@
         "sellerName": "너드는어디가고머드",
         "sellerTrust": 50,
         "isExchangeable": true
+    },
+    {
+        "id": "111",
+        "title": "사랑의 하츄핑 응원봉 판매합니다",
+        "description": "사랑의 하츄핑 응원봉 판매합니다.\n이번 6월 콘서트에만 풀린 희귀 매물이에요..!\n콘서트에서 한 번 사용하고 계속 상태 좋게 보관중입니다\n관심 있으신 분들 채팅주세요!",
+        "category": "팬 라이트",
+        "price": 32000,
+        "imageUrl": [
+            "/images/mydeals/sale49.png"
+        ],
+        "likes": 62,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 812,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "내사랑하츄핑",
+        "sellerTrust": 80,
+        "isExchangeable": false
     }
 ]
