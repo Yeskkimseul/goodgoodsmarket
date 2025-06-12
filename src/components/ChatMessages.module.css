@@ -51,7 +51,7 @@
 }
 
 .meMessage {
-    width: 277px;
+    width: clamp(277px, 40vw, 370px);
     display: flex;
     flex-direction: column;
     padding: 8px 10px;
@@ -76,7 +76,7 @@
 }
 
 .otherMessage {
-    width: 277px;
+    width: clamp(277px, 40vw, 370px);
     display: flex;
     flex-direction: column;
     padding: 8px 10px;

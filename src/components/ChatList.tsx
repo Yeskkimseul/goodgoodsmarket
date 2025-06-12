@@ -1,8 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // time
 function getTimeAgo(dateString: string): string {
@@ -20,7 +21,21 @@ type ChatListProps = {
     chats: Chatting[];
 };
 
+
 const ChatList = ({ chats }: ChatListProps) => {
+
+    const [readList, setReadList] = useState<boolean[]>(() => {
+        const saved = localStorage.getItem("chatReadList");
+        return saved ? JSON.parse(saved) : chats.map(chat => !chat.unread ? true : false);
+    });
+
+    const handleRead = (idx: number) => {
+        setReadList(prev => prev.map((r, i) => i === idx ? true : r));
+    };
+
+    useEffect(() => {
+        localStorage.setItem("chatReadList", JSON.stringify(readList));
+    }, [readList]);
 
     const [chatStates, setChatStates] = useState(chats);
 
@@ -35,23 +50,20 @@ const ChatList = ({ chats }: ChatListProps) => {
     return (
         <div className={styles.chatList}>
             <ul className={styles.chatItems}>
-                {chats.map((chat) => (
+                {chats.map((chat, idx) => (
                     <li key={chat.id} className={styles.chatItem}>
-                        <Link to={`/chat/chatdetail`} className={styles.link}>
+                        <Link
+                            to={`/chat/chatdetail`}
+                            className={styles.link}
+                            onClick={() => handleRead(idx)}
+                        >
                             <div className={styles.productImage}>
                                 <img src={chat.productImage} alt="상품" />
-                                {typeof chat.unread === 'boolean' && (
-                                    <span
-                                        className={chat.unread ? styles.chatDot : styles.chatDotRead}
-                                        onClick={e => {
-                                            e.preventDefault();
-                                            handleDotClick(chat.id);
-                                        }}
-                                        style={{ cursor: 'pointer' }}
-                                    />
-                                )}
+                                <span
+                                    className={readList[idx] ? styles.chatDotRead : styles.chatDot}
+                                    style={{ cursor: 'pointer' }}
+                                />
                             </div>
-
                             <div className={styles.chatContent}>
                                 <div className={styles.chatHeader}>
                                     <div className={styles.userInfo}>
