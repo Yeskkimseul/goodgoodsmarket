@@ -4,6 +4,41 @@
     height: 100vh;
 }
 
-.body ul {
+.bgbg {
+    background: url(../../public/images/about/about_bg.png) center center/cover no-repeat;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.bgbg>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    height: clamp(120px, 25vw, 324px);
+    width: 100%;
+}
+
+.marquee {
+    padding-top: clamp(70px, 14vw, 180px);
+}
+
+.mi {
+    margin-right: var(--space16);
+height: clamp(23px, 5vw, 45px);
+}
+
+.scroll img {
+    border-radius: 16px;
+    margin-right: var(--space32);
+    width: clamp(60px, 10vw, 120px);
+}
+
+.imgscroll {
+    padding-top: clamp(30px, 10vw, 151px);
+    padding-bottom: 80px;
     display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 4vw, 60px);
 }
