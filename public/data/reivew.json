@@ -3,7 +3,7 @@
     "id": "r1",
     "sellerName": "뱃지가좋아",
     "reviewer": {
-      "name": "구매자1",
+      "name": "굿즈요정",
       "img": "/images/users/user2.png"
     },
     "date": "2025-06-10",
@@ -22,18 +22,17 @@
     "id": "r2",
     "sellerName": "뱃지가좋아",
     "reviewer": {
-      "name": "구매자1",
-      "img": "/images/users/user2.png"
+      "name": "왕밤빵이왕",
+      "img": "/images/users/user10.png"
     },
     "date": "2025-06-10",
     "reviewimg": [
-      "/images/main_postimgs/homeGoodsPick_1.png",
-      "/images/main_postimgs/homeGoodsPick_1.png",
+      "/images/mydeals/sale16.png",
+      "/images/review/review1.png",
       "/images/main_postimgs/homeGoodsPick_1.png"
     ],
     "content": "퀄리티 너무 좋고 덤도 감사합니다!! 같이 넣어주신 과자 맛있었어요. 잘 쓰겠습니다 감사합니다!!",
     "keywords": [
-      "답장이 빨라요",
       "친절해요"
     ],
     "goods": {

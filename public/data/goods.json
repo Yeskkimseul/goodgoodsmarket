@@ -1478,7 +1478,315 @@
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "이제문구류는그만",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "75",
+        "title": "고오급 가죽수첩,만년필세트 교환해요!",
+        "description": "가죽수첩,만년필 세트랑 다른 굿즈 제품이랑 교환 원합니다..!\n두개가 세트여서 낱개로 교환신청은 정중히 거절하겠습니다\n관심 있으신 분들 편하게 채팅주세요!",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": [
+            "/images/myexchange/exchange28.png"
+        ],
+        "likes": 6,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 41,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "고오급굿즈수집가",
         "sellerTrust": 40,
+        "isExchangeable": true
+    },
+    {
+        "id": "76",
+        "title": "꽃 마스킹 테이프 교환합니다",
+        "description": "가죽수첩,만년필 세트랑 다른 굿즈 제품이랑 교환 원합니다..!\n두개가 세트여서 낱개로 교환신청은 정중히 거절하겠습니다\n관심 있으신 분들 편하게 채팅주세요!",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": [
+            "/images/myexchange/exchange29.png"
+        ],
+        "likes": 16,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 121,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "고오급굿즈수집가",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "77",
+        "title": "하트모양 펜들 교환합니다!",
+        "description": "하트모양 펜들 다른 펜들이나 문구 관련 굿즈들이랑 교환 원해요!\n낱개도 괜찮고 묶어서도 괜찮습니다!\n관심 있으신 분들 편하게 채팅주세요~",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": [
+            "/images/myexchange/exchange30.png"
+        ],
+        "likes": 5,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 78,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "고오급굿즈수집가",
+        "sellerTrust": 40,
+        "isExchangeable": true
+    },
+    {
+        "id": "78",
+        "title": "파티프린세스 티셔츠 팔아요!",
+        "description": "파티 프린세스 티셔츠 팝니당\n구매하고 한 번도 입지 않고 보관만했어서 새거나 다름 없습니다!\n관심 있으신 분들 채팅으로 많은 문의 부탁드립니다..!",
+        "category": "패션",
+        "price": 35000,
+        "imageUrl": [
+            "/images/mydeals/sale33.png"
+        ],
+        "likes": 25,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 333,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "티셔츠수집가",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "79",
+        "title": "해바라기 웹툰 에코백 굿즈 팝니다~",
+        "description": "해바라기 웹툰에 나오는 캐릭터 에코백 굿즈 판매합니다..!\n사용감은 약간 있지만 깨끗하게 사용하였습니다\n관심 있으신 분들 채팅으로 많은 문의 부탁드립니다~",
+        "category": "패션",
+        "price": 19000,
+        "imageUrl": [
+            "/images/mydeals/sale34.png"
+        ],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 66,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "패셔니스타",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "80",
+        "title": "해드셋 캐릭터 모자 팔아용",
+        "description": "해드셋 캐릭터 굿즈 모자 판매합니다\n개봉하고 한 달 정도 사용하였구요 세탁 싹해서 보내드리겠습니다\n관심 있으신 분들 채팅으로 많은 문의 부탁드립니다~",
+        "category": "패션",
+        "price": 33000,
+        "imageUrl": [
+            "/images/mydeals/sale35.png"
+        ],
+        "likes": 24,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 188,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "패셔니스타",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "82",
+        "title": "꿈나라 달토끼 양말 판매합니다",
+        "description": "꿈나라 달토끼 굿즈 양말 판매합니다\n조카 사줄려고 구매했다가 조카가 안 좋아해서 판매글 올립니다ㅠ\n한 번도 사용한 적은 없구 개봉만한 상태입니다.\n채팅주세요~",
+        "category": "패션",
+        "price": 11000,
+        "imageUrl": [
+            "/images/mydeals/sale36.png"
+        ],
+        "likes": 41,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 328,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "삼둥이엄마",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "83",
+        "title": "그날의 너 굿즈 파우치 팔아용",
+        "description": "그날의 너 굿즈 파우치 판매합니당\n팬심으로 구입해서 몇 번 사용하다가 사정이 생겨서 판매 글 올립니다..ㅠ\n거의 사용 안 한 상태라서 새거급입니다..!\n많은 채팅주세요~",
+        "category": "패션",
+        "price": 13500,
+        "imageUrl": [
+            "/images/mydeals/sale37.png"
+        ],
+        "likes": 26,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 219,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "감성충만이",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "84",
+        "title": "팍스맥스 굿즈 신발 팔아요!(260mm)",
+        "description": "판스맥스 굿즈 신발 판매합니다!\n제목 처럼 260mm이구, 5번도 안 신었어서 거의 새거급입니다..!\n돈이 좀 급해서 싸게 올립니다..!\n문의 주세요!",
+        "category": "패션",
+        "price": 36500,
+        "imageUrl": [
+            "/images/mydeals/sale38.png"
+        ],
+        "likes": 39,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 346,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "슈즈즈슈",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "85",
+        "title": "마우스 걸 굿즈 동전지갑 판매합니다..!",
+        "description": "마우스 걸 굿즈 동전지갑 판매합니다!\n구성품은 단품이고 3달정도 사용해서 사용감 조금 있습니다.\n그래도 깨끗하게 사용해서 상태는 A급입니다!\n많은 채팅 부탁드려요~",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/mydeals/sale39.png"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 96,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "월렛보이",
+        "sellerTrust": 40,
+        "isExchangeable": false
+    },
+    {
+        "id": "86",
+        "title": "다크 로즈 굿즈 목걸이 판매",
+        "description": "다크 로즈 굿즈 목걸이 판매합니다\n구성품은 단품이고 사용은 일주일도 안 해서 새거급입니다\n네고는 정중히 거절하겠습니다\n문의 주세요",
+        "category": "패션",
+        "price": 22000,
+        "imageUrl": [
+            "/images/mydeals/sale40.png"
+        ],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 59,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "쿠앤크로즈",
+        "sellerTrust": 30,
+        "isExchangeable": false
+    },
+    {
+        "id": "87",
+        "title": "웹툰 작가 굿즈 머플러 교환합니다!",
+        "description": "웹툰 작가 굿즈 머플러 교환원합니다..!\n다른 웹툰작가 굿즈랑 교환하고싶습니다\n구매하고 한 번도 사용하지 않아 새거입니다\n관심 있으신 분들 연락주세요!",
+        "category": "패션",
+        "price": 22000,
+        "imageUrl": [
+            "/images/myexchange/exchange31.png"
+        ],
+        "likes": 22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 235,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "나는야웹툰광",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "88",
+        "title": "스타라이트 굿즈 반지 교환원해요!",
+        "description": "스타라이트 굿즈 반지 교환원합니다!\n같은 반지여도 좋고 아예 다른 굿즈들도 환영입니다ㅎ\n사용은 한 달정도해서 사용감 약간있는거 감안해서 생각해주세용\n관심 있으신 분들 많은 채팅부탁드려요!",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange32.png"
+        ],
+        "likes": 12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 85,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "반지의제왕",
+        "sellerTrust": 40,
+        "isExchangeable": true
+    },
+    {
+        "id": "89",
+        "title": "타락한 천사 굿즈 벨트 교환합니다!",
+        "description": "타락한 천사 굿즈 벨트 교환해요~\n구입하고 사용은 한 번도 안 한 상태입니다!\n같은 타락한 천사 굿즈도 괜찮고 아예 다른 장르 굿즈도 괜찮습니다ㅎ\n채팅주세요!",
+        "category": "패션",
+        "price": 18000,
+        "imageUrl": [
+            "/images/myexchange/exchange33.png"
+        ],
+        "likes": 22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 168,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "타락파워전사",
+        "sellerTrust": 80,
         "isExchangeable": true
     }
 ]
