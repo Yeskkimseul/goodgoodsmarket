@@ -2008,5 +2008,247 @@
         "sellerName": "사이보그는미래다",
         "sellerTrust": 50,
         "isExchangeable": false
+    },
+    {
+        "id": "100",
+        "title": "은하 앨범 키트 판매합니다",
+        "description": "은하 3집 앨범 키트 판매합니다\n안에 구성품들로 응원봉,친필사인,포토카드,cd 등 다 들어있습니다\n한정으로 나온 제품이라 가지고 계신 분 몇 없으실 겁니다\n관심 있으신 분들 채팀 부탁드립니다",
+        "category": "음반",
+        "price": 66000,
+        "imageUrl": [
+            "/images/mydeals/sale46.png"
+        ],
+        "likes": 46,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 513,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "은하는 사랑",
+        "sellerTrust": 90,
+        "isExchangeable": false
+    },
+    {
+        "id": "101",
+        "title": "월아익선 앨범 판매",
+        "description": "월아익선 앨범 판매합니다\n구성품 다 들어있고 한 번도 꺼내본 적 없는 새제품입니다\n문의주세요",
+        "category": "음반",
+        "price": 21000,
+        "imageUrl": [
+            "/images/mydeals/sale47.png"
+        ],
+        "likes": 13,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 121,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "달과방패",
+        "sellerTrust": 50,
+        "isExchangeable": false
+    },
+    {
+        "id": "102",
+        "title": "굿걸즈 앨범 판매해용",
+        "description": "굿걸즈 2집 미니 앨범 판매해용\n안에 친필 사인들이랑 포토카드 다 들어있습니다.\n많은 관심 부탁드려용",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/mydeals/sale48.png"
+        ],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 91,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "헬로우걸즈",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "103",
+        "title": "썸머보이즈 앨범 교환해요!",
+        "description": "썸머보이즈 2집 앨범이랑 1집 앨범 교환 원해요!\n제가 2집 앨범이고 1집 앨범 구해요ㅠ\n가지고 계신 분 채팅 부탁드려요..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange39.png"
+        ],
+        "likes": 15,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 134,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "썸머는여름",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "104",
+        "title": "봄날의 햇살 ost 앨범 교환해요!",
+        "description": "봄날의 햇살 ost 앨범 교환합니당\n다른 버전 있으신 분이랑 교환하고 싶어요..!\n한 번도 개봉하지 않은 새제품이라 새제품이랑 교환원합니다\n교환 원하시는 분 채팅부탁드립니다..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange40.png"
+        ],
+        "likes": 22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 274,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "앨범교환장인",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "105",
+        "title": "다시 만나는 날 앨범 포토북 교환",
+        "description": "다시 만나는 날 앨범 포토북 교환합니다\n다른 버전 있으신 분이랑 교환하고 싶어요..!\n구입하고 두번 정도만 넘겨본 거의 새제품입니다..!\n교환 원하시는 분 채팅부탁드립니다..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange41.png"
+        ],
+        "likes": 19,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 94,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "너와 다시 만나는 날",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "106",
+        "title": "시네마틱 앨범 교환해용",
+        "description": "시네마틱 버추얼 아이돌 앨범 교환합니당\n다른 버추얼 아이돌이랑 교환원합니다..!\n거의 사용하지 않은 A급 제품입니다\n교환 원하시는 분 채팅부탁드립니다..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange42.png"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 130,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "시네마틱마그네틱",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "107",
+        "title": "트로트 아이돌 앨범 교환해요",
+        "description": "요즘 핫 한 트로트 아이돌 앨범입니다.\n다른 트로트 아이돌 앨범이랑 교환 원합니다\n거의 사용하지 않은 A급 제품입니다\n교환 원하시는 분 채팅부탁드립니다..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange43.png"
+        ],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 77,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "트로트이즈마이라이프",
+        "sellerTrust": 40,
+        "isExchangeable": true
+    },
+    {
+        "id": "108",
+        "title": "달빛의 그녀 앨범 교환",
+        "description": "달빛의 그녀 앨범 교환합니다.\n햇살의 그녀 앨범 가지고 계신 분이랑 교환하고싶어요..!\n상태는 한 번도 개봉하지 않은 새제품입니다\n햇살의 그녀 가지고 계신 분 연락부탁드려요ㅠ",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange44.png"
+        ],
+        "likes": 14,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 100,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "달빛과햇살",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "109",
+        "title": "J pop 앨범 교환",
+        "description": "J pop 앨범 교환원합니다.\n다른 J pop 앨범이랑 교환원해요\n이게 나온지 오래된 앨범이라 생활 기스 정도는 있습니다\n관심 있으신 분들 연락 부탁드려요..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange45.png"
+        ],
+        "likes": 23,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 189,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "제이팝보단케이팝",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "110",
+        "title": "웹툰 내 친구 너드 ost 앨범 교환",
+        "description": "웹툰 내 친구 너드 ost 앨범 교환합니다.\n같은 웹툰 다른 표지 앨범이나 다른 웹툰 ost 앨범 갖고 계신 분이랑 교환하고 싶어요.\n2019년에 나온거라 상태는 B급정도 생각하시면 됩니다\n관심 있으신 분들 연락 부탁드려요..!",
+        "category": "음반",
+        "price": 19000,
+        "imageUrl": [
+            "/images/myexchange/exchange46.png"
+        ],
+        "likes": 10,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 99,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "너드는어디가고머드",
+        "sellerTrust": 50,
+        "isExchangeable": true
     }
 ]
