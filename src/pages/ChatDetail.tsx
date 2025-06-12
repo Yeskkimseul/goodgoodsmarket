@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Layout2 from "../components/Layout2";
 import HeaderType5 from "../components/header/HeaderType5";
 import ChatInput from "../components/ChatInput";
+import ChatInfo from "../components/ChatInfo";
 import ChatMessages from "../components/ChatMessages";
 import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css"
@@ -27,6 +28,7 @@ function ChatDetail() {
             <div className={styles.chatContents}>
                 <HeaderType5 onMoreClick={openSheet} />
                 <div>
+                    <ChatInfo/>
                     <ChatMessages chats={chatList} 
                     />
                     <ChatInput

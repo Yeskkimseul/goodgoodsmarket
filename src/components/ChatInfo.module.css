@@ -1,0 +1,9 @@
+.chatInfo{
+    width: 100%;
+    height: auto;
+    background: var(--bg-white);
+    padding: 24px clamp(16px, 4vw, 78px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
