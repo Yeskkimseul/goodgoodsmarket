@@ -1160,6 +1160,206 @@
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "감성이1순위",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "65",
+        "title": "굿즈 수첩 세트 판매합니다!",
+        "description": "굿즈 수첩 세트 판매합니다! \n여러가지 수첩과 문구류 세트도 사진 처럼 포함되어있습니다~ \n채팅 많이 많이 주세욤~",
+        "category": "문구류",
+        "price": 35000,
+        "imageUrl": ["/images/mydeals/sale26.png"],
+        "likes": 20,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 218,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "문방구사장님",
+        "sellerTrust": 40,
+        "isExchangeable": false
+    },
+    {
+        "id": "66",
+        "title": "슈가슈가룬 문구 세트 팔아욤",
+        "description": "슈가슈가룬 문구 세트 판매합니당\n슈가슈가룬 문구 제품 모두 포함하고있어여\n상태도 사용하지 않고 보관만해서 좋습니다! 채팅주세요~",
+        "category": "문구류",
+        "price": 22000,
+        "imageUrl": ["/images/mydeals/sale28.png"],
+        "likes": 26,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 208,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "슈가슈가룬",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "67",
+        "title": "판다링 문구류 세트 팔아보아요",
+        "description": "판다링 문구류 세트 팝니당\n사진처럼 상태 좋습니다\n관심 있으신 분들 연락주세요!",
+        "category": "문구류",
+        "price": 18000,
+        "imageUrl": ["/images/mydeals/sale29.png"],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 123,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "판다링가링",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "68",
+        "title": "플라워 편지지 세트 팔아요",
+        "description": "플라워 편지지 세트 팝니다\n사진처럼 상태 좋습니다\n관심 있으신 분들 연락주세요!",
+        "category": "문구류",
+        "price": 18000,
+        "imageUrl": ["/images/mydeals/sale30.png"],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 123,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "판다링가링",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "69",
+        "title": "해리포터 노트, 만년필 팝니다",
+        "description": "해리포터 굿즈 노트랑 만년필 팝니다\n구매하고 한 번도 사용 안 한거라 새거라고해도 무방합니다\n해리포터 좋아하시는 분들 많은 관심과 채팅 부탁드려요ㅎㅎ",
+        "category": "문구류",
+        "price": 40000,
+        "imageUrl": ["/images/mydeals/sale31.png"],
+        "likes": 31,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 439,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "레비오우사",
+        "sellerTrust": 90,
+        "isExchangeable": false
+    },
+    {
+        "id": "70",
+        "title": "하트러버 문구류 세트 팝니다~",
+        "description": "하트러버 굿즈 문구류 판매합니다..!\n지금은 단종된 제품이라 구하시기 어려울거에요 상태도 보관만해서 완전 새거급입니다..!\n관심있으신 분들 채팅 부탁드려요~",
+        "category": "문구류",
+        "price": 38000,
+        "imageUrl": ["/images/mydeals/sale32.png"],
+        "likes": 22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 359,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "하트뿅뿅",
+        "sellerTrust": 30,
+        "isExchangeable": false
+    },
+    {
+        "id": "71",
+        "title": "테크니컬 굿즈 문구류 교환합니다",
+        "description": "테크니컬 아크릴 재질 문구류 다른거랑 교환합니다\n상태는 새거이고 사진처럼 여러가지 구비하고있습니다.\n낱개로도 교환하고 묶어서도 교환합니다\n관심 있으신 분들 채팅주세요!",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": ["/images/myexchange/exchange24.png"],
+        "likes": 18,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 120,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "미래에서온사람",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "72",
+        "title": "야채 굿즈 지우개 교환해요!",
+        "description": "야채 굿즈 지우개들 교환합니다!\n한 번도 사용 안 했구, 다른 굿즈 지우개들 이쁜거 교환 원해요\n사진말고도 야채 지우개 몇개 더 있습니다!\n채팅주시면 더 보내드릴게요~",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": ["/images/myexchange/exchange25.png"],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 109,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "야채도꼭꼭",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "73",
+        "title": "별자리 문구류들 교환합니당",
+        "description": "별자리 굿즈 문구류들 다른 문구류 굿즈들이랑 교환 원합니다!\n각각 별자리 수첩이랑 펜 등 사진에 보이는 제품들 각각 교환합니다\n채팅주세요!",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": ["/images/myexchange/exchange26.png"],
+        "likes": 30,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 331,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "사수자리를사수해라",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "74",
+        "title": "사진에 있는 모든 문구류 교환합니다!",
+        "description": "제목 그대로 사진에 있는 모든 문구류 다른 굿즈들이랑 교환 원합니다!\n꼭 문구류가 아니여도 이쁜 굿즈들 있으면 교환 의사있습니다!\n관심 있으신 분들 연락주세요~",
+        "category": "문구류",
+        "price": 10000,
+        "imageUrl": ["/images/myexchange/exchange27.png"],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 67,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "이제문구류는그만",
         "sellerTrust": 40,
         "isExchangeable": true
     }
