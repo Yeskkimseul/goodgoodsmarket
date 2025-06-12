@@ -30,7 +30,7 @@ const Popular = () => {
 
     return (
         <Layout>
-       {/*      <MyListBottomSheet isOpen={isSheetOpen} onClose={closeSheet}  /> */}
+       <MyListBottomSheet isOpen={isSheetOpen} onClose={closeSheet}  onDelete={()=>{}}/>
             {/* 여기서 onMoreClick에 openSheet 함수 전달 */}
             <HeaderType5 onMoreClick={openSheet} />
             <h2 style={{ marginBlock: 20 }}>인기 굿즈 순</h2>
@@ -46,7 +46,6 @@ const Popular = () => {
                     />
                 ))}
             </div>
-            {/*             <ChatBottomSheet isOpen={isSheetOpen} onClose={closeSheet} /> */}
         </Layout>
     )
 }
