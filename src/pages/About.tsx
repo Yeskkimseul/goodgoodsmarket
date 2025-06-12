@@ -15,7 +15,7 @@ const About = () => {
             <div className={styles.bgbg}>
                 <img src="/images/about/muzi.png" alt="배경" />
                 <div className={styles.marquee}>
-                    <Marquee>
+                    <Marquee speed={30}>
                         <div>
                             <img src="/images/about/marquee1.svg" alt="굿굿마켓" className={styles.mi} />
                             <img src="/images/about/marquee2.svg" alt="슬로건" className={styles.mi} />
