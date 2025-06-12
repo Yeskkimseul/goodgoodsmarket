@@ -46,19 +46,37 @@
 
 .two {
     width: 100%;
-    height: clamp(322px, 27vw, 392px);
-    background: #ccc;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: clamp(25px, 5vw, 78px);
 }
 
 .two_inner {
-    width: auto;
-    height: auto;
-    padding: clamp(15px, 4vw, 40px) var(--padding);
+    width: clamp(320px, 50vw, 686px);
+    padding: clamp(20px, 4vw, 40px) clamp(25px, 4vw, 40px);
     background: var(--bg-white);
     border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 4vw, 40px);
+}
+
+.two_txt1 {
+    font-family: var(--sokcho);
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 130%;
+    /* 36.4px */
+    letter-spacing: -0.84px;
+}
+
+.two_txt1 span {
+    color: var(--main-mint);
+}
+
+.two_txt1 i {
+    color: var(--point-deeppink);
 }
 
 /* bottom */

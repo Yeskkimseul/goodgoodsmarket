@@ -19,11 +19,12 @@ const About = () => {
                 </div>{/* //.one */}
                 <div className={styles.two}>
                     <div className={styles.two_inner}>
-                        <div className={styles.two_txt1}></div>
+                        <div className={styles.two_txt1}><span>찐팬</span>이라면 알아요.<br />
+                            <i>굿즈 거래</i>, 아무데서나 못 하죠.</div>
                         <div className="body2">
-                            좋아하는 마음이 담긴 굿즈, 아무 데나 올릴 수 없잖아요.<br/>믿을 수 있는 곳에서, 같은 팬끼리 주고받는 게 마음 편하죠.<br/>그래서 저희가 만들었어요.
+                            좋아하는 마음이 담긴 굿즈, 아무 데나 올릴 수 없잖아요.<br />믿을 수 있는 곳에서, 같은 팬끼리 주고받는 게 마음 편하죠.<br />그래서 저희가 만들었어요.
                         </div>
-                        <div className={styles.two_txt3}></div>
+                        <h3>덕질도, 거래도, 안심되는 공간.</h3>
                     </div>
                 </div>{/* //.two */}
 
