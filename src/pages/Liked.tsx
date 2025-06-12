@@ -24,12 +24,29 @@ const Liked = () => {
     const { setGoodsList } = useGoods();
 
     // likes 상태 관리
-    const [likedIds, setLikedIds] = useState<string[]>([]);
+    const [likedIds, setLikedIds] = useState<string[]>(() => {
+        const liked = localStorage.getItem('likes');
+        return liked ? JSON.parse(liked) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem('likes', JSON.stringify(likedIds));
+    }, [likedIds]);
 
     useEffect(() => {
         const liked = localStorage.getItem('likes');
         if (liked) setLikedIds(JSON.parse(liked));
     }, []);
+
+    // 교환 탭에 보여줄 데이터: isExchangeable이 true이고, likedIds에 포함된 상품만
+    const exchangeLiked = goodsList.filter(
+        g => g.isExchangeable && likedIds.includes(g.id)
+    );
+
+    // 구매 탭에 보여줄 데이터: isExchangeable이 false이고, likedIds에 포함된 상품만
+    const purchaseLiked = goodsList.filter(
+        g => !g.isExchangeable && likedIds.includes(g.id)
+    );
 
     return (
         <Layout>
@@ -54,9 +71,43 @@ const Liked = () => {
                         )}
                         </div>
                     ) : activeIndex === 1 ? (
-                        <div>교환 탭 내용</div>
+                        <div>
+                            {exchangeLiked.length === 0 ? (
+                                <div>교환 찜 상품이 없습니다.</div>
+                            ) : (
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+                                    {exchangeLiked.map(item => (
+                                        <GoodsCard
+                                            key={item.id}
+                                            item={item}
+                                            likedIds={likedIds}
+                                            setLikedIds={setLikedIds}
+                                            goodsList={goodsList}
+                                            setGoodsList={setGoodsList}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     ) : activeIndex === 2 ? (
-                        <div>구매 탭 내용</div>
+                        <div>
+                            {purchaseLiked.length === 0 ? (
+                                <div>구매 찜 상품이 없습니다.</div>
+                            ) : (
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+                                    {purchaseLiked.map(item => (
+                                        <GoodsCard
+                                            key={item.id}
+                                            item={item}
+                                            likedIds={likedIds}
+                                            setLikedIds={setLikedIds}
+                                            goodsList={goodsList}
+                                            setGoodsList={setGoodsList}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     ) : null
                 )}
             </MultiTab>
