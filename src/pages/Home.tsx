@@ -54,6 +54,10 @@ const Home = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const blockedUsers = JSON.parse(localStorage.getItem("blockedUsers") || "[]");
+    // 굿즈 커뮤니티 카드 렌더링 시 차단 유저 제외
+    const visibleCommuList = commuList.filter(item => !blockedUsers.includes(item.userName));
+
     const displayedList = showOnlyLiked
         ? goodsList.filter((item) => likedIds.includes(item.id))
         : goodsList;
@@ -120,9 +124,9 @@ const Home = () => {
                 </div>
 
                 <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
-                <div style={{padding: '0 var(--padding)'}}>
+                <div style={{ padding: '0 var(--padding)' }}>
                     {
-                        commuList.slice(0, 4).map((item) => (
+                        visibleCommuList.slice(0, 4).map((item) => (
                             <CommuCard
                                 key={item.id}
                                 item={item}

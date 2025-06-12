@@ -13,6 +13,7 @@ import Header from "../components/header/Header";
 
 const Community = () => {
 
+
     //커뮤니티 리스트 상태 추가
     const [commuList, setCommuList] = useState<Commu[]>([]);
     const [filter, setFilter] = useState<string>('추천');
@@ -38,24 +39,30 @@ const Community = () => {
         }
     }, []);
 
+    const blockedUsers = JSON.parse(localStorage.getItem("blockedUsers") || "[]");
+    // 1. 차단 유저 제외
+    const visibleList = commuList.filter(item => !blockedUsers.includes(item.userName));
     // 필터링/정렬 로직
-    const filteredList = commuList.filter(item => {
+
+    // 2. 카테고리 필터링
+    const filteredList = visibleList.filter(item => {
         if (filter === '굿즈 소식') return item.category === '굿즈 소식';
         if (filter === '굿즈 자랑') return item.category === '굿즈 자랑';
         if (filter === '자유게시판') return item.category === '자유게시판';
         return true;
     });
+    
+    // 3. 정렬
     const sortedList = filter === '추천'
         ? [...filteredList].sort((a, b) => b.views - a.views)
         : filter === '인기'
             ? [...filteredList].sort((a, b) => b.likes - a.likes)
             : filteredList;
-
     return (
         <Layout>
             <Header type="type7" />
             <div>
-                <div className={filterstyles.filterContainer} style={{position:"fixed", maxWidth:"1200px", width:"100%"}}>
+                <div className={filterstyles.filterContainer} style={{ position: "fixed", maxWidth: "1200px", width: "100%" }}>
                     {filterList.map(f => (
                         <button
                             className={`${filterstyles.filterButton} ${filter === f.value ? filterstyles.active : ''}`}
@@ -66,23 +73,23 @@ const Community = () => {
                         </button>
                     ))}
                 </div>
-                <div style={{padding:'clamp(64px,7.5vh,68px) var(--padding)'}}>
-                {
-                    sortedList.map((item) => (
-                        <CommuCard
-                            key={item.id}
-                            item={item}
-                            className={styles.card}
-                        />
-                    ))
-                }
+                <div style={{ padding: 'clamp(64px,7.5vh,68px) var(--padding)' }}>
+                    {
+                        sortedList.map((item) => (
+                            <CommuCard
+                                key={item.id}
+                                item={item}
+                                className={styles.card}
+                            />
+                        ))
+                    }
 
                 </div>
                 <MainMoreBtn
                     popupContent={({ close }: { close: () => void }) => (
                         <div>
-                            <button 
-                            className={morestyles.writeBtn}
+                            <button
+                                className={morestyles.writeBtn}
                                 onClick={() => {
                                     navigate("/community/commuupload");
                                     close();
@@ -95,7 +102,7 @@ const Community = () => {
                                 게시글 등록
                             </button>
                             <button
-                              className={morestyles.viewBtn}
+                                className={morestyles.viewBtn}
                                 onClick={() => {
                                     navigate("/community/mycommu");
                                     close();
@@ -107,20 +114,20 @@ const Community = () => {
                                 />
                                 내 등록글 보기
                             </button>
-                            <button 
-                            className={morestyles.closeBtn}
-                            onClick={close}>
-                                  
-                                 <img
+                            <button
+                                className={morestyles.closeBtn}
+                                onClick={close}>
+
+                                <img
                                     src="../../../images/icon/x_medium.svg"
                                     alt="닫기"
                                 />
                                 닫기
-                                </button>
-                       </div>
+                            </button>
+                        </div>
                     )}
                 />
-                
+
             </div>
         </Layout>
     )

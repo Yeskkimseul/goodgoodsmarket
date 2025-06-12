@@ -39,8 +39,8 @@ const MyListBottomSheet = ({ isOpen, onClose, onDelete }: MyListBottomSheetProps
                 isOpen={isDeleteModalOpen}
                 title="정말 삭제할까요?"
                 description={<>
-                    채팅이 있는 게시글을 삭제하면<br />
-                    거래 상대방이 당황할 수 있어요.
+                    게시글을 삭제하면<br />
+                    되돌릴 수 없어요.
                 </>}
                 confirmText="삭제하기"
                 onConfirm={() => {
