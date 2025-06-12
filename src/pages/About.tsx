@@ -9,7 +9,23 @@ const About = () => {
         <Layout>
             <Header type="type1" title="굿굿마켓 소개" />
             <div className={styles.body}>
-
+                <div className={styles.one}>
+                    <img src="/images/about/about1.png" alt="굿굿마켓 소개" />
+                    <div className={styles.slogan}>
+                        <img src="/images/about/be.svg" alt="slogan" />
+                        <img src="/images/about/slogan.svg" alt="slogan" />
+                        <img src="/images/about/yourself.svg" alt="slogan" />
+                    </div>{/* //.slogan */}
+                </div>{/* //.one */}
+                <div className={styles.two}>
+                    <div className={styles.two_inner}>
+                        <div className={styles.two_txt1}></div>
+                        <div className="body2">
+                            좋아하는 마음이 담긴 굿즈, 아무 데나 올릴 수 없잖아요.<br/>믿을 수 있는 곳에서, 같은 팬끼리 주고받는 게 마음 편하죠.<br/>그래서 저희가 만들었어요.
+                        </div>
+                        <div className={styles.two_txt3}></div>
+                    </div>
+                </div>{/* //.two */}
 
             </div>
             <div className={styles.bgbg}>

@@ -1,9 +1,67 @@
 .body {
     background: #FEF4F5;
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
+.one {
+    width: 100%;
+    height: clamp(210px, 35vw, 560px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.one>img {
+    border-radius: 300px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30%;
+    height: clamp(200px, 30vw, 477px);
+}
+
+.one .slogan {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: var(--space24);
+}
+
+.one .slogan img:first-child {
+    height: clamp(30px, 6vw, 81px);
+}
+
+.one .slogan img:nth-child(2) {
+    padding-bottom: clamp(15px, 4vw, 40px);
+    height: clamp(100px, 20vw, 299px);
+}
+
+.one .slogan img:last-child {
+    height: clamp(45px, 8vw, 115px);
+}
+
+.two {
+    width: 100%;
+    height: clamp(322px, 27vw, 392px);
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two_inner {
+    width: auto;
+    height: auto;
+    padding: clamp(15px, 4vw, 40px) var(--padding);
+    background: var(--bg-white);
+    border-radius: 60px;
+}
+
+/* bottom */
 .bgbg {
     background: url(../../public/images/about/about_bg.png) center center/cover no-repeat;
     height: auto;
@@ -26,7 +84,7 @@
 
 .mi {
     margin-right: var(--space16);
-height: clamp(23px, 5vw, 45px);
+    height: clamp(23px, 5vw, 45px);
 }
 
 .scroll img {
