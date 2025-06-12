@@ -1,35 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import styles from './ChatInfo.module.css';
 import type { Chatting } from "../types/chatting";
 
-
-interface ChatMessagesProps {
-    chats: Chatting[];
-}
-
-
-
-
-
+const statusOptions = [
+    { value: "1", label: "판매중", color: "#eb4677" },
+    { value: "2", label: "판매완료", color: "#bbb" }
+];
 
 const ChatInfo = () => {
+    const [chatInfo, setChatInfo] = useState<Chatting[]>([]);
+    const [status, setStatus] = useState("1"); // "1"=판매중, "2"=판매완료
+    const [showStatusOptions, setShowStatusOptions] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         fetch("/data/chatting.json")
             .then(res => res.json())
-            .then((data: Chatting[]) => setChatInfo(data.length > 0 ? [data[0]] : [])) // 첫 번째 채팅만 표시;
+            .then((data: Chatting[]) => setChatInfo(data.length > 0 ? [data[0]] : []));
     }, []);
 
+    // 외부 클릭 시 닫힘
+    useEffect(() => {
+        function handleClickOutside(e: MouseEvent) {
+            if (
+                showStatusOptions &&
+                dropdownRef.current &&
+                !dropdownRef.current.contains(e.target as Node)
+            ) {
+                setShowStatusOptions(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [showStatusOptions]);
 
-    const [chatInfo, setChatInfo] = useState<Chatting[]>([]);
-
-
-    //판매자 상품이미지
     const productImage = chatInfo[0]?.productImage || "/images/sample_keyring.png";
-
-    //select
-    const [selectValue, setSelectValue] = useState("1");
-
 
     return (
         <div className={styles.chatInfo}>
@@ -41,19 +46,40 @@ const ChatInfo = () => {
                 />
                 <div className={styles.info}>
                     <div className={styles.top}>
-                        <div className={styles.status}>
-                            <select
-                                className={`${styles.chatSelect} ${selectValue === "1" ? styles.pink : styles.gray}`}
-                                value={selectValue}
-                                onChange={e => setSelectValue(e.target.value)}
+                        {/* === 여기부터 커스텀 드롭다운 === */}
+                        <div className={styles.status} ref={dropdownRef}>
+                            <button
+                                className={`${styles.statusBtn} ${status === "1" ? styles.pink : styles.gray}`}
+                                type="button"
+                                onClick={() => setShowStatusOptions(prev => !prev)}
                             >
-                                <option value="1" selected>판매중</option>
-                                <option value="2">판매완료</option>
-                            </select>
-                            {/*  <span className={styles.status}>판매중
-                            <img src="/images/chat/chevron-left.svg" alt="드롭다운" />
-                        </span> */}
+                                {statusOptions.find(opt => opt.value === status)?.label}
+                                <img 
+                                className={styles.arrow}
+                                src="/images/chat/chevron-left.svg" alt="화살표" />
+                            </button>
+                            {showStatusOptions && (
+                                <ul className={styles.chatSelect}>
+                                    {statusOptions.map(opt => (
+                                        <li
+                                            key={opt.value}
+                                            onClick={() => {
+                                                setStatus(opt.value);
+                                                setShowStatusOptions(false);
+                                            }}
+                                            className={`
+    ${opt.value === "1" ? styles.pink : styles.gray}
+    ${opt.value === status ? styles.selected : ""}
+    ${styles.statusOption}
+  `}
+                                        >
+                                            {opt.label}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
+                        {/* === 여기까지 커스텀 드롭다운 === */}
                         <span className={styles.title}>하츄핑 키링 판매합니다.</span>
                     </div>
                     <div className={styles.price}>50,000원</div>

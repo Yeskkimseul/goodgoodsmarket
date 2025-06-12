@@ -27,7 +27,6 @@ function ChatDetail() {
         <Layout2>
             <div className={styles.chatContents}>
                 <HeaderType5 onMoreClick={openSheet} />
-
                 <ChatInfo />
                 <div className={styles.chat}>
                     <ChatMessages chats={chatList}

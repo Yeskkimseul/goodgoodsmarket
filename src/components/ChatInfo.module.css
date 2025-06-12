@@ -15,7 +15,7 @@
     border-radius: 6px;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -32,24 +32,58 @@
     align-items: center;
 }
 
-.chatSelect {
-    width: 80px;
-    height: 30px;
-    border: none;
-    font-size: var(--font-h5);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: url("/public/images/chat/chevron-left.svg") no-repeat right 8px center/16px 16px;
-    font-weight: 600;
-    padding: 0 4px;
-    border-radius: 4px;
+
+
+.status {
+    position: relative;
+   
 }
 
-.chatSelect:focus {
-    border: 1px solid var(--point-deeppink);
-     outline: none;
+.statusBtn {
+    width: 82px;
+    height: 30px;
+    /* background: var(  --fields-form); */
+    border: 1px solid var(--stroke-lightE);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: var(--font-h5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.arrow {}
+
+.chatSelect {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    background: var(--bg-white);
+    border: 1px solid var(--stroke-lightgrey);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-h5);
+    border-radius: 8px;
+overflow: hidden;
+}
+
+.statusOption {
+    padding: 6px;
+    cursor: pointer;
+    background: var(--bg-white);
+    font-weight: 500;
+
+}
+
+.selected {
+    font-weight: 700;
+}
+
+
 
 
 .pink {
@@ -60,18 +94,18 @@
     color: var(--text-grey);
 }
 
-.title{
+.title {
     font-size: var(--font-caption);
-     color: var(--text-grey);
+    color: var(--text-grey);
     white-space: nowrap;
 }
 
-.price{
+.price {
     font-size: var(--font-h4);
     font-weight: 600;
 }
 
-.time{
-     font-size: var(--font-caption);
-     color: var(--text-lightgrey);
+.time {
+    font-size: var(--font-caption);
+    color: var(--text-lightgrey);
 }

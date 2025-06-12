@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
 import { Link } from "react-router-dom";
@@ -20,6 +21,17 @@ type ChatListProps = {
 };
 
 const ChatList = ({ chats }: ChatListProps) => {
+
+    const [chatStates, setChatStates] = useState(chats);
+
+    const handleDotClick = (id: string | number) => {
+        setChatStates(prev =>
+            prev.map(chat =>
+                chat.id === id ? { ...chat, unread: false } : chat
+            )
+        );
+    };
+
     return (
         <div className={styles.chatList}>
             <ul className={styles.chatItems}>
@@ -28,7 +40,16 @@ const ChatList = ({ chats }: ChatListProps) => {
                         <Link to={`/chat/chatdetail`} className={styles.link}>
                             <div className={styles.productImage}>
                                 <img src={chat.productImage} alt="상품" />
-                                {chat.unread && <span className={styles.chatDot} />}
+                                {typeof chat.unread === 'boolean' && (
+                                    <span
+                                        className={chat.unread ? styles.chatDot : styles.chatDotRead}
+                                        onClick={e => {
+                                            e.preventDefault();
+                                            handleDotClick(chat.id);
+                                        }}
+                                        style={{ cursor: 'pointer' }}
+                                    />
+                                )}
                             </div>
 
                             <div className={styles.chatContent}>
