@@ -4,6 +4,7 @@ import GoodsCard from "../components/GoodsCard";
 import Layout from "../components/Layout";
 import styles from "./CardListLayout.module.css"
 import HeaderType5 from "../components/header/HeaderType5";
+import Header from "../components/header/Header";
 import ChatBottomSheet from "../components/bottomsheet/ChatBottomSheet";
 import CommuBottomSheet from "../components/bottomsheet/CommuBottomSheet";
 import MyListBottomSheet from "../components/bottomsheet/MyListBottomSheet";
@@ -32,7 +33,8 @@ const Popular = () => {
         <Layout>
        <MyListBottomSheet isOpen={isSheetOpen} onClose={closeSheet}  onDelete={()=>{}}/>
             {/* 여기서 onMoreClick에 openSheet 함수 전달 */}
-            <HeaderType5 onMoreClick={openSheet} />
+{/*             <HeaderType5 onMoreClick={openSheet} /> */}
+<Header type="type2-2"/>
             <h2 style={{ marginBlock: 20 }}>인기 굿즈 순</h2>
             <div className={styles.list}>
                 {goodsList.map((item) => (

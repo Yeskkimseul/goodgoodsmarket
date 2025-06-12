@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 
 
-const HeaderType2: React.FC = () => {
+const HeaderType2_2: React.FC = () => {
     const navigate = useNavigate();
 
     const handleBack = () => {
@@ -12,9 +12,17 @@ const HeaderType2: React.FC = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.back} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
-                <img src="/images/header/header_back.svg" alt="뒤로가기" />
-            </div>
+            <div className={styles.type2_2}>
+                <div className={styles.back} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
+                    <img src="/images/header/header_back.svg" alt="뒤로가기" />
+                </div>
+                <div className={styles.right}>
+                    <Link to="/home">
+                        <img src="/images/header/header_home.svg" alt="search" />
+                    </Link>
+                </div>
+
+            </div>{/* //.type2_2 */}
             <ul className={styles.right}>
                 <li>
                     <Link to="/home/search">
@@ -37,4 +45,4 @@ const HeaderType2: React.FC = () => {
     );
 };
 
-export default HeaderType2;
+export default HeaderType2_2;

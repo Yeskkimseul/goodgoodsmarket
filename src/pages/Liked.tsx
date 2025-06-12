@@ -61,24 +61,25 @@ const Liked = () => {
             <MultiTab tabs={['최근 본 상품', '교환', '구매']}>
                 {(activeIndex) => (
                     activeIndex === 0 ? (
-                        <div>              {recentViewed.length === 0 ? (
-                            <div>최근 본 상품이 없습니다.</div>
-                        ) : (
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
-                                {recentViewed.map(item => (
-                                    <GoodsCard
-                                        key={item.id}
-                                        item={item}
-                                        likedIds={likedIds}
-                                        setLikedIds={setLikedIds}
-                                        goodsList={goodsList}
-                                        setGoodsList={setGoodsList} />
-                                ))}
-                            </div>
-                        )}
+                        <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
+                            {recentViewed.length === 0 ? (
+                                <div>최근 본 상품이 없습니다.</div>
+                            ) : (
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+                                    {recentViewed.map(item => (
+                                        <GoodsCard
+                                            key={item.id}
+                                            item={item}
+                                            likedIds={likedIds}
+                                            setLikedIds={setLikedIds}
+                                            goodsList={goodsList}
+                                            setGoodsList={setGoodsList} />
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     ) : activeIndex === 1 ? (
-                        <div>
+                        <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
                             {exchangeLiked.length === 0 ? (
                                 <div>교환 찜 상품이 없습니다.</div>
                             ) : (
@@ -97,7 +98,7 @@ const Liked = () => {
                             )}
                         </div>
                     ) : activeIndex === 2 ? (
-                        <div>
+                        <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
                             {purchaseLiked.length === 0 ? (
                                 <div>구매 찜 상품이 없습니다.</div>
                             ) : (
