@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "직접 만든 수첩 판매합니다.",
-        "description": "수제 굿즈 수첩",
+        "description": "하나하나 손으로 제본한 특별한 수제 수첩이에요.\n매일의 소중한 순간을 차곡차곡 담아보세요.",
         "category": "문구류",
         "price": 12000,
         "imageUrl": [
@@ -17,15 +17,15 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 10,
+        "sellerimgUrl": "/images/users/user3.png",
+        "sellerName": "수첩장인",
+        "sellerTrust": 60,
         "isExchangeable": true
     },
     {
         "id": "2",
         "title": "캐릭터 뱃지 팝니다~",
-        "description": "아크릴 굿즈 뱃지",
+        "description": "사랑스럽고 귀여운 캐릭터가 담긴 아크릴 뱃지예요.\n가방이나 파우치에 포인트로 달기 좋아요 :)",
         "category": "아크릴 굿즈",
         "price": 5000,
         "imageUrl": [
@@ -40,14 +40,14 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
+        "sellerName": "뱃지좋아",
         "sellerTrust": 70,
         "isExchangeable": false
     },
     {
         "id": "3",
         "title": "아이돌 포토카드 판매합니다!",
-        "description": "아이돌 포토카드",
+        "description": "좋아하던 아이돌의 소중한 순간이 담긴 포토카드예요.\n정성껏 보관한 만큼, 애정 담아 보내드려요.",
         "category": "포토카드",
         "price": 16000,
         "imageUrl": [
@@ -61,14 +61,14 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
+        "sellerimgUrl": "/images/users/user4.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 40
     },
     {
         "id": "4",
         "title": "별, 하트 롤리팝 팝니다!",
-        "description": "롤리팝 세트",
+        "description": "별과 하트 모양의 롤리팝처럼\n기분까지 달콤해지는 문구 세트예요.\n선물용으로도 너무 예쁜 아이랍니다.",
         "category": "문구류",
         "price": 8500,
         "imageUrl": [
@@ -82,14 +82,14 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerimgUrl": "/images/users/user5.png",
+        "sellerName": "하트와별이",
+        "sellerTrust": 90
     },
     {
         "id": "5",
-        "title": "OO 굿즈 인형 팔아용~",
-        "description": "OO 굿즈 인형",
+        "title": "동글이 굿즈 인형 팔아용~",
+        "description": "동글동글 귀여움 가득한 인형이에요.\n포근한 촉감으로 볼 때마다 마음이 몽글몽글해져요.",
         "category": "인형",
         "price": 12000,
         "imageUrl": [
@@ -103,14 +103,14 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerimgUrl": "/images/users/user6.png",
+        "sellerName": "인형수집가",
+        "sellerTrust": 50
     },
     {
         "id": "6",
-        "title": "OO 굿즈 아크릴 키링 판매",
-        "description": "OO 아크릴 키링",
+        "title": "프린세스 아크릴 키링 판매",
+        "description": "반짝이는 아크릴 속에 작은 프린세스가 담겨 있어요.\n가방이나 키에 달면 매일이 동화처럼 느껴질 거예요 ✨",
         "category": "아크릴 굿즈",
         "price": 9800,
         "imageUrl": [
@@ -124,14 +124,14 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
+        "sellerimgUrl": "/images/users/user7.png",
+        "sellerName": "프린세스x프린스",
         "sellerTrust": 70
     },
     {
         "id": "7",
-        "title": "OOO 굿즈 스티커 팝니다",
-        "description": "OOO 굿즈 스티커",
+        "title": "야채나라 스티커 팝니다",
+        "description": "야채 친구들이 가득한 귀여운 스티커예요. \n다이어리나 노트에 붙이면 일상이 더욱 싱그러워져요 🌿🥕",
         "category": "문구류",
         "price": 3500,
         "imageUrl": [
@@ -145,14 +145,14 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerimgUrl": "/images/users/user8.png",
+        "sellerName": "편식하면안되요",
+        "sellerTrust": 80
     },
     {
         "id": "8",
         "title": "레드 베어 굿즈 세트 팝니다",
-        "description": "레드 베어 굿즈 세트",
+        "description": "귀여움 가득한 레드 베어 굿즈 세트예요! 🧸❤️ \n미개봉 구성으로 소장 가치도 높고, 팬이라면 놓치기 아까운 아이템이에요. \n선물용이나 컬렉션용으로 추천드려요!",
         "category": "기타",
         "price": 108000,
         "imageUrl": [
@@ -166,9 +166,9 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerimgUrl": "/images/users/user9.png",
+        "sellerName": "레드베어1호팬",
+        "sellerTrust": 30
     },
     {
         "id": "9",
@@ -296,7 +296,7 @@
     {
         "id": "22",
         "title": "아이돌 포토카드 교환해요!",
-        "description": "OO이 팬 분들 여기 모여라~.",
+        "description": "아이돌 팬 분들 여기 모여라~.",
         "category": "포토카드",
         "price": 23000,
         "imageUrl": [
@@ -340,7 +340,7 @@
     {
         "id": "24",
         "title": "전신이랑 얼굴샷 바꿀 사람?",
-        "description": "OO이 전신샷 많이 갖고 있어여 얼굴샷 가지고 계신 분~?.",
+        "description": "전신샷 많이 갖고 있어여 얼굴샷 가지고 계신 분~?.",
         "category": "포토카드",
         "price": 23000,
         "imageUrl": [
@@ -646,7 +646,7 @@
     {
         "id": "39",
         "title": "아이돌 인형 컬렉션 세트 판매",
-        "description": "OO아이돌 인형 세트 팔아요",
+        "description": "뉴보이즈 아이돌 인형 세트 팔아요",
         "category": "인형",
         "price": 50000,
         "imageUrl": ["/images/mydeals/sale16.png"],
@@ -785,8 +785,8 @@
     },
     {
         "id": "46",
-        "title": "OO 맴버 교환 구합니다",
-        "description": "다른 맴버 다 있습니다 OO만 없어요..ㅠ.",
+        "title": "유닛 맴버 교환 구합니다",
+        "description": "다른 맴버 다 있습니다 성준이만 없어요..ㅠ.",
         "category": "인형",
         "price": 13500,
         "imageUrl": ["/images/myexchange/exchange11.png"],
@@ -882,5 +882,25 @@
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": true
+    },
+    {
+        "id": "51",
+        "title": "할로윈 기념 아크릴 키링 팝니당",
+        "description": "물량 많이 갖고있어여 연락주세요~",
+        "category": "아크릴 굿즈",
+        "price": 6500,
+        "imageUrl": ["/images/mydeals/sale20.png"],
+        "likes": 23,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 165,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 90,
+        "isExchangeable": false
     }
 ]
