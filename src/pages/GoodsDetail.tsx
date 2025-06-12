@@ -174,9 +174,8 @@ const GoodsDetail = () => {
                                         <li className={style.optionItem}>옵션 없음</li>
                                     )}
                                 </ul>
-                                <p className='body2'>
-                                    {goods?.description}
-                                </p>
+                                <p className='body2' dangerouslySetInnerHTML={{ __html: goods?.description.replace(/\n/g, "<br>") || "" }} />
+
                             </div>
                         ) : activeIndex === 1 ? (
                             <div className={style.tabcon}>

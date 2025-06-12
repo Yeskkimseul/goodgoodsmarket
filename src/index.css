@@ -1,65 +1,155 @@
-
-
 /* 리셋 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-ul, li, ol {
- list-style: none;
- padding: 0;
- margin: 0;
+
+ul,
+li,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* 스타일 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url("/src/font/font.css");
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 body {
   margin: 0;
- font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -83,7 +173,7 @@ body {
   --space56: 3.5rem;
   /* 56px */
 
-  --padding: clamp(16px,4vw,78px);
+  --padding: clamp(16px, 4vw, 78px);
   /* 혹시 위아래가 0이 아닌 컴포넌트도 있을까봐 이렇게 넣어둡니다! */
 
   /* fontsize (+2px) */
@@ -95,6 +185,8 @@ body {
 
   --font-subtit1: clamp(1.25rem, 2.47vw, 1.375rem);
   --font-subtit2: clamp(1.125rem, 2.21vw, 1.25rem);
+  --font-subtit3: clamp(0.875rem, 1.69vw, 1rem);
+  /* 14px~16px */
 
   --font-body1: clamp(1.125rem, 2.21vw, 1.25rem);
   --font-body2: clamp(1rem, 1.95vw, 1.125rem);
@@ -209,6 +301,13 @@ h5 {
   letter-spacing: -0.03em;
 }
 
+.subtit3 {
+  font-size: var(--font-subtit3);
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+}
+
 body {
   font-family: var(--pre);
   font-size: var(--font-body1);
@@ -237,7 +336,7 @@ button {
 
 .sokcho {
   font-family: var(--sokcho);
-  font-size: clamp(var(--font-h3),5vw,var(--font-h2));
+  font-size: clamp(var(--font-h3), 5vw, var(--font-h2));
   line-height: 125%;
   letter-spacing: -0.03em;
   font-weight: 400;

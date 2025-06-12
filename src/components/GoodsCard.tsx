@@ -48,9 +48,17 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
     console.log(item)
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
-            <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}>
+            <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}
+                onClick={() => {
+                    // 최근 본 상품 id 배열을 localStorage에서 불러오기
+                    const viewed = JSON.parse(localStorage.getItem('recentViewed') || '[]');
+                    // 이미 있으면 중복 제거
+                    const newViewed = [item.id, ...viewed.filter((id: string) => id !== item.id)];
+                    localStorage.setItem('recentViewed', JSON.stringify(newViewed));
+                }}
+            >
                 <div className={styles.cardTop}>
-                   <img src={item.imageUrl[0]} alt={item.title} className={styles.image} />
+                    <img src={item.imageUrl[0]} alt={item.title} className={styles.image} />
                     <button className={styles.likeButton} onClick={(e) => {
                         e.preventDefault();
                         toggleLike();
