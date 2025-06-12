@@ -31,7 +31,7 @@ function ChatMessages({ chats }: ChatMessagesProps) {
         <div className={styles.chatMessages}>
             <div className={styles.warningMessage}>
                 <p className="caption">
-                    사기를 예방하기 위해, <br />
+                    사기를 예방하기 위해, 
                     거래 전, 더치트에서 계좌번호를 조회해보세요. <br />
                     의심 계좌일 경우 거래를 멈추는 것이 안전합니다.
                 </p>

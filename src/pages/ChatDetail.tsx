@@ -26,11 +26,13 @@ function ChatDetail() {
     return (
         <Layout2>
             <div className={styles.chatContents}>
-                <HeaderType5 onMoreClick={openSheet} />
-                <ChatInfo />
-                <div className={styles.chat}>
-                    <ChatMessages chats={chatList}
-                    />
+                <div className={styles.chatTitle}>
+                    <HeaderType5 onMoreClick={openSheet} />
+                    <ChatInfo />
+                    <div className={styles.chat}>
+                        <ChatMessages chats={chatList}
+                        />
+                    </div>
                 </div>
                 <ChatInput
                     value={msg}

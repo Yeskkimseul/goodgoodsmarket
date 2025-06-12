@@ -1,14 +1,17 @@
+
 .chatContents{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 112px;
+    background: var(--fields-form);
 
 }
 
 .chat{
     width: 100%;
-    flex: 1;
-    background: var(--fields-form);
+    height: 100%;
+    
 }
 

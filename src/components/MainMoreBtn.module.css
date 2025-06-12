@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(48px, 5vw, 60px);
+  width: 55px;
 
 }
 
@@ -33,9 +33,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: clamp(48px, 5vw, 60px);
+  min-height: 55px;
   border-radius: 50%;
-  background: rgba(29, 198, 167, 0.9);
+  background: #19B296;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -52,7 +52,7 @@
   position: absolute;
   bottom: 80px;
   right: 0;
-  background: var(--main-mint);
+  background: #19B296;
   border-radius: 10px;
   z-index: 10;
   display: flex;
