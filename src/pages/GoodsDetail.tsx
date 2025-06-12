@@ -23,15 +23,33 @@ const GoodsDetail = () => {
 
     const [showSnackbar, setShowSnackbar] = useState(false);
     const [snackbarVisible, setSnackbarVisible] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState("");
     const swiperRef = useRef<SwiperClass | null>(null);
 
     const handleLike = () => {
+        if (!goods) return;
+        const likes = JSON.parse(localStorage.getItem('likes') || '[]');
+        const idStr = String(goods.id);
+        let updatedLikes;
+        let message;
+        if (likes.includes(idStr)) {
+            // 이미 있으면 제거
+            updatedLikes = likes.filter((likeId: string) => likeId !== idStr);
+            message = "찜 목록에서 제외되었습니다.";
+        } else {
+            // 없으면 추가
+            updatedLikes = [...likes, idStr];
+            message = "찜 목록에 추가되었습니다.";
+        }
+        localStorage.setItem('likes', JSON.stringify(updatedLikes));
+
+        setSnackbarMessage(message);
         setShowSnackbar(true);
         setSnackbarVisible(true);
         setTimeout(() => {
-            setSnackbarVisible(false); // fade-out 시작
-            setTimeout(() => setShowSnackbar(false), 300); // fade-out 끝나고 DOM 제거
-        }, 3000);
+            setSnackbarVisible(false);
+            setTimeout(() => setShowSnackbar(false), 300);
+        }, 1800);
     };
 
     const categories = [
@@ -229,13 +247,20 @@ const GoodsDetail = () => {
                         onClick={handleLike}>
                         찜하기
                     </div>
-                    <div className={form.button_big}>
+                    <div className={form.button_big} style={
+                        goods && goods.isCompleted
+                            ? { background: 'var(--button-bgdisabled)', color: 'var(--button-textdisabled)', cursor: 'default' }
+                            : undefined
+                    }>
                         채팅하기
                     </div>
                 </div>
 
                 {showSnackbar && (
-                    <div className={style.snackbar_wrap}><div className={snackbarVisible ? style.snackbar : style.snackbar_hide}>찜 목록에 추가되었습니다.</div>
+                    <div className={style.snackbar_wrap}>
+                        <div className={snackbarVisible ? style.snackbar : style.snackbar_hide}>
+                            {snackbarMessage}
+                        </div>
                     </div>
                 )}
             </div>
