@@ -29,16 +29,7 @@
 }
 
 /* 가짜 화살표 */
-.categoryselect::after {
-  content: "▼";
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 12px;
-  color: #555;
-}
+
 .categoryselect select:focus{
     outline: none;
 }
@@ -54,20 +45,23 @@
   width: 100%;
   padding: 18px 20px;
   cursor: pointer;
-  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 56px;
   background: #f4f4f4;
   border-radius: 8px;
+  color: #111;
 }
 
 .arrowIcon {
-  width: 12px;
-  height: 12px;
-  background-size: contain;
+  width: 28px;
+  height: 28px;
   /* 혹은 CSS로 삼각형 만들기 */
+  background-image: url(../../public/images/icon/chevron-down.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .dropdownMenu {
@@ -81,6 +75,8 @@
   border: 2px solid #f4f4f4;
   z-index: 1000;
   border-radius: 8px;
+  color: #8A8A8A;
+
 }
 
 .dropdownItem {
