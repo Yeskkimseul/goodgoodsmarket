@@ -27,22 +27,22 @@ function ChatDetail() {
         <Layout2>
             <div className={styles.chatContents}>
                 <HeaderType5 onMoreClick={openSheet} />
-                <div>
-                    <ChatInfo/>
-                    <ChatMessages chats={chatList} 
-                    />
-                    <ChatInput
-                        value={msg}
-                        onChange={e => setMsg(e.target.value)}
-                        onSend={() => {
-                            // 예시: 메시지 전송
-                            alert(msg);
-                            setMsg(""); // 전송 후 입력창 비우기
-                        }}
+
+                <ChatInfo />
+                <div className={styles.chat}>
+                    <ChatMessages chats={chatList}
                     />
                 </div>
+                <ChatInput
+                    value={msg}
+                    onChange={e => setMsg(e.target.value)}
+                    onSend={() => {
+                        // 예시: 메시지 전송
+                        alert(msg);
+                        setMsg(""); // 전송 후 입력창 비우기
+                    }}
+                />
             </div>
-
         </Layout2>
     );
 }
