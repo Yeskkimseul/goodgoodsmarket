@@ -21,30 +21,32 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
 
     //처음 들어오거나 likedIds가 바뀌면 liked 상태 업데이트
     useEffect(() => {
-        setliked(likedIds.includes(item.id));
+        setliked(likedIds.includes(String(item.id)));
     }, [likedIds, item.id])
 
     const toggleLike = () => {
-        const liked = likedIds.includes(item.id); //이미 찜했는지 확인
+        const id = String(item.id); // ← 여기서 string 변환 고정
+        const liked = likedIds.includes(id);
 
-        //찜 id 목록을 추가하거나 제거함
-        const updatedLikes = liked ? likedIds.filter((id) => id !== item.id) //제거
-            : [...likedIds, item.id]; //추가
+        const updatedLikes = liked
+            ? likedIds.filter((likeId) => likeId !== id) // string끼리 비교
+            : [...likedIds, id];                         // string으로 추가
 
-        localStorage.setItem('likes', JSON.stringify(updatedLikes)) //저장
-        setLikedIds(updatedLikes); //상태반영
+        localStorage.setItem('likes', JSON.stringify(updatedLikes));
+        setLikedIds(updatedLikes);
 
-        //굿즈 리스트 안의 likes 수 업데이트
         const updatedGoodsList = goodsList.map((g) =>
-            g.id === item.id ? {
-                ...g,
-                likes: liked ? Math.max(g.likes - 1, 0) //좋아요수가 0보다 작아지지 않게
-                    : g.likes + 1,
-            } : g
-        )
+            g.id === item.id
+                ? {
+                    ...g,
+                    likes: liked ? Math.max(g.likes - 1, 0) : g.likes + 1,
+                }
+                : g
+        );
         setGoodsList(updatedGoodsList);
         localStorage.setItem('goodsList', JSON.stringify(updatedGoodsList));
-    }
+    };
+
     console.log(item)
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
@@ -53,7 +55,9 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
                     // 최근 본 상품 id 배열을 localStorage에서 불러오기
                     const viewed = JSON.parse(localStorage.getItem('recentViewed') || '[]');
                     // 이미 있으면 중복 제거
-                    const newViewed = [item.id, ...viewed.filter((id: string) => id !== item.id)];
+                   // 이 필터도 아래처럼 바꿔야 정확히 동작함
+                const newViewed = [String(item.id), ...viewed.filter((id: string) => id !== String(item.id))];
+
                     localStorage.setItem('recentViewed', JSON.stringify(newViewed));
                 }}
             >

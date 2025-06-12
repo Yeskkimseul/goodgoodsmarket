@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { Goods } from "../types";
 
 interface GoodsContextType {
@@ -19,12 +19,23 @@ export const useGoods = () => {
 }
 
 //전체 앱을 감싸서 굿즈 정보를 모두에게 나눠주는 컴포넌트
-export const GoodsProvider = ({children} : {children : React.ReactNode}) => {
-    const [goodsList,setGoodsList] = useState<Goods[]>([])
-
-    return(
+export const GoodsProvider = ({ children }: { children: React.ReactNode }) => {
+    const [goodsList, setGoodsList] = useState<Goods[]>([])
+    // ✅ 새로고침 시 localStorage에서 goodsList 복원
+    useEffect(() => {
+        const stored = localStorage.getItem("goodsList");
+        if (stored) {
+            try {
+                const parsed: Goods[] = JSON.parse(stored);
+                setGoodsList(parsed);
+            } catch (err) {
+                console.error("goodsList 복원 실패", err);
+            }
+        }
+    }, []);
+    return (
         //context provider로 children 안의 모든 컴포넌트에게 데이터를 나눠줌
-        <GoodsContext.Provider value={{goodsList,setGoodsList}}>
+        <GoodsContext.Provider value={{ goodsList, setGoodsList }}>
             {children}
         </GoodsContext.Provider>
     )

@@ -33,19 +33,26 @@ const Liked = () => {
         localStorage.setItem('likes', JSON.stringify(likedIds));
     }, [likedIds]);
 
-    useEffect(() => {
-        const liked = localStorage.getItem('likes');
-        if (liked) setLikedIds(JSON.parse(liked));
-    }, []);
+    /*     useEffect(() => {
+            const liked = localStorage.getItem('likes');
+            if (liked) {
+                setLikedIds(JSON.parse(liked));
+            }
+        }, []); */
+
+    //새로고침시 최근 본 상품 목록을 불러오기
+
+
 
     // 교환 탭에 보여줄 데이터: isExchangeable이 true이고, likedIds에 포함된 상품만
     const exchangeLiked = goodsList.filter(
-        g => g.isExchangeable && likedIds.includes(g.id)
+        g => g.isExchangeable && likedIds.includes(String(g.id))
     );
-
+    console.log("goodsList", goodsList);
+    console.log("likedIds", likedIds);
     // 구매 탭에 보여줄 데이터: isExchangeable이 false이고, likedIds에 포함된 상품만
     const purchaseLiked = goodsList.filter(
-        g => !g.isExchangeable && likedIds.includes(g.id)
+        g => !g.isExchangeable && likedIds.includes(String(g.id))
     );
 
     return (
