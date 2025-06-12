@@ -1,7 +1,7 @@
 [
   {
     "id": "r1",
-    "sellerName": "아이돌팬",
+    "sellerName": "뱃지가좋아",
     "reviewer": {
       "name": "구매자1",
       "img": "/images/users/user2.png"
@@ -12,15 +12,15 @@
       "친절해요"
     ],
     "goods": {
-      "id": "1",
-      "title": "직접 만든 수첩 판매합니다.",
-      "imageUrl": "/images/main_postimgs/homeGoodsPick_1.png"
+      "id": "40",
+      "title": "할로윈 한정판 미니 인형 판매",
+      "imageUrl": "/images/mydeals/sale17.png"
     },
     "recommend": 5
   },
   {
     "id": "r2",
-    "sellerName": "아이돌팬",
+    "sellerName": "뱃지가좋아",
     "reviewer": {
       "name": "구매자1",
       "img": "/images/users/user2.png"
@@ -37,9 +37,9 @@
       "친절해요"
     ],
     "goods": {
-      "id": "1",
-      "title": "직접 만든 수첩 판매합니다.",
-      "imageUrl": "/images/main_postimgs/homeGoodsPick_1.png"
+      "id": "39",
+      "title": "아이돌 인형 컬렉션 세트 판매",
+      "imageUrl": "/images/mydeals/sale16.png"
     },
     "recommend": 14
   }

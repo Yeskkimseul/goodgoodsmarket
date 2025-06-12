@@ -18,7 +18,9 @@ const GoodsDetail = () => {
     const navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [goods, setGoods] = useState<Goods | null>(null);
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeTabIndex, setActiveTabIndex] = useState(0); // 탭 인덱스 (0: 첫번째 탭)
+    const [activeSlideIndex, setActiveSlideIndex] = useState(1); // 이미지 슬라이드 인덱스 (1부터 시작)
+
     const [showSnackbar, setShowSnackbar] = useState(false);
     const [snackbarVisible, setSnackbarVisible] = useState(false);
     const swiperRef = useRef<SwiperClass | null>(null);
@@ -63,6 +65,13 @@ const GoodsDetail = () => {
             });
     }, [id]);
 
+    // 상품 id가 바뀔 때 탭 인덱스 초기화
+    useEffect(() => {
+        setActiveTabIndex(0); // 항상 첫 번째 탭으로
+        setActiveSlideIndex(1); // 첫 번째 이미지로
+        window.scrollTo(0, 0);
+    }, [id]);
+
     //시간 변경
     function getTimeAgo(dateString: string) {
         const now = new Date();
@@ -86,12 +95,12 @@ const GoodsDetail = () => {
                         pagination={{ clickable: true }}
                         loop
                         className={style.itemswiper}
-                        onSlideChange={(swiper: SwiperClass) => setActiveIndex(swiper.realIndex + 1)}
+                        onSlideChange={(swiper: SwiperClass) => setActiveSlideIndex(swiper.realIndex + 1)}
                         onSwiper={(swiper: SwiperClass) => { swiperRef.current = swiper; }}
                     >
                         <div className={style.page}>
                             <div className={style.activenum}>
-                                {activeIndex}
+                                {activeSlideIndex}
                             </div>
                             <div className={style.right}>
                                 <div className={style.slash}>/</div>
@@ -161,7 +170,11 @@ const GoodsDetail = () => {
                     </div>{/* titbox */}
                 </div>{/* topcon */}
 
-                <MultiTab tabs={['굿즈 정보', '판매자 정보']}>
+                <MultiTab
+                    tabs={['굿즈 정보', '판매자 정보']}
+                    activeIndex={activeTabIndex}
+                    setActiveIndex={setActiveTabIndex}
+                >
                     {(activeIndex) => (
                         activeIndex === 0 ? (
                             <div className={style.tabcon}>
@@ -178,7 +191,7 @@ const GoodsDetail = () => {
 
                             </div>
                         ) : activeIndex === 1 ? (
-                            <div className={style.tabcon}>
+                            <div className={style.tabcon2}>
                                 <div className={style.userprofile}>
                                     <div className={style.usertop}>
                                         {goods && (
@@ -194,12 +207,14 @@ const GoodsDetail = () => {
                                     </div>
                                     <Trust trust={goods ? goods.sellerTrust : 0} />
                                 </div>
-                                {sellerReviews.map(review => (
-                                    <ReviewCard
-                                        key={review.id}
-                                        review={review}
-                                    />
-                                ))}
+                                <div className={style.reviewsinner}>
+                                    {sellerReviews.map(review => (
+                                        <ReviewCard
+                                            key={review.id}
+                                            review={review}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                         ) : null
                     )}
