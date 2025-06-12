@@ -16,7 +16,7 @@ const HeaderType2_2: React.FC = () => {
                 <div className={styles.back} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
                     <img src="/images/header/header_back.svg" alt="뒤로가기" />
                 </div>
-                <div className={styles.right}>
+                <div className={styles.back}>
                     <Link to="/home">
                         <img src="/images/header/header_home.svg" alt="search" />
                     </Link>
