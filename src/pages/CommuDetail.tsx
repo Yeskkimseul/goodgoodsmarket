@@ -25,9 +25,7 @@ interface commuType {
 
 const CommuDetail = () => {
     const navigate = useNavigate();
-    const handleBack = () => {
-        navigate(-1); // ← 바로 이전 페이지로 이동
-    };
+
     const [isSheetOpen, setIsSheetOpen] = useState(false);
     // 날짜를 "몇 분/시간/일 전"으로 변환하는 함수
     function getTimeAgo(dateString: string) {
@@ -115,7 +113,7 @@ const CommuDetail = () => {
                     </div>
                 </div>{/* titlecon */}
                 <div className={style.articlecon}>
-                    <img src={commu.imageUrl} alt={commu.title} />
+                    <img src={commu.imageUrl} alt={commu.title} className={style.articleimg} />
                     <p>
                         {commu.description}
                     </p>

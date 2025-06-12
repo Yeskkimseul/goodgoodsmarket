@@ -65,3 +65,14 @@
     height: auto;
     aspect-ratio: 1/1;
 }
+
+.articlecon{
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--space16);
+}
+
+.articleimg{
+    width: 50%;
+    height: auto;
+}
