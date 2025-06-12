@@ -233,6 +233,9 @@
 
 .reviewsinner {
     padding: 0 var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
 }
 
 @media (max-width:768px) {

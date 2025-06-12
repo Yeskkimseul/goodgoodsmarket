@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./ReviewCard.module.css";
 import { Review } from "../types/reivew";
 import { Link } from "react-router-dom";
@@ -8,8 +8,29 @@ interface ReviewCardProps {
 }
 
 const ReviewCard = ({ review }: ReviewCardProps) => {
-    const [recommended, setRecommended] = useState(false);
+    const recommendKey = `review_recommend_${review.id}`;
+
+    // localStorage에서 추천 여부 불러오기
+    const [recommended, setRecommended] = useState(() => {
+        return localStorage.getItem(recommendKey) === "true";
+    });
     const [recommendCount, setRecommendCount] = useState(review.recommend);
+
+    useEffect(() => {
+        // 추천 상태가 바뀔 때마다 localStorage에 저장
+        localStorage.setItem(recommendKey, recommended.toString());
+    }, [recommended, recommendKey]);
+
+
+    useEffect(() => {
+        // 새로고침 시 추천 상태에 따라 추천수 보정
+        if (localStorage.getItem(recommendKey) === "true") {
+            setRecommendCount(review.recommend + 1);
+        } else {
+            setRecommendCount(review.recommend);
+        }
+    }, [review.recommend, recommendKey]);
+
 
     const handleRecommend = () => {
         if (!recommended) {
