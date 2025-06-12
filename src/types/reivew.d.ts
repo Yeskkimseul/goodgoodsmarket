@@ -5,10 +5,8 @@ export interface Review {
         name: string;
         img: string;
     };
-    reviewimg?: {
-        img: string;
-    }
     date: string;
+    reviewimg?: string[];
     content?: string; // (선택) 상세 리뷰 내용
     keywords: string[]; // 리뷰 키워드
     goods: {
@@ -17,5 +15,5 @@ export interface Review {
         imageUrl: string;
     };
     recommend: number;   // 추천수
-    
+
 }
