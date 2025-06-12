@@ -20,7 +20,8 @@
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 10,
-        "isExchangeable": true
+        "isExchangeable": true,
+        "isCompleted": false
     },
     {
         "id": "2",
@@ -42,7 +43,8 @@
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
         "sellerTrust": 70,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": false
     },
     {
         "id": "3",
@@ -63,7 +65,8 @@
         ],
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "4",
@@ -84,7 +87,8 @@
         ],
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "5",
@@ -105,7 +109,8 @@
         ],
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "6",
@@ -126,7 +131,8 @@
         ],
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "7",
@@ -147,7 +153,8 @@
         ],
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "8",
@@ -168,7 +175,8 @@
         ],
         "sellerimgUrl": "/images/users/user1.png",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "9",
@@ -189,7 +197,8 @@
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
-        "sellerTrust": 70
+        "sellerTrust": 70,
+        "isCompleted": false
     },
     {
         "id": "10",
@@ -197,7 +206,9 @@
         "description": "응답하라 1988 한정 굿즈 팔아요.",
         "category": "기타",
         "price": 5000,
-        "imageUrl": ["/images/mydeals/sale9.png"],
+        "imageUrl": [
+            "/images/mydeals/sale9.png"
+        ],
         "likes": 14,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 78,
@@ -209,7 +220,8 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": false
     },
     {
         "id": "11",
@@ -217,7 +229,9 @@
         "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
         "category": "기타",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale1.png"],
+        "imageUrl": [
+            "/images/mydeals/sale1.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 63,
@@ -229,7 +243,8 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
-        "isExchangeable": true
+        "isExchangeable": true,
+        "isCompleted": false
     },
     {
         "id": "12",
@@ -237,7 +252,9 @@
         "description": "신비한 동물사전 초판 BOOK CD입니다.",
         "category": "기타",
         "price": 20000,
-        "imageUrl": ["/images/mydeals/sale11.png"],
+        "imageUrl": [
+            "/images/mydeals/sale11.png"
+        ],
         "likes": 3,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 44,
@@ -249,7 +266,8 @@
         "sellerimgUrl": "/images/users/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": false
     },
     {
         "id": "13",
@@ -257,7 +275,9 @@
         "description": "잔나비 굿즈들 구경하고가세여~",
         "category": "기타",
         "price": 35000,
-        "imageUrl": ["/images/mydeals/sale12.png"],
+        "imageUrl": [
+            "/images/mydeals/sale12.png"
+        ],
         "likes": 15,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 150,
@@ -409,7 +429,9 @@
         "description": "2집 앨범 OO 포토카드 구해여.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange6.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange6.png"
+        ],
         "likes": 52,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 731,
@@ -429,7 +451,9 @@
         "description": "다른건 다 있는데 수록 포토카드만 없어요ㅠ.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/myexchange/exchange7.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange7.png"
+        ],
         "likes": 52,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 731,
@@ -449,7 +473,9 @@
         "description": "레드밸벳 전 맴버 포토카드 팔아용.",
         "category": "포토카드",
         "price": 25000,
-        "imageUrl": ["/images/mydeals/sale3.png"],
+        "imageUrl": [
+            "/images/mydeals/sale3.png"
+        ],
         "likes": 32,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 448,
@@ -469,7 +495,9 @@
         "description": "전 세계 하나 밖에없는 포토카드 팝니다.",
         "category": "포토카드",
         "price": 15000,
-        "imageUrl": ["/images/mydeals/sale4.png"],
+        "imageUrl": [
+            "/images/mydeals/sale4.png"
+        ],
         "likes": 23,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 232,
@@ -489,7 +517,9 @@
         "description": "태일이 팬이신 분들~",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/mydeals/sale5.png"],
+        "imageUrl": [
+            "/images/mydeals/sale5.png"
+        ],
         "likes": 37,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 316,
@@ -509,7 +539,9 @@
         "description": "재현이 팬이신 분들~",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/mydeals/sale5.png"],
+        "imageUrl": [
+            "/images/mydeals/sale5.png"
+        ],
         "likes": 49,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 388,
@@ -529,7 +561,9 @@
         "description": "굿걸즈 포토카드 세트 판매합니다.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/mydeals/sale6.png"],
+        "imageUrl": [
+            "/images/mydeals/sale6.png"
+        ],
         "likes": 22,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 168,
@@ -549,7 +583,9 @@
         "description": "뉴진스 전 맴버 포토카드 있어용.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/mydeals/sale7.png"],
+        "imageUrl": [
+            "/images/mydeals/sale7.png"
+        ],
         "likes": 82,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 927,
@@ -569,7 +605,9 @@
         "description": "아린 정규 2집 LP판 포토카드 팔아요.",
         "category": "포토카드",
         "price": 23000,
-        "imageUrl": ["/images/mydeals/sale8.png"],
+        "imageUrl": [
+            "/images/mydeals/sale8.png"
+        ],
         "likes": 35,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 228,
@@ -589,7 +627,9 @@
         "description": "나는 문어 인형 판매합니다.",
         "category": "인형",
         "price": 16000,
-        "imageUrl": ["/images/mydeals/sale13.png"],
+        "imageUrl": [
+            "/images/mydeals/sale13.png"
+        ],
         "likes": 24,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 197,
@@ -609,7 +649,9 @@
         "description": "토토로 아닙니다 도도로 입니다^^.",
         "category": "인형",
         "price": 14500,
-        "imageUrl": ["/images/mydeals/sale14.png"],
+        "imageUrl": [
+            "/images/mydeals/sale14.png"
+        ],
         "likes": 32,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 235,
@@ -629,7 +671,9 @@
         "description": "못난이 좋아하시는 분?ㅎ.",
         "category": "인형",
         "price": 10000,
-        "imageUrl": ["/images/mydeals/sale15.png"],
+        "imageUrl": [
+            "/images/mydeals/sale15.png"
+        ],
         "likes": 13,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 146,
@@ -649,7 +693,9 @@
         "description": "OO아이돌 인형 세트 팔아요",
         "category": "인형",
         "price": 50000,
-        "imageUrl": ["/images/mydeals/sale16.png"],
+        "imageUrl": [
+            "/images/mydeals/sale16.png"
+        ],
         "likes": 33,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 368,
@@ -661,7 +707,8 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": true
     },
     {
         "id": "40",
@@ -669,7 +716,9 @@
         "description": "할로윈 한정판 미니 인형 팝니다",
         "category": "인형",
         "price": 9800,
-        "imageUrl": ["/images/mydeals/sale17.png"],
+        "imageUrl": [
+            "/images/mydeals/sale17.png"
+        ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 98,
@@ -681,7 +730,8 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": true
     },
     {
         "id": "41",
@@ -689,7 +739,9 @@
         "description": "미니 키링 좋아하시는 분?",
         "category": "인형",
         "price": 8500,
-        "imageUrl": ["/images/mydeals/sale18.png"],
+        "imageUrl": [
+            "/images/mydeals/sale18.png"
+        ],
         "likes": 8,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 72,
@@ -709,7 +761,9 @@
         "description": "인형 뽑기로 모은 인형들 판매합니당",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/mydeals/sale19.png"],
+        "imageUrl": [
+            "/images/mydeals/sale19.png"
+        ],
         "likes": 4,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 38,
@@ -729,7 +783,9 @@
         "description": "흰색 버전 인형 구해요.",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange8.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange8.png"
+        ],
         "likes": 12,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 98,
@@ -749,7 +805,9 @@
         "description": "밥톨이 밥순이 인형 교환 원해요.",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange9.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange9.png"
+        ],
         "likes": 18,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 120,
@@ -769,7 +827,9 @@
         "description": "잭오랜턴 미니 인형 갖고 계신분ㅠ.",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange10.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange10.png"
+        ],
         "likes": 20,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 150,
@@ -789,7 +849,9 @@
         "description": "다른 맴버 다 있습니다 OO만 없어요..ㅠ.",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange11.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange11.png"
+        ],
         "likes": 25,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 200,
@@ -809,7 +871,9 @@
         "description": "깨돌이 갖고 계신분 채팅 부탁드려요..!",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange12.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange12.png"
+        ],
         "likes": 15,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 150,
@@ -829,7 +893,9 @@
         "description": "사진 가운데 초랭이 친구 있으신 분",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange13.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange13.png"
+        ],
         "likes": 27,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 180,
@@ -849,7 +915,9 @@
         "description": "더미베어 다른 버전 구해요.",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange14.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange14.png"
+        ],
         "likes": 33,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 241,
@@ -869,7 +937,9 @@
         "description": "노랑색이랑 파란색 바꾸실 분ㅠ",
         "category": "인형",
         "price": 13500,
-        "imageUrl": ["/images/myexchange/exchange15.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange15.png"
+        ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 68,
@@ -889,7 +959,9 @@
         "description": "물량 많이 갖고있어여 연락주세요~",
         "category": "아크릴 굿즈",
         "price": 4200,
-        "imageUrl": ["/images/mydeals/sale20.png"],
+        "imageUrl": [
+            "/images/mydeals/sale20.png"
+        ],
         "likes": 23,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 165,
@@ -909,7 +981,9 @@
         "description": "귀여운 빨간머리 앤 키링 굿즈💫 \n물량 여유 있게 있어요! 미개봉 제품으로 깔끔하게 받아보실 수 있어요. \n소장하거나 친구에게 선물해도 딱 좋아요 :) 문의 언제든 환영해요!",
         "category": "아크릴 굿즈",
         "price": 7600,
-        "imageUrl": ["/images/mydeals/sale21.png"],
+        "imageUrl": [
+            "/images/mydeals/sale21.png"
+        ],
         "likes": 18,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 125,
@@ -929,7 +1003,9 @@
         "description": "레트로 감성 가득한 태권보이 키링 세트! 🥋✨ \n귀엽고 유니크한 디자인으로 소장 욕구 뿜뿜! \n미개봉 새 상품이고, 친구들과 함께 맞춰도 너무 귀여워요 :) 궁금한 점은 언제든지 문의주세요!",
         "category": "아크릴 굿즈",
         "price": 5500,
-        "imageUrl": ["/images/mydeals/sale22.png"],
+        "imageUrl": [
+            "/images/mydeals/sale22.png"
+        ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 113,
@@ -949,7 +1025,9 @@
         "description": "멍~한 표정이 매력 포인트인 키링들이에요 🐶💤 \n볼수록 정가는 비주얼로 소장용, 선물용 모두 추천! \n미개봉 제품이라 깔끔하게 받아보실 수 있어요 :) 편하게 문의 주세요!",
         "category": "아크릴 굿즈",
         "price": 10000,
-        "imageUrl": ["/images/mydeals/sale23.png"],
+        "imageUrl": [
+            "/images/mydeals/sale23.png"
+        ],
         "likes": 19,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 181,
@@ -969,7 +1047,9 @@
         "description": "상큼한 감귤 한 조각이 내 손안에! 🍊✨ \n직접 만든 핸드메이드 키링으로 유니크함 100%! \n귀엽고 리얼한 디테일로 가방이나 에어팟에 달면 포인트 확실해요. 미개봉 제품이며 정성 가득 담았어요 :)",
         "category": "아크릴 굿즈",
         "price": 8800,
-        "imageUrl": ["/images/mydeals/sale24.png"],
+        "imageUrl": [
+            "/images/mydeals/sale24.png"
+        ],
         "likes": 22,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 194,
@@ -989,7 +1069,9 @@
         "description": "벚꽃처럼 포근한 분위기의 토끼 키링이에요 🐰🌸 \n파스텔 톤 디자인으로 가방이나 소품에 달면 감성 한 스푼 추가! \n핸드메이드 특유의 따뜻한 감성이 담긴 미개봉 제품입니다. 봄 느낌 가득한 굿즈, 지금 만나보세요 :)",
         "category": "아크릴 굿즈",
         "price": 7200,
-        "imageUrl": ["/images/mydeals/sale25.png"],
+        "imageUrl": [
+            "/images/mydeals/sale25.png"
+        ],
         "likes": 34,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 284,
@@ -1009,7 +1091,9 @@
         "description": "제가 지금까지 모아둔 키링들이에요! \n다른 느낌의 키링들 갖고 계신 분 있으시면 저랑 교환해요! \n 거의 박스 상태로 둬서 상태는 매우 훌륭합니다ㅎㅎ",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange16.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange16.png"
+        ],
         "likes": 14,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 213,
@@ -1029,7 +1113,9 @@
         "description": "몽글이 키링 많이 모아두고있습니다 \n채팅주시면 사진들 더 보여드릴게요! \n관심 있으신 분들 많이 채팅주세요~ 종류 상관없이 교환합니다!",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange17.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange17.png"
+        ],
         "likes": 8,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 62,
@@ -1049,7 +1135,9 @@
         "description": "게임기 키링 다른 키링과 교환원합니다\n게임기 작동 잘 하구요 USB C타입으로 연결해서 사용하시면 됩니다. \n간단한 게임들 들어가있어요.\n관심 있으신 분들 연락주세요",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange18.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange18.png"
+        ],
         "likes": 38,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 362,
@@ -1069,7 +1157,9 @@
         "description": "라이토 키링 교환원합니다ㅠ \n다른 캐릭터는 다 있어서 필요하신거 있으시면 바로 드릴게요.. \n관심 있으신 분들 채팅 주세욤!",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange19.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange19.png"
+        ],
         "likes": 13,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 167,
@@ -1089,7 +1179,9 @@
         "description": "젤리 재질의 키링입니다! \n키링 종류 상관없이 이쁜거 있으면 교환 의사 있습니다! \n관심 있으신 분들 채팅부탁드려요~",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange20.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange20.png"
+        ],
         "likes": 13,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 167,
@@ -1109,7 +1201,9 @@
         "description": "여러가지 동물 키링 교환원합니다! \n키링 종류 상관없이 이쁜거 있으면 교환 의사 있습니다! \n관심 있으신 분들 채팅부탁드려요~",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange21.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange21.png"
+        ],
         "likes": 8,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 67,
@@ -1129,7 +1223,9 @@
         "description": "애나벨 키링 교환합니다 \n사진에 있는 키링 말고 다른 캐릭터 교환원해요 \n채팅주세요",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange22.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange22.png"
+        ],
         "likes": 6,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 47,
@@ -1149,7 +1245,9 @@
         "description": "감성 키링들 다른 키링들과 교환원해요! \n챗으로 키링 사진들 보내주세요 이쁜거면 상관없이 교환 의사 있습니다! \n채팅 많이 많이 주세욤~",
         "category": "아크릴 굿즈",
         "price": 6500,
-        "imageUrl": ["/images/myexchange/exchange23.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange23.png"
+        ],
         "likes": 33,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 291,
@@ -1169,7 +1267,9 @@
         "description": "굿즈 수첩 세트 판매합니다! \n여러가지 수첩과 문구류 세트도 사진 처럼 포함되어있습니다~ \n채팅 많이 많이 주세욤~",
         "category": "문구류",
         "price": 35000,
-        "imageUrl": ["/images/mydeals/sale26.png"],
+        "imageUrl": [
+            "/images/mydeals/sale26.png"
+        ],
         "likes": 20,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 218,
@@ -1189,7 +1289,9 @@
         "description": "슈가슈가룬 문구 세트 판매합니당\n슈가슈가룬 문구 제품 모두 포함하고있어여\n상태도 사용하지 않고 보관만해서 좋습니다! 채팅주세요~",
         "category": "문구류",
         "price": 22000,
-        "imageUrl": ["/images/mydeals/sale28.png"],
+        "imageUrl": [
+            "/images/mydeals/sale28.png"
+        ],
         "likes": 26,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 208,
@@ -1209,7 +1311,9 @@
         "description": "판다링 문구류 세트 팝니당\n사진처럼 상태 좋습니다\n관심 있으신 분들 연락주세요!",
         "category": "문구류",
         "price": 18000,
-        "imageUrl": ["/images/mydeals/sale29.png"],
+        "imageUrl": [
+            "/images/mydeals/sale29.png"
+        ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 123,
@@ -1229,7 +1333,9 @@
         "description": "플라워 편지지 세트 팝니다\n사진처럼 상태 좋습니다\n관심 있으신 분들 연락주세요!",
         "category": "문구류",
         "price": 18000,
-        "imageUrl": ["/images/mydeals/sale30.png"],
+        "imageUrl": [
+            "/images/mydeals/sale30.png"
+        ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 123,
@@ -1249,7 +1355,9 @@
         "description": "해리포터 굿즈 노트랑 만년필 팝니다\n구매하고 한 번도 사용 안 한거라 새거라고해도 무방합니다\n해리포터 좋아하시는 분들 많은 관심과 채팅 부탁드려요ㅎㅎ",
         "category": "문구류",
         "price": 40000,
-        "imageUrl": ["/images/mydeals/sale31.png"],
+        "imageUrl": [
+            "/images/mydeals/sale31.png"
+        ],
         "likes": 31,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 439,
@@ -1269,7 +1377,9 @@
         "description": "하트러버 굿즈 문구류 판매합니다..!\n지금은 단종된 제품이라 구하시기 어려울거에요 상태도 보관만해서 완전 새거급입니다..!\n관심있으신 분들 채팅 부탁드려요~",
         "category": "문구류",
         "price": 38000,
-        "imageUrl": ["/images/mydeals/sale32.png"],
+        "imageUrl": [
+            "/images/mydeals/sale32.png"
+        ],
         "likes": 22,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 359,
@@ -1289,7 +1399,9 @@
         "description": "테크니컬 아크릴 재질 문구류 다른거랑 교환합니다\n상태는 새거이고 사진처럼 여러가지 구비하고있습니다.\n낱개로도 교환하고 묶어서도 교환합니다\n관심 있으신 분들 채팅주세요!",
         "category": "문구류",
         "price": 10000,
-        "imageUrl": ["/images/myexchange/exchange24.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange24.png"
+        ],
         "likes": 18,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 120,
@@ -1309,7 +1421,9 @@
         "description": "야채 굿즈 지우개들 교환합니다!\n한 번도 사용 안 했구, 다른 굿즈 지우개들 이쁜거 교환 원해요\n사진말고도 야채 지우개 몇개 더 있습니다!\n채팅주시면 더 보내드릴게요~",
         "category": "문구류",
         "price": 10000,
-        "imageUrl": ["/images/myexchange/exchange25.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange25.png"
+        ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 109,
@@ -1329,7 +1443,9 @@
         "description": "별자리 굿즈 문구류들 다른 문구류 굿즈들이랑 교환 원합니다!\n각각 별자리 수첩이랑 펜 등 사진에 보이는 제품들 각각 교환합니다\n채팅주세요!",
         "category": "문구류",
         "price": 10000,
-        "imageUrl": ["/images/myexchange/exchange26.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange26.png"
+        ],
         "likes": 30,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 331,
@@ -1349,7 +1465,9 @@
         "description": "제목 그대로 사진에 있는 모든 문구류 다른 굿즈들이랑 교환 원합니다!\n꼭 문구류가 아니여도 이쁜 굿즈들 있으면 교환 의사있습니다!\n관심 있으신 분들 연락주세요~",
         "category": "문구류",
         "price": 10000,
-        "imageUrl": ["/images/myexchange/exchange27.png"],
+        "imageUrl": [
+            "/images/myexchange/exchange27.png"
+        ],
         "likes": 8,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 67,

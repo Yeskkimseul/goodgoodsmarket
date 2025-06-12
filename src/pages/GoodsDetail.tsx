@@ -161,9 +161,11 @@ const GoodsDetail = () => {
                             </div>
                             <h1>
                                 {goods
-                                    ? goods.isExchangeable
-                                        ? "교환 희망 제품"
-                                        : `${goods.price.toLocaleString()}원`
+                                    ? goods.isCompleted
+                                        ? "거래 완료 제품"
+                                        : goods.isExchangeable
+                                            ? "교환 희망 제품"
+                                            : `${goods.price.toLocaleString()}원`
                                     : ""}
                             </h1>
                         </div>{/* maintit */}

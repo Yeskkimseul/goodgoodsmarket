@@ -55,8 +55,8 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
                     // 최근 본 상품 id 배열을 localStorage에서 불러오기
                     const viewed = JSON.parse(localStorage.getItem('recentViewed') || '[]');
                     // 이미 있으면 중복 제거
-                   // 이 필터도 아래처럼 바꿔야 정확히 동작함
-                const newViewed = [String(item.id), ...viewed.filter((id: string) => id !== String(item.id))];
+                    // 이 필터도 아래처럼 바꿔야 정확히 동작함
+                    const newViewed = [String(item.id), ...viewed.filter((id: string) => id !== String(item.id))];
 
                     localStorage.setItem('recentViewed', JSON.stringify(newViewed));
                 }}
@@ -76,9 +76,11 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
                 </div>
                 <h3 className={styles.title}>{item.title}</h3>
                 <h3 className={styles.price}>
-                    {item.isExchangeable
-                        ? '교환 희망 제품'
-                        : (item.price ?? 0).toLocaleString() + '원'}
+                    {item.isCompleted
+                        ? '거래 완료 제품'
+                        : item.isExchangeable
+                            ? '교환 희망 제품'
+                            : (item.price ?? 0).toLocaleString() + '원'}
                 </h3>
             </Link>
         </div>
