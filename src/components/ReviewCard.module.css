@@ -1,4 +1,39 @@
-.card{
-    padding: var(--space8) var(--space16);
+.card {
+    padding: var(--space16);
     border: 1px solid var(--stroke-lightE);
+    border-radius: 12px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space8) 0;
+    border-bottom: 1px solid var(--stroke-lightE);
+}
+
+.userprofile {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 12px);
+}
+
+.avatar {
+    width: clamp(32px, 8vw, 46px);
+    border-radius: 50%;
+    border: 1px solid var(--stroke-lightE);
+}
+
+.name {
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+}
+
+.date {
+    font-size: var(--font-caption);
+    font-weight: 400;
+    line-height: 125%;
+    color: var(--text-grey);
 }

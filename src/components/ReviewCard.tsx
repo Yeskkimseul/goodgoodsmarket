@@ -10,8 +10,10 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
     return (
         <div className={style.card}>
             <div className={style.header}>
-                <img src={review.reviewer.img} alt={review.reviewer.name} className={style.avatar} />
-                <span className={style.name}>{review.reviewer.name}</span>
+                <div className={style.userprofile}>
+                    <img src={review.reviewer.img} alt={review.reviewer.name} className={style.avatar} />
+                    <span className={style.name}>{review.reviewer.name}</span>
+                </div>{/* userprofile */}
                 <span className={style.date}>{review.date}</span>
             </div>
             <div className={style.keywords}>
