@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout2 from "../components/Layout2";
 import HeaderType5 from "../components/header/HeaderType5";
+import ChatBottomSheet from "../components/bottomsheet/ChatBottomSheet";
 import ChatInput from "../components/ChatInput";
 import ChatInfo from "../components/ChatInfo";
 import ChatMessages from "../components/ChatMessages";
@@ -25,6 +26,7 @@ function ChatDetail() {
 
     return (
         <Layout2>
+            <ChatBottomSheet isOpen={isSheetOpen} onClose={closeSheet} />
             <div className={styles.chatContents}>
                 <div className={styles.chatTitle}>
                     <HeaderType5 onMoreClick={openSheet} />
