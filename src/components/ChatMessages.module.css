@@ -1,7 +1,5 @@
 .chatMessages {
     width: 100%;
-    height: auto;
-    background:var( --fields-form);
     color: var(--text-grey);
     padding: 16px;
     display: flex;
@@ -24,7 +22,13 @@
     margin-top: 4px;
 }
 
-.chatTime {
+.chatMsg {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.chatDay {
     display: flex;
     align-items: center;
 }
@@ -35,16 +39,55 @@
     background: var(--text-lightgrey);
 }
 
-.time{
+.time {
     font-size: var(--font-caption);
     color: var(--text-lightgrey);
-    padding: 0 6px;
+    padding: 0 12px;
 }
 
-.chatProfile{
+.meChat {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.meMessage {
+    width: 277px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    gap: 4px;
+    background: var(--main-mint);
+    color: var(--text-white);
+    border-radius: 8px 0 8px 8px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chatProfile {
     width: 34px;
     height: 34px;
     border-radius: 50%;
     display: block;
     object-fit: cover;
+}
+
+.otherChat {
+    display: flex;
+    gap: 8px;
+}
+
+.otherMessage {
+    width: 277px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    gap: 4px;
+    background: var(--bg-white);
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chatTime {
+    display: block;
+    width: 100%;
+    text-align: end;
 }

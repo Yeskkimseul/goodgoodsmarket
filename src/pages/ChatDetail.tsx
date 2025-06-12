@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import Layout2 from "../components/Layout2";
 import HeaderType5 from "../components/header/HeaderType5";
-/* import ChatBottomSheet from "../components/bottomsheet/ChatBottomSheet"; */
 import ChatInput from "../components/ChatInput";
 import ChatMessages from "../components/ChatMessages";
 import type { Chatting } from "../types/chatting";
+import styles from "./ChatDetail.module.css"
 
 function ChatDetail() {
     const [msg, setMsg] = useState("");
@@ -24,19 +24,23 @@ function ChatDetail() {
 
     return (
         <Layout2>
-            <HeaderType5 onMoreClick={openSheet} />
-            <div>
-                <ChatMessages chats={chatList} />
-                <ChatInput
-                    value={msg}
-                    onChange={e => setMsg(e.target.value)}
-                    onSend={() => {
-                        // 예시: 메시지 전송
-                        alert(msg);
-                        setMsg(""); // 전송 후 입력창 비우기
-                    }}
-                />
+            <div className={styles.chatContents}>
+                <HeaderType5 onMoreClick={openSheet} />
+                <div>
+                    <ChatMessages chats={chatList} 
+                    />
+                    <ChatInput
+                        value={msg}
+                        onChange={e => setMsg(e.target.value)}
+                        onSend={() => {
+                            // 예시: 메시지 전송
+                            alert(msg);
+                            setMsg(""); // 전송 후 입력창 비우기
+                        }}
+                    />
+                </div>
             </div>
+
         </Layout2>
     );
 }

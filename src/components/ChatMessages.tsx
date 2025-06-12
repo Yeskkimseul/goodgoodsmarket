@@ -35,26 +35,36 @@ function ChatMessages({ chats }: ChatMessagesProps) {
                     거래 전, 더치트에서 계좌번호를 조회해보세요. <br />
                     의심 계좌일 경우 거래를 멈추는 것이 안전합니다.
                 </p>
-                <a href="#" className={styles.theCheat}> 더치트에서 조회하기</a>
+                <a href="https://thecheat.co.kr/rb/?mod=_search" className={styles.theCheat} target="_blank"> 더치트에서 조회하기</a>
             </div>
             {chats.map((chat) => (
-                <div className="chat-msg" key={chat.id}>
-                    <div className={styles.chatTime}>
+                <div className={styles.chatMsg} key={chat.id}>
+                    <div className={styles.chatDay}>
                         <div className={styles.line}></div>
                         <div className={styles.time}>{formatDateOnly(chat.createdAt)}</div>
                         <div className={styles.line}></div>
                     </div>
-                    <div className="{styles.otherChat}">
-                    <img className={styles.chatProfile} src={chat.userProfile} alt="프로필" />
+                    <div className={styles.meChat}>
+                        <div className={`body2 ${styles.meMessage}`}>
+                            <p>
+                                안녕하세요. <br />
+                                키링 구매하고싶은데 직거래 되나요?
+                            </p>
+                            <span className={`caption ${styles.chatTime}`}>
+                                읽음   16:45
+                            </span>
+                        </div>
+
                     </div>
-                    <div className="{styles.otherMessage}">
-                        <div className={styles.chatContent}>
+                    <div className={styles.otherChat}>
+                        <img className={styles.chatProfile} src={chat.userProfile} alt="프로필" />
+
+                        <div className={styles.otherMessage}>
                             <div className={`body2 ${styles.chatMessage}`}>{chat.message}</div>
-                            <div className={styles.chatHeader}>
-                                <span className={`caption ${styles.chatTime}`}>
-                                    {formatTimeOnly(chat.createdAt)}
-                                </span>
-                            </div>
+
+                            <span className={`caption ${styles.chatTime}`}>
+                                {formatTimeOnly(chat.createdAt)}
+                            </span>
                         </div>
                     </div>
                 </div>
