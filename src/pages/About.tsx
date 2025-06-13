@@ -12,23 +12,43 @@ const About = () => {
                 <div className={styles.one}>
                     <img src="/images/about/about1.png" alt="굿굿마켓 소개" />
                     <div className={styles.slogan}>
-                        <img src="/images/about/be.svg" alt="slogan" />
+                        <img src="/images/about/BE.svg" alt="slogan" />
                         <img src="/images/about/slogan.svg" alt="slogan" />
-                        <img src="/images/about/yourself.svg" alt="slogan" />
+                        <img src="/images/about/YOURSELF.svg" alt="slogan" />
                     </div>{/* //.slogan */}
                 </div>{/* //.one */}
+
                 <div className={styles.two}>
-                    <div className={styles.two_inner}>
-                        <div className={styles.two_txt1}><span>찐팬</span>이라면 알아요.<br />
-                            <i>굿즈 거래</i>, 아무데서나 못 하죠.</div>
+                    <div className={styles.inner}>
+                        <div className={styles.txt1}
+                        >
+                            <span>찐팬</span>이라면 알아요.<br />
+                            <div className={styles.underlineWrap}>
+                                <i>굿즈 거래</i>
+                                <img src="/images/about/underline.svg" alt="underline" className={styles.underlineSvg} />
+                            </div>
+                            , 아무데서나 못 하죠.</div>
                         <div className="body2">
                             좋아하는 마음이 담긴 굿즈, 아무 데나 올릴 수 없잖아요.<br />믿을 수 있는 곳에서, 같은 팬끼리 주고받는 게 마음 편하죠.<br />그래서 저희가 만들었어요.
                         </div>
-                        <h3>덕질도, 거래도, 안심되는 공간.</h3>
-                    </div>
+                        <div className={styles.txt2}>덕질도, 거래도, 안심되는 공간.</div>
+                    </div>{/* //.two_inner */}
                 </div>{/* //.two */}
 
-            </div>
+                <div className={styles.three}>
+                    <img src="/images/about/about2.png" alt="굿굿마켓 소개 이미지" />
+                    <div className={styles.inner}>
+                        <div className={styles.txt3}>
+                            서랍 속 굿즈, 이제는 <span className={styles.pink}>빛</span>을 볼 차례예요.
+                        </div>
+                        <div className="body2">
+                            필요없는 굿즈는 판매하고, 원하는 굿즈는 교환으로 찾아보세요.<br />중고거래와 교환을 팬들끼리 쉽고 안전하게 주고받을 수 있는<br />굿즈 전용 거래 플랫폼입니다.
+                        </div>{/* //.body2 */}
+                        <img src="/images/about/icon.svg" alt="굿굿이" />
+                    </div>{/* //.three_inner */}
+                </div>{/* //.three */}
+
+            </div>{/* //.body */}
             <div className={styles.bgbg}>
                 <img src="/images/about/muzi.png" alt="배경" />
                 <div className={styles.marquee}>

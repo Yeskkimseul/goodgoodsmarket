@@ -2,8 +2,66 @@
     background: #FEF4F5;
     width: 100%;
     height: auto;
+    word-break: keep-all;
+    /* 띄어쓰기 기준으로 wrap됨 */
 }
 
+/* 공통 */
+.inner {
+    width: clamp(320px, 50vw, 686px);
+    padding: clamp(20px, 4vw, 40px) clamp(25px, 4vw, 40px);
+    background: var(--bg-white);
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 4vw, 40px);
+    position: relative;
+    z-index: 2;
+}
+
+.txt1 {
+    font-family: var(--sokcho);
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 130%;
+    /* 36.4px */
+    letter-spacing: -0.84px;
+}
+
+.txt1 span {
+    color: var(--main-mint);
+}
+
+.txt1 i {
+    color: var(--point-deeppink);
+}
+
+.txt2 {
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 600;
+}
+
+.txt3 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+    letter-spacing: -0.6px;
+    font-family: var(--sokcho);
+}
+
+.txt3 span {
+    font-size: clamp(20px, 5vw, 30px);
+}
+
+.txt3 span.pink {
+    color: var(--point-deeppink);
+}
+
+.txt3 span.mint {
+    color: var(--main-mint);
+}
+
+/* one */
 .one {
     width: 100%;
     height: clamp(210px, 35vw, 560px);
@@ -44,39 +102,70 @@
     height: clamp(45px, 8vw, 115px);
 }
 
+/* two */
 .two {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: clamp(25px, 5vw, 78px);
+    padding: clamp(50px, 5vw, 100px) clamp(25px, 5vw, 78px);
 }
 
-.two_inner {
-    width: clamp(320px, 50vw, 686px);
-    padding: clamp(20px, 4vw, 40px) clamp(25px, 4vw, 40px);
-    background: var(--bg-white);
-    border-radius: 60px;
-    display: flex;
+.underlineWrap {
+    display: inline-block;
+    position: relative;
+}
+
+.underlineWrap i {
+    position: relative;
+    z-index: 1;
+}
+
+.underlineSvg {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%) translateY(0.1em);
+    /* 0.2em은 텍스트와의 간격, 필요시 조정 */
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* three */
+.three {
+    padding: clamp(50px, 5vw, 100px) clamp(25px, 5vw, 78px);
+    width: 100%;
+    height: clamp(300px, 55vw, 600px);
+    position: relative;
     flex-direction: column;
-    gap: clamp(16px, 4vw, 40px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
-.two_txt1 {
-    font-family: var(--sokcho);
-    font-size: clamp(20px, 3vw, 28px);
-    line-height: 130%;
-    /* 36.4px */
-    letter-spacing: -0.84px;
+.three .inner {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    position: relative;
 }
 
-.two_txt1 span {
-    color: var(--main-mint);
+.three .inner img {
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    width: clamp(40px, 10vw, 80px);
 }
 
-.two_txt1 i {
-    color: var(--point-deeppink);
+.three>img {
+    border-radius: 150px;
+    position: absolute;
+    right: clamp(25px, 5vw, 78px);
+    top: clamp(50px, 5vw, 100px);
+    height: clamp(162px, 25vw, 324px);
 }
 
 /* bottom */
@@ -117,6 +206,26 @@
     display: flex;
     flex-direction: column;
     gap: clamp(20px, 4vw, 60px);
+}
+
+@media (max-width: 740px) {
+    
+    .three {
+        height: auto;
+        align-items: center;
+        gap: var(--space16);
+    }
+    .three>img {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 375px) {
