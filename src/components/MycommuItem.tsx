@@ -1,6 +1,6 @@
 import { Commu } from "../types/commu";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from './CommuCard.module.css';
 import exp from "constants";
 import MyListBottomSheet from "./bottomsheet/MyListBottomSheet";
@@ -26,6 +26,7 @@ const formatDate = (dateString: string) => {
 const MycommuItem = ({ item, className, onDelete }: Props & { onDelete: (id: string) => void }) => {
 
     const [isSheetOpen, setIsSheetOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleMoreClick = (e: React.MouseEvent) => {
         e.preventDefault(); // 링크 이동 방지
@@ -75,7 +76,8 @@ const MycommuItem = ({ item, className, onDelete }: Props & { onDelete: (id: str
             <MyListBottomSheet
                 isOpen={isSheetOpen}
                 onClose={() => setIsSheetOpen(false)}
-                onDelete={() => onDelete(item.id)}
+                onDelete={() => { onDelete(item.id); setIsSheetOpen(false); }}
+                onEdit={() => navigate(`/community/commuedit/${item.id}`)}
             />
         </div >
     );

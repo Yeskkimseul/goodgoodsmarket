@@ -9,9 +9,10 @@ interface MyListBottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
     onDelete: () => void;
+    onEdit: () => void; 
 }
 
-const MyListBottomSheet = ({ isOpen, onClose, onDelete }: MyListBottomSheetProps) => {
+const MyListBottomSheet = ({ isOpen, onClose, onDelete, onEdit }: MyListBottomSheetProps) => {
     const navigate = useNavigate();
     const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
 
@@ -19,7 +20,10 @@ const MyListBottomSheet = ({ isOpen, onClose, onDelete }: MyListBottomSheetProps
         {
             label: "수정하기",
             icon: <img src="/images/bottomsheet/bs_pen.svg" alt="수정" />,
-            onClick: () => navigate("#"),
+               onClick: () => {
+                onEdit();
+                onClose();
+            },
         },
         {
             label: "삭제하기",

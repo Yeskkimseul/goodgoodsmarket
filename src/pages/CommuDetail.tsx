@@ -326,6 +326,7 @@ const CommuDetail = () => {
                     isOpen={isSheetOpen}
                     onClose={() => setIsSheetOpen(false)}
                     onDelete={handleDelete}
+                    onEdit={() => navigate(`/community/commuedit/${commu.id}`)}
                 />
             ) : (
                 <CommuBottomSheet
