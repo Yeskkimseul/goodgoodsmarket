@@ -200,6 +200,17 @@ const CommuDetail = () => {
     const commentsToShow = commu ? (storedComments[commu.id] || commu.comments || []) : [];
     const commentsCount = commentsToShow.length;
 
+    /* 로컬스토리지의 태그 불러오기 */
+    const storedTags = JSON.parse(localStorage.getItem('commuTags') || '{}');
+    const tagsToShow =
+        commu && storedTags[commu.id]
+            ? storedTags[commu.id]
+            : commu && Array.isArray(commu.tags)
+                ? commu.tags
+                : commu && typeof commu.tags === 'string'
+                    ? [commu.tags]
+                    : [];
+
     if (!commu) return <div>로딩 중...</div>;
 
 
@@ -251,9 +262,7 @@ const CommuDetail = () => {
                         {commu.description}
                     </p>
                     <div className={style.tags}>
-                        {Array.isArray(commu.tags)
-                            ? commu.tags.map((tag, i) => <span key={i}>{tag}</span>)
-                            : commu.tags}
+                        {tagsToShow.map((tag: string, i: number) => <span key={i}>{tag}</span>)}
                     </div>
                     <div
                         className={`${style.liketn} ${liked ? style.likedon : ""}`}

@@ -27,40 +27,40 @@ const CommuEdit = () => {
     const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-   useEffect(() => {
-    if (!id) return;
+    useEffect(() => {
+        if (!id) return;
 
-    // 1. localStorage에 commuList가 없으면 commu.json에서 불러와 저장
-    let stored = localStorage.getItem('commuList');
-    if (!stored) {
-        fetch('/data/commu.json')
-            .then(res => res.json())
-            .then((data: Commu[]) => {
-                localStorage.setItem('commuList', JSON.stringify(data));
-                const found = data.find(item => item.id === id);
-                if (found) {
-                    setCategory(found.category);
-                    setTitle(found.title);
-                    setDescription(found.description);
-                    setImageUrls(found.imageUrl ? (Array.isArray(found.imageUrl) ? found.imageUrl : [found.imageUrl]) : []);
-                    setTags(found.tags || []);
-                }
-            });
-    } else {
-        // 2. localStorage에 commuList가 있으면 거기서 찾기
-        const commuList: Commu[] = JSON.parse(stored);
-        const found = commuList.find(item => item.id === id);
-        if (found) {
-            setCategory(found.category);
-            setTitle(found.title);
-            setDescription(found.description);
-            setImageUrls(found.imageUrl ? (Array.isArray(found.imageUrl) ? found.imageUrl : [found.imageUrl]) : []);
-            setTags(found.tags || []);
+        // 1. localStorage에 commuList가 없으면 commu.json에서 불러와 저장
+        let stored = localStorage.getItem('commuList');
+        if (!stored) {
+            fetch('/data/commu.json')
+                .then(res => res.json())
+                .then((data: Commu[]) => {
+                    localStorage.setItem('commuList', JSON.stringify(data));
+                    const found = data.find(item => item.id === id);
+                    if (found) {
+                        setCategory(found.category);
+                        setTitle(found.title);
+                        setDescription(found.description);
+                        setImageUrls(found.imageUrl ? (Array.isArray(found.imageUrl) ? found.imageUrl : [found.imageUrl]) : []);
+                        setTags(found.tags || []);
+                    }
+                });
+        } else {
+            // 2. localStorage에 commuList가 있으면 거기서 찾기
+            const commuList: Commu[] = JSON.parse(stored);
+            const found = commuList.find(item => item.id === id);
+            if (found) {
+                setCategory(found.category);
+                setTitle(found.title);
+                setDescription(found.description);
+                setImageUrls(found.imageUrl ? (Array.isArray(found.imageUrl) ? found.imageUrl : [found.imageUrl]) : []);
+                setTags(found.tags || []);
+            }
         }
-    }
-}, [id]);
+    }, [id]);
 
-    
+
 
     // 카테고리 드롭다운 영역 밖 클릭 시 닫기
     useEffect(() => {
@@ -179,17 +179,35 @@ const CommuEdit = () => {
                         type="text"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                        required
                         placeholder="제목을 입력해주세요"
                     />
                 </label>
                 <label className={styles.txtarea}>
                     <textarea
                         value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                        required
+                        onChange={(e) => {
+                            setDescription(e.target.value);
+
+                            // #키워드 추출 (공백 또는 줄바꿈 기준)
+                            const tagArr = Array.from(
+                                new Set(
+                                    e.target.value
+                                        .split(/[\s\n]+/)
+                                        .filter(word => word.startsWith('#') && word.length > 1)
+                                        .map(word => word.replace(/[^#\w가-힣]/g, '')) // 특수문자 제거
+                                )
+                            );
+                            setTags(tagArr);
+
+                            // 로컬스토리지에 저장 (id별로 tags 저장)
+                            if (id) {
+                                const storedTags = JSON.parse(localStorage.getItem('commuTags') || '{}');
+                                storedTags[id] = tagArr;
+                                localStorage.setItem('commuTags', JSON.stringify(storedTags));
+                            }
+                        }}
                         placeholder="굿굿마켓은 건전한 굿즈 문화를 지향합니다. 
-                            자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
+        자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
                     />
                 </label>
                 <div className={styles.photovideo}>

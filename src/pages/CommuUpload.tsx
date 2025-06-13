@@ -71,6 +71,26 @@ const CommuUpload = () => {
       comments: []
     };
 
+    /* 필수 입력값 검증 */
+    if (!title.trim()) {
+      alert("제목을 입력해주세요.");
+      return;
+    }
+    if (!description.trim()) {
+      alert("내용을 입력해주세요.");
+      return;
+    }
+    if (imageUrls.length === 0) {
+      alert("이미지를 1장 이상 업로드해주세요.");
+      return;
+    }
+
+
+    // tags를 commuTags에 id별로 저장
+    const commuTags = JSON.parse(localStorage.getItem('commuTags') || '{}');
+    commuTags[newCommu.id] = tags;
+    localStorage.setItem('commuTags', JSON.stringify(commuTags));
+
     //로컬 스토리지에 저장
     let stored = localStorage.getItem('commuList');
     let commuList: Commu[] = [];
@@ -151,17 +171,32 @@ const CommuUpload = () => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              required
               placeholder="제목을 입력해주세요"
             />
           </label>
           <label className={styles.txtarea}>
             <textarea
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
+              onChange={e => {
+                setDescription(e.target.value);
+
+                // #키워드 추출
+                const tagArr = Array.from(
+                  new Set(
+                    e.target.value
+                      .split(/[\s\n]+/)
+                      .filter(word => word.startsWith('#') && word.length > 1)
+                      .map(word => word.replace(/[^#\w가-힣]/g, ''))
+                  )
+                );
+                setTags(tagArr);
+
+                // 임시 id로 tags 저장 (등록 전이므로 Date.now() 등 임시 id 사용 가능)
+                // 등록 시에는 실제 id로 저장해야 함
+                // 예시: localStorage.setItem('commuTags', JSON.stringify({ ...기존, [id]: tagArr }))
+              }}
               placeholder="굿굿마켓은 건전한 굿즈 문화를 지향합니다. 
-                            자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
+    자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
             />
           </label>
 
