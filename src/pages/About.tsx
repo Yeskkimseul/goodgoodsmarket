@@ -47,7 +47,28 @@ const About = () => {
                         <img src="/images/about/icon.svg" alt="굿굿이" />
                     </div>{/* //.three_inner */}
                 </div>{/* //.three */}
-
+                <div className={styles.four}>
+                    <img src="/images/about/about3.png" alt="굿굿마켓 소개 이미지" />
+                    <div className={styles.inner}>
+                        <div className={styles.txt3}>
+                            덕질은 <span className={styles.mint}>함께</span>할 때 더 즐겁잖아요.
+                        </div>
+                        <div className="body2">
+                            굿즈 거래만으로는 부족하니까, 덕후들끼리 자유롭게 소통할 수 있는 커뮤니티 공간도 함께 준비했어요. 자랑도, 후기 공유도, 소소한 정보 나눔도 이제는 굿굿마켓에서 부담 없이 즐기세요.
+                        </div>{/* //.body2 */}
+                    </div>{/* //.four_inner */}
+                </div>{/* //.four */}
+                <div className={styles.five}>
+                    <img src="/images/about/about4.png" alt="굿굿마켓 소개 이미지" />
+                    <div className={styles.inner}>
+                        <div className={styles.txt3}>
+                            <span className={styles.pink}>팬심</span>이 머무는 거래,<br />기억이 남는 커뮤니티
+                        </div>
+                        <div className="body2">
+                            굿굿 마켓은 안전한 거래, 빠른 탐색, 깊은 팬심을 위한 굿즈 팬덤 생태계를 만들어갑니다.
+                        </div>{/* //.body2 */}
+                    </div>{/* //.three_inner */}
+                </div>{/* //.three */}
             </div>{/* //.body */}
             <div className={styles.bgbg}>
                 <img src="/images/about/muzi.png" alt="배경" />

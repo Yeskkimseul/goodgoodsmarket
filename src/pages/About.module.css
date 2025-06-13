@@ -172,6 +172,74 @@
     height: clamp(162px, 30vw, 324px);
 }
 
+/* four */
+.four {
+    padding: clamp(50px, 5vw, 100px) clamp(25px, 5vw, 78px);
+    width: 100%;
+    height: clamp(300px, 55vw, 700px);
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.four .inner {
+    justify-content: center;
+    align-items: center;
+    width: clamp(320px, 60vw, 500px);
+    position: relative;
+}
+
+.four .inner img {
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    width: clamp(40px, 10vw, 80px);
+}
+
+.four>img {
+    border-radius: 16px;
+    position: absolute;
+    left: clamp(25px, 5vw, 78px);
+    top: clamp(50px, 5vw, 100px);
+    height: clamp(162px, 30vw, 324px);
+}
+
+/* five */
+.five {
+    padding: clamp(50px, 5vw, 100px) clamp(25px, 5vw, 78px);
+    width: 100%;
+    height: clamp(300px, 55vw, 600px);
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.five .inner {
+    justify-content: center;
+    align-items: center;
+    width: clamp(320px, 60vw, 500px);
+    position: relative;
+}
+
+.five .inner img {
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    width: clamp(40px, 10vw, 80px);
+}
+
+.five>img {
+    border-radius: 16px;
+    position: absolute;
+    right: clamp(25px, 5vw, 78px);
+    top: clamp(50px, 5vw, 100px);
+    height: clamp(162px, 30vw, 324px);
+}
+
 /* bottom */
 .bgbg {
     background: url(../../public/images/about/about_bg.png) center center/cover no-repeat;
@@ -228,7 +296,43 @@
         justify-content: center;
         align-items: center;
         display: block;
-        width: 100%;
+        width: clamp(320px, 60vw, 500px);
+        object-fit: cover;
+    }
+
+    .four {
+        height: auto;
+        align-items: center;
+        gap: var(--space16);
+    }
+
+    .four>img {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        width: clamp(320px, 60vw, 500px);
+        object-fit: cover;
+    }
+
+    .five {
+        height: auto;
+        align-items: center;
+        gap: var(--space16);
+    }
+
+    .five>img {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        width: clamp(320px, 60vw, 500px);
         object-fit: cover;
     }
 }
