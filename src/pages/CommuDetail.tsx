@@ -45,6 +45,10 @@ const CommuDetail = () => {
     const [commu, setcommu] = useState<commuType | null>(null);
     const [liked, setLiked] = useState(false);
     const [likes, setLikes] = useState(0);
+    // 댓글별 좋아요 상태와 수를 관리
+    const [commentLikes, setCommentLikes] = useState<{ [key: string]: number }>({});
+    const [commentLiked, setCommentLiked] = useState<{ [key: string]: boolean }>({});
+
     useEffect(() => {
         if (commu) {
             // localStorage에서 좋아요 수 불러오기
@@ -57,6 +61,47 @@ const CommuDetail = () => {
         }
     }, [commu]);
 
+    /* 댓글 좋아요 값 불러오기 */
+    useEffect(() => {
+        if (commu && commu.comments) {
+            // 좋아요 수
+            const storedLikes = JSON.parse(localStorage.getItem("commentLikes") || "{}");
+            // 좋아요 상태
+            const storedLiked = JSON.parse(localStorage.getItem("commentLiked") || "{}");
+            const likesObj: { [key: string]: number } = {};
+            const likedObj: { [key: string]: boolean } = {};
+            commu.comments.forEach((c: any) => {
+                likesObj[c.id] = storedLikes[c.id] ?? c.commentlikes ?? 0;
+                likedObj[c.id] = storedLiked[c.id] ?? false;
+            });
+            setCommentLikes(likesObj);
+            setCommentLiked(likedObj);
+        }
+    }, [commu]);
+
+    /* 토글 코멘트 좋아요 */
+    const handleCommentLike = (commentId: string) => {
+        setCommentLiked(prev => {
+            const newLiked = !prev[commentId];
+            // 상태 업데이트
+            const updated = { ...prev, [commentId]: newLiked };
+            // localStorage 저장
+            localStorage.setItem("commentLiked", JSON.stringify(updated));
+            return updated;
+        });
+
+        setCommentLikes(prev => {
+            const newCount = commentLiked[commentId]
+                ? (prev[commentId] || 0) - 1
+                : (prev[commentId] || 0) + 1;
+            const updated = { ...prev, [commentId]: newCount };
+            // localStorage 저장
+            localStorage.setItem("commentLikes", JSON.stringify(updated));
+            return updated;
+        });
+    };
+
+    /* 본문 좋아요 토글 */
     const handleLike = () => {
         if (!commu) return;
         const likedCommu = JSON.parse(localStorage.getItem("likedCommu") || "[]");
@@ -84,7 +129,7 @@ const CommuDetail = () => {
     };
 
 
-
+    /* 데이터 불러오기 */
     useEffect(() => {
         fetch("/data/commu.json")
             .then(res => res.json())
@@ -94,6 +139,7 @@ const CommuDetail = () => {
             });
     }, [id]);
 
+    /* 내 글 삭제 */
     const handleDelete = () => {
         // localStorage에서 myCommuList 불러오기
         const commuList = JSON.parse(localStorage.getItem("myCommuList") || "[]");
@@ -200,16 +246,20 @@ const CommuDetail = () => {
                                     <span className="body2">{c.content}</span>
                                     <div className={style.commentbottom}>
                                         <span> {getTimeAgo(c.createdAt)}  </span>
-                                        <div className={style.cIcontext}>
+                                        <div
+                                            className={`${style.cIcontext} ${commentLiked[c.id] ? style.cIcontexton : ""}`}
+                                            onClick={() => handleCommentLike(c.id)}
+                                            style={{ cursor: "pointer" }}
+                                        >
                                             <img
                                                 src={
-                                                    liked
-                                                        ? "/images/icon/heart_small_grey_empty.svg"
-                                                        : "/images/icon/heart_small_mint_fill.svg"
+                                                    commentLiked[c.id]
+                                                        ? "/images/icon/heart_small_mint_fill.svg"
+                                                        : "/images/icon/heart_small_grey_empty.svg"
                                                 }
                                                 alt="좋아요"
                                             />
-                                            <p className={style.commentlike}>{c.commentlikes} 좋아요</p>
+                                            <p className={style.commentlike}>{commentLikes[c.id] ?? c.commentlikes} 좋아요</p>
                                         </div>
                                     </div>
                                 </div>
