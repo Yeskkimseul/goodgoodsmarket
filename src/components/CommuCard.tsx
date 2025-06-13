@@ -15,12 +15,20 @@ const CommuCard = ({ item, className }: Props) => {
 
     // localStorage에서 값 불러오기
     const commuLikes = JSON.parse(localStorage.getItem("commuLikes") || "{}");
-    const commuComments = JSON.parse(localStorage.getItem("commuComments") || "{}");
     const commuViews = JSON.parse(localStorage.getItem("commuViews") || "{}");
+    const raw = localStorage.getItem('comments');
+    const storedComments = raw ? JSON.parse(raw) : {};
 
     const likes = commuLikes[item.id] ?? item.likes;
-    const commentsNum = commuComments[item.id] ?? item.commentsNum;
     const views = commuViews[item.id] ?? item.views;
+
+    // localStorage에 저장된 댓글이 있으면 그 길이, 없으면 원본 commentsNum
+    const commentList = storedComments?.[item.id];
+    const commentsNum = Array.isArray(commentList)
+        ? commentList.length
+        : item.commentsNum;
+
+
 
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}

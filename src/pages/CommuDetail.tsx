@@ -43,12 +43,16 @@ const CommuDetail = () => {
 
     const { id } = useParams<{ id: string }>();
     const [commu, setcommu] = useState<commuType | null>(null);
+    /* 좋아요 버튼 상태와 수 */
     const [liked, setLiked] = useState(false);
     const [likes, setLikes] = useState(0);
     // 댓글별 좋아요 상태와 수를 관리
     const [commentLikes, setCommentLikes] = useState<{ [key: string]: number }>({});
     const [commentLiked, setCommentLiked] = useState<{ [key: string]: boolean }>({});
+    /* 댓글 입력 상태 */
+    const [commentInput, setCommentInput] = useState("");
 
+    /* 좋아요 버튼 */
     useEffect(() => {
         if (commu) {
             // localStorage에서 좋아요 수 불러오기
@@ -128,17 +132,6 @@ const CommuDetail = () => {
         localStorage.setItem("commuLikes", JSON.stringify(commuLikes));
     };
 
-
-    /* 데이터 불러오기 */
-    useEffect(() => {
-        fetch("/data/commu.json")
-            .then(res => res.json())
-            .then((data: commuType[]) => {
-                const found = data.find(item => item.id === id);
-                setcommu(found ?? null);
-            });
-    }, [id]);
-
     /* 내 글 삭제 */
     const handleDelete = () => {
         // localStorage에서 myCommuList 불러오기
@@ -152,7 +145,52 @@ const CommuDetail = () => {
         navigate(-1);
     };
 
+    /* 댓글 등록 함수 */
+    const handleCommentSubmit = () => {
+        if (!commentInput.trim() || !commu) return;
 
+        // 새 댓글 객체 생성
+        const newComment = {
+            id: `c${Date.now()}`,
+            userimgUrl: "/images/users/user1.png",
+            userName: "뱃지가좋아",
+            content: commentInput,
+            createdAt: new Date().toISOString(),
+        };
+
+        // 기존 댓글 불러오기 (localStorage 우선)
+        const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
+        const commuComments = storedComments[commu.id] || commu.comments || [];
+        const updatedComments = [...commuComments, newComment];
+
+        // localStorage에 저장
+        storedComments[commu.id] = updatedComments;
+        localStorage.setItem("comments", JSON.stringify(storedComments));
+
+        // 화면에도 즉시 반영
+        setcommu({
+            ...commu,
+            comments: updatedComments,
+            commentsNum: updatedComments.length,
+        });
+
+        setCommentInput("");
+    };
+
+    /* 커뮤니티 데이터 불러오기 */
+    useEffect(() => {
+        fetch("/data/commu.json")
+            .then(res => res.json())
+            .then((data: commuType[]) => {
+                const found = data.find(item => item.id === id);
+                setcommu(found ?? null);
+            });
+    }, [id]);
+
+    /* 로컬스토리지에 저장된 코멘트 우선 적용 */
+     const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
+    const commentsToShow = commu ? (storedComments[commu.id] || commu.comments || []) : [];
+    const commentsCount = commentsToShow.length;
 
     if (!commu) return <div>로딩 중...</div>;
 
@@ -187,7 +225,7 @@ const CommuDetail = () => {
                                 </li>
                                 <li className={style.icontext}>
                                     <img src="/images/icon/comment_small.svg" alt="comment" />
-                                    {commu.commentsNum}
+                                    {commentsCount}
                                 </li>
                             </ul>{/* bottomprofile */}
                         </div>{/* profilearia */}
@@ -228,15 +266,20 @@ const CommuDetail = () => {
 
                 <div className={style.commentcon}>
                     <h4>
-                        댓글 {commu.commentsNum}
+                        댓글 {commentsCount}
                     </h4>
                     <div className={style.inputcon}>
-                        <input className={form.input} style={{ flex: '3.5' }} />
-                        <button className={form.button_sm}>등록</button>
+                        <input
+                            className={form.input}
+                            style={{ flex: '3.5' }}
+                            value={commentInput}
+                            onChange={e => setCommentInput(e.target.value)}
+                        />
+                        <button className={form.button_sm} onClick={handleCommentSubmit}>등록</button>
                     </div>
                     <div className={style.commentlist}>
                         {/* 댓글 출력 예시 */}
-                        {commu.comments && commu.comments.map((c) => (
+                        {commentsToShow.map((c: any) => (
                             <div key={c.id} className={style.commentitem}>
                                 <div className={style.cUser}>
                                     <img src={c.userimgUrl} alt={c.userName} className={style.cUserimg} />
