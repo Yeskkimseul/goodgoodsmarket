@@ -65,9 +65,9 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
             createdAt: new Date().toISOString(),
             views: 0,
             tags,
-            userimgUrl: '/images/seller1.png',
+            userimgUrl: '/images/users/profile.png',
             userName: '뱃지가좋아',
-            commentsNum: 70,
+            commentsNum: 0,
             comments: []
         };
 

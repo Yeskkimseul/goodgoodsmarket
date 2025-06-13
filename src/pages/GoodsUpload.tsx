@@ -60,39 +60,39 @@ const GoodsUpload = () => {
         return numeric.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
-useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      showOptionPopup &&
-      popupRef.current &&
-      !popupRef.current.contains(event.target as Node)
-    ) {
-      setShowOptionPopup(false);
-    }
-  };
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                showOptionPopup &&
+                popupRef.current &&
+                !popupRef.current.contains(event.target as Node)
+            ) {
+                setShowOptionPopup(false);
+            }
+        };
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [showOptionPopup]);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [showOptionPopup]);
 
-useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      showCategoryDropdown &&
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
-    ) {
-      setShowCategoryDropdown(false);
-    }
-  };
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                showCategoryDropdown &&
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target as Node)
+            ) {
+                setShowCategoryDropdown(false);
+            }
+        };
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [showCategoryDropdown]);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [showCategoryDropdown]);
 
 
     // 옵션 팝업 완료
@@ -110,28 +110,28 @@ useEffect(() => {
     };
 
 
-const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-  const files = e.target.files;
-  if (!files) return;
+    const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const files = e.target.files;
+        if (!files) return;
 
-  const selectedFiles = Array.from(files);
-  const currentCount = imageUrls.length;
-  const totalCount = currentCount + selectedFiles.length;
+        const selectedFiles = Array.from(files);
+        const currentCount = imageUrls.length;
+        const totalCount = currentCount + selectedFiles.length;
 
-  if (totalCount > 5) {
-    alert('이미지는 최대 5장까지만 업로드할 수 있어요.');
-    return;
-  }
+        if (totalCount > 5) {
+            alert('이미지는 최대 5장까지만 업로드할 수 있어요.');
+            return;
+        }
 
-  const uploadPromises = selectedFiles.map(file => uploadToCloudinary(file));
+        const uploadPromises = selectedFiles.map(file => uploadToCloudinary(file));
 
-  try {
-    const urls = await Promise.all(uploadPromises);
-    setImageUrls(prev => [...prev, ...urls]);
-  } catch (err) {
-    alert('하나 이상의 이미지 업로드에 실패했어요.');
-  }
-};
+        try {
+            const urls = await Promise.all(uploadPromises);
+            setImageUrls(prev => [...prev, ...urls]);
+        } catch (err) {
+            alert('하나 이상의 이미지 업로드에 실패했어요.');
+        }
+    };
 
     // 등록 또는 엔터로 제출시 실행
     const handleSubmit = async (e: React.FormEvent) => {
@@ -148,10 +148,10 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
             createdAt: new Date().toISOString(),
             views: 0,
             options,
-            sellerimgUrl: '/images/seller1.png',
+            sellerimgUrl: '/images/users/profile.png',
             sellerName: '뱃지가좋아',
             sellerTrust: 70,
-             isExchangeable: false,
+            isExchangeable: false,
         } as Goods;
         // 로컬스토리지에 저장
 
@@ -182,9 +182,9 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     <div className={styles.imgflex}>
                         <label className={styles.imguploadlabel}>
                             <input type="file" accept="image/*" multiple onChange={handleImageChange} className={styles.imgupload} />
-                                <div className={styles.counter}>
-                                    {imageUrls.length}/5
-                                </div>
+                            <div className={styles.counter}>
+                                {imageUrls.length}/5
+                            </div>
                         </label>
                         {imageUrls.map((url, index) => (
                             <div key={index} className={styles.previewWrapper}>
@@ -244,45 +244,45 @@ const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
                     <label className={`${styles.sell} ${styles.all}`}>
                         <p>판매가</p>
                         <div className={styles.pricelimit}>
-                    <input
-                    type="text"
-                    inputMode="numeric"
-                      style={{
-                            fontFamily: isNegotiable ? "Pretendard Variable" : "기본폰트",
-                            }}
-                    value={
-                        isNegotiable ? "교환 거래 희망" : formatPrice(price)
-                    }
-                    onChange={(e) => {
-                        if (isNegotiable) return; // 교환 거래일 땐 입력 막기
+                            <input
+                                type="text"
+                                inputMode="numeric"
+                                style={{
+                                    fontFamily: isNegotiable ? "Pretendard Variable" : "기본폰트",
+                                }}
+                                value={
+                                    isNegotiable ? "교환 거래 희망" : formatPrice(price)
+                                }
+                                onChange={(e) => {
+                                    if (isNegotiable) return; // 교환 거래일 땐 입력 막기
 
-                        const rawValue = e.target.value.replace(/[^0-9]/g, '');
-                        const numericValue = rawValue === '' ? 0 : Number(rawValue);
+                                    const rawValue = e.target.value.replace(/[^0-9]/g, '');
+                                    const numericValue = rawValue === '' ? 0 : Number(rawValue);
 
-                        if (numericValue > 100000000) {
-                        setIsPriceOverLimit(true);
-                        } else {
-                        setIsPriceOverLimit(false);
-                        setPrice(numericValue);
-                        }
-                    }}
-                    placeholder="가격을 입력해주세요.(숫자만 입력 가능)"
-                    readOnly={isNegotiable}
-                    />
-                    {isPriceOverLimit && (
-                        <small className={styles.warningText}>최대 1억원까지 입력 가능합니다.</small>
-                    )}
-                    </div>
-                    <label className={styles.checkboxLabel}>
-                    <input
-                        type="checkbox"
-                        checked={isNegotiable}
-                        onChange={(e) => setIsNegotiable(e.target.checked)}
-                        className={styles.checkboxInput}
-                    />
-                    <span className={styles.customCheckbox}></span>
-                    교환 거래 상품
-                    </label>
+                                    if (numericValue > 100000000) {
+                                        setIsPriceOverLimit(true);
+                                    } else {
+                                        setIsPriceOverLimit(false);
+                                        setPrice(numericValue);
+                                    }
+                                }}
+                                placeholder="가격을 입력해주세요.(숫자만 입력 가능)"
+                                readOnly={isNegotiable}
+                            />
+                            {isPriceOverLimit && (
+                                <small className={styles.warningText}>최대 1억원까지 입력 가능합니다.</small>
+                            )}
+                        </div>
+                        <label className={styles.checkboxLabel}>
+                            <input
+                                type="checkbox"
+                                checked={isNegotiable}
+                                onChange={(e) => setIsNegotiable(e.target.checked)}
+                                className={styles.checkboxInput}
+                            />
+                            <span className={styles.customCheckbox}></span>
+                            교환 거래 상품
+                        </label>
 
                     </label>
                     <label className={`${styles.dealoption} ${styles.all}`}>

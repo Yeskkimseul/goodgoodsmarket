@@ -75,12 +75,21 @@ const GoodsDetail = () => {
         : [];
 
     useEffect(() => {
-        fetch("/data/goods.json")
-            .then(res => res.json())
-            .then((data: Goods[]) => {
-                const found = data.find(item => item.id === id);
-                setGoods(found ?? null);
-            });
+        /* localStorage에서 goodsList불러오기 */
+        const stored = localStorage.getItem("goodsList");
+        if (stored) {
+            const goodsList = JSON.parse(stored);
+            const found = goodsList.find((item: Goods) => item.id === id);
+            setGoods(found ?? null);
+        } else {
+            /* 없으면 commu.json에서 불러오기 */
+            fetch("/data/goods.json")
+                .then(res => res.json())
+                .then((data: Goods[]) => {
+                    const found = data.find(item => item.id === id);
+                    setGoods(found ?? null);
+                });
+        }
     }, [id]);
 
     // 상품 id가 바뀔 때 탭 인덱스 초기화

@@ -177,18 +177,26 @@ const CommuDetail = () => {
         setCommentInput("");
     };
 
-    /* 커뮤니티 데이터 불러오기 */
     useEffect(() => {
-        fetch("/data/commu.json")
-            .then(res => res.json())
-            .then((data: commuType[]) => {
-                const found = data.find(item => item.id === id);
-                setcommu(found ?? null);
-            });
+        // 1. localStorage에서 commuList 불러오기
+        const stored = localStorage.getItem("commuList");
+        if (stored) {
+            const commuList = JSON.parse(stored);
+            const found = commuList.find((item: commuType) => item.id === id);
+            setcommu(found ?? null);
+        } else {
+            // 2. 없으면 commu.json에서 불러오기
+            fetch("/data/commu.json")
+                .then(res => res.json())
+                .then((data: commuType[]) => {
+                    const found = data.find(item => item.id === id);
+                    setcommu(found ?? null);
+                });
+        }
     }, [id]);
 
     /* 로컬스토리지에 저장된 코멘트 우선 적용 */
-     const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
+    const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
     const commentsToShow = commu ? (storedComments[commu.id] || commu.comments || []) : [];
     const commentsCount = commentsToShow.length;
 
