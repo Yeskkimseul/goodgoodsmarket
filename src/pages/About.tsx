@@ -73,7 +73,7 @@ const About = () => {
             <div className={styles.bgbg}>
                 <img src="/images/about/muzi.png" alt="배경" />
                 <div className={styles.marquee}>
-                    <Marquee speed={30}>
+                    <Marquee speed={20}>
                         <div>
                             <img src="/images/about/marquee1.svg" alt="굿굿마켓" className={styles.mi} />
                             <img src="/images/about/marquee2.svg" alt="슬로건" className={styles.mi} />
@@ -100,7 +100,7 @@ const About = () => {
                         </Marquee>
                     </div>
                     <div className={styles.scroll}>
-                        <Marquee speed={40}>
+                        <Marquee speed={30}>
                             <div>
                                 <img src="/images/about/scrollbottom1.png" alt="굿굿마켓" />
                                 <img src="/images/about/scrollbottom2.png" alt="굿굿마켓" />
