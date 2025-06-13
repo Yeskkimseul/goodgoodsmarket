@@ -50,7 +50,7 @@
 }
 
 .txt3 span {
-    font-size: clamp(20px, 5vw, 30px);
+    font-size: clamp(20px, 4vw, 30px);
 }
 
 .txt3 span.pink {
@@ -187,7 +187,7 @@
 .four .inner {
     justify-content: center;
     align-items: center;
-    width: clamp(320px, 60vw, 500px);
+    width: clamp(330px, 55vw, 450px);
     position: relative;
 }
 
@@ -221,7 +221,7 @@
 .five .inner {
     justify-content: center;
     align-items: center;
-    width: clamp(320px, 60vw, 500px);
+    width: clamp(330px, 60vw, 470px);
     position: relative;
 }
 
