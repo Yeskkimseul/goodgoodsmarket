@@ -2954,5 +2954,357 @@
         "sellerName": "요리왕비룡은나",
         "sellerTrust": 80,
         "isExchangeable": true
+    },
+    {
+        "id": "143",
+        "title": "레인보우 콘서트 티켓 판매합니다",
+        "description": "레인보우 콘서트 티켓 판매합니다 🎶\n미개봉 상태의 티켓으로, 공연에 대한 추억을 간직하고 싶은 분께 추천드려요!\n다른 굿즈와 교환도 가능하니, 관심 있는 분들은 편하게 채팅 주세요 😊",
+        "category": "티켓",
+        "price": 33000,
+        "imageUrl": [
+            "/images/mydeals/sale65.png"
+        ],
+        "likes": 23,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 183,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "레인보우션샤인",
+        "sellerTrust": 90,
+        "isExchangeable": false
+    },
+    {
+        "id": "144",
+        "title": "2000년대 추억의 티켓 판매",
+        "description": "2000년대 콘서트 감성이 듬뿍 담긴 티켓이에요 ✨\n희소성 있는 디자인으로 수집용으로도 좋아요!\n보관 상태 아주 양호하며, 티켓 굿즈 좋아하시는 분들께 강력 추천합니다.",
+        "category": "티켓",
+        "price": 27000,
+        "imageUrl": [
+            "/images/mydeals/sale66.png"
+        ],
+        "likes": 17,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 142,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "추억소환러버",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "145",
+        "title": "영화관 티켓 판매합니다",
+        "description": "영화 덕후라면 하나쯤 소장하고 싶은 빈티지 영화관 티켓입니다 🎬\n오래된 티켓이지만 상태는 깔끔해요!\n수집용으로 추천드리며, 실물 요청도 가능하니 부담 없이 채팅 주세요 :)",
+        "category": "티켓",
+        "price": 18000,
+        "imageUrl": [
+            "/images/mydeals/sale67.png"
+        ],
+        "likes": 11 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 97,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "필름소년",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "146",
+        "title": "스파이더맨 티켓 판매",
+        "description": "스파이더맨 개봉 당시 한정으로 배포된 특별 티켓입니다 🕷️\n히어로 팬분들이라면 소장 가치 충분해요!\n실물은 깔끔하게 보관되어 있으며 문의는 언제든 환영입니다 :)",
+        "category": "티켓",
+        "price": 22000,
+        "imageUrl": [
+            "/images/mydeals/sale68.png"
+        ],
+        "likes": 19 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 163,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "히어로수집가",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "147",
+        "title": "전시회 티켓 판매",
+        "description": "감성 가득한 아트 전시회 티켓입니다 🎨\n일러스트레이터 단독 전시로, 디자인이 너무 예뻐요!\n티켓 상태는 최상이며, 전시 굿즈나 소장품 좋아하시는 분들께 추천드려요.",
+        "category": "티켓",
+        "price": 20000,
+        "imageUrl": [
+            "/images/mydeals/sale69.png"
+        ],
+        "likes": 14 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 121,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "그림보는고양이",
+        "sellerTrust": 50,
+        "isExchangeable": false
+    },
+    {
+        "id": "148",
+        "title": "국립현대미술관 티켓 판매해요",
+        "description": "국립현대미술관에서 열린 특별 기획전 티켓입니다 🖼️\n감각적인 디자인으로 소장용으로도 제격이에요!\n미개봉 상태이며, 전시 팬이나 디자인 티켓 좋아하시는 분들께 추천드립니다.",
+        "category": "티켓",
+        "price": 16000,
+        "imageUrl": [
+            "/images/mydeals/sale70.png"
+        ],
+        "likes": 9 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 87,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "아트감상러",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "149",
+        "title": "정동일 콘서트 티켓 팔아요",
+        "description": "정동일 단독 콘서트 티켓 판매합니다 🎤\n감성적인 무대와 라이브를 좋아하신다면 추천드려요!\n미개봉 티켓이며, 빠른 직거래 가능합니다. 관심 있으신 분들은 채팅 주세요!",
+        "category": "티켓",
+        "price": 35000,
+        "imageUrl": [
+            "/images/mydeals/sale71.png"
+        ],
+        "likes": 19 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 168,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "콘서트사냥꾼",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "150",
+        "title": "무도회 입장 티켓 팔아요",
+        "description": "클래식한 분위기의 무도회 입장 티켓입니다 🎻\n희소한 이벤트 티켓으로 수집용이나 드레스업 행사 참여용으로 좋아요!\n티켓 상태는 미개봉이며, 예쁜 디자인이라 소장 가치도 충분합니다. 문의 환영해요 :)",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/mydeals/sale72.png"
+        ],
+        "likes": 12 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 103,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "무도회주말러",
+        "sellerTrust": 90,
+        "isExchangeable": false
+    },
+    {
+        "id": "151",
+        "title": "구글 파티 티켓 교환",
+        "description": "구글 주최 프라이빗 파티 티켓입니다 🎉\nIT 관계자나 테크 팬분들에게 인기가 많았던 행사예요!\n티켓은 미개봉 상태이고, 수집용 또는 추억용으로도 소장 가치 있습니다. 교환문의 주세요 :)",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange63.png"
+        ],
+        "likes": 21 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 189,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "테크덕후마켓",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "152",
+        "title": "크리스탈 전시회 티켓 교환",
+        "description": "화려한 조명 아래 반짝이는 크리스탈 아트 전시회 티켓입니다 💎\n미개봉 상태로 보관 중이며, 디자인도 예뻐서 소장 가치 충분해요!\n비슷한 전시 굿즈나 티켓과 교환 원해요. 편하게 제안 주세요 :)",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange64.png"
+        ],
+        "likes": 18 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 134,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "전시덕후유리",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "153",
+        "title": "풀숲 콘서트 티켓 교환",
+        "description": "자연 속 힐링 사운드를 느낄 수 있는 풀숲 콘서트 티켓이에요 🌿\n잔잔한 음악과 숲의 분위기를 좋아하는 분들께 추천드려요!\n티켓은 미개봉 상태이며, 다른 콘서트 굿즈나 티켓과 교환 원해요. 편하게 제안 주세요 :)",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange65.png"
+        ],
+        "likes": 15 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 122,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "힐링러버",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "154",
+        "title": "골든 위크 티켓 교환",
+        "description": "황금연휴 기간 한정으로 열렸던 '골든 위크' 이벤트 티켓입니다 ✨\n귀한 한정 굿즈로 소장 가치가 높아요!\n미개봉 상태이며, 다른 한정 티켓이나 굿즈와의 교환을 원합니다. 관심 있으신 분은 편하게 채팅 주세요!",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange66.png"
+        ],
+        "likes": 19 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 147,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "한정수집가",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "155",
+        "title": "푸른 바다 싸인 티켓 교환",
+        "description": "‘푸른 바다의 전설’ 이벤트에서 배포된 싸인 티켓입니다. 🌊\n현재는 구할 수 없는 레어템이며 상태도 최상이에요!\n다른 싸인 굿즈나 이벤트 티켓과의 교환을 희망합니다. 문의 주세요!",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange67.png"
+        ],
+        "likes": 34 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 221,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "레어템헌터",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "156",
+        "title": "웹드라마 그날에 우리 티켓 교환",
+        "description": "감성 웹드라마 '그날에 우리'의 특별 상영회 한정 티켓입니다. 🎬\n현재는 구하기 어려운 한정판으로, 포장 상태 그대로 보관 중이에요.\n웹드라마 관련 굿즈나 비슷한 한정 티켓과의 교환 원해요. 관심 있으시면 메시지 주세요!",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange68.png"
+        ],
+        "likes": 42 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 193,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "굿즈모으는중",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "157",
+        "title": "김지훈 작가 싸인 티켓 교환",
+        "description": "김지훈 작가 팬미팅에서만 배포된 싸인 티켓입니다 ✍️\n소장용으로 가치가 높은 아이템이며, 포장도 그대로 보존 중입니다.\n동일 작가의 굿즈나 다른 문학 행사 티켓과의 교환을 원해요. 관심 있으신 분은 편하게 연락 주세요!",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange69.png"
+        ],
+        "likes": 27 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 176,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "문덕수집가",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "158",
+        "title": "마스터셰프 티켓 교환",
+        "description": "요리 경연 프로그램 '마스터셰프 코리아' 라이브 관람권입니다 🍽️\n셰프들의 생생한 요리 현장을 직접 볼 수 있었던 한정 이벤트 티켓이에요.\n푸드 관련 굿즈나 쿠킹 클래스 티켓과 교환 원해요. 관심 있으신 분은 채팅 주세요!",
+        "category": "티켓",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange70.png"
+        ],
+        "likes": 51 ,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 204,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "요리조리러버",
+        "sellerTrust": 100,
+        "isExchangeable": true
     }
 ]
