@@ -580,7 +580,7 @@
     {
         "id": "34",
         "title": "뉴진스 앨범 포토카드 세트",
-        "description": "뉴진스 전 맴버 포토카드 있어용.",
+        "description": "뉴진스 전 멤버 포토카드 있어용.",
         "category": "포토카드",
         "price": 23000,
         "imageUrl": [
@@ -845,8 +845,8 @@
     },
     {
         "id": "46",
-        "title": "OO 맴버 교환 구합니다",
-        "description": "다른 맴버 다 있습니다 OO만 없어요..ㅠ.",
+        "title": "OO 멤버 교환 구합니다",
+        "description": "다른 멤버 다 있습니다 OO만 없어요..ㅠ.",
         "category": "인형",
         "price": 13500,
         "imageUrl": [
