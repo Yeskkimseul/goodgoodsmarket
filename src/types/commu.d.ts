@@ -19,6 +19,5 @@ export interface Commu {
         content: string,
         commentlikes: number,
         createdAt: string,
-        reply: boolean
     }[];
 }
