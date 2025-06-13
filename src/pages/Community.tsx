@@ -112,7 +112,7 @@ const Community = () => {
                                     src="../../../images/icon/book_medium.svg"
                                     alt="내등록글보기"
                                 />
-                                내 등록글 보기
+                                내가 쓴 글
                             </button>
                             <button
                                 className={morestyles.closeBtn}

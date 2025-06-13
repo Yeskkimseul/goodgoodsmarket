@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Layout2 from "../components/Layout2";
 import HeaderType5 from "../components/header/HeaderType5";
 import ChatBottomSheet from "../components/bottomsheet/ChatBottomSheet";
@@ -9,6 +10,8 @@ import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css";
 
 function ChatDetail() {
+    const navigate = useNavigate();
+
   const [msg, setMsg] = useState("");
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [chatList, setChatList] = useState<Chatting[]>([]);
