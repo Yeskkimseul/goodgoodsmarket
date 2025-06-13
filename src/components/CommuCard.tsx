@@ -13,6 +13,15 @@ interface Props {
 
 const CommuCard = ({ item, className }: Props) => {
 
+    // localStorage에서 값 불러오기
+    const commuLikes = JSON.parse(localStorage.getItem("commuLikes") || "{}");
+    const commuComments = JSON.parse(localStorage.getItem("commuComments") || "{}");
+    const commuViews = JSON.parse(localStorage.getItem("commuViews") || "{}");
+
+    const likes = commuLikes[item.id] ?? item.likes;
+    const commentsNum = commuComments[item.id] ?? item.commentsNum;
+    const views = commuViews[item.id] ?? item.views;
+
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
             <Link to={`/community/commudetail/${item.id}`} className={styles.link}>
@@ -27,16 +36,14 @@ const CommuCard = ({ item, className }: Props) => {
                             <img src="../images/icon/eye_small.svg" alt="작은눈"
                                 className={styles.commuListIcon}
                             />
-                            <span  className={styles.commuRateText}>{item.views}</span>
+                            <span className={styles.commuRateText}>{views}</span>
                         </li>
                         <li className={styles.commuRate}>
                             <img src="../images/icon/heart_small.svg" alt="
                             작은좋아요"
                                 className={styles.commuListIcon}
                             />
-                            <span
-                                className={styles.commuRateText}
-                            > {item.likes}</span>
+                            <span className={styles.commuRateText}>{likes}</span>
 
                         </li>
                         <li className={styles.commuRate}>
@@ -44,9 +51,7 @@ const CommuCard = ({ item, className }: Props) => {
                             작은댓글"
                                 className={styles.commuListIcon}
                             />
-                            <span  className={styles.commuRateText}>
-                                {item.commentsNum}
-                            </span>
+                            <span className={styles.commuRateText}>{commentsNum}</span>
                         </li>
                     </ul>
                 </div>

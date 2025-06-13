@@ -1,5 +1,10 @@
 .con {
+    margin: 0 auto;
+    max-width: 1000px;
     padding: var(--space16) var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
 }
 
 .titlecon {
@@ -54,25 +59,70 @@
     line-height: 125%;
 }
 
-.icontext{
+.icontext {
     display: flex;
     gap: var(--space4);
 }
 
-.more{
+.more {
     cursor: pointer;
     width: var(--icon-size);
     height: auto;
     aspect-ratio: 1/1;
 }
 
-.articlecon{
+.articlecon {
     display: flex;
     flex-direction: column;
     padding-top: var(--space16);
 }
 
-.articleimg{
-    width: 50%;
+.articleimg {
+    width: 100%;
     height: auto;
+    margin-bottom: var(--space16);
+}
+
+.tags {
+    display: flex;
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: var(--text-grey);
+    gap: var(--space16);
+    margin-top: var(--space16);
+}
+
+.liketn {
+    margin-top: var(--space16);
+    width: fit-content;
+    display: flex;
+    gap: var(--space4);
+    align-items: center;
+    padding: var(--space8) var(--space16);
+    border-radius: 100px;
+    background: var(--bg-lightE);
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: var(--text-grey);
+    transition: background 0.2s, color 0.2s;
+}
+
+.likedon {
+    margin-top: var(--space16);
+    width: fit-content;
+    display: flex;
+    gap: var(--space4);
+    align-items: center;
+    padding: var(--space8) var(--space16);
+    border-radius: 100px;
+    background: var(--main-mint);
+    font-size: var(--font-button);
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: var(--text-white);
 }

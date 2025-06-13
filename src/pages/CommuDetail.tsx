@@ -43,6 +43,47 @@ const CommuDetail = () => {
 
     const { id } = useParams<{ id: string }>();
     const [commu, setcommu] = useState<commuType | null>(null);
+    const [liked, setLiked] = useState(false);
+    const [likes, setLikes] = useState(0);
+    useEffect(() => {
+        if (commu) {
+            // localStorage에서 좋아요 수 불러오기
+            const commuLikes = JSON.parse(localStorage.getItem("commuLikes") || "{}");
+            setLikes(commuLikes[commu.id] ?? commu.likes);
+
+            // localStorage에서 좋아요 상태 불러오기
+            const likedCommu = JSON.parse(localStorage.getItem("likedCommu") || "[]");
+            setLiked(likedCommu.includes(commu.id));
+        }
+    }, [commu]);
+
+    const handleLike = () => {
+        if (!commu) return;
+        const likedCommu = JSON.parse(localStorage.getItem("likedCommu") || "[]");
+        let updatedLikedCommu;
+        let newLiked;
+
+        if (likedCommu.includes(commu.id)) {
+            // 이미 좋아요면 취소
+            updatedLikedCommu = likedCommu.filter((cid: string) => cid !== commu.id);
+            setLikes(prev => prev - 1);
+            newLiked = false;
+        } else {
+            // 좋아요 추가
+            updatedLikedCommu = [...likedCommu, commu.id];
+            setLikes(prev => prev + 1);
+            newLiked = true;
+        }
+        localStorage.setItem("likedCommu", JSON.stringify(updatedLikedCommu));
+        setLiked(newLiked);
+
+        // 좋아요 수를 localStorage에도 저장 (commuLikes: { [id]: likes })
+        const commuLikes = JSON.parse(localStorage.getItem("commuLikes") || "{}");
+        commuLikes[commu.id] = newLiked ? likes + 1 : likes - 1;
+        localStorage.setItem("commuLikes", JSON.stringify(commuLikes));
+    };
+
+
 
     useEffect(() => {
         fetch("/data/commu.json")
@@ -62,7 +103,7 @@ const CommuDetail = () => {
         localStorage.setItem("myCommuList", JSON.stringify(updated));
         setIsSheetOpen(false);
         alert("게시글이 삭제되었습니다.");
-        navigate(-1); 
+        navigate(-1);
     };
 
 
@@ -114,7 +155,7 @@ const CommuDetail = () => {
                 </div>{/* titlecon */}
                 <div className={style.articlecon}>
                     <img src={commu.imageUrl} alt={commu.title} className={style.articleimg} />
-                    <p>
+                    <p className="body2">
                         {commu.description}
                     </p>
                     <div className={style.tags}>
@@ -122,9 +163,20 @@ const CommuDetail = () => {
                             ? commu.tags.map((tag, i) => <span key={i}>{tag}</span>)
                             : commu.tags}
                     </div>
-                    <div className={style.liketn}>
-                        <img src="/images/icon/heart_small_grey_empty.svg" />
-                        좋아요
+                    <div
+                        className={`${style.liketn} ${liked ? style.likedon : ""}`}
+                        onClick={handleLike}
+                        style={{ cursor: "pointer" }}
+                    >
+                        <img
+                            src={
+                                liked
+                                    ? "/images/icon/heart_small_white_fill.svg"
+                                    : "/images/icon/heart_small_grey_empty.svg"
+                            }
+                            alt="좋아요"
+                        />
+                        {likes} 좋아요
                     </div>
                 </div>{/* articlecon */}
                 <div className={style.commentcon}>

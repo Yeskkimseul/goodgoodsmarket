@@ -22,6 +22,20 @@ const Home = () => {
     const [showOnlyLiked, setshowOnlyLiked] = useState(false);
     const [isMobile, setIsMobile] = useState(false); // ✅ 모바일 여부 판단용
 
+    const blockedUsers = JSON.parse(localStorage.getItem("blockedUsers") || "[]");
+    // 굿즈 커뮤니티 카드 렌더링 시 차단 유저 제외
+    const visibleCommuList = commuList.filter(item => !blockedUsers.includes(item.userName));
+
+    const displayedList = showOnlyLiked
+        ? goodsList.filter((item) => likedIds.includes(item.id))
+        : goodsList;
+
+    // localStorage에서 좋아요/댓글/조회수 불러오기
+    const commuLikes = JSON.parse(localStorage.getItem("commuLikes") || "{}");
+    const commuComments = JSON.parse(localStorage.getItem("commuComments") || "{}");
+    const commuViews = JSON.parse(localStorage.getItem("commuViews") || "{}");
+
+
     useEffect(() => {
         const stored = localStorage.getItem('goodsList');
         const liked = localStorage.getItem('likes');
@@ -54,15 +68,7 @@ const Home = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const blockedUsers = JSON.parse(localStorage.getItem("blockedUsers") || "[]");
-    // 굿즈 커뮤니티 카드 렌더링 시 차단 유저 제외
-    const visibleCommuList = commuList.filter(item => !blockedUsers.includes(item.userName));
 
-    const displayedList = showOnlyLiked
-        ? goodsList.filter((item) => likedIds.includes(item.id))
-        : goodsList;
-
-    console.log("전체 굿즈 개수:", displayedList.length);
 
     return (
         <Layout>
@@ -126,13 +132,20 @@ const Home = () => {
                 <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
                 <div style={{ padding: '0 var(--padding)' }}>
                     {
-                        visibleCommuList.slice(0, 4).map((item) => (
-                            <CommuCard
-                                key={item.id}
-                                item={item}
-                                className={styles.card}
-                            />
-                        ))
+                        visibleCommuList.slice(0, 4).map((item) => {
+                            const likes = commuLikes[item.id] ?? item.likes;
+                            const commentsNum = commuComments[item.id] ?? item.commentsNum;
+                            const views = commuViews[item.id] ?? item.views;
+                            const newItem = { ...item, likes, commentsNum, views };
+
+                            return (
+                                <CommuCard
+                                    key={item.id}
+                                    item={newItem}
+                                    className={styles.card}
+                                />
+                            );
+                        })
                     }
                 </div>
                 <MainMoreBtn />
