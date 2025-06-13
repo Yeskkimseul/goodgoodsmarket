@@ -2272,5 +2272,181 @@
         "sellerName": "내사랑하츄핑",
         "sellerTrust": 80,
         "isExchangeable": false
+    },
+    {
+        "id": "112",
+        "title": "별자리 응원봉 판매",
+        "description": "호그와트의 별자리 응원봉 판매합니다.\n이번 새 시리즈 출시 기념 콘서트때에만 제작된 한정판 제품입니다..!\n콘서트에서 잠깐 사용하고 계속 보관 했던 제품이라 상태 최상입니다!\n관심 있으신 분들 채팅주세요!",
+        "category": "팬 라이트",
+        "price": 26000,
+        "imageUrl": [
+            "/images/mydeals/sale50.png"
+        ],
+        "likes": 42,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 612,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "안녕난양자리",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "113",
+        "title": "레인보우식스 응원봉 판매해요!",
+        "description": "지난 3월 미니 콘서트때 출시했던 레인보우식스 응원봉 판매해봐요.\n콘서트때에만 사용했는데 부주의로 손잡이 끝 부분이 약간 까졌습니다ㅠ\n그 외에는 기스도 없고 깨끗한 상태로 계속 보관했습니당\n관심있으신 분들 연락주세요~!",
+        "category": "팬 라이트",
+        "price": 21000,
+        "imageUrl": [
+            "/images/mydeals/sale51.png"
+        ],
+        "likes": 23,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 216,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "무지개는레인보우",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "114",
+        "title": "라이트닝제트 응원봉 판매합니다",
+        "description": "라이트닝제트 응원봉 판매합니다\n이번 달 7777개 한정으로 제작된 희귀 응원봉입니다\n구매 후 한 번도 사용하지 않고 박스채 보관중이여서 완전 새상품입니다\n많은 문의주세요",
+        "category": "팬 라이트",
+        "price": 43000,
+        "imageUrl": [
+            "/images/mydeals/sale52.png"
+        ],
+        "likes": 18,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 168,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "번개맞아보았니",
+        "sellerTrust": 30,
+        "isExchangeable": false
+    },
+    {
+        "id": "115",
+        "title": "필트오버 팬 라이트 팔아용",
+        "description": "이번 라이엇 필트오버편 제작되고 굿즈로 출시한 필트오버 팬 라이트 판매해요!\n제작된지 얼마 안되서 다 품절되서 구하기 힘든 매물입니다ㅎ\n제품 구입 후 박스 한 번만 개봉하고 계속 박스 안에 넣어서 보관한거라 새제품급입니다..!\n관심있으신 분들 채팅주세욤!",
+        "category": "팬 라이트",
+        "price": 38000,
+        "imageUrl": [
+            "/images/mydeals/sale53.png"
+        ],
+        "likes": 34,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 386,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "그님티난챌린저",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "116",
+        "title": "엔젤레이 응원봉 판매합니다",
+        "description": "엔젤레이 응원봉 판매합니다\n엔젤레이 해체 전 마지막 콘서트 응원봉입니다..!아주 뜻 깊은 제품이지요\n콘서트에서 한 번 사용하고 이후에는 케이스에 잘 보관해둔터라 거의 새상품 급으로 하자 없습니다\n문의주세요",
+        "category": "팬 라이트",
+        "price": 29000,
+        "imageUrl": [
+            "/images/mydeals/sale54.png"
+        ],
+        "likes": 16,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 99,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "엔젤레이포에버",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "117",
+        "title": "최유리-숲 콘서트 응원봉 판매",
+        "description": "이번 서울 광장 콘서트에서 출시한 최유리 굿즈 응원봉 판매합니다..!\n가사 뜻이랑 연결지어 제품 재질도 친환경적으로 제작되었다고해요\n사용은 콘서트때만하고 보관하고있어서 완전 새상품이라고 생각하시면 됩니다\n많은 연락 주세요",
+        "category": "팬 라이트",
+        "price": 31000,
+        "imageUrl": [
+            "/images/mydeals/sale55.png"
+        ],
+        "likes": 28,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 167,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "숲이아닌바다",
+        "sellerTrust": 90,
+        "isExchangeable": false
+    },
+    {
+        "id": "118",
+        "title": "드루이드 팬 라이트 판매합니다",
+        "description": "작년 4월에 하스스톤에서 월드 파이널 참가 굿즈로 제작된 드루이드 팬 라이트 판매합니다\n가서 경기 참가하고 받은 다음에 박스도 까지 않은 채 있는 미개봉 제품입니다\n월드 파이널 참가인들 1000명만 줬던 굿즈라 희소성 아주 높습니다ㅎ\n관심있으신 분들 연락주세요",
+        "category": "팬 라이트",
+        "price": 63000,
+        "imageUrl": [
+            "/images/mydeals/sale56.png"
+        ],
+        "likes": 58,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 667,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "드루이드덱장인",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "119",
+        "title": "우드 굿즈 팬 라이트 교환해요!",
+        "description": "우드 굿즈 팬 라이트 교환해요\n다른 굿즈 팬 라이트 이쁜거랑 교환 원합니다\n포장도 안 뜯은 미개봉 제품이여서 미개봉 제품이랑 교환 원합니다\n관심있으신 분들 연락주세요",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange47.png"
+        ],
+        "likes": 15,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 182,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "널응원해",
+        "sellerTrust": 70,
+        "isExchangeable": false
     }
 ]
