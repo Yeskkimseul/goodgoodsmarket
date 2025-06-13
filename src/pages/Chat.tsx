@@ -4,9 +4,8 @@ import Header from "../components/header/Header";
 import ChatList from "../components/ChatList";
 import styles from "./filter.module.css";
 import type { Chatting } from "../types/chatting";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-// 필터 탭 리스트 정의
 const filterList = [
   { label: "전체", value: "전체" },
   { label: "판매", value: "판매" },
@@ -19,6 +18,7 @@ type TabType = (typeof filterList)[number]["value"];
 const Chat = () => {
   const [chatData, setChatData] = useState<Chatting[]>([]);
   const [filter, setFilter] = useState<TabType>("전체");
+  const navigate = useNavigate();
 
   // 데이터 불러오기
   useEffect(() => {
@@ -31,6 +31,10 @@ const Chat = () => {
   // 필터 적용
   const filteredChats =
     filter === "전체" ? chatData : chatData.filter((chat) => chat.type === filter);
+
+  const handleChatClick = (chatId: number) => {
+    navigate(`/chat/chatdetail`);
+  };
 
   return (
     <Layout>
@@ -50,7 +54,10 @@ const Chat = () => {
           ))}
         </div>
 
-        <ChatList chats={filteredChats} />
+        <ChatList
+          chats={filteredChats}
+          onChatClick={handleChatClick}
+        />
       </div>
     </Layout>
   );

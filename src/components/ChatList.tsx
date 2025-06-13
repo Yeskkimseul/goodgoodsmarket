@@ -3,6 +3,10 @@ import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
 import { useNavigate } from "react-router-dom";
 
+
+
+
+
 // 시간 계산 함수
 function getTimeAgo(dateString: string): string {
   const now = new Date();
@@ -17,7 +21,10 @@ function getTimeAgo(dateString: string): string {
 
 type ChatListProps = {
   chats: Chatting[];
+  onChatClick: (chatId: number) => void;
+
 };
+
 
 const ChatList = ({ chats }: ChatListProps) => {
   const [readList, setReadList] = useState<{ [id: number]: boolean }>(() => {
