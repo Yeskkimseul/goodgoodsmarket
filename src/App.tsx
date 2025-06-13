@@ -11,12 +11,14 @@ import Home from "./pages/Home";  //홈
 import GoodsCategory from "./pages/GoodsCategory"; //굿즈 카테고리
 import GoodsDetail from "./pages/GoodsDetail"; //굿즈 상세보기
 import GoodsUpload from "./pages/GoodsUpload"; //굿즈업로드
+import GoodsEdit from "./pages/GoodsEdit"; //굿즈수정
 import Search from "./pages/Search"; //검색
 import Chat from "./pages/Chat"; //챗
 import ChatDetail from "./pages/ChatDetail"; //채팅상세
 import Community from "./pages/Community"; //커뮤니티
 import CommuDetail from "./pages/CommuDetail"; //커뮤니티 상세보기
 import CommuUpload from "./pages/CommuUpload"; //커뮤니티업로드
+import CommuEdit from "./pages/CommuEdit"; //커뮤니티수정
 import MyCommu from "./pages/MyCommu"; //내 커뮤니티
 import Mypage from "./pages/Mypage"; //마이페이지
 import MyDeals from "./pages/MyDeals"; //내 거래내역
@@ -116,6 +118,7 @@ function App() {
               <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
               <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
               <Route path="/home/goodsupload" element={<GoodsUpload />} />
+              
 
               <Route path="/home/search" element={<Search />} />
 
@@ -133,11 +136,11 @@ function App() {
 
               } />
               <Route path="/community/commuupload" element={
-
+              
                 <CommuUpload />
 
               } />
-
+              <Route path="/community/commuedit/:id" element={<CommuEdit />} />
 
               <Route path="/chat" element={
 
@@ -155,7 +158,7 @@ function App() {
               <Route path="/mypage/alarm" element={<Alarm />} />
               <Route path="/mypage/mydeals" element={<MyDeals />} />
               <Route path="/writereview" element={<WriteReview />} />
-
+              <Route path="/mypahe/goodsedit/:id" element={<GoodsEdit />} />
               {/* 수정 전 참고용 페이지들 */}
 
               <Route path="/popular" element={<Popular />} />

@@ -136,6 +136,23 @@ const GoodsUpload = () => {
     // 등록 또는 엔터로 제출시 실행
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        /* 필수 입력값 검증 */
+        if (imageUrls.length === 0) {
+            alert("이미지를 1장 이상 업로드해주세요.");
+            return;
+        }
+        if (!title.trim()) {
+            alert("상품명을 입력해주세요.");
+            return;
+        }
+        if (!description.trim()) {
+            alert("상품 설명을 입력해주세요.");
+            return;
+        }
+
+
+
         const newGoods: Goods = {
             id: Date.now().toString(),
             title,
@@ -279,6 +296,7 @@ const GoodsUpload = () => {
                                 checked={isNegotiable}
                                 onChange={(e) => setIsNegotiable(e.target.checked)}
                                 className={styles.checkboxInput}
+
                             />
                             <span className={styles.customCheckbox}></span>
                             교환 거래 상품
@@ -365,7 +383,8 @@ const GoodsUpload = () => {
                                 *실제 촬영한 사진과 함께 상세 정보를 입력해주세요.
                                 *카카오톡 아이디 첨부 시 게시물 삭제 및 이용재재 처리가 될 수 있어요.
                                 안전하고 건전한 거래환경을 위해 과학기술정보통신부, 한국인터넷진흥원, 굿굿마켓이 함께합니다.
-                                " />
+                                "
+                            />
                         </label>
                     </div>
                     <button className={styles.upload} type="submit">등록완료</button>

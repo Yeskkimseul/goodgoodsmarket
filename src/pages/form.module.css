@@ -15,7 +15,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding: 60px 78px;
+  padding: var(--space56) var(--padding);
   gap: 50px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .input::placeholder {
-  color: var(--fields-discription);
+  color: var(--text-grey);
 }
 
 .input:hover {
@@ -86,8 +86,14 @@
   color: var(--text-error);
 }
 
+
+
 .textarea {
   width: 100%;
+  min-height: 200px;
+  max-height: 400px;
+  font-family: var(--pre), sans-serif;
+  overflow-y: auto;
   padding: clamp(14px, 2vh, 16px) clamp(16px, 2vw, 20px);
   border-radius: 8px;
   border: 1px solid var(--fields-form);
@@ -97,6 +103,7 @@
   color: var(--fields-text);
   font-weight: 400;
   line-height: 160%;
+  box-sizing: border-box;
 }
 
 /* button */
@@ -271,7 +278,7 @@
 }
 
 /* 모든 기본 css */
-.all{
+.all {
   display: flex;
   gap: 17px;
 }
@@ -337,9 +344,11 @@
   font-size: 1.2rem;
   color: #555;
 }
-.dropdownToggle:focus{
+
+.dropdownToggle:focus {
   border-bottom: 1px solid #7e7e7e;
 }
+
 .arrow {
   margin-left: 10px;
 }
@@ -372,7 +381,8 @@
   background-color: var(--sub-lightmint);
   color: #fff;
 }
-.arrowIcon{
+
+.arrowIcon {
   width: 20px;
   height: 20px;
   background-image: url(../../public/images/icon/chevron-down.svg);
@@ -380,10 +390,12 @@
   background-position: center;
   transition: transform 0.3s ease;
 }
+
 /* 판매가 */
-.sell{
+.sell {
   position: relative;
 }
+
 .sell input {
   width: 100%;
   height: 66px;
@@ -391,13 +403,16 @@
   color: #555;
   transition: all 0.3s ease;
 }
+
 .sell input {
   border: none;
   border-bottom: 1px solid #efefef;
 }
-.sell input::placeholder{
+
+.sell input::placeholder {
   font-family: "Pretendard Variable";
 }
+
 .sell input:focus {
   outline: none;
   color: var(--main-black);
@@ -409,7 +424,7 @@
   opacity: 0;
 }
 
-.checkboxLabel{
+.checkboxLabel {
   display: flex;
   align-items: center;
   position: absolute;
@@ -420,14 +435,17 @@
   color: #999;
   gap: 4px;
 }
-.checkboxLabel input{
+
+.checkboxLabel input {
   width: 30px;
   height: auto;
 }
+
 /* 기본 체크박스 숨기기 */
 .checkboxInput {
   display: none;
 }
+
 /* 커스텀 박스 */
 .customCheckbox {
   width: 28px;
@@ -445,23 +463,25 @@
   content: '';
   position: absolute;
   left: 10px;
-  top: 6px; 
+  top: 6px;
   width: 5px;
   height: 10px;
-  border: solid #fff; /* 기본 체크 색상 */
+  border: solid #fff;
+  /* 기본 체크 색상 */
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   transition: border-color 0.2s ease;
 }
 
 /* 체크됐을 때 배경색 + 체크 마크 색상 변경 */
-.checkboxInput:checked + .customCheckbox {
+.checkboxInput:checked+.customCheckbox {
   background-color: var(--main-mint);
 }
 
-.checkboxInput:checked + .customCheckbox::after {
+.checkboxInput:checked+.customCheckbox::after {
   border-color: white;
 }
+
 .negotiableText {
   font-family: "Pretendard Variable";
 }
@@ -474,7 +494,7 @@
   display: block;
 }
 
-.pricelimit{
+.pricelimit {
   width: 85%;
   height: 66px;
 }
@@ -518,9 +538,11 @@
   font-size: 1.25rem;
   margin-bottom: 16px;
 }
-.popup h4.txtmgt{
+
+.popup h4.txtmgt {
   margin-top: 32px;
 }
+
 .popup label {
   margin-top: 1%;
 }
@@ -548,7 +570,7 @@ input.directPlaceInput:focus {
   outline: none;
   font-family: "Pretendard Variable";
 
-  
+
 }
 
 input.directPlaceInput:focus::placeholder {
@@ -585,14 +607,15 @@ input.directPlaceInput:focus::placeholder {
   font-family: "Pretendard Variable";
   font-size: 1.1rem;
 }
-.goodstxt textarea::placeholder{
+
+.goodstxt textarea::placeholder {
   padding: 48px;
   font-size: 1.1rem;
   color: #B6B6B6;
   white-space: pre-line;
-   font-family: "Pretendard Variable";
-   font-weight: 300;
-   line-height: 3;
+  font-family: "Pretendard Variable";
+  font-weight: 300;
+  line-height: 3;
 }
 
 .goodstxt textarea:focus {
