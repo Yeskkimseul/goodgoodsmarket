@@ -27,7 +27,7 @@ const GoodsCategory = () => {
   const category = categories.find(cat => cat.id === id);
   const categoryName = category ? category.name : "";
 
-    // likes 상태 관리
+  // likes 상태 관리
   const [likedIds, setLikedIds] = useState<string[]>([]);
 
   useEffect(() => {
@@ -45,22 +45,22 @@ const GoodsCategory = () => {
         <MultiTab tabs={['구매', '교환']}>
           {(activeIndex) => (
             activeIndex === 0 ? (
-              <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,1vw,24px)', padding: '0 var(--padding)' }}>
-                {filteredGoods
-                  .filter(g => !g.isExchangeable)
-                  .map(item => (
-                    <GoodsCard
-                      key={item.id}
-                      item={item}
-                      likedIds={likedIds}
-                      setLikedIds={setLikedIds}
-                      goodsList={goodsList}
-                      setGoodsList={setGoodsList}
-                    />
-                  ))}
-              </div>
+                <div className={styles.cate}>
+                  {filteredGoods
+                    .filter(g => !g.isExchangeable)
+                    .map(item => (
+                      <GoodsCard
+                        key={item.id}
+                        item={item}
+                        likedIds={likedIds}
+                        setLikedIds={setLikedIds}
+                        goodsList={goodsList}
+                        setGoodsList={setGoodsList}
+                      />
+                    ))}
+                </div>
             ) : activeIndex === 1 ? (
-              <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
+              <div className={styles.cate}>
                 {filteredGoods
                   .filter(g => g.isExchangeable)
                   .map(item => (

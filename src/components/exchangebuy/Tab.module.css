@@ -58,4 +58,10 @@
   width: calc(100% + var(--tab-horizontal-padding, clamp(16px, 20vw, 78px)) * 2);
 }  */
 
-
+.cate {
+  margin-top: var(--space24);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px,2vw,24px);
+  padding: 0 var(--padding);
+}
