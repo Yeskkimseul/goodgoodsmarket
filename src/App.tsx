@@ -158,7 +158,7 @@ function App() {
               <Route path="/mypage/alarm" element={<Alarm />} />
               <Route path="/mypage/mydeals" element={<MyDeals />} />
               <Route path="/writereview" element={<WriteReview />} />
-              <Route path="/mypahe/goodsedit/:id" element={<GoodsEdit />} />
+              <Route path="/mypage/goodsedit/:id" element={<GoodsEdit />} />
               {/* 수정 전 참고용 페이지들 */}
 
               <Route path="/popular" element={<Popular />} />

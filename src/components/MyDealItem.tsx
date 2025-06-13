@@ -1,7 +1,7 @@
 import { Goods } from "../types";
 import styles from "./MyDealItem.module.css"
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import forms from "../pages/form.module.css";
 import Modal from "./Modal";
 
@@ -23,7 +23,7 @@ const formatDate = (dateString: string) => {
 
 const MyDealItem = ({ item, className, setGoodsList }: Props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const navigate = useNavigate();
     // 카드 클릭 시 detail로 이동
     const handleCardClick = (e: React.MouseEvent) => {
         // 삭제 버튼 클릭 시에는 이동 방지
@@ -82,7 +82,10 @@ const MyDealItem = ({ item, className, setGoodsList }: Props) => {
                         >
                             삭제하기
                         </button>
-                        <button className={forms.button_sm}>
+                        <button className={forms.button_sm} onClick={e => {
+                            e.stopPropagation();
+                            navigate(`/mypage/goodsedit/${item.id}`);
+                        }}>
                             수정하기
                         </button>
                     </div>
