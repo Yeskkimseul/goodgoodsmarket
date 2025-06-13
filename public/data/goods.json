@@ -2447,6 +2447,336 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "널응원해",
         "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "120",
+        "title": "쿤 응원봉 교환해요!",
+        "description": "신의탑 쿤 응원봉 교환합니다!\n다른 신의탑 굿즈 응원봉이랑 교환원해요~\n소장용으로 구매한거라 개봉하지 않은 미개봉입니다!\n관심있으신 분들 연락주세요",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange48.png"
+        ],
+        "likes": 25,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 232,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "쿤아그네스",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "121",
+        "title": "햄토리 응원봉 교환",
+        "description": "햄토리 굿즈 응원봉 교환합니다\n종류 상관없이 다른 굿즈 응원봉이랑 교환원합니다\n상태는 한 달 정도 사용해서 약간의 사용감있는 A급 상태입니다\n연락주세요",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange49.png"
+        ],
+        "likes": 18,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 197,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "햄토리토리",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "122",
+        "title": "투바투 응원봉 교환합니다",
+        "description": "투바투 2집 콘서트 응원봉 교환합니다\n투바투 굿즈 수집중이여서 투타투 응원봉말고 다른 종류의 굿즈 상관없이 교환 원합니다..!\n상태는 수집 목적으로 구매한거라 미개봉입니다\n관심있으신 분들 채팅주세요~",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange50.png"
+        ],
+        "likes": 24,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 261,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "투바투바투",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "123",
+        "title": "별빛공주 응원봉 교환",
+        "description": "별빛공주 응원봉 교환합니다\n달빛공주 응원봉이랑 교환원해요\n박스만 개봉한 완전 새거입니다\n달빛공주있으신 분 연락주세요",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange51.png"
+        ],
+        "likes": 8,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 71,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "별빛나라달빛",
+        "sellerTrust": 50,
+        "isExchangeable": true
+    },
+    {
+        "id": "124",
+        "title": "푸우 팬 라이트 교환해용",
+        "description": "푸우 팬 라이트 교환합니당\n푸우 다른 캐릭터 팬 라이트랑 교환원해요..!\n상태는 미개봉입니다아\n푸우 팬 라이트 찾고 계신 분들 연락주세요~",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange52.png"
+        ],
+        "likes": 15,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 108,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "푸우푸우푸",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "125",
+        "title": "달빛공주 팬 라이트 교환",
+        "description": "달빛공주 팬 라이트 교환합니당\n별빛공주 팬 라이트 가지고 계신 분이랑 교환하고 싶어요\n상태는 비닐도 안 뜯은 미개봉 제품입니다\n별빛공주 가지고 계신 분 연락주세요~",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange53.png"
+        ],
+        "likes": 22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 186,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "별빛공주원해",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "126",
+        "title": "레인보우크리스탈 응원봉 교환합니다",
+        "description": "레인보우크리스탈 응원봉 교환합니다\n종류 상관없이 다른 응원봉이랑 교환원해요\n2주정도 사용한 거의 새거급 상태입니다\n관심 있으신 분들 채팅주세여~",
+        "category": "팬 라이트",
+        "price": 28000,
+        "imageUrl": [
+            "/images/myexchange/exchange54.png"
+        ],
+        "likes": 16,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 150,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "무지개공",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "127",
+        "title": "정국 화보 잡지 팝니다",
+        "description": "정국 화보 잡지 판매합니다\n작년 8월 앨범 화보 잡지입니다.\n한 10개월 된 잡지라서 사용감 좀 있습니다\n관심 있으신 분들 연락주세요",
+        "category": "잡지",
+        "price": 22000,
+        "imageUrl": [
+            "/images/mydeals/sale57.png"
+        ],
+        "likes": 66,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 610,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "방탄조끼단",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "128",
+        "title": "트로이시반 화보 잡지 팔아용",
+        "description": "트로이시반 화보 잡지 팔아요!\n재작년 썸머 화보 잡지입니다\n2~3번 정도만 읽고 소장하고있어서 깨끗한 A급 상태입니다\n관심 있으신 분들 채팅주세욤",
+        "category": "잡지",
+        "price": 19000,
+        "imageUrl": [
+            "/images/mydeals/sale58.png"
+        ],
+        "likes": 21,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 214,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "핸섬보이",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "129",
+        "title": "메디제이 앨범 잡지 판매합니다",
+        "description": "메디제이 3집 앨범 잡지 판매합니다\n이번에 나온 메디제이 3집 앨범 잡지입니다!\n소장용으로 산거라 개봉도 안 한 상태에요\n관심 있으신 분들 채팅주세욤",
+        "category": "잡지",
+        "price": 18000,
+        "imageUrl": [
+            "/images/mydeals/sale59.png"
+        ],
+        "likes": 17,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 194,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "메이디메이",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "130",
+        "title": "프로듀스101 홍보 잡지 판매해요",
+        "description": "프로듀스101 홍보 잡지 판매해요..!\n프로듀스101 프로그램 방영할때 나온 홍보 잡지입니다!\n나온지 좀 됬어서 약간의 사용감은 있습니다\n그때 추억을 간직하고 싶으신 분들 연락주세요!",
+        "category": "잡지",
+        "price": 16000,
+        "imageUrl": [
+            "/images/mydeals/sale60.png"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 154,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "프듀원",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "131",
+        "title": "강성훈 화보 잡지 판매",
+        "description": "강성훈 화보 잡지 판매합니다\n강성훈 데뷔 이후 처음 나온 화보 잡지라 희소성 높습니다\n팬심으로 샀어서 비닐도 안 뜯고 보관해서 미개봉 상태입니다\n관심 있으신 분들 연락주세요~",
+        "category": "잡지",
+        "price": 18000,
+        "imageUrl": [
+            "/images/mydeals/sale61.png"
+        ],
+        "likes": 28,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 291,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "간장공장간공장장",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "132",
+        "title": "공백기 시집 홍보 잡지 판매합니다",
+        "description": "공백기 시집 홍보 잡지 판매합니다\n시 좋아하시는 분들 좋아하실거에요\n귀중한 거래 미개봉 상태로 보관하고있었어요\n문의주세요",
+        "category": "잡지",
+        "price": 20000,
+        "imageUrl": [
+            "/images/mydeals/sale62.png"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 187,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "폭풍의 시",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "133",
+        "title": "윈터 화보 잡지 판매",
+        "description": "윈터 화보 잡지 판매해요\n저번 앨범때 나온 잡지입니다.\n윈터 팬이신 분들 분명 좋아하실 거에요\n채팅주세요",
+        "category": "잡지",
+        "price": 21000,
+        "imageUrl": [
+            "/images/mydeals/sale63.png"
+        ],
+        "likes": 26,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 230,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "겨울은 윈터",
+        "sellerTrust": 80,
+        "isExchangeable": false
+    },
+    {
+        "id": "134",
+        "title": "사이조 히데키 2집 앨범 잡지 판매",
+        "description": "사이조 히데키 2집 앨범 잡지 판매합니당\n이번 한국 투어때 한국에서 찍은 홍보 잡지에요\n사이조 히데키 팬이신 분들 좋아하실겁니다ㅎ\n관심있으신 분들 연락부탁드려용",
+        "category": "잡지",
+        "price": 25000,
+        "imageUrl": [
+            "/images/mydeals/sale64.png"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 90,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "히시아이조랑말",
+        "sellerTrust": 70,
         "isExchangeable": false
     }
 ]
