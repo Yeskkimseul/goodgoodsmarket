@@ -113,7 +113,7 @@ const GoodsDetail = () => {
 
     return (
         <Layout2>
-            <Header type="type2" />
+            <Header type="type2-2" />
             <div className={style.con}>
                 <div className={style.topcon}>
 

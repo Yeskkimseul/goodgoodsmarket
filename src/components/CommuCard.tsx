@@ -22,11 +22,13 @@ const CommuCard = ({ item, className }: Props) => {
     const likes = commuLikes[item.id] ?? item.likes;
     const views = commuViews[item.id] ?? item.views;
 
-    // localStorage에 저장된 댓글이 있으면 그 길이, 없으면 원본 commentsNum
+    // localStorage에 저장된 댓글이 있으면 그 길이, 없으면 원본 comments 배열 길이
     const commentList = storedComments?.[item.id];
     const commentsNum = Array.isArray(commentList)
         ? commentList.length
-        : item.commentsNum;
+        : Array.isArray(item.comments)
+            ? item.comments.length
+            : 0;
 
 
 
