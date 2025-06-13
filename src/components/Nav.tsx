@@ -27,7 +27,7 @@ const Nav = () => {
                         {({ isActive }) => (
                             <>
                                 <img
-                                    src={isActive ? "/images/nav/navhomeon.png" : "/images/nav/navhomeoff.png"}
+                                    src={isActive ? "/images/nav/navhomeon.svg" : "/images/nav/navhomeoff.svg"}
                                     alt="홈"
                                     className={styles.icon}
                                 />
@@ -41,7 +41,7 @@ const Nav = () => {
                         {({ isActive }) => (
                             <>
                                 <img
-                                    src={isActive ? "/images/nav/navcomuon.png" : "/images/nav/navcomuoff.png"}
+                                    src={isActive ? "/images/nav/navcomuon.svg" : "/images/nav/navcomuoff.svg"}
                                     alt="커뮤니티"
                                     className={styles.icon}
                                 />
@@ -55,7 +55,7 @@ const Nav = () => {
                         {({ isActive }) => (
                             <>
                                 <img
-                                    src={isActive ? "/images/nav/navchaton.png" : "/images/nav/navchatoff.png"}
+                                    src={isActive ? "/images/nav/navchaton.svg" : "/images/nav/navchatoff.svg"}
                                     alt="채팅"
                                     className={styles.icon}
                                 />
@@ -69,7 +69,7 @@ const Nav = () => {
                         {({ isActive }) => (
                             <>
                                 <img
-                                    src={isActive ? "/images/nav/navmypageon.png" : "/images/nav/navmypageoff.png"}
+                                    src={isActive ? "/images/nav/navmypageon.svg" : "/images/nav/navmypageoff.svg"}
                                     alt="마이페이지"
                                     className={styles.icon}
                                 />
