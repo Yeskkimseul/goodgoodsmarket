@@ -201,7 +201,15 @@ const CommuDetail = () => {
                                     <div className={style.commentbottom}>
                                         <span> {getTimeAgo(c.createdAt)}  </span>
                                         <div className={style.cIcontext}>
-                                                <p>좋아요 {c.commentlikes}</p>
+                                            <img
+                                                src={
+                                                    liked
+                                                        ? "/images/icon/heart_small_grey_empty.svg"
+                                                        : "/images/icon/heart_small_mint_fill.svg"
+                                                }
+                                                alt="좋아요"
+                                            />
+                                            <p className={style.commentlike}>{c.commentlikes} 좋아요</p>
                                         </div>
                                     </div>
                                 </div>
