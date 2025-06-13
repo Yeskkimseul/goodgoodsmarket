@@ -2778,5 +2778,181 @@
         "sellerName": "히시아이조랑말",
         "sellerTrust": 70,
         "isExchangeable": false
+    },
+    {
+        "id": "135",
+        "title": "메탈스플래시 잡지 교환",
+        "description": "메탈스플래시 잡지 교환해요\n메탈스플래시의 역사가 담겨있는 잡지에요\n다른 밴드 잡지랑 교환하고 싶어요\n관심있으신 분들 연락부탁드려용",
+        "category": "잡지",
+        "price": 26000,
+        "imageUrl": [
+            "/images/myexchange/exchange55.png"
+        ],
+        "likes": 17,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 160,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "메탈메달모달",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "136",
+        "title": "아이유 팔레트 잡지 교환합니당",
+        "description": "아이유 팔레트 앨범 홍보 잡지 교환해요!\n다른 가수 잡지나 굿즈들 이쁜거 있으면 다 교환주세요\n상태는 미개봉입니다\n관심있으신 분들 연락부탁드려용",
+        "category": "잡지",
+        "price": 26000,
+        "imageUrl": [
+            "/images/myexchange/exchange56.png"
+        ],
+        "likes": 28,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 216,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "이유는아이유",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "137",
+        "title": "콜드플레이 홍보 잡지 교환합니다",
+        "description": "콜드플레이 홍보 잡지 교환합니다\n콜드플레이 잡짐말고도 다른 굿즈들이랑 교환 원합니다\n상태는 약간의 사용감있어요 구입한지 한 달 됬습니다\n콜드플레이 팬분들 연락주세요",
+        "category": "잡지",
+        "price": 15000,
+        "imageUrl": [
+            "/images/myexchange/exchange57.png"
+        ],
+        "likes": 12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 160,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "핫플레이",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "138",
+        "title": "보넥도 썸머 잡지 교환",
+        "description": "보넥도 썸머 잡지 교환합니다\n다른 보넥도 굿즈랑 교환하고싶습니당\n한 번 열어보고 계속 보관하고 있어서 거의 새상품급입니다\n보넥도 팬분들 연락주세용",
+        "category": "잡지",
+        "price": 15000,
+        "imageUrl": [
+            "/images/myexchange/exchange58.png"
+        ],
+        "likes": 23,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 198,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "보이스카웃",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "139",
+        "title": "세븐틴 4집 앨범 잡지 교환해요",
+        "description": "세븐틴 4집 앨범 썸머 컨셉 잡지 교환원합니다\n세븐틴 잡지 말고 다른 굿즈들이랑 교환원해요\n48페이지에 한장 약간 찢어져 있습니다 참고해주세요ㅠ\n세븐틴 팬 분들 채팅주세욤",
+        "category": "잡지",
+        "price": 15000,
+        "imageUrl": [
+            "/images/myexchange/exchange59.png"
+        ],
+        "likes": 33,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 308,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "세븐망고틴틴",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "140",
+        "title": "불꽃지는 밤 잡지 교환",
+        "description": "불꽃지는 밤 잡지 교환합니다\n잡지 말고도 이쁜 굿즈들이랑 교환원해요\n선물로 받고 건들이지 않아서 미개봉 상태입니다\n많은 채팅 부탁드려용",
+        "category": "잡지",
+        "price": 15000,
+        "imageUrl": [
+            "/images/myexchange/exchange60.png"
+        ],
+        "likes": 16,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 100,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "스물다섯번째밤",
+        "sellerTrust": 50,
+        "isExchangeable": true
+    },
+    {
+        "id": "141",
+        "title": "벚꽃 잡지 교환함",
+        "description": "벚꽃 잡지 교환합니다\n벚꽃 시즌때 나온 한정판이에요\n미개봉 상태에 좋은 다른 굿즈들 있으면 교환합니다\n많관부",
+        "category": "잡지",
+        "price": 15000,
+        "imageUrl": [
+            "/images/myexchange/exchange61.png"
+        ],
+        "likes": 5,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 61,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "벚꽃엔딩",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "142",
+        "title": "요리 잡지 교환합니당",
+        "description": "요리 잡지 교환해요\n흑백요리사때 잠깐 나온 요리 잡지에요\n미개봉 상태에 좋은 다른 굿즈들 있으면 교환합니다\n많은 채팅 부탁드려요",
+        "category": "잡지",
+        "price": 15000,
+        "imageUrl": [
+            "/images/myexchange/exchange62.png"
+        ],
+        "likes": 15,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 113,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "요리왕비룡은나",
+        "sellerTrust": 80,
+        "isExchangeable": true
     }
 ]
