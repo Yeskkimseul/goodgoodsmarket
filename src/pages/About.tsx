@@ -3,8 +3,14 @@ import Layout from "../components/Layout";
 import Header from "../components/header/Header";
 import styles from "./About.module.css"
 import Marquee from "react-fast-marquee";
+import { useInView } from "../components/hooks/useInView";
 
 const About = () => {
+    const [ref1, inView1] = useInView();
+    const [ref2, inView2] = useInView();
+    const [ref3, inView3] = useInView();
+    const [ref4, inView4] = useInView();
+
     return (
         <Layout>
             <Header type="type1" title="굿굿마켓 소개" />
@@ -13,13 +19,16 @@ const About = () => {
                     <img src="/images/about/about1.png" alt="굿굿마켓 소개" />
                     <div className={styles.slogan}>
                         <img src="/images/about/BE.svg" alt="slogan" />
-                        <img src="/images/about/slogan.svg" alt="slogan" />
+                        <img src="/images/about/slogan.svg" alt="slogan" className={styles.shakeRotate}/>
                         <img src="/images/about/YOURSELF.svg" alt="slogan" />
                     </div>{/* //.slogan */}
                 </div>{/* //.one */}
 
                 <div className={styles.two}>
-                    <div className={styles.inner}>
+                    <div
+                        className={`${styles.inner} ${inView1 ? styles.fadeIn : ""}`}
+                        ref={ref1}
+                    >
                         <div className={styles.txt1}
                         >
                             <span>찐팬</span>이라면 알아요.<br />
@@ -37,7 +46,10 @@ const About = () => {
 
                 <div className={styles.three}>
                     <img src="/images/about/about2.png" alt="굿굿마켓 소개 이미지" />
-                    <div className={styles.inner}>
+                    <div
+                        className={`${styles.inner} ${inView2 ? styles.fadeIn : ""}`}
+                        ref={ref2}
+                    >
                         <div className={styles.txt3}>
                             서랍 속 굿즈, 이제는 <span className={styles.pink}>빛</span>을 볼 차례예요.
                         </div>
@@ -49,7 +61,10 @@ const About = () => {
                 </div>{/* //.three */}
                 <div className={styles.four}>
                     <img src="/images/about/about3.png" alt="굿굿마켓 소개 이미지" />
-                    <div className={styles.inner}>
+                    <div
+                        className={`${styles.inner} ${inView3 ? styles.fadeIn : ""}`}
+                        ref={ref3}
+                    >
                         <div className={styles.txt3}>
                             덕질은 <span className={styles.mint}>함께</span>할 때 더 즐겁잖아요.
                         </div>
@@ -60,7 +75,10 @@ const About = () => {
                 </div>{/* //.four */}
                 <div className={styles.five}>
                     <img src="/images/about/about4.png" alt="굿굿마켓 소개 이미지" />
-                    <div className={styles.inner}>
+                    <div
+                        className={`${styles.inner} ${inView4 ? styles.fadeIn : ""}`}
+                        ref={ref4}
+                    >
                         <div className={styles.txt3}>
                             <span className={styles.pink}>팬심</span>이 머무는 거래,<br />기억이 남는 커뮤니티
                         </div>
