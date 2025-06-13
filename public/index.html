@@ -42,6 +42,36 @@
     #chatbase-message-bubbles {
       display: none !important;
     }
+
+    #chatbase-bubble-window {
+      position: fixed !important;
+      /* bottom: clamp(120px, 10vw, 150px) !important; */
+      height: 75% !important;
+      right: 54% !important;
+      margin-right: clamp(-554px, calc(-50vw + 24px), -123.5px) !important;
+
+    }
+
+    svg#closeIcon {
+      stroke : #fff !important;
+      width: 30px !important;
+      height: 30px !important;
+      stroke-width: 1.5px !important;
+    }
+
+    @media (max-width : 630px) {
+      #chatbase-bubble-window {
+        right: 45% !important;
+        height: 100% !important;
+      }
+    }
+
+    @media (max-width : 630px) {
+      #chatbase-bubble-window {
+        right: 45% !important;
+        height: 100% !important;
+      }
+    }
   </style>
 </head>
 
@@ -71,6 +101,26 @@
     };
   </script>
   <script src="https://www.chatbase.co/embed.min.js" chatbotId="R5jk6ydB6lnN4fTbS7Cy5" defer></script>
+  <!--   <script>
+    // Chatbase가 자동으로 붙이는 iframe 감지
+    document.addEventListener("click", function (e) {
+      const iframe = document.querySelector('iframe[src*="chatbase"]');
+      if (!iframe) return;
+
+      // 클릭된 요소가 iframe 자체 또는 내부가 아닌 경우
+      const rect = iframe.getBoundingClientRect();
+      const clickedInsideIframe =
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom;
+
+      if (!clickedInsideIframe && window.chatbase) {
+        window.chatbase("hide"); // 창 닫기
+      }
+    });
+  </script> -->
+
 
 </body>
 

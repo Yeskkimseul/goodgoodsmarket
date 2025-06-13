@@ -22,13 +22,16 @@ function ChatDetail() {
       .then((data: Chatting[]) => setChatList(data.length > 0 ? [data[0]] : []));
   }, []);
 
+  // 👉 첫 채팅의 type이 '판매'일 경우만 seller
+  const chatInfoType = chatList[0]?.type === "판매" ? "seller" : "default";
+
   return (
     <Layout2>
       <ChatBottomSheet isOpen={isSheetOpen} onClose={closeSheet} />
       <div className={styles.chatContents}>
         <div className={styles.chatTitle}>
           <HeaderType5 onMoreClick={openSheet} />
-          <ChatInfo type="default" />
+          <ChatInfo type={chatInfoType} />
           <div className={styles.chat}>
             <ChatMessages chats={chatList} />
           </div>
