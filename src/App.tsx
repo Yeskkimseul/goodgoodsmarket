@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Login from "./pages/Login"; //로그인
 import LoginEmail from "./pages/LoginEmail"; //이메일 로그인
@@ -94,75 +95,77 @@ function App() {
 
 
   return (
-
-    <GoodsProvider>
-      <CommuProvider>
-        <ReviewProvider>
-          {/* ✅ 조건부 삽입 */}
-          {/* <>
+    <>
+      <ScrollToTop />
+      <GoodsProvider>
+        <CommuProvider>
+          <ReviewProvider>
+            {/* ✅ 조건부 삽입 */}
+            {/* <>
           {loading ? <SplashScreen /> : <Login />}
         </> */}
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/login/email" element={<LoginEmail />} />
-            <Route path="/login/phone" element={<LoginPhone />} />
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/login/email" element={<LoginEmail />} />
+              <Route path="/login/phone" element={<LoginPhone />} />
 
-            <Route path="/join" element={<Join />} />
+              <Route path="/join" element={<Join />} />
 
-            <Route path="/home" element={
-              <Home />} />
-            <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
-            <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
-            <Route path="/home/goodsupload" element={<GoodsUpload />} />
+              <Route path="/home" element={
+                <Home />} />
+              <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
+              <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
+              <Route path="/home/goodsupload" element={<GoodsUpload />} />
 
-            <Route path="/home/search" element={<Search />} />
+              <Route path="/home/search" element={<Search />} />
 
-            <Route path="/community" element={
-              <Community />
-            } />
-            <Route path="/community/commudetail/:id" element={
+              <Route path="/community" element={
+                <Community />
+              } />
+              <Route path="/community/commudetail/:id" element={
 
-              <CommuDetail />
+                <CommuDetail />
 
-            } />
-            <Route path="/community/mycommu" element={
+              } />
+              <Route path="/community/mycommu" element={
 
-              <MyCommu />
+                <MyCommu />
 
-            } />
-            <Route path="/community/commuupload" element={
+              } />
+              <Route path="/community/commuupload" element={
 
-              <CommuUpload />
+                <CommuUpload />
 
-            } />
+              } />
 
 
-            <Route path="/chat" element={
+              <Route path="/chat" element={
 
-              <Chat />
+                <Chat />
 
-            } />
-            <Route path="/chat/chatdetail" element={
+              } />
+              <Route path="/chat/chatdetail" element={
 
-              <ChatDetail />
+                <ChatDetail />
 
-            } />
+              } />
 
-            <Route path="/mypage" element={<Mypage />} />
-            <Route path="/liked" element={<Liked />} />
-            <Route path="/mypage/alarm" element={<Alarm />} />
-            <Route path="/mypage/mydeals" element={<MyDeals />} />
-            <Route path="/writereview" element={<WriteReview />} />
+              <Route path="/mypage" element={<Mypage />} />
+              <Route path="/liked" element={<Liked />} />
+              <Route path="/mypage/alarm" element={<Alarm />} />
+              <Route path="/mypage/mydeals" element={<MyDeals />} />
+              <Route path="/writereview" element={<WriteReview />} />
 
-            {/* 수정 전 참고용 페이지들 */}
+              {/* 수정 전 참고용 페이지들 */}
 
-            <Route path="/popular" element={<Popular />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/upload" element={<Upload />} />
-          </Routes>
-        </ReviewProvider>
-      </CommuProvider>
-    </GoodsProvider>
+              <Route path="/popular" element={<Popular />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/upload" element={<Upload />} />
+            </Routes>
+          </ReviewProvider>
+        </CommuProvider>
+      </GoodsProvider>
+    </>
   );
 }
 
