@@ -86,11 +86,12 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    gap: var(--space24);
+    padding-left: 5.7%;
 }
 
 .one .slogan img:first-child {
     height: clamp(30px, 6vw, 81px);
+    margin-right: var(--space16);
 }
 
 .one .slogan img:nth-child(2) {
@@ -100,6 +101,7 @@
 
 .one .slogan img:last-child {
     height: clamp(45px, 8vw, 115px);
+    margin-left: var(--space8);
 }
 
 /* two */
