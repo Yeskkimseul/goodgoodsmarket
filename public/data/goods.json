@@ -3658,5 +3658,247 @@
         "sellerName": "마법기타소녀",
         "sellerTrust": 80,
         "isExchangeable": true
+    },
+    {
+        "id": "176",
+        "title": "카드캡터체리 꿈의 지팡이 손목시계 판매",
+        "description": "카드캡터체리 팬들을 위한 특별 제작 손목시계입니다 ⏰💖\n꿈의 지팡이 디자인이 시계 안에 포인트로 들어가 있으며, 분홍빛 밴드로 소녀 감성이 가득해요.\n실제 착용 시 더욱 러블리한 느낌을 연출할 수 있어요!",
+        "category": "기타",
+        "price": 19500,
+        "imageUrl": [
+            "/images/mydeals/sale81.png"
+        ],
+        "likes": 38,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 142,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "체리덕후",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "177",
+        "title": "마루밑 아리에티 헤어집게",
+        "description": "‘마루밑 아리에티’의 귀여운 헤어집게입니다 🌿✨\n작고 섬세한 디자인에 자연을 담은 색감이 매력적이에요.\n평소 헤어 스타일에 포인트를 주고 싶을 때 추천드립니다!",
+        "category": "기타",
+        "price": 12500,
+        "imageUrl": [
+            "/images/mydeals/sale82.png"
+        ],
+        "likes": 45,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 160,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "아리에티팬",
+        "sellerTrust": 60,
+        "isExchangeable": false
+    },
+    {
+        "id": "178",
+        "title": "천연원석 비즈키링 판매해용",
+        "description": "자연의 아름다움을 담은 천연원석 비즈 키링입니다 🌿💎\n각기 다른 원석들의 조합으로 유니크한 매력을 자랑해요.\n가방이나 열쇠에 달아 특별한 포인트를 주고 싶으신 분께 추천드려요!",
+        "category": "기타",
+        "price": 15800,
+        "imageUrl": [
+            "/images/mydeals/sale83.png"
+        ],
+        "likes": 38,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 143,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "비즈아티스트",
+        "sellerTrust": 90,
+        "isExchangeable": false
+    },
+    {
+        "id": "179",
+        "title": "동물의 숲 스탬프",
+        "description": "귀여운 동물의 숲 테마의 스탬프 세트입니다 🐻🍃\n다양한 캐릭터와 아이템 디자인으로 팬들에게 인기 많아요.\n다꾸나 선물용으로도 완벽한 아이템입니다!",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/mydeals/sale84.png"
+        ],
+        "likes": 27,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 110,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "스탬프러버",
+        "sellerTrust": 70,
+        "isExchangeable": false
+    },
+    {
+        "id": "180",
+        "title": "포켓몬 고리 마스코트 교환",
+        "description": "포켓몬 팬들을 위한 귀여운 고리 마스코트입니다 🐾✨\n다양한 포켓몬 캐릭터가 포함되어 있어 팬들의 소장 욕구를 자극해요.\n교환을 원하시는 분들과 함께 즐겁게 나누고 싶어요!",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange79.png"
+        ],
+        "likes":15,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 90,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "포켓몬트레이너",
+        "sellerTrust": 60,
+        "isExchangeable": true
+    },
+    {
+        "id": "181",
+        "title": "컬러그램 파워퍼프걸 콜라보 포카홀더",
+        "description": "파워퍼프걸과 컬러그램이 만나 귀여움 폭발! 🌸🎀\n다양한 포카를 깔끔하게 보관할 수 있는 홀더로, 팬분들께 추천드려요.\n소장과 교환 모두 환영합니다!",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange80.png"
+        ],
+        "likes":16,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 106,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "컬러파워",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "182",
+        "title": "컬러그램 제로베이스원 콜라보 증사홀더",
+        "description": "귀여운 콜라보 디자인으로 소장가치 최고! 포카 보관도 깔끔하게 할 수 있어 팬들에게 인기 많아요.",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange81.png"
+        ],
+        "likes":42,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 118,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "임의판매자",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "183",
+        "title": "숲의 요정 페어리루 마법의 펜듈럼 교환",
+        "description": "마법 숲의 신비로운 요정 페어리루와 함께하는 특별한 콜라보 아이템이에요! ✨🧚‍♀️\n아름다운 펜듈럼 디자인과 함께 포카를 깔끔하게 정리할 수 있어 팬들에게 큰 사랑을 받고 있답니다.\n다채로운 색감과 세심한 디테일이 돋보여 소장 가치가 매우 높으며,\n교환도 활발히 이루어지고 있어 팬분들과의 소중한 교류를 기대해요.\n당신만의 특별한 덕심을 나누고 싶은 분께 꼭 추천드립니다! 🌿💖",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange82.png"
+        ],
+        "likes":22,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 178,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "숲의 요정",
+        "sellerTrust": 80,
+        "isExchangeable": true
+    },
+    {
+        "id": "184",
+        "title": "캐릭캐릭체인지 두근두근 롤스티커",
+        "description": "귀여운 캐릭캐릭체인지 테마의 두근두근 롤스티커 세트입니다! 🌈✨\n다양한 표정과 색감이 돋보이는 디자인으로, 팬들의 마음을 사로잡아요.\n스티커 하나하나 정성스럽게 제작되어 다꾸용이나 선물용으로도 완벽하며,\n교환을 통해 팬분들과 특별한 추억을 나누고 싶은 분께 추천드립니다! 💕🎀",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange83.png"
+        ],
+        "likes":37,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 142,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "스티커덕후 요정",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "185",
+        "title": "캐릭캐릭체인지 포카앨범",
+        "description": "캐릭캐릭체인지의 사랑스러운 캐릭터들이 가득한 포카앨범입니다! 🌈💖\n다채로운 색감과 귀여운 일러스트가 돋보여 팬들에게 큰 인기를 얻고 있어요.\n앨범 하나로 소중한 포카들을 안전하고 깔끔하게 보관할 수 있답니다.\n다꾸뿐만 아니라 특별한 선물용으로도 안성맞춤이며,\n팬분들과 추억을 나누고 싶은 분께 적극 추천드려요! 🎀✨",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange84.png"
+        ],
+        "likes":42,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 150,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "스티커요정",
+        "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "186",
+        "title": "틴틴팅클 베리",
+        "description": "틴틴팅클의 상큼 발랄한 매력이 가득한 베리 굿즈입니다! 🍓✨\n선명한 컬러와 귀여운 디자인이 돋보여 소장 가치가 높아요.\n작은 디테일까지 정성 들여 만들어 팬들의 마음을 사로잡는 아이템이며,\n일상에 활력을 더해주는 특별한 선물이 될 거예요.\n팬분들과 교환하며 즐거운 추억을 쌓고 싶으신 분께 추천드립니다! 🎀💖",
+        "category": "기타",
+        "price": 13200,
+        "imageUrl": [
+            "/images/myexchange/exchange85.png"
+        ],
+        "likes":12,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 100,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "베리베리스트로베리",
+        "sellerTrust": 60,
+        "isExchangeable": true
     }
 ]
