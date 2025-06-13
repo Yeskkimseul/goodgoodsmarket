@@ -126,3 +126,60 @@
     letter-spacing: -0.03em;
     color: var(--text-white);
 }
+
+.commentcon {
+    padding: var(--space32) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
+}
+
+.inputcon {
+    display: flex;
+    gap: var(--space8);
+    margin-bottom: var(--space16);
+}
+.commentlist{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
+}
+.commentitem {
+    display: flex;
+    flex-direction: column;
+}
+
+.cUser {
+    display: flex;
+    align-items: center;
+    gap: var(--space8);
+    margin-bottom: var(--space4);
+}
+
+.cUserimg {
+    border-radius: 50%;
+    border: 1px solid var(--stroke-lightE);
+    width: clamp(32px, 2vw, 40px);
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.commentin {
+    padding: 0 clamp(32px, 2vw, 40px);
+}
+
+.commentbottom {
+    margin-top: var(--space8);
+    font-size: var(--font-caption);
+    font-weight: 400;
+    line-height: 125%;
+    color: var(--text-grey);
+    gap: var(--space16);
+    display: flex;
+}
+
+.cIcontext{
+    display: flex;
+    gap: var(--space4);
+    align-items: center;
+}

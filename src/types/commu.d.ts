@@ -17,6 +17,8 @@ export interface Commu {
         userimgUrl: string,
         userName: string,
         content: string,
+        commentlikes: number,
         createdAt: string,
+        reply: boolean
     }[];
 }

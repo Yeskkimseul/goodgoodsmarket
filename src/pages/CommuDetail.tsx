@@ -179,22 +179,32 @@ const CommuDetail = () => {
                         {likes} 좋아요
                     </div>
                 </div>{/* articlecon */}
+
                 <div className={style.commentcon}>
                     <h4>
                         댓글 {commu.commentsNum}
                     </h4>
                     <div className={style.inputcon}>
-                        <input className={form.input} />
+                        <input className={form.input} style={{ flex: '3.5' }} />
                         <button className={form.button_sm}>등록</button>
                     </div>
                     <div className={style.commentlist}>
                         {/* 댓글 출력 예시 */}
                         {commu.comments && commu.comments.map((c) => (
-                            <div key={c.id}>
-                                <img src={c.userimgUrl} alt={c.userName} />
-                                <span>{c.userName}</span>
-                                <span>{c.content}</span>
-                                <span>{c.createdAt}</span>
+                            <div key={c.id} className={style.commentitem}>
+                                <div className={style.cUser}>
+                                    <img src={c.userimgUrl} alt={c.userName} className={style.cUserimg} />
+                                    <h4>{c.userName}</h4>
+                                </div>
+                                <div className={style.commentin}>
+                                    <span className="body2">{c.content}</span>
+                                    <div className={style.commentbottom}>
+                                        <span> {getTimeAgo(c.createdAt)}  </span>
+                                        <div className={style.cIcontext}>
+                                                <p>좋아요 {c.commentlikes}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
