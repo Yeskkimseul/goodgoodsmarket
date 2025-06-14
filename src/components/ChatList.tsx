@@ -46,7 +46,7 @@ const ChatList = ({ chats }: ChatListProps) => {
       setReadList(updated);
       localStorage.setItem("chatReadList", JSON.stringify(updated));
     }
-    navigate(`/chat/chatdetail`);
+    navigate(`/chat/chatdetail/${id}`);
   };
 
   return (

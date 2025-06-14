@@ -10,7 +10,7 @@ import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css";
 
 function ChatDetail() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [msg, setMsg] = useState("");
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -18,6 +18,9 @@ function ChatDetail() {
 
   const openSheet = () => setIsSheetOpen(true);
   const closeSheet = () => setIsSheetOpen(false);
+
+  const { id } = useParams();
+  const chatId = Number(id);  // number로 변환
 
   useEffect(() => {
     fetch("/data/chatting.json")
