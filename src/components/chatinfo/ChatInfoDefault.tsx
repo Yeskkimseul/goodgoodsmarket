@@ -22,7 +22,7 @@ const ChatInfoDefault = ({ chat }: ChatInfoDefaultProps) => {
 
     return (
         <div className={styles.chatInfo}>
-            <div className={styles.info_right}>
+            <div className={styles.info_left}>
                 <img
                     src={productImage}
                     alt="상품 이미지"
