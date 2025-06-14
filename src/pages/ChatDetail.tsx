@@ -22,14 +22,18 @@ function ChatDetail() {
   const { id } = useParams();
   const chatId = Number(id);  // number로 변환
 
-  useEffect(() => {
-    fetch("/data/chatting.json")
-      .then(res => res.json())
-      .then((data: Chatting[]) => setChatList(data.length > 0 ? [data[0]] : []));
-  }, []);
+useEffect(() => {
+  fetch("/data/chatting.json")
+    .then(res => res.json())
+    .then((data: Chatting[]) => {
+      // id가 일치하는 채팅만 저장
+      const filtered = data.filter(chat => chat.id === chatId);
+      setChatList(filtered);
+    });
+}, [chatId]);
 
-  // 👉 첫 채팅의 type이 '판매'일 경우만 seller
-  const chatInfoType = chatList[0]?.type === "판매" ? "seller" : "default";
+  // chatList 배열에 type이 "판매"인 데이터가 하나라도 있으면 seller, 아니면 default
+  const chatInfoType = chatList.some(chat => chat.type === "판매") ? "seller" : "default";
 
   return (
     <Layout2>
@@ -37,7 +41,7 @@ function ChatDetail() {
       <div className={styles.chatContents}>
         <div className={styles.chatTitle}>
           <HeaderType5 onMoreClick={openSheet} />
-          <ChatInfo type={chatInfoType} />
+          <ChatInfo type={chatInfoType} chat={chatList[0]} />
           <div className={styles.chat}>
             <ChatMessages chats={chatList} />
           </div>

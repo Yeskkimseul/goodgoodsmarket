@@ -5,9 +5,13 @@
     "userProfile": "/images/chat/chatProfile1.png",
     "productImage": "/images/chat/chatProduct1.png",
     "message": "네, 서울역에서 직거래 가능합니다.",
+    "userMessage": "좋아요! 몇 시쯤 괜찮으세요?",
+    "sender": "other",
     "createdAt": "2025-06-10T09:45:00",
     "unread": true,
-    "type": "판매"
+    "type": "판매",
+    "title": "[공식 굿즈] BTS 방탄소년단 투어 슬로건",
+    "price": "12,000원"
   },
   {
     "id": 2,
@@ -15,9 +19,13 @@
     "userProfile": "/images/chat/chatProfile2.png",
     "productImage": "/images/chat/chatProduct2.png",
     "message": "아직 재고 있습니다~",
+    "userMessage": "그럼 지금 바로 구매할게요!",
+    "sender": "other",
     "createdAt": "2025-06-10T08:00:00",
     "unread": false,
-    "type": "구매"
+    "type": "구매",
+    "title": "[팬메이드] 뉴진스 하트 키링 세트",
+    "price": "8,000원"
   },
   {
     "id": 3,
@@ -25,9 +33,13 @@
     "userProfile": "../../../images/chat/chatProfile3.png",
     "productImage": "/images/chat/chatProduct3.png",
     "message": "거래 감사합니다!",
+    "userMessage": "저야말로 감사합니다! 잘 쓸게요 :)",
+    "sender": "other",
     "createdAt": "2025-06-03T10:00:00",
     "unread": false,
-    "type": "교환"
+    "type": "교환",
+    "title": "세븐틴 캐럿봉 랜덤 포카",
+    "price": "교환 희망"
   },
   {
     "id": 4,
@@ -35,9 +47,13 @@
     "userProfile": "../../../images/chat/chatProfile4.png",
     "productImage": "/images/chat/chatProduct4.png",
     "message": "직거래 가능할까요?",
+    "userMessage": "네! 위치 알려주시면 맞춰볼게요",
+    "sender": "other",
     "createdAt": "2025-06-07T16:30:00",
     "unread": true,
-    "type": "판매"
+    "type": "판매",
+    "title": "[공식 포카] 아이브 이서 콘서트 MD 포토카드",
+    "price": "5,000원"
   },
   {
     "id": 5,
@@ -45,8 +61,12 @@
     "userProfile": "../../../images/chat/chatProfile5.png",
     "productImage": "/images/chat/chatProduct5.png",
     "message": "내일 발송 가능합니다!",
+    "userMessage": "넵! 송장번호만 알려주세요 :)",
+    "sender": "other",
     "createdAt": "2025-06-08T22:15:00",
     "unread": false,
-    "type": "구매"
+    "type": "구매",
+    "title": "[공식 응원봉] 스트레이키즈 3기 팬라이트",
+    "price": "29,000원"
   }
 ]

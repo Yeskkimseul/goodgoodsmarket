@@ -11,7 +11,7 @@ function ChatInput({ value, onChange, onSend }: ChatInputProps) {
   return (
     <div className={styles.chatInputWrap}>
       <button className={styles.attachBtn} type="button" onClick={() => alert("첨부 기능은 아직 구현되지 않았습니다.")}>
-        <img src="../images/chat/clip.svg" alt="첨부"
+        <img src="/images/chat/clip.svg" alt="첨부"
           className={styles.icon}></img>
       </button>
       <input
@@ -22,7 +22,7 @@ function ChatInput({ value, onChange, onSend }: ChatInputProps) {
         onChange={onChange}
       />
       <button className={styles.sendBtn} type="button" onClick={onSend}>
-        <img src="../images/chat/send.svg" alt="전송"
+        <img src="/images/chat/send.svg" alt="전송"
           className={styles.icon}
         />
       </button>
