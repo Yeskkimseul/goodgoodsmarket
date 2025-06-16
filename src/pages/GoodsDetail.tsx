@@ -250,7 +250,7 @@ const GoodsDetail = () => {
                 </MultiTab>
             </div>{/* con */}
 
-            <div className={style.bottom}>
+            <div className={style.bottom} style={goods?.sellerName === "뱃지가좋아" ? { display: "none" } : {}}>
                 <div className={style.bts}>
                     <div className={form.button_big} style={{ background: 'var(--bg-white)', color: 'var(--text-grey)', border: '1px solid var(--stroke-grey)' }}
                         onClick={handleLike}>
