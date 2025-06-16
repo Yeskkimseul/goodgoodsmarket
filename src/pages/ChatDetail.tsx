@@ -9,6 +9,9 @@ import ChatMessages from "../components/ChatMessages";
 import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css";
 
+
+
+
 function ChatDetail() {
   const handleSend = (text: string) => {
     if (!text.trim()) return;
