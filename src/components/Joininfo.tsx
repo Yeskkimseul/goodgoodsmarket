@@ -51,7 +51,7 @@ const Joininfo = () => {
                 <h4>
                     닉네임
                 </h4>
-                <input type='email' className={style.input} placeholder='닉네임을 입력해주세요' required />
+                <input type='email' className={style.input} placeholder='닉네임을 입력해주세요' required value={'뱃지가좋아'}/>
             </div>{/* 닉네임 입력 */}
 
             <div className={Login.inputbox}>
@@ -60,12 +60,12 @@ const Joininfo = () => {
                 </h4>
                 <div className={Login.inputboxlist}>
                     <div className={Login.phone}>
-                        <input type='email' className={style.input} placeholder='abc@email.com' style={{width: 'auto'}}  required />
+                        <input type='email' className={style.input} placeholder='abc@email.com'  required value={'admin@email.com'} />
                         <button className={Login.phonebtn}
                             onClick={handleClick}
                             disabled={disabled}>{buttonText}</button>
                     </div>{/* phone */}
-                    <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' required />
+                    <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' value={'1234'} required />
                 </div>
             </div>{/*전화번호 입력 */}
 
@@ -74,7 +74,7 @@ const Joininfo = () => {
                     비밀번호
                 </h4>
                 <div className={Login.password}>
-                    <input type={hide[0] ? "password" : "text"} className={style.input} placeholder='비밀번호를 입력해주세요.' required />
+                    <input type={hide[0] ? "password" : "text"} className={style.input} placeholder='비밀번호를 입력해주세요.' required value={'123456789'} />
                     {hide[0] ? (
                         <img
                             src="/images/icon/eye_off_20.svg"
@@ -103,7 +103,7 @@ const Joininfo = () => {
                     비밀번호 확인
                 </h4>
                 <div className={Login.password}>
-                    <input type={hide[1] ? "password" : "text"} className={style.input} placeholder='비밀번호를 다시 입력해주세요.' required />
+                    <input type={hide[1] ? "password" : "text"} className={style.input} placeholder='비밀번호를 다시 입력해주세요.' value={'123456789'} required />
                     {hide[1] ? (
                         <img
                             src="/images/icon/eye_off_20.svg"

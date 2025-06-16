@@ -21,7 +21,8 @@
 
 /* input */
 .input {
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
   padding: clamp(14px, 2vh, 16px) clamp(16px, 2vw, 20px);
   border-radius: 8px;
   border: 1px solid var(--fields-form);
@@ -241,7 +242,7 @@
 }
 
 .imgupload {
- display: none;
+  display: none;
 }
 
 .previewWrapper {
@@ -649,82 +650,96 @@ button.upload:hover {
 }
 
 @media (max-width: 430px) {
-.form{
-  gap: 24px;
-  padding: 32px 16px;
-}
-.imguploadlabel {
-  width: 100px;
-  height: 100px;
-  border-radius: 6px;
-  background-size: 40px;
-}
-.counter{
-  padding: 0;
-  font-size: 14px;
-}
-.all{
-  gap: 10px;
-}
-.all p{
-  width: 120px;
-  height: 60px;
-  border-radius: 6px;
-}
-/* 상품명 */
-.productname input::placeholder{
-  font-size: 1rem;
-}
-.productname input:focus {
-  font-size: 1rem;
-}
+  .form {
+    gap: 24px;
+    padding: 32px 16px;
+  }
 
-/* 카테고리 */
-.customDropdown {
-  height: 60px;
-}
-.dropdownToggle{
-  font-size: 1rem;
-}
+  .imguploadlabel {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background-size: 40px;
+  }
 
-/* 판매가 */
-.sell input {
-  height: 60px;
-  font-size: 1rem;
-}
-.checkboxLabel{
-  font-size: 1rem;
-}
-.customCheckbox{
-  width: 24px;
-  height: 24px;
-}
-.customCheckbox::after{
-left: 9px;
-top: 5px;
-width: 4px;
-height: 9px;
-}
-/* 거래 옵션 */
+  .counter {
+    padding: 0;
+    font-size: 14px;
+  }
 
-/* 굿즈 설명 글 */
-.goodstxt{
-  height: 304px;
-}
-.goodstxt textarea {
-  height: 304px;
-  border-radius: 6px;
-  line-height: 1.25;
-  font-size: 1rem;
-  padding: 16px;
+  .all {
+    gap: 10px;
+  }
 
-}
-.goodstxt textarea::placeholder{
-  line-height: 1.25;
-  font-size: 1rem;
-}
-.goodstxt textarea:focus {
-  line-height: 1.25;
-  font-size: 1rem;
-}
+  .all p {
+    width: 120px;
+    height: 60px;
+    border-radius: 6px;
+  }
+
+  /* 상품명 */
+  .productname input::placeholder {
+    font-size: 1rem;
+  }
+
+  .productname input:focus {
+    font-size: 1rem;
+  }
+
+  /* 카테고리 */
+  .customDropdown {
+    height: 60px;
+  }
+
+  .dropdownToggle {
+    font-size: 1rem;
+  }
+
+  /* 판매가 */
+  .sell input {
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .checkboxLabel {
+    font-size: 1rem;
+  }
+
+  .customCheckbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .customCheckbox::after {
+    left: 9px;
+    top: 5px;
+    width: 4px;
+    height: 9px;
+  }
+
+  /* 거래 옵션 */
+
+  /* 굿즈 설명 글 */
+  .goodstxt {
+    height: 304px;
+  }
+
+  .goodstxt textarea {
+    height: 304px;
+    border-radius: 6px;
+    line-height: 1.25;
+    font-size: 1rem;
+    padding: 16px;
+
+  }
+
+  .goodstxt textarea::placeholder {
+    line-height: 1.25;
+    font-size: 1rem;
+  }
+
+  .goodstxt textarea:focus {
+    line-height: 1.25;
+    font-size: 1rem;
+  }
 }

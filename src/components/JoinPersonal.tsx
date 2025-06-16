@@ -53,14 +53,14 @@ const JoinPersonal = () => {
                 <h4>
                     이름
                 </h4>
-                <input type='text' className={style.input} placeholder='이름을 입력해주세요' required />
+                <input type='text' className={style.input} placeholder='이름을 입력해주세요' value={'홍길동'} required />
             </div>{/* 이름 입력 */}
 
             <div className={Login.inputbox}>
                 <h4>
                     생년월일
                 </h4>
-                <input type='text' className={style.input} placeholder='생년월일 8자리를 입력해주세요' required />
+                <input type='text' className={style.input} placeholder='생년월일 8자리를 입력해주세요' value={'14430101'} required />
             </div>{/* 생년월일 입력 */}
 
             <div className={Login.inputbox}>
@@ -69,12 +69,12 @@ const JoinPersonal = () => {
                 </h4>
                 <div className={Login.inputboxlist}>
                     <div className={Login.phone}>
-                        <input type='text' className={style.input} style={{width: 'auto'}} placeholder='전화번호를 입력해주세요' required />
+                        <input type='text' className={style.input} placeholder='전화번호를 입력해주세요' value={'010000000000'} required />
                         <button className={Login.phonebtn}
                             onClick={handleClick}
                             disabled={disabled}>{buttonText}</button>
                     </div>{/* phone */}
-                    <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' required />
+                    <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' value={'1234'} required />
                 </div>
             </div>{/*전화번호 입력 */}
         </div>

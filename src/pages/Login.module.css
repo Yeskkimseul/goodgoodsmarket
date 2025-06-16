@@ -112,15 +112,19 @@ body {
 .phone {
     display: flex;
     gap: var(--space8);
+    align-items: stretch;
 }
 
 .phonebtn {
-    width: 120px;
+    word-break: keep-all;
     font-size: var(--font-button);
     font-weight: 500;
     line-height: 125%;
     letter-spacing: -0.03em;
-    padding: clamp(12px, 2vh, 14px) 0;
+    padding: clamp(12px, 2vh, 14px) var(--space8);
+    flex: 0 0 100px;
+    width: 100px;
+    white-space: nowrap;
     background-color: var(--button-bgdefault);
     color: var(--button-textdefault);
     display: flex;
