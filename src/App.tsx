@@ -22,6 +22,7 @@ import CommuEdit from "./pages/CommuEdit"; //커뮤니티수정
 import MyCommu from "./pages/MyCommu"; //내 커뮤니티
 import Mypage from "./pages/Mypage"; //마이페이지
 import MyDeals from "./pages/MyDeals"; //내 거래내역
+import MyReview from "./pages/MyReview"; //내 후기
 import WriteReview from "./pages/WriteReview";//리뷰 작성
 import Liked from "./pages/Liked"; //찜
 import Alarm from "./pages/Alarm"; //알림보기
