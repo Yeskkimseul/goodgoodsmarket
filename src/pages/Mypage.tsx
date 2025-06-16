@@ -31,8 +31,8 @@ const Mypage = () => {
                         거래
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>거래내역</p>} to="" />
-                    <MypageList leftContent={<p>찜목록</p>}
-                        onClick={() => navigate("/liked", { state: { tab: 1 } })} />
+                    <MypageList leftContent={<p>관심목록</p>}
+                        onClick={() => navigate("/liked", { state: { tab: 2 } })} />
                     {/* 일단 이렇게 해두기 - 인덱스 읽을 수 있게 수정 필요 */}
                     <MypageList leftContent={<p>최근 본 상품</p>} to="/liked" />
                 </div>{/* //.section */}
