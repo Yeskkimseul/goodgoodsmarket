@@ -317,7 +317,8 @@ const CommuDetail = () => {
                                                         ? "/images/icon/heart_small_mint_fill.svg"
                                                         : "/images/icon/heart_small_grey_empty.svg"
                                                 }
-                                                alt="좋아요"
+                                                alt="좋아요" 
+                                                className={style.commentlikesicon}
                                             />
                                             <p className={style.commentlike}>{commentLikes[c.id] ?? c.commentlikes} 좋아요</p>
                                         </div>

@@ -187,3 +187,7 @@
 .cIcontexton{
     color: var(--main-mint);
 }
+.commentlikesicon{
+    width: clamp(14px,3vw,16px);
+    aspect-ratio: 1/1;
+}
