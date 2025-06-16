@@ -20,7 +20,7 @@ const Mypage = () => {
                     <img src="/images/mypage/profile.png" alt="프로필사진" className={mypageStyles.profileImage} />
                     <div className={mypageStyles.right}>
                         <h3 className={mypageStyles.name}>뱃지가 좋아</h3>
-                        <div className={`${formStyles.button_big} ${formStyles.width40}`} onClick={() => navigate("#")}>프로필 관리</div>
+                        <div className={`${formStyles.button_big} ${formStyles.width40}`} onClick={() => navigate("/mypage/profile")}>프로필 관리</div>
 
                     </div>{/* //.right */}
                 </div>{/* profile */}
