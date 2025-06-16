@@ -30,7 +30,7 @@
   {
     "id": 3,
     "username": "키링은못참지",
-    "userProfile": "../../../images/chat/chatProfile3.png",
+    "userProfile": "/images/chat/chatProfile3.png",
     "productImage": "/images/chat/chatProduct3.png",
     "message": "네 가능합니다.",
     "userMessage": "안녕하세요, 저 정환이랑 교환 가능한가요?",
@@ -44,7 +44,7 @@
   {
     "id": 4,
     "username": "포카수집러",
-    "userProfile": "../../../images/chat/chatProfile4.png",
+    "userProfile": "/images/chat/chatProfile4.png",
     "productImage": "/images/chat/chatProduct4.png",
     "message": "네! 위치 알려주시면 맞춰볼게요",
     "userMessage": "직거래 가능한가요?",
@@ -58,7 +58,7 @@
   {
     "id": 5,
     "username": "굿즈는생명",
-    "userProfile": "../../../images/chat/chatProfile5.png",
+    "userProfile": "/images/chat/chatProfile5.png",
     "productImage": "/images/chat/chatProduct5.png",
     "message": "내일 발송 가능합니다!",
     "userMessage": "혹시 언제 배송 가능하세요?",

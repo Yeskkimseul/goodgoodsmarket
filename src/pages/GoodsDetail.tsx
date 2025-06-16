@@ -11,6 +11,10 @@ import MultiTab from "../components/exchangebuy/MultiTab";
 import Trust from "../components/Trust";
 import ReviewCard from "../components/ReviewCard";
 import { useReview } from "../context/ReviewContext";
+import { useChat } from "../context/ChatContext";
+
+
+
 
 const GoodsDetail = () => {
     const { reviews } = useReview();
@@ -24,6 +28,8 @@ const GoodsDetail = () => {
     const [snackbarVisible, setSnackbarVisible] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState("");
     const swiperRef = useRef<SwiperClass | null>(null);
+
+
 
     const handleLike = () => {
         if (!goods) return;
@@ -153,6 +159,9 @@ const GoodsDetail = () => {
         // 중복 증가 방지 플래그
         sessionStorage.setItem(viewedKey, "1");
     }, [goods]);
+
+    const { addChat, getChatByProductId } = useChat(); // ✅ context 사용
+
     const handleStartChat = () => {
         if (!goods || goods.isCompleted) return;
 
@@ -167,11 +176,13 @@ const GoodsDetail = () => {
             sellerName: goods.sellerName,
             sellerProfile: goods.sellerimgUrl,
             messages: [],
-           createdAt: goods.createdAt ?? new Date().toISOString()
+            createdAt: goods.createdAt ?? new Date().toISOString()
         };
 
         const existing = JSON.parse(localStorage.getItem("chatRooms") || "[]");
         localStorage.setItem("chatRooms", JSON.stringify([...existing, newRoom]));
+
+        
 
         navigate(`/chat/${roomId}`);
     };

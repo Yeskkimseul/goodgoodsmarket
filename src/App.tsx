@@ -78,7 +78,7 @@ function App() {
       path.startsWith("/community/commudetail") ||
       path.startsWith("/community/mycommu") ||
       path.startsWith("/community/commuupload") ||
-      path.startsWith("/chat/chatdetail") ||
+     (path.startsWith("/chat") && path !== "/chat") || 
       path === "/liked" ||
       path.startsWith("/writereview") ||
       path.startsWith("/about");
