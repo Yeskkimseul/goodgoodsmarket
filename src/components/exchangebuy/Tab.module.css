@@ -60,18 +60,18 @@
   width: calc(100% + var(--tab-horizontal-padding, clamp(16px, 20vw, 78px)) * 2);
 }  */
 
-.catewrap {
+/* .catewrap {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 var(--padding);
+  
 }
-
+ */
 .cate {
   margin-top: var(--space24);
   display: flex;
   flex-wrap: wrap;
   gap: clamp(8px, 2vw, 24px);
   width: 100%; 
-  
+  padding: 0 var(--padding);
 }

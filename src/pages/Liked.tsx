@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Header from "../components/header/Header";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import MultiTab from "../components/exchangebuy/MultiTab";
 import GoodsCard from "../components/GoodsCard";
 import { useGoods } from "../context/GoodsContext";
 import { Goods } from "../types";
 
+
+
 const Liked = () => {
     const navigate = useNavigate();
+
+    const location = useLocation();
+    const initialTab = location.state?.tab ?? 0;
+    const [tabIndex, setTabIndex] = useState(initialTab);
+
     const { goodsList } = useGoods();
     const [recentViewed, setRecentViewed] = useState<Goods[]>([]);
 
@@ -58,7 +65,11 @@ const Liked = () => {
     return (
         <Layout>
             <Header type="type1" title="관심목록" />
-            <MultiTab tabs={['최근 본 상품', '교환', '구매']}>
+            <MultiTab
+                tabs={['최근 본 상품', '교환', '구매']}
+                activeIndex={tabIndex}
+                setActiveIndex={setTabIndex}
+            >
                 {(activeIndex) => (
                     activeIndex === 0 ? (
                         <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
