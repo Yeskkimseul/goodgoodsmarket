@@ -285,7 +285,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/profile.png",
+        "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "뱃지가좋아",
         "sellerTrust": 70,
         "isExchangeable": false
