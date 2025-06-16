@@ -20,16 +20,24 @@ const Trust = ({ trust }: TrustProps) => {
     };
 
     const getTrustImg = (trust: number) => {
-        if (trust >= 70) return "/images/mypage/trust.svg";
+        if (trust >= 70) return "/images/mypage/trust_gg.svg";
         if (trust >= 50) return "/images/mypage/trust_g.svg";
         return "/images/mypage/trust_ss.svg";
     };
+
+    const getTrustLabel = (trust: number) => {
+        if (trust >= 70) return { label: "굿굿", color: "var(--button-bgdefault)" };
+        if (trust >= 50) return { label: "굿", color: "var(--text-validation)" };
+        return { label: "쏘쏘", color: "var(--text-error)" };
+    };
+
+    const { label, color } = getTrustLabel(trust);
 
     return (
 
         <div className={styles.trust}>
             <div className={styles.top} style={{ position: "relative" }}>
-                <h5>신뢰지수 - <span>굿굿</span></h5>
+                <h5>신뢰지수 - <span style={{ color }}>{label}</span></h5>
                 <img src="/images/mypage/info.svg" alt="신뢰지수란?"
                     onClick={handleToggleModal}
                     style={{ cursor: "pointer" }}

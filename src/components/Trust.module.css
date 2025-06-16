@@ -9,10 +9,7 @@
     display: flex;
     align-items: center;
     gap: var(--space4);
-}
-
-.top span {
-    color: var(--main-mint);
+    color: var(--text-grey);
 }
 
 .chart {
