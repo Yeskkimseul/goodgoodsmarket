@@ -7,7 +7,7 @@
         "price": 12000,
         "imageUrl": [
             "/images/main_postimgs/homeGoodsPick_1.png",
-            "/images/main_postimgs/homeGoodsPick_2.png"
+            "/images/main_postimgs/homeGoodsPick_9.png"
         ],
         "likes": 3,
         "createdAt": "2025-06-01T12:00:00Z",
@@ -17,10 +17,10 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 10,
-        "isExchangeable": true,
+        "sellerimgUrl": "/images/users/user13.jpg",
+        "sellerName": "내가만든굿즈",
+        "sellerTrust": 80,
+        "isExchangeable": false,
         "isCompleted": false
     },
     {
@@ -41,7 +41,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
+        "sellerName": "뱃지를뺏지",
         "sellerTrust": 70,
         "isExchangeable": false,
         "isCompleted": false
@@ -2378,10 +2378,12 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "엔젤레이포에버",
+        "sellerimgUrl": "/images/users/user1.png",
+        "sellerName": "뱃지를뺏지",
         "sellerTrust": 70,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": true
+
     },
     {
         "id": "117",
@@ -2730,10 +2732,12 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "폭풍의 시",
-        "sellerTrust": 60,
-        "isExchangeable": false
+        "sellerimgUrl": "/images/users/user13.jpg",
+        "sellerName": "내가만든굿즈",
+        "sellerTrust": 70,
+        "isExchangeable": false,
+        "isCompleted":  true
+
     },
     {
         "id": "133",

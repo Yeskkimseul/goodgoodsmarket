@@ -134,6 +134,33 @@
         ]
     },
     {
+        "id": "5",
+        "title": "이 펜 이름 뭔지 아시는 분..?",
+        "description": "이거 예전에 유행한 펜이였는데 오래되서 이름이 기억 안나요 아시는 분ㅠㅠ",
+        "category": "자유게시판",
+        "imageUrl": "/images/commuimgs/commuimg19.png",
+        "likes": 5,
+        "createdAt": "2025-05-30T13:20:00Z",
+        "views": 51,
+        "tags": [
+            "#굿즈",
+            "#문구류",
+            "#레어템"
+        ],
+        "userimgUrl": "/images/users/user1.png",
+        "userName": "레어템수집가",
+        "commentsNum": 1,
+        "comments": [
+            {
+                "id": "c8",
+                "userimgUrl": "/images/users/user1.png",
+                "userName": "뱃지가좋아",
+                "content": "아그거 제트슈프림 펜이에요!",
+                "createdAt": "2025-05-30T14:00:00Z"
+            }
+        ]
+    },
+    {
         "id": "6",
         "title": "굿즈 배송 너무 느려요ㅠㅠ",
         "description": "공식몰에서 주문했는데 2주째 배송이 안 오네요... 다들 배송 얼마나 걸리셨나요?",

@@ -41,5 +41,76 @@
       "imageUrl": "/images/mydeals/sale16.png"
     },
     "recommend": 14
+  },
+  {
+    "id": "r3",
+    "sellerName": "뱃지가좋아",
+    "reviewer": {
+      "name": "그대는천사",
+      "img": "/images/users/user10.png"
+    },
+    "date": "2025-06-10",
+    "reviewimg": [
+      "/images/mydeals/sale16.png",
+      "/images/review/review1.png",
+      "/images/main_postimgs/homeGoodsPick_1.png"
+    ],
+    "content": "퀄리티 너무 좋고 덤도 감사합니다!! 같이 넣어주신 과자 맛있었어요. 잘 쓰겠습니다 감사합니다!!",
+    "keywords": [
+      "친절해요"
+    ],
+    "goods": {
+      "id": "39",
+      "title": "아이돌 인형 컬렉션 세트 판매",
+      "imageUrl": "/images/mydeals/sale16.png"
+    },
+    "recommend": 14
+  },
+  {
+    "id": "r4",
+    "sellerName": "내가만든굿즈",
+    "reviewer": {
+      "name": "notecollecter03",
+      "img": "/images/users/user11.jpg"
+    },
+    "date": "2025-06-10",
+    "reviewimg": [
+      "/images/mydeals/sale62.png",
+      "/images/review/review2.jpg"
+    ],
+    "content": "퀄리티 너무 좋고 덤도 감사합니다!! 같이 넣어주신 과자 맛있었어요. 잘 쓰겠습니다 감사합니다!!",
+    "keywords": [
+      "답장이 빨라요",
+      "친절해요"
+    ],
+    "goods": {
+      "id": "132",
+      "title": "공백기 시집 홍보 잡지 판매합니다.",
+      "imageUrl": "/images/mydeals/sale62.png"
+    },
+    "recommend": 14
+  },
+  {
+    "id": "r5",
+    "sellerName": "뱃지를뺏지",
+    "reviewer": {
+      "name": "오늘저녁소고기",
+      "img": "/images/users/user12.jpg"
+    },
+    "date": "2025-06-15",
+    "reviewimg": [
+      "/images/mydeals/sale54.png"
+    ],
+    "content": "갖고싶었던 응원봉이였는데 빠른 직거래 감사합니다!!",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+    ],
+    "goods": {
+      "id": "116",
+      "title": "엔젤레이 응원봉 판매합니다",
+      "imageUrl": "/images/mydeals/sale54.png"
+    },
+    "recommend": 14
   }
 ]
