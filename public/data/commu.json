@@ -52,7 +52,7 @@
             "#굿즈",
             "#할인"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user2.png",
         "userName": "세일정보",
         "commentsNum": 2,
         "comments": [
@@ -86,7 +86,7 @@
             "#키링",
             "#자작"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user51.jpg",
         "userName": "키링장인",
         "commentsNum": 2,
         "comments": [
@@ -120,7 +120,7 @@
             "#포토카드",
             "#레어템"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user52.jpg",
         "userName": "레어템수집가",
         "commentsNum": 1,
         "comments": [
@@ -147,7 +147,7 @@
             "#문구류",
             "#레어템"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user53.jpg",
         "userName": "레어템수집가",
         "commentsNum": 1,
         "comments": [
@@ -173,7 +173,7 @@
             "#굿즈",
             "#배송"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user54.jpg",
         "userName": "배송기다림",
         "commentsNum": 2,
         "comments": [
@@ -207,8 +207,8 @@
       "#커스텀",
       "#콘서트"
     ],
-    "userimgUrl": "/images/users/user4.png",
-    "userName": "뱃지가좋아",
+    "userimgUrl": "/images/users/user55.jpg",
+    "userName": "하이텐션",
     "commentsNum": 3,
     "comments": [
       {
@@ -259,8 +259,8 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
-    "userName": "뱃지가좋아",
+    "userimgUrl": "/images/users/user56.jpg",
+    "userName": "츄파춥스",
     "commentsNum": 12,
     "comments": [
       {
@@ -285,7 +285,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user57.jpg",
     "userName": "햄햄토리",
     "commentsNum": 11,
     "comments": [
@@ -311,7 +311,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user58.jpg",
     "userName": "태연팬",
     "commentsNum": 13,
     "comments": [
@@ -337,7 +337,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user59.jpg",
     "userName": "굿즈지도",
     "commentsNum": 6,
     "comments": [
@@ -363,7 +363,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user60.jpg",
     "userName": "야채나라",
     "commentsNum": 8,
     "comments": [
@@ -389,7 +389,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user61.jpg",
     "userName": "몽글몽글",
     "commentsNum": 10,
     "comments": [
@@ -415,7 +415,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user62.jpg",
     "userName": "탐나는크루즈",
     "commentsNum": 11,
     "comments": [
@@ -441,7 +441,7 @@
       "#인형",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user63.jpg",
     "userName": "animate은혼",
     "commentsNum": 21,
     "comments": [
@@ -467,7 +467,7 @@
       "#패션",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user64.jpg",
     "userName": "아이마이미",
     "commentsNum": 11,
     "comments": [
@@ -493,7 +493,7 @@
       "#티켓",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user65.jpg",
     "userName": "락에빠져버렸어",
     "commentsNum": 9,
     "comments": [
@@ -519,7 +519,7 @@
       "#문구류",
       "#굿즈"
     ],
-    "userimgUrl": "/images/mypage/profile.png",
+    "userimgUrl": "/images/users/user66.jpg",
     "userName": "지현언니팬",
     "commentsNum": 8,
     "comments": [
