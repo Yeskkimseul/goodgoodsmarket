@@ -27,8 +27,6 @@ function formatTimeOnly(createdAt: string) {
 }
 
 function ChatMessages({ chats }: ChatMessagesProps) {
-    let lastDate = "";
-
     return (
         <div className={styles.chatMessages}>
             <div className={styles.warningMessage}>
@@ -38,11 +36,10 @@ function ChatMessages({ chats }: ChatMessagesProps) {
                 </p>
                 <a href="https://thecheat.co.kr/rb/?mod=_search" className={styles.theCheat} target="_blank" rel="noreferrer">더치트에서 조회하기</a>
             </div>
-
-            {chats.map((chat) => {
+            {chats.map((chat, index) => {
                 const currentDate = formatDateOnly(chat.createdAt);
-                const showDate = currentDate !== lastDate;
-                lastDate = currentDate;
+                const prevDate = index === 0 ? null : formatDateOnly(chats[index - 1].createdAt);
+                const showDate = currentDate !== prevDate;
 
                 return (
                     <div className={styles.chatMsg} key={chat.id + chat.createdAt}>
@@ -54,7 +51,8 @@ function ChatMessages({ chats }: ChatMessagesProps) {
                             </div>
                         )}
 
-                        {chat.sender === "me" ? (
+                        {/* 내가 보낸 메시지 */}
+                        {chat.sender === "me" && chat.userMessage && (
                             <div className={styles.meChat}>
                                 <div className={`body2 ${styles.meMessage}`}>
                                     <p>{chat.userMessage}</p>
@@ -63,7 +61,10 @@ function ChatMessages({ chats }: ChatMessagesProps) {
                                     </span>
                                 </div>
                             </div>
-                        ) : (
+                        )}
+
+                        {/* 상대방 메시지 */}
+                        {chat.sender !== "me" && chat.message && (
                             <div className={styles.otherChat}>
                                 <img className={styles.chatProfile} src={chat.userProfile} alt="프로필" />
                                 <div className={styles.otherMessage}>
@@ -77,6 +78,7 @@ function ChatMessages({ chats }: ChatMessagesProps) {
                     </div>
                 );
             })}
+
         </div>
     );
 }
