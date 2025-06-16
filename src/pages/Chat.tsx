@@ -33,7 +33,7 @@ const Chat = () => {
     filter === "전체" ? chatData : chatData.filter((chat) => chat.type === filter);
 
   const handleChatClick = (chatId: number) => {
-    navigate(`/chat/chatdetail/${chatId}`);
+    navigate(`/chat/${chatId}`);
   };
 
   return (

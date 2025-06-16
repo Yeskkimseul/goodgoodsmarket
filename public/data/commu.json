@@ -52,7 +52,7 @@
             "#굿즈",
             "#할인"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user2.png",
         "userName": "세일정보",
         "commentsNum": 2,
         "comments": [
@@ -86,7 +86,7 @@
             "#키링",
             "#자작"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user51.jpg",
         "userName": "키링장인",
         "commentsNum": 2,
         "comments": [
@@ -120,7 +120,7 @@
             "#포토카드",
             "#레어템"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user52.jpg",
         "userName": "레어템수집가",
         "commentsNum": 1,
         "comments": [
@@ -147,7 +147,7 @@
             "#문구류",
             "#레어템"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user53.jpg",
         "userName": "레어템수집가",
         "commentsNum": 1,
         "comments": [
@@ -173,7 +173,7 @@
             "#굿즈",
             "#배송"
         ],
-        "userimgUrl": "/images/users/user1.png",
+        "userimgUrl": "/images/users/user54.jpg",
         "userName": "배송기다림",
         "commentsNum": 2,
         "comments": [
@@ -202,7 +202,11 @@
     "likes": 33,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 121,
-    "tags": ["#응원봉", "#커스텀", "#콘서트"],
+    "tags": [
+      "#응원봉",
+      "#커스텀",
+      "#콘서트"
+    ],
     "userimgUrl": "/images/users/user4.png",
     "userName": "뱃지가좋아",
     "commentsNum": 3,
@@ -248,7 +252,10 @@
     "likes": 61,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 105,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "뱃지가좋아",
     "commentsNum": 12,
@@ -271,7 +278,10 @@
     "likes": 10,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 87,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "햄햄토리",
     "commentsNum": 11,
@@ -294,7 +304,10 @@
     "likes": 21,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 121,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "태연팬",
     "commentsNum": 13,
@@ -317,7 +330,10 @@
     "likes": 16,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 88,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "굿즈지도",
     "commentsNum": 6,
@@ -340,7 +356,10 @@
     "likes": 11,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 67,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "야채나라",
     "commentsNum": 8,
@@ -363,7 +382,10 @@
     "likes": 18,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 106,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "몽글몽글",
     "commentsNum": 10,
@@ -386,7 +408,10 @@
     "likes": 12,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 92,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "탐나는크루즈",
     "commentsNum": 11,
@@ -409,7 +434,10 @@
     "likes": 33,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 191,
-    "tags": ["#인형", "#굿즈"],
+    "tags": [
+      "#인형",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "animate은혼",
     "commentsNum": 21,
@@ -432,7 +460,10 @@
     "likes": 28,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 112,
-    "tags": ["#패션", "#굿즈"],
+    "tags": [
+      "#패션",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "아이마이미",
     "commentsNum": 11,
@@ -455,7 +486,10 @@
     "likes": 18,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 102,
-    "tags": ["#티켓", "#굿즈"],
+    "tags": [
+      "#티켓",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "락에빠져버렸어",
     "commentsNum": 9,
@@ -478,7 +512,10 @@
     "likes": 22,
     "createdAt": "2025-06-03T14:45:00Z",
     "views": 98,
-    "tags": ["#문구류", "#굿즈"],
+    "tags": [
+      "#문구류",
+      "#굿즈"
+    ],
     "userimgUrl": "/images/mypage/profile.png",
     "userName": "지현언니팬",
     "commentsNum": 8,
