@@ -170,7 +170,8 @@ const GoodsEdit = () => {
         goodsList = goodsList.map(item => item.id === id ? updatedGoods : item);
         localStorage.setItem('goodsList', JSON.stringify(goodsList));
         setGoodsList(goodsList); // 컨텍스트 업데이트
-        navigate('/mypage'); // 마이페이지로 이동
+        alert('수정이 완료되었습니다.');
+        navigate(`/home/goodsdetail/${id}`);
     };
 
     const formatPrice = (value: string | number) => {
@@ -376,7 +377,7 @@ const GoodsEdit = () => {
                             />
                         </label>
                     </div>
-                    <button className={styles.upload} type="submit">등록완료</button>
+                    <button className={styles.upload} type="submit">수정완료</button>
                 </form>
             </div>
         </Layout>
