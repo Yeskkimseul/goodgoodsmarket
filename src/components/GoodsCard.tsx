@@ -18,6 +18,8 @@ interface Props {
 
 const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, className }: Props) => {
     const [liked, setliked] = useState(false); //내가 아이템을 찜했는지
+    const isLikeDisabled = item.sellerName === '뱃지가좋아';
+
 
     //처음 들어오거나 likedIds가 바뀌면 liked 상태 업데이트
     useEffect(() => {
@@ -63,13 +65,34 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
             >
                 <div className={styles.cardTop}>
                     <img src={item.imageUrl[0]} alt={item.title} className={styles.image} />
-                    <button className={styles.likeButton} onClick={(e) => {
-                        e.preventDefault();
-                        toggleLike();
-                    }}>
+                    <button
+                        className={styles.likeButton}
+                        onClick={(e) => {
+                            e.preventDefault();
+
+                            if (isLikeDisabled) {
+                                alert('내 상품은 찜할 수 없어요!');
+                                return;
+                            }
+
+                            toggleLike();
+                        }}
+                    >
                         <img
-                            src={liked ? process.env.PUBLIC_URL + '/images/icon/heart_on.svg' : process.env.PUBLIC_URL + '/images/icon/heart_off.svg'}
-                            alt={liked ? '좋아요 취소' : '좋아요'}
+                            src={
+                                isLikeDisabled
+                                    ? process.env.PUBLIC_URL + '/images/icon/heartdisabled.svg'
+                                    : liked
+                                        ? process.env.PUBLIC_URL + '/images/icon/heart_on.svg'
+                                        : process.env.PUBLIC_URL + '/images/icon/heart_off.svg'
+                            }
+                            alt={
+                                isLikeDisabled
+                                    ? '좋아요 비활성화'
+                                    : liked
+                                        ? '좋아요 취소'
+                                        : '좋아요'
+                            }
                             className={styles.heartIcon}
                         />
                     </button>
