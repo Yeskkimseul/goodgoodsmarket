@@ -5,7 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 const suggestions = ['굿즈', '문구', '솜깅','스탠드', '아크릴', '앨범', '음반', '응원봉', '인형', '잡지', '커스텀', '코롯토', '키링', '티켓', '패션', '팬라이트', '펜', '포카', '포토카드'];
 
-const HeaderType0: React.FC = () => {
+interface HeaderType0Props {
+  searchValue: string;
+  setSearchValue: (value: string) => void;
+}
+
+const HeaderType0: React.FC<HeaderType0Props> = ({ searchValue, setSearchValue }) => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState('');
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
@@ -43,22 +48,18 @@ const HeaderType0: React.FC = () => {
         >
           <img src="/images/header/header_back.svg" alt="뒤로가기" />
         </div>
-        <div style={{ position: 'relative', width: '100%' }}>
+           <div style={{ position: 'relative', width: '100%' }}>
           <input
             className={`${formstyle.input} ${styles.searchInput}`}
             type="text"
             placeholder="검색어를 입력해주세요"
-            value={inputValue}
+            value={searchValue}
             onChange={handleChange}
           />
           {filteredSuggestions.length > 0 && (
             <ul className={styles.suggestionList}>
               {filteredSuggestions.map((suggestion, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleSuggestionClick(suggestion)}
-                  className={styles.suggestionItem}
-                >
+                <li key={index} onClick={() => handleSuggestionClick(suggestion)} className={styles.suggestionItem}>
                   {suggestion}
                 </li>
               ))}

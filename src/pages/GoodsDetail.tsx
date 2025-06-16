@@ -129,6 +129,30 @@ const GoodsDetail = () => {
         return `${Math.floor(diff / 86400)}일 전`;
     }
 
+    useEffect(() => {
+        if (!goods) return;
+
+        // 이미 증가시켰는지 체크(새로고침/탭 이동 시 중복 방지)
+        const viewedKey = `goods_viewed_${goods.id}`;
+        if (sessionStorage.getItem(viewedKey)) return;
+
+        // 조회수 1 증가
+        const newViews = (goods.views || 0) + 1;
+        setGoods({ ...goods, views: newViews });
+
+        // localStorage의 goodsList도 업데이트
+        const stored = localStorage.getItem("goodsList");
+        if (stored) {
+            const goodsList = JSON.parse(stored);
+            const updatedList = goodsList.map((item: Goods) =>
+                item.id === goods.id ? { ...item, views: newViews } : item
+            );
+            localStorage.setItem("goodsList", JSON.stringify(updatedList));
+        }
+
+        // 중복 증가 방지 플래그
+        sessionStorage.setItem(viewedKey, "1");
+    }, [goods]);
     const handleStartChat = () => {
         if (!goods || goods.isCompleted) return;
 
@@ -151,6 +175,39 @@ const GoodsDetail = () => {
 
         navigate(`/chat/${roomId}`);
     };
+
+    useEffect(() => {
+        const stored = localStorage.getItem("goodsList");
+        const likes = JSON.parse(localStorage.getItem("likes") || "[]");
+
+        if (stored) {
+            const goodsList = JSON.parse(stored);
+            let found = goodsList.find((item: Goods) => item.id === id);
+
+            // likes 리스트에 현재 상품 ID가 있는 경우 수동 증가
+            if (found && likes.includes(String(found.id))) {
+                found = {
+                    ...found,
+                    likes: (found.likes || 0) + 1,
+                };
+            }
+
+            setGoods(found ?? null);
+        } else {
+            fetch("/data/goods.json")
+                .then(res => res.json())
+                .then((data: Goods[]) => {
+                    let found = data.find(item => item.id === id);
+                    if (found && likes.includes(String(found.id))) {
+                        found = {
+                            ...found,
+                            likes: (found.likes || 0) + 1,
+                        };
+                    }
+                    setGoods(found ?? null);
+                });
+        }
+    }, [id]);
 
 
     return (

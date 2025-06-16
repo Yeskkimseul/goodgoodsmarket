@@ -240,6 +240,12 @@
     gap: var(--space16);
 }
 
+.blank {
+    width: 100%;
+    height: var(--space4);
+    background: var(--stroke-lightE);
+}
+
 @media (max-width:768px) {
     .topcon {
         display: block;

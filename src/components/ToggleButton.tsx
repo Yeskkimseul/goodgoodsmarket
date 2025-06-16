@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import styles from './ToggleButton.module.css'; // CSS 모듈 import
+import React from 'react';
+import styles from './ToggleButton.module.css';
 
 type ToggleButtonProps = {
   text: string;
+  selected: boolean;
   onSelect: (text: string, selected: boolean) => void;
 };
 
-const ToggleButton: React.FC<ToggleButtonProps> = ({ text, onSelect }) => {
-  const [selected, setSelected] = useState(false);
-
+const ToggleButton: React.FC<ToggleButtonProps> = ({ text, selected, onSelect }) => {
   const handleClick = () => {
-    const newState = !selected;
-    setSelected(newState);
-    onSelect(text, newState);
+    onSelect(text, !selected); // 상태 변경은 부모가 처리
   };
 
   return (

@@ -156,6 +156,7 @@ function App() {
               <Route path="/liked" element={<Liked />} />
               <Route path="/mypage/alarm" element={<Alarm />} />
               <Route path="/mypage/mydeals" element={<MyDeals />} />
+              <Route path="/mypage/myreview" element={<MyReview />} />
               <Route path="/writereview" element={<WriteReview />} />
               <Route path="/mypage/goodsedit/:id" element={<GoodsEdit />} />
               {/* 수정 전 참고용 페이지들 */}

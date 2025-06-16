@@ -195,6 +195,34 @@ const CommuDetail = () => {
         }
     }, [id]);
 
+    useEffect(() => {
+        if (!commu || !commu.id) return;
+
+        const viewedKey = `commu_viewed_${commu.id}`;
+        if (sessionStorage.getItem(viewedKey)) return;
+
+        const newViews = (commu.views || 0) + 1;
+
+        // localStorage의 commuList 업데이트
+        const stored = localStorage.getItem("commuList");
+        if (stored) {
+            const commuList = JSON.parse(stored);
+            const updatedList = commuList.map((item: commuType) =>
+                item.id === commu.id ? { ...item, views: newViews } : item
+            );
+            localStorage.setItem("commuList", JSON.stringify(updatedList));
+
+            // 업데이트된 commu 객체로 setcommu
+            const updated = updatedList.find((item: commuType) => item.id === commu.id);
+            if (updated) setcommu(updated);
+        } else {
+            // commu만 업데이트
+            setcommu(prev => prev ? { ...prev, views: newViews } : prev);
+        }
+
+        sessionStorage.setItem(viewedKey, "1");
+    }, [commu?.id]);
+
     /* 로컬스토리지에 저장된 코멘트 우선 적용 */
     const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
     const commentsToShow = commu ? (storedComments[commu.id] || commu.comments || []) : [];
