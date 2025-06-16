@@ -225,26 +225,25 @@
     },
     {
         "id": "11",
-        "title": "컬러그램 제로베이스원 콜라보 홀더",
-        "description": "A디자인의 홀더랑 교환하실 분 없으신가요?ㅠㅠ",
+        "title": "틴틴팅클 베리",
+        "description": "틴틴팅클의 상큼 발랄한 매력이 가득한 베리 굿즈입니다! 🍓✨\n선명한 컬러와 귀여운 디자인이 돋보여 소장 가치가 높아요.\n작은 디테일까지 정성 들여 만들어 팬들의 마음을 사로잡는 아이템이며,\n일상에 활력을 더해주는 특별한 선물이 될 거예요.\n팬분들과 교환하며 즐거운 추억을 쌓고 싶으신 분께 추천드립니다! 🎀💖",
         "category": "기타",
-        "price": 16000,
+        "price": 13200,
         "imageUrl": [
-            "/images/mydeals/sale1.png"
+            "/images/myexchange/exchange85.png"
         ],
-        "likes": 4,
+        "likes": 12,
         "createdAt": "2025-05-25T12:00:00Z",
-        "views": 63,
+        "views": 100,
         "options": [
             "미개봉",
             "직거래",
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
-        "sellerTrust": 70,
-        "isExchangeable": true,
-        "isCompleted": false
+        "sellerName": "베리베리스트로베리",
+        "sellerTrust": 60,
+        "isExchangeable": true
     },
     {
         "id": "12",
@@ -1571,7 +1570,6 @@
         "sellerTrust": 70,
         "isExchangeable": false,
         "isCompleted": true
-
     },
     {
         "id": "79",
@@ -2388,7 +2386,6 @@
         "sellerTrust": 70,
         "isExchangeable": false,
         "isCompleted": true
-
     },
     {
         "id": "117",
@@ -2741,8 +2738,7 @@
         "sellerName": "내가만든굿즈",
         "sellerTrust": 70,
         "isExchangeable": false,
-        "isCompleted":  true
-
+        "isCompleted": true
     },
     {
         "id": "133",
@@ -3017,7 +3013,7 @@
         "imageUrl": [
             "/images/mydeals/sale67.png"
         ],
-        "likes": 11 ,
+        "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 97,
         "options": [
@@ -3039,7 +3035,7 @@
         "imageUrl": [
             "/images/mydeals/sale68.png"
         ],
-        "likes": 19 ,
+        "likes": 19,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 163,
         "options": [
@@ -3061,7 +3057,7 @@
         "imageUrl": [
             "/images/mydeals/sale69.png"
         ],
-        "likes": 14 ,
+        "likes": 14,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 121,
         "options": [
@@ -3084,7 +3080,7 @@
         "imageUrl": [
             "/images/mydeals/sale70.png"
         ],
-        "likes": 9 ,
+        "likes": 9,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 87,
         "options": [
@@ -3106,7 +3102,7 @@
         "imageUrl": [
             "/images/mydeals/sale71.png"
         ],
-        "likes": 19 ,
+        "likes": 19,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 168,
         "options": [
@@ -3128,7 +3124,7 @@
         "imageUrl": [
             "/images/mydeals/sale72.png"
         ],
-        "likes": 12 ,
+        "likes": 12,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 103,
         "options": [
@@ -3150,7 +3146,7 @@
         "imageUrl": [
             "/images/myexchange/exchange63.png"
         ],
-        "likes": 21 ,
+        "likes": 21,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 189,
         "options": [
@@ -3172,7 +3168,7 @@
         "imageUrl": [
             "/images/myexchange/exchange64.png"
         ],
-        "likes": 18 ,
+        "likes": 18,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 134,
         "options": [
@@ -3194,7 +3190,7 @@
         "imageUrl": [
             "/images/myexchange/exchange65.png"
         ],
-        "likes": 15 ,
+        "likes": 15,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 122,
         "options": [
@@ -3216,7 +3212,7 @@
         "imageUrl": [
             "/images/myexchange/exchange66.png"
         ],
-        "likes": 19 ,
+        "likes": 19,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 147,
         "options": [
@@ -3238,7 +3234,7 @@
         "imageUrl": [
             "/images/myexchange/exchange67.png"
         ],
-        "likes": 34 ,
+        "likes": 34,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 221,
         "options": [
@@ -3260,7 +3256,7 @@
         "imageUrl": [
             "/images/myexchange/exchange68.png"
         ],
-        "likes": 42 ,
+        "likes": 42,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 193,
         "options": [
@@ -3282,7 +3278,7 @@
         "imageUrl": [
             "/images/myexchange/exchange69.png"
         ],
-        "likes": 27 ,
+        "likes": 27,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 176,
         "options": [
@@ -3304,7 +3300,7 @@
         "imageUrl": [
             "/images/myexchange/exchange70.png"
         ],
-        "likes": 51 ,
+        "likes": 51,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 204,
         "options": [
@@ -3326,7 +3322,7 @@
         "imageUrl": [
             "/images/mydeals/sale73.png"
         ],
-        "likes": 37 ,
+        "likes": 37,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 118,
         "options": [
@@ -3348,7 +3344,7 @@
         "imageUrl": [
             "/images/mydeals/sale74.png"
         ],
-        "likes": 24 ,
+        "likes": 24,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 86,
         "options": [
@@ -3370,7 +3366,7 @@
         "imageUrl": [
             "/images/mydeals/sale75.png"
         ],
-        "likes": 41 ,
+        "likes": 41,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 132,
         "options": [
@@ -3392,7 +3388,7 @@
         "imageUrl": [
             "/images/mydeals/sale76.png"
         ],
-        "likes": 57 ,
+        "likes": 57,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 210,
         "options": [
@@ -3405,7 +3401,6 @@
         "sellerTrust": 90,
         "isExchangeable": false,
         "isCompleted": true
-
     },
     {
         "id": "163",
@@ -3416,7 +3411,7 @@
         "imageUrl": [
             "/images/mydeals/sale77.png"
         ],
-        "likes": 33 ,
+        "likes": 33,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 98,
         "options": [
@@ -3438,7 +3433,7 @@
         "imageUrl": [
             "/images/mydeals/sale78.png"
         ],
-        "likes": 64 ,
+        "likes": 64,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 243,
         "options": [
@@ -3460,7 +3455,7 @@
         "imageUrl": [
             "/images/mydeals/sale79.png"
         ],
-        "likes": 22 ,
+        "likes": 22,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 155,
         "options": [
@@ -3482,7 +3477,7 @@
         "imageUrl": [
             "/images/mydeals/sale80.png"
         ],
-        "likes": 48 ,
+        "likes": 48,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 179,
         "options": [
@@ -3504,7 +3499,7 @@
         "imageUrl": [
             "/images/myexchange/exchange71.png"
         ],
-        "likes": 19 ,
+        "likes": 19,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 85,
         "options": [
@@ -3526,7 +3521,7 @@
         "imageUrl": [
             "/images/myexchange/exchange72.png"
         ],
-        "likes": 27 ,
+        "likes": 27,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 112,
         "options": [
@@ -3548,7 +3543,7 @@
         "imageUrl": [
             "/images/myexchange/exchange73.png"
         ],
-        "likes": 35 ,
+        "likes": 35,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 124,
         "options": [
@@ -3570,7 +3565,7 @@
         "imageUrl": [
             "/images/myexchange/exchange74.png"
         ],
-        "likes": 35 ,
+        "likes": 35,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 124,
         "options": [
@@ -3768,7 +3763,7 @@
         "imageUrl": [
             "/images/myexchange/exchange79.png"
         ],
-        "likes":15,
+        "likes": 15,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 90,
         "options": [
@@ -3790,7 +3785,7 @@
         "imageUrl": [
             "/images/myexchange/exchange80.png"
         ],
-        "likes":16,
+        "likes": 16,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 106,
         "options": [
@@ -3812,7 +3807,7 @@
         "imageUrl": [
             "/images/myexchange/exchange81.png"
         ],
-        "likes":42,
+        "likes": 42,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 118,
         "options": [
@@ -3834,7 +3829,7 @@
         "imageUrl": [
             "/images/myexchange/exchange82.png"
         ],
-        "likes":22,
+        "likes": 22,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 178,
         "options": [
@@ -3856,7 +3851,7 @@
         "imageUrl": [
             "/images/myexchange/exchange83.png"
         ],
-        "likes":37,
+        "likes": 37,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 142,
         "options": [
@@ -3878,7 +3873,7 @@
         "imageUrl": [
             "/images/myexchange/exchange84.png"
         ],
-        "likes":42,
+        "likes": 42,
         "createdAt": "2025-05-25T12:00:00Z",
         "views": 150,
         "options": [
@@ -3889,28 +3884,6 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "스티커요정",
         "sellerTrust": 90,
-        "isExchangeable": true
-    },
-    {
-        "id": "186",
-        "title": "틴틴팅클 베리",
-        "description": "틴틴팅클의 상큼 발랄한 매력이 가득한 베리 굿즈입니다! 🍓✨\n선명한 컬러와 귀여운 디자인이 돋보여 소장 가치가 높아요.\n작은 디테일까지 정성 들여 만들어 팬들의 마음을 사로잡는 아이템이며,\n일상에 활력을 더해주는 특별한 선물이 될 거예요.\n팬분들과 교환하며 즐거운 추억을 쌓고 싶으신 분께 추천드립니다! 🎀💖",
-        "category": "기타",
-        "price": 13200,
-        "imageUrl": [
-            "/images/myexchange/exchange85.png"
-        ],
-        "likes":12,
-        "createdAt": "2025-05-25T12:00:00Z",
-        "views": 100,
-        "options": [
-            "미개봉",
-            "직거래",
-            "안전거래"
-        ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "베리베리스트로베리",
-        "sellerTrust": 60,
         "isExchangeable": true
     }
 ]
