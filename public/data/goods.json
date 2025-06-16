@@ -33,7 +33,7 @@
             "/images/main_postimgs/homeGoodsPick_2.png"
         ],
         "likes": 7,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -56,7 +56,7 @@
             "/images/main_postimgs/homeGoodsPick_3.png"
         ],
         "likes": 10,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -78,7 +78,7 @@
             "/images/main_postimgs/homeGoodsPick_4.png"
         ],
         "likes": 5,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -100,7 +100,7 @@
             "/images/main_postimgs/homeGoodsPick_5.png"
         ],
         "likes": 8,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -122,7 +122,7 @@
             "/images/main_postimgs/homeGoodsPick_6.png"
         ],
         "likes": 8,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -144,7 +144,7 @@
             "/images/main_postimgs/homeGoodsPick_7.png"
         ],
         "likes": 8,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -166,7 +166,7 @@
             "/images/main_postimgs/homeGoodsPick_8.png"
         ],
         "likes": 8,
-        "createdAt": "2023-10-01T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -188,7 +188,7 @@
             "/images/mydeals/sale1.png"
         ],
         "likes": 4,
-        "createdAt": "2025-05-25T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 120,
         "options": [
             "미개봉",
@@ -210,7 +210,7 @@
             "/images/mydeals/sale9.png"
         ],
         "likes": 14,
-        "createdAt": "2025-05-25T12:00:00Z",
+        "createdAt": "2025-06-16T12:00:00Z",
         "views": 78,
         "options": [
             "미개봉",
@@ -307,8 +307,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/user16.jpg",
+        "sellerName": "세상은동글동글",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -329,15 +329,15 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/noiconuser.png",
+        "sellerName": "파일럿천재",
         "sellerTrust": 70,
         "isExchangeable": true
     },
     {
         "id": "23",
         "title": "포토카드 컬러 교환해요~",
-        "description": "포토카드 컬러별로 구비중입니당.",
+        "description": "포토카드 컬러별로 구비중입니당. 챗으로 문의주세여",
         "category": "포토카드",
         "price": 23000,
         "imageUrl": [
@@ -351,15 +351,15 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/noiconuser.png",
+        "sellerName": "파일럿천재",
         "sellerTrust": 70,
         "isExchangeable": true
     },
     {
         "id": "24",
         "title": "전신이랑 얼굴샷 바꿀 사람?",
-        "description": "OO이 전신샷 많이 갖고 있어여 얼굴샷 가지고 계신 분~?.",
+        "description": "케이 전신샷 많이 갖고 있어여 얼굴샷 가지고 계신 분~?.",
         "category": "포토카드",
         "price": 23000,
         "imageUrl": [
@@ -373,8 +373,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/noiconuser.png",
+        "sellerName": "케이여친",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -396,7 +396,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "겨울은윈터",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -418,7 +418,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "겨울은윈터",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -461,8 +461,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/noiconuser.png",
+        "sellerName": "파일럿천재",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -483,8 +483,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/user14.jpg",
+        "sellerName": "아이돌팬",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -506,7 +506,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -527,8 +527,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/noiconuser.png",
+        "sellerName": "케이여친",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -549,8 +549,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/noiconuser.png",
+        "sellerName": "케이여친",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -571,8 +571,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/user14.jpg",
+        "sellerName": "아이돌팬",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -615,8 +615,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/user17.jpg",
+        "sellerName": "냠냠쩝쩝",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -660,7 +660,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -682,7 +682,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "젤리리젤리",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -704,7 +704,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false,
         "isCompleted": true
@@ -750,7 +750,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -772,7 +772,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
     },
@@ -794,7 +794,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "간장공장간공장장",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -816,7 +816,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "간장공장간공장장",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -904,7 +904,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerName": "컬러파워",
         "sellerTrust": 70,
         "isExchangeable": true
     },
@@ -1962,7 +1962,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "파일럿천재",
         "sellerTrust": 80,
         "isExchangeable": false
@@ -2758,7 +2758,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "겨울은 윈터",
+        "sellerName": "겨울은윈터",
         "sellerTrust": 80,
         "isExchangeable": false
     },
@@ -3884,6 +3884,28 @@
         "sellerimgUrl": "/images/mypage/profile.png",
         "sellerName": "스티커요정",
         "sellerTrust": 90,
+        "isExchangeable": true
+    },
+    {
+        "id": "186",
+        "title": "이 친구 파란색 버전 구해요",
+        "description": "노랑색이랑 파란색 바꾸실 분ㅠ",
+        "category": "인형",
+        "price": 13500,
+        "imageUrl": [
+            "/images/myexchange/exchange15.png"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-25T12:00:00Z",
+        "views": 68,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
         "isExchangeable": true
     }
 ]

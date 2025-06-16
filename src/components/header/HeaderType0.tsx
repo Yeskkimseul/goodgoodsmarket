@@ -57,6 +57,7 @@ const HeaderType0: React.FC<HeaderType0Props> = ({ searchValue, setSearchValue }
             placeholder="검색어를 입력해주세요"
             value={searchValue}
             onChange={handleChange}
+            style={{width : '100%'}}
           />
           {filteredSuggestions.length > 0 && (
             <ul className={styles.suggestionList}>

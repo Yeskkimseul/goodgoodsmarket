@@ -45,35 +45,37 @@ const GoodsCategory = () => {
         <MultiTab tabs={['구매', '교환']}>
           {(activeIndex) => (
             activeIndex === 0 ? (
-                <div className={styles.cate}>
-                  {filteredGoods
-                    .filter(g => !g.isExchangeable)
-                    .map(item => (
-                      <GoodsCard
-                        key={item.id}
-                        item={item}
-                        likedIds={likedIds}
-                        setLikedIds={setLikedIds}
-                        goodsList={goodsList}
-                        setGoodsList={setGoodsList}
-                      />
-                    ))}
-                </div>
+              <div className={styles.cate}>
+                {filteredGoods
+                  .filter(g => !g.isExchangeable)
+                  .slice(0, 8)
+                  .map(item => (
+                    <GoodsCard
+                      key={item.id}
+                      item={item}
+                      likedIds={likedIds}
+                      setLikedIds={setLikedIds}
+                      goodsList={goodsList}
+                      setGoodsList={setGoodsList}
+                    />
+                  ))}
+              </div>
             ) : activeIndex === 1 ? (
-                <div className={styles.cate}>
-                  {filteredGoods
-                    .filter(g => g.isExchangeable)
-                    .map(item => (
-                      <GoodsCard
-                        key={item.id}
-                        item={item}
-                        likedIds={likedIds}
-                        setLikedIds={setLikedIds}
-                        goodsList={goodsList}
-                        setGoodsList={setGoodsList}
-                      />
-                    ))}
-                </div>
+              <div className={styles.cate}>
+                {filteredGoods
+                  .filter(g => g.isExchangeable)
+                  .slice(0, 8)
+                  .map(item => (
+                    <GoodsCard
+                      key={item.id}
+                      item={item}
+                      likedIds={likedIds}
+                      setLikedIds={setLikedIds}
+                      goodsList={goodsList}
+                      setGoodsList={setGoodsList}
+                    />
+                  ))}
+              </div>
             ) : null
           )}
         </MultiTab>
