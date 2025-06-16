@@ -260,7 +260,7 @@ const GoodsDetail = () => {
                         goods && goods.isCompleted
                             ? { background: 'var(--button-bgdisabled)', color: 'var(--button-textdisabled)', cursor: 'default' }
                             : undefined
-                    }>
+                    } >
                         채팅하기
                     </div>
                 </div>
