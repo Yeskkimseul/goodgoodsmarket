@@ -41,9 +41,9 @@ const Mypage = () => {
                     <div className={mypageStyles.title}>
                         나의 굿굿
                     </div>{/* //.title */}
-                    <MypageList leftContent={<p>내 상품 관리</p>} to="" />
+                    <MypageList leftContent={<p>내 상품 관리</p>} to="/mypage/mydeals" />
                     <MypageList leftContent={<p>내 상점 후기</p>} to="" />
-                    <MypageList leftContent={<p>내 커뮤니티 관리</p>} to="" />
+                    <MypageList leftContent={<p>내 커뮤니티 관리</p>} to="/community/mycommu" />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.section}>
