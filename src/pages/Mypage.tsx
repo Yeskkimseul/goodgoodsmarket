@@ -50,7 +50,7 @@ const Mypage = () => {
                         굿굿 소식
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>굿굿마켓 소개</p>} to="/about" />
-                    <MypageList leftContent={<p>공지사항</p>} to="" />
+                    <MypageList leftContent={<p>공지사항</p>} to="/mypage/notice" />
                     <MypageList leftContent={<p>이용안내</p>} to="" />
                 </div>{/* //.section */}
 
