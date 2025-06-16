@@ -7,7 +7,17 @@ interface ChatInputProps {
   onSend: () => void;
 }
 
+
+
 function ChatInput({ value, onChange, onSend }: ChatInputProps) {
+
+   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      onSend();
+    }
+  };
+
   return (
     <div className={styles.chatInputWrap}>
       <button className={styles.attachBtn} type="button" onClick={() => alert("첨부 기능은 아직 구현되지 않았습니다.")}>
@@ -20,6 +30,7 @@ function ChatInput({ value, onChange, onSend }: ChatInputProps) {
         placeholder="메시지를 입력해주세요."
         value={value}
         onChange={onChange}
+        onKeyDown={handleKeyDown}
       />
       <button className={styles.sendBtn} type="button" onClick={onSend}>
         <img src="/images/chat/send.svg" alt="전송"

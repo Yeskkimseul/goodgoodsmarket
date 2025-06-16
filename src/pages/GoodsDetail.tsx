@@ -142,7 +142,8 @@ const GoodsDetail = () => {
             productImage: goods.imageUrl?.[0] ?? "",
             sellerName: goods.sellerName,
             sellerProfile: goods.sellerimgUrl,
-            messages: []
+            messages: [],
+           createdAt: goods.createdAt ?? new Date().toISOString()
         };
 
         const existing = JSON.parse(localStorage.getItem("chatRooms") || "[]");
@@ -299,8 +300,8 @@ const GoodsDetail = () => {
                     <div className={form.button_big} style={
                         goods && goods.isCompleted
                             ? { background: 'var(--button-bgdisabled)', color: 'var(--button-textdisabled)', cursor: 'default' }
-                            : undefined} 
-                            onClick={handleStartChat} 
+                            : undefined}
+                        onClick={handleStartChat}
                     >
                         채팅하기
                     </div>
