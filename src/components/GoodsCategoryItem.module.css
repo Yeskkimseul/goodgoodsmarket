@@ -1,13 +1,31 @@
+/* 새로 추가한 최상위 래퍼 */
+.swiperWrapper {
+  position: relative;
+  padding-left: clamp(16px, 4vw, 78px);
+  padding-right: clamp(16px, 4vw, 78px);
+  overflow: visible; /* 화살표가 밖으로 나갈 수 있게 */
+}
+
+
+/* 기존 listContainer에서 패딩 제거 */
 .listContainer {
+  padding: 0;
+  margin: 0 -clamp(16px, 4vw, 78px); /* 패딩만큼 스크롤 영역 확장 */
+  /* 기존 스타일 유지 */
   display: flex;
   gap: var(--space24);
-  overflow-x: auto;
   white-space: nowrap;
-  /*   padding-bottom: clamp(40px, 5vw, 80px); */
   cursor: grab;
   user-select: none;
-  padding: 0 clamp(16px, 4vw, 78px);
-  /* scroll-behavior: smooth; */
+  overflow: visible;
+  position: relative; /* 필요하면 유지 */
+  
+}
+:global(.custom-prev.disabled),
+:global(.custom-next.disabled) {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
 }
 
 .listContainer:active {
@@ -21,6 +39,7 @@
   font-weight: 600;
   line-height: 125%;
   letter-spacing: -0.03em;
+  
 }
 
 .listItem a {
@@ -51,6 +70,7 @@
   gap: 8px;                 /* 이미지와 텍스트 사이 간격 */
   width: 100%;              /* 슬라이드 크기에 맞게 꽉 채움 */
   box-sizing: border-box;
+  
 }
 
 .listItem img {
@@ -69,6 +89,40 @@
   text-overflow: ellipsis;  /* 길면 ... 처리 */
   width: 100%;              /* 텍스트 너비 고정 */
 }
+
+
+:global(.custom-prev),
+:global(.custom-next) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #1DC6A7;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* 각각 좌우 위치 지정 */
+:global(.custom-prev) {
+  left: clamp(8px, 2vw, 48px);
+}
+
+:global(.custom-next) {
+  right: clamp(8px, 2vw, 48px);
+}
+
+
+
+
+
 
 @media (max-width: 400px) {
 .listItem img {
