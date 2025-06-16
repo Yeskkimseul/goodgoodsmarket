@@ -11,13 +11,13 @@
         "tags": [
             "#굿즈"
         ],
-        "userimgUrl": "/images/users/user1.png",
-        "userName": "굿즈왕",
+        "userimgUrl": "/images/users/user13.jpg",
+        "userName": "내가만든굿즈",
         "commentsNum": 3,
         "comments": [
             {
                 "id": "c1",
-                "userimgUrl": "/images/users/user1.png",
+                "userimgUrl": "/images/users/user28.jpg",
                 "userName": "밍키러버",
                 "content": "진짜 예뻐요! 정보 감사합니다~",
                 "commentlikes" : 4,
@@ -25,14 +25,14 @@
             },
             {
                 "id": "c2",
-                "userimgUrl": "/images/users/user1.png",
+                "userimgUrl": "/images/users/user29.jpg",
                 "userName": "굿즈초보",
                 "content": "한정판 세트 어디서 살 수 있나요?",
                 "createdAt": "2025-06-03T11:10:00Z"
             },
             {
                 "id": "c3",
-                "userimgUrl": "/images/users/user1.png",
+                "userimgUrl": "/images/users/user30.jpg",
                 "userName": "굿즈수집가",
                 "content": "악세사리까지 주는 건 처음 알았어요!",
                 "createdAt": "2025-06-03T11:20:00Z"
@@ -53,19 +53,19 @@
             "#할인"
         ],
         "userimgUrl": "/images/users/user1.png",
-        "userName": "세일정보",
+        "userName": "뱃지를뺏지",
         "commentsNum": 2,
         "comments": [
             {
                 "id": "c4",
-                "userimgUrl": "/images/users/user1.png",
+                "userimgUrl": "/images/users/user31.jpg",
                 "userName": "굿즈덕후",
                 "content": "정보 감사합니다! 바로 구매했어요.",
                 "createdAt": "2025-06-02T10:00:00Z"
             },
             {
                 "id": "c5",
-                "userimgUrl": "/images/users/user1.png",
+                "userimgUrl": "/images/users/user29.jpg",
                 "userName": "굿즈초보",
                 "content": "할인 언제까지인가요?",
                 "createdAt": "2025-06-02T10:30:00Z"
@@ -92,15 +92,15 @@
         "comments": [
             {
                 "id": "c6",
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "굿즈러버",
+                "userimgUrl": "/images/users/user32.jpg",
+                "userName": "핑크근육",
                 "content": "진짜 예뻐요! 어디서 제작하셨나요?",
                 "createdAt": "2025-06-01T16:00:00Z"
             },
             {
                 "id": "c7",
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "키링수집가",
+                "userimgUrl": "/images/users/user33.jpg",
+                "userName": "오늘날씨흐림",
                 "content": "구매 가능한가요?",
                 "createdAt": "2025-06-01T16:10:00Z"
             }
@@ -126,8 +126,8 @@
         "comments": [
             {
                 "id": "c8",
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "뱃지가좋아",
+                "userimgUrl": "/images/users/user34.jpg",
+                "userName": "낭만돌이",
                 "content": "저도 있어요! 반갑네요 ㅎㅎ",
                 "createdAt": "2025-05-30T14:00:00Z"
             }
@@ -153,8 +153,8 @@
         "comments": [
             {
                 "id": "c8",
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "뱃지가좋아",
+                "userimgUrl": "/images/users/user35.jpg",
+                "userName": "가진거다내놔",
                 "content": "아그거 제트슈프림 펜이에요!",
                 "createdAt": "2025-05-30T14:00:00Z"
             }
@@ -179,15 +179,15 @@
         "comments": [
             {
                 "id": "c9",
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "굿즈왕",
+                "userimgUrl": "/images/users/user36.jpg",
+                "userName": "크크루삥뽕",
                 "content": "저도 2주 넘게 걸렸어요ㅠㅠ 힘내세요!",
                 "createdAt": "2025-06-02T19:00:00Z"
             },
             {
                 "id": "c10",
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "뱃지가좋아",
+                "userimgUrl": "/images/users/user37.jpg",
+                "userName": "우주최강미녀",
                 "content": "요즘 배송이 다 느린가봐요...",
                 "createdAt": "2025-06-02T19:10:00Z"
             }
@@ -209,7 +209,7 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
+        "userimgUrl": "/images/users/user38.jpg",
         "userName": "콘서트러버",
         "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
         "createdAt": "2025-06-03T15:00:00Z"
@@ -232,9 +232,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user39.jpg",
+        "userName": "깜지곰",
+        "content": "고건 인정ㅋㅌㅋㅌㅋㅋㅋㅌ",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -255,9 +255,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user40.jpg",
+        "userName": "미니텀블러",
+        "content": "밍키 이번에 신상나온데요!!",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -278,9 +278,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user41.jpg",
+        "userName": "누구냐넌",
+        "content": "동물은 사랑입니다..ㅎ",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -301,9 +301,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user42.jpg",
+        "userName": "ehdWHrdmfh",
+        "content": "그대여 난 너를 사랑해~ 언제나~",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -311,7 +311,7 @@
    {
     "id": "12",
     "title": "굿즈 사고싶다면? 여기로 가라!",
-    "description": "제가 소녀시대 팬이라서 콘서트 티켓을 모으고 있어요! 혹시 다른 팬분들도 계신가요? 같이 공유해요~",
+    "description": "굿즈에 관심 많으신 분들 좋은 정보 올려드립니다~! 확인하시구 좋은 굿즈들 가져가세욤!!",
     "category": "굿즈 소식",
     "imageUrl": "/images/commuimgs/commuimg11.png",
     "likes": 16,
@@ -324,9 +324,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user43.jpg",
+        "userName": "유저382",
+        "content": "정보 공유 감사합니다",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -347,9 +347,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user44.jpg",
+        "userName": "사진과다름",
+        "content": "과일나라 스티커 탐난다..",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -370,9 +370,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user45.jpg",
+        "userName": "나에게너에게",
+        "content": "구르미는 앞구르미? 캬캬캬캬캬",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -393,9 +393,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user46.jpg",
+        "userName": "집에가고싶어",
+        "content": "오 제가 아는 거 하나있다ㅎ",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -416,9 +416,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user47.jpg",
+        "userName": "애니짱",
+        "content": "방금 은혼 정주행보고왔습니다. 바로 굿즈 사러 ㄱ",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -439,9 +439,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user48.jpg",
+        "userName": "회는초장에",
+        "content": "이게 드디어 티셔츠도 나오네요 사러가야징 하하",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -462,9 +462,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user49.jpg",
+        "userName": "뮤직이즈마이라이프",
+        "content": "티켓 구하실때 서버 잘되는 곳으로 가셔야합니다..ㅎ",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
@@ -485,9 +485,9 @@
     "comments": [
       {
         "id": "c9",
-        "userimgUrl": "/images/users/user5.png",
-        "userName": "콘서트러버",
-        "content": "이거 진짜 커스텀하신 거예요? 완전 예술!",
+        "userimgUrl": "/images/users/user50.jpg",
+        "userName": "고양이조아",
+        "content": "지현 언니가 이 글을 읽는다면..",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
