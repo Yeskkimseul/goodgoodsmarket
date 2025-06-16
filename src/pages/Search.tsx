@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Header from "../components/header/Header";
 import GoodsCategoryItem from "../components/GoodsCategoryItem";
@@ -22,6 +22,13 @@ const Search = () => {
     };
 
     const isSelected = (text: string) => selectedKeyword === text;
+
+    useEffect(() => {
+        // 검색창 값이 ToggleButton과 다르면 선택 해제
+        if (selectedKeyword && searchValue !== selectedKeyword) {
+            setSelectedKeyword(""); // 선택 해제
+        }
+    }, [searchValue]);
 
     return (
         <Layout>

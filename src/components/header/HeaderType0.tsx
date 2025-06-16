@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 import formstyle from '../../pages/form.module.css';
 import { useNavigate } from 'react-router-dom';
 
-const suggestions = ['굿즈', '문구', '솜깅','스탠드', '아크릴', '앨범', '음반', '응원봉', '인형', '잡지', '커스텀', '코롯토', '키링', '티켓', '패션', '팬라이트', '펜', '포카', '포토카드'];
+const suggestions = ['굿즈', '문구', '솜깅', '스탠드', '아크릴', '앨범', '음반', '응원봉', '인형', '잡지', '커스텀', '코롯토', '키링', '티켓', '패션', '팬라이트', '펜', '포카', '포토카드'];
 
 interface HeaderType0Props {
   searchValue: string;
@@ -22,6 +22,7 @@ const HeaderType0: React.FC<HeaderType0Props> = ({ searchValue, setSearchValue }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setInputValue(value);
+    setSearchValue(value);
 
     if (value.length > 0) {
       const filtered = suggestions.filter((item) =>
@@ -35,6 +36,7 @@ const HeaderType0: React.FC<HeaderType0Props> = ({ searchValue, setSearchValue }
 
   const handleSuggestionClick = (suggestion: string) => {
     setInputValue(suggestion);
+    setSearchValue(suggestion);
     setFilteredSuggestions([]);
   };
 
@@ -48,7 +50,7 @@ const HeaderType0: React.FC<HeaderType0Props> = ({ searchValue, setSearchValue }
         >
           <img src="/images/header/header_back.svg" alt="뒤로가기" />
         </div>
-           <div style={{ position: 'relative', width: '100%' }}>
+        <div style={{ position: 'relative', width: '100%' }}>
           <input
             className={`${formstyle.input} ${styles.searchInput}`}
             type="text"
