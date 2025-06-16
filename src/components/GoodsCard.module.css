@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: clamp(150px, 20vw, 240px);
+  width: 24%;
   height: auto;
   padding-bottom: var(--space8);
-  flex: auto;
 }
+
+.small-count .card {}
 
 .link {
   width: auto;
@@ -111,7 +112,7 @@
 }
 
 @media (max-width: 507px) {
-    .card{
-      width: 48%;
-    } 
+  .card {
+    width: 48%;
+  }
 }

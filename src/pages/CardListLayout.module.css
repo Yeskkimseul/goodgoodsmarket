@@ -44,7 +44,7 @@
 .goodgoodspick {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(8px, 0.7vw, 24px);
+  gap: 1.3%;
 }
 
 
