@@ -175,6 +175,39 @@ const GoodsDetail = () => {
         navigate(`/chat/${roomId}`);
     };
 
+    useEffect(() => {
+        const stored = localStorage.getItem("goodsList");
+        const likes = JSON.parse(localStorage.getItem("likes") || "[]");
+
+        if (stored) {
+            const goodsList = JSON.parse(stored);
+            let found = goodsList.find((item: Goods) => item.id === id);
+
+            // likes 리스트에 현재 상품 ID가 있는 경우 수동 증가
+            if (found && likes.includes(String(found.id))) {
+                found = {
+                    ...found,
+                    likes: (found.likes || 0) + 1,
+                };
+            }
+
+            setGoods(found ?? null);
+        } else {
+            fetch("/data/goods.json")
+                .then(res => res.json())
+                .then((data: Goods[]) => {
+                    let found = data.find(item => item.id === id);
+                    if (found && likes.includes(String(found.id))) {
+                        found = {
+                            ...found,
+                            likes: (found.likes || 0) + 1,
+                        };
+                    }
+                    setGoods(found ?? null);
+                });
+        }
+    }, [id]);
+
 
     return (
         <Layout2>
@@ -323,8 +356,8 @@ const GoodsDetail = () => {
                     <div className={form.button_big} style={
                         goods && goods.isCompleted
                             ? { background: 'var(--button-bgdisabled)', color: 'var(--button-textdisabled)', cursor: 'default' }
-                            : undefined} 
-                            onClick={handleStartChat} 
+                            : undefined}
+                        onClick={handleStartChat}
                     >
                         채팅하기
                     </div>
