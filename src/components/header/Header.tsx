@@ -17,12 +17,14 @@ interface HeaderProps {
     title?: string;
     chat?: Chatting | undefined;
     onComplete?: () => void;
+    searchValue?: string;
+    setSearchValue?: (value: string) => void;
 }
 
-const Header = ({ type, chat, title, onComplete }: HeaderProps) => {
+const Header = ({ type, chat, title, onComplete , searchValue = '', setSearchValue = () => {} }: HeaderProps) => {
     switch (type) {
         case 'type0':
-            return <HeaderType0 />;
+            return <HeaderType0 searchValue={searchValue} setSearchValue={setSearchValue} />;
         case 'type1':
             return <HeaderType1 title={title || '굿즈등록'} />;
         case 'type2':
