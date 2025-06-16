@@ -71,7 +71,19 @@
   margin-top: var(--space24);
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(8px, 0.7vw, 24px);
-  width: 100%; 
+  width: 100%;
   padding: 0 var(--padding);
+  gap: 2.5%;
+}
+
+@media (max-width: 670px){
+  .cate{
+    gap: 1%;
+  }
+}
+
+@media (max-width: 500px){
+  .cate{
+    gap: 3.8%;
+  }
 }
