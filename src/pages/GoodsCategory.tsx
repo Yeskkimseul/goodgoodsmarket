@@ -6,6 +6,7 @@ import styles from '../components/exchangebuy/Tab.module.css';
 import { useParams } from "react-router-dom";
 import GoodsCard from "../components/GoodsCard";
 import { useGoods } from "../context/GoodsContext";
+import cardstyle from "../pages/CardListLayout.module.css"
 
 const categories = [
   { id: "1", name: "포토카드" },
@@ -45,7 +46,7 @@ const GoodsCategory = () => {
         <MultiTab tabs={['구매', '교환']}>
           {(activeIndex) => (
             activeIndex === 0 ? (
-              <div className={styles.cate}>
+              <div className={cardstyle.goodgoodspick} style={{ paddingTop: "var(--space32)" }}>
                 {filteredGoods
                   .filter(g => !g.isExchangeable)
                   .slice(0, 8)
@@ -61,7 +62,7 @@ const GoodsCategory = () => {
                   ))}
               </div>
             ) : activeIndex === 1 ? (
-              <div className={styles.cate}>
+              <div className={cardstyle.goodgoodspick} style={{ paddingTop: "var(--space32)" }}>
                 {filteredGoods
                   .filter(g => g.isExchangeable)
                   .slice(0, 8)
