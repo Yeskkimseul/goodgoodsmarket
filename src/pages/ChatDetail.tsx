@@ -10,6 +10,34 @@ import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css";
 
 function ChatDetail() {
+  const handleSend = (text: string) => {
+    if (!text.trim()) return;
+
+    const newMessage: Chatting = {
+      id: Number(id),
+      message: "",
+      userMessage: text,
+      sender: "me",
+      createdAt: new Date().toISOString(),
+      unread: false,
+      title: chatMeta?.title || "",
+      price: chatMeta?.price || "",
+      productImage: chatMeta?.productImage || "",
+      username: "나",
+      userProfile: "/images/myprofile.png",
+      type: "판매"
+    };
+
+    const updated = [...chatList, newMessage];
+    setChatList(updated);
+
+    const chatRooms = JSON.parse(localStorage.getItem("chatRooms") || "[]");
+    const updatedRooms = (chatRooms as any[]).map((room: any) =>
+      room.roomId === id ? { ...room, messages: updated } : room
+    );
+    localStorage.setItem("chatRooms", JSON.stringify(updatedRooms));
+  };
+
   const navigate = useNavigate();
 
   const [msg, setMsg] = useState("");
@@ -23,26 +51,47 @@ function ChatDetail() {
   const chatId = Number(id);  // number로 변환
   const chat = chatList.find(c => String(c.id) === String(id));
 
+  const [chatMeta, setChatMeta] = useState<any>(null);
+
   useEffect(() => {
-    fetch("/data/chatting.json")
-      .then(res => res.json())
-      .then((data: Chatting[]) => {
-        // id가 일치하는 채팅만 저장
-        const filtered = data.filter(chat => chat.id === chatId);
-        setChatList(filtered);
+    const chatRooms = JSON.parse(localStorage.getItem("chatRooms") || "[]");
+    const localRoom = chatRooms.find((room: any) => room.roomId === id);
+
+    if (localRoom) {
+      // 🔥 새로 생성된 채팅방
+      setChatList(localRoom.messages || []);
+      setChatMeta({
+        title: localRoom.title,
+        price: localRoom.price,
+        productImage: localRoom.productImage,
+        sellerName: localRoom.sellerName,
+        sellerProfile: localRoom.sellerProfile
       });
-  }, [chatId]);
+    } else {
+      // 🔁 기존 chatting.json 에서 불러오기
+      fetch("/data/chatting.json")
+        .then(res => res.json())
+        .then((data: Chatting[]) => {
+          const filtered = data.filter(chat => chat.id === Number(id));
+          setChatList(filtered);
+          setChatMeta(filtered[0] || null);
+        });
+    }
+  }, [id]);
+
 
   // chatList 배열에 type이 "판매"인 데이터가 하나라도 있으면 seller, 아니면 default
   const chatInfoType = chatList.some(chat => chat.type === "판매") ? "seller" : "default";
+
+
 
   return (
     <Layout2>
       <ChatBottomSheet isOpen={isSheetOpen} onClose={closeSheet} />
       <div className={styles.chatContents}>
         <div className={styles.chatTitle}>
-          <HeaderType5 chat={chat} onMoreClick={openSheet} />
-          <ChatInfo type={chatInfoType} chat={chatList[0]} />
+          <HeaderType5 chat={chatMeta} onMoreClick={openSheet} />
+          <ChatInfo type={chatInfoType} chat={chatMeta} />
           <div className={styles.chat}>
             <ChatMessages chats={chatList} />
           </div>
@@ -51,7 +100,7 @@ function ChatDetail() {
           value={msg}
           onChange={e => setMsg(e.target.value)}
           onSend={() => {
-            alert(msg);
+            handleSend(msg);
             setMsg("");
           }}
         />

@@ -148,7 +148,8 @@ function App() {
                 <Chat />
 
               } />
-              <Route path="/chat/chatdetail/:id" element={<ChatDetail />} />
+              {/* <Route path="/chat/chatdetail/:id" element={<ChatDetail />} /> */}
+              <Route path="/chat/:id" element={<ChatDetail />} />
 
               <Route path="/mypage" element={<Mypage />} />
               <Route path="/liked" element={<Liked />} />
