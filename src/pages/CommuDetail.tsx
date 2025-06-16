@@ -257,9 +257,7 @@ const CommuDetail = () => {
                     </div>
                 </div>{/* titlecon */}
                 <div className={style.articlecon}>
-                    {commu.imageUrl && (
-                        <img src={commu.imageUrl} alt={commu.title} className={style.articleimg} />
-                    )}
+                    <img src={commu.imageUrl} alt={commu.title} className={style.articleimg} />
                     <p className="body2">
                         {commu.description}
                     </p>
@@ -320,7 +318,6 @@ const CommuDetail = () => {
                                                         : "/images/icon/heart_small_grey_empty.svg"
                                                 }
                                                 alt="좋아요"
-                                                className={style.commentlikesicon}
                                             />
                                             <p className={style.commentlike}>{commentLikes[c.id] ?? c.commentlikes} 좋아요</p>
                                         </div>
