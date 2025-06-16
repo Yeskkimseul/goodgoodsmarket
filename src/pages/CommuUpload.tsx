@@ -52,66 +52,69 @@ const CommuUpload = () => {
     };
   }, []);
 
-  // 게시글 등록 핸들러
   const handleSubmit = async (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    const newCommu: Commu = {
-      id: Date.now().toString(),
-      title,
-      description,
-      category,
-      imageUrl: imageUrls.length > 0 ? imageUrls[0] : '', // 첫 번째 이미지를 대표 이미지로 사용
-      likes: 0,
-      createdAt: new Date().toISOString(),
-      views: 0,
-      tags,
-      userimgUrl: '/images/users/profile.png',
-      userName: '뱃지가좋아',
-      commentsNum: 0,
-      comments: []
-    };
+  if (e) e.preventDefault();
 
-    /* 필수 입력값 검증 */
-    if (!title.trim()) {
-      alert("제목을 입력해주세요.");
-      return;
-    }
-    if (!description.trim()) {
-      alert("내용을 입력해주세요.");
-      return;
-    }
-    if (imageUrls.length === 0) {
-      alert("이미지를 1장 이상 업로드해주세요.");
-      return;
-    }
+  // 🔥 [1] 태그 추출
+  const tagArr = Array.from(
+    new Set(
+      description
+        .split(/[\s\n]+/)
+        .filter(word => word.startsWith('#') && word.length > 1)
+        .map(word => word.replace(/[^#\w가-힣]/g, ''))
+    )
+  );
+  setTags(tagArr); // 상태도 갱신
 
+  // 🔥 [2] 본문에서 태그 제거
+  const cleanedDescription = description
+    .split(/[\s\n]+/)
+    .filter(word => !(word.startsWith('#') && word.length > 1))
+    .join(' ');
 
-    // tags를 commuTags에 id별로 저장
-    const commuTags = JSON.parse(localStorage.getItem('commuTags') || '{}');
-    commuTags[newCommu.id] = tags;
-    localStorage.setItem('commuTags', JSON.stringify(commuTags));
-
-    //로컬 스토리지에 저장
-    let stored = localStorage.getItem('commuList');
-    let commuList: Commu[] = [];
-    if (stored) {
-      commuList = JSON.parse(stored);
-    } else {
-      try {
-        const response = await fetch('/data/commu.json');
-        const dummy = await response.json();
-        commuList = dummy;
-      } catch {
-        commuList = [];
-      }
-    }
-
-    const updated = [newCommu, ...commuList];
-    localStorage.setItem('commuList', JSON.stringify(updated));
-    setCommuList(updated); // 컨텍스트 업데이트
-    console.log('게시글 등록 완료:', newCommu);
-    navigate('/community'); // 커뮤니티 페이지로 이동
+  // 🔥 [3] newCommu에 정제된 본문과 태그 사용
+  const newCommu: Commu = {
+    id: Date.now().toString(),
+    title,
+    description: cleanedDescription,
+    category,
+    imageUrl: imageUrls.length > 0 ? imageUrls[0] : '',
+    likes: 0,
+    createdAt: new Date().toISOString(),
+    views: 0,
+    tags: tagArr,
+    userimgUrl: '/images/users/profile.png',
+    userName: '뱃지가좋아',
+    commentsNum: 0,
+    comments: []
   };
+
+  // 필수 입력값 검증
+  if (!title.trim()) {
+    alert("제목을 입력해주세요.");
+    return;
+  }
+  if (!cleanedDescription.trim()) {
+    alert("내용을 입력해주세요.");
+    return;
+  }
+
+  // tags를 commuTags에 저장
+  const commuTags = JSON.parse(localStorage.getItem('commuTags') || '{}');
+  commuTags[newCommu.id] = tagArr;
+  localStorage.setItem('commuTags', JSON.stringify(commuTags));
+
+  // commuList 저장
+  let stored = localStorage.getItem('commuList');
+  let commuList: Commu[] = stored ? JSON.parse(stored) : [];
+
+  const updated = [newCommu, ...commuList];
+  localStorage.setItem('commuList', JSON.stringify(updated));
+  setCommuList(updated);
+
+  console.log('게시글 등록 완료:', newCommu);
+  navigate('/community');
+};
 
   return (
     <>
@@ -177,24 +180,7 @@ const CommuUpload = () => {
           <label className={styles.txtarea}>
             <textarea
               value={description}
-              onChange={e => {
-                setDescription(e.target.value);
-
-                // #키워드 추출
-                const tagArr = Array.from(
-                  new Set(
-                    e.target.value
-                      .split(/[\s\n]+/)
-                      .filter(word => word.startsWith('#') && word.length > 1)
-                      .map(word => word.replace(/[^#\w가-힣]/g, ''))
-                  )
-                );
-                setTags(tagArr);
-
-                // 임시 id로 tags 저장 (등록 전이므로 Date.now() 등 임시 id 사용 가능)
-                // 등록 시에는 실제 id로 저장해야 함
-                // 예시: localStorage.setItem('commuTags', JSON.stringify({ ...기존, [id]: tagArr }))
-              }}
+              onChange={e => setDescription(e.target.value)}
               placeholder="굿굿마켓은 건전한 굿즈 문화를 지향합니다. 
     자유게시판은 소통을 위한 공간이며, 거래 글이나 규칙을 어긴 게시물은 삭제되거나 이용이 제한될 수 있습니다."
             />

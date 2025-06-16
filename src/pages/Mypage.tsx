@@ -24,14 +24,15 @@ const Mypage = () => {
 
                     </div>{/* //.right */}
                 </div>{/* profile */}
-                <Trust trust={myTrust}  />
+                <Trust trust={myTrust} />
 
                 <div className={mypageStyles.section}>
                     <div className={mypageStyles.title}>
                         거래
                     </div>{/* //.title */}
-                    <MypageList leftContent={<p>거래내역</p>} to="/어디로갈지 링크걸기" />
-                    <MypageList leftContent={<p>찜목록</p>} to="/liked" />
+                    <MypageList leftContent={<p>거래내역</p>} to="" />
+                    <MypageList leftContent={<p>찜목록</p>}
+                        onClick={() => navigate("/liked", { state: { tab: 1 } })} />
                     {/* 일단 이렇게 해두기 - 인덱스 읽을 수 있게 수정 필요 */}
                     <MypageList leftContent={<p>최근 본 상품</p>} to="/liked" />
                 </div>{/* //.section */}
@@ -40,9 +41,9 @@ const Mypage = () => {
                     <div className={mypageStyles.title}>
                         나의 굿굿
                     </div>{/* //.title */}
-                    <MypageList leftContent={<p>내 상품 관리</p>} to="/어디로갈지 링크걸기" />
-                    <MypageList leftContent={<p>내 상점 후기</p>} to="/어디로갈지 링크걸기" />
-                    <MypageList leftContent={<p>내 커뮤니티 관리</p>} to="/어디로갈지 링크걸기" />
+                    <MypageList leftContent={<p>내 상품 관리</p>} to="/mypage/mydeals" />
+                    <MypageList leftContent={<p>내 상점 후기</p>} to="" />
+                    <MypageList leftContent={<p>내 커뮤니티 관리</p>} to="/community/mycommu" />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.section}>
@@ -50,16 +51,16 @@ const Mypage = () => {
                         굿굿 소식
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>굿굿마켓 소개</p>} to="/about" />
-                    <MypageList leftContent={<p>공지사항</p>} to="/어디로갈지 링크걸기" />
-                    <MypageList leftContent={<p>이용안내</p>} to="/어디로갈지 링크걸기" />
+                    <MypageList leftContent={<p>공지사항</p>} to="" />
+                    <MypageList leftContent={<p>이용안내</p>} to="" />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.section}>
                     <div className={mypageStyles.title}>
                         고객지원
                     </div>{/* //.title */}
-                    <MypageList leftContent={<p>앱 설정</p>} to="/어디로갈지 링크걸기" />
-                    <MypageList leftContent={<p>고객센터</p>} to="/어디로갈지 링크걸기" />
+                    <MypageList leftContent={<p>앱 설정</p>} to="" />
+                    <MypageList leftContent={<p>고객센터</p>} to="" />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.bottom}>

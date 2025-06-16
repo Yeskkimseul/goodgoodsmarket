@@ -1,6 +1,5 @@
 .card {
   border-radius: 8px;
-  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -103,20 +102,15 @@
   height: clamp(24px, 3vw, 38px);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 678px) {
   .card {
     width: clamp(150px, 28vw, 240px);
 
   }
 }
-@media (max-width: 600px) {
-    .card {
-    width: clamp(150px, 50vw, 240px);
 
-  }
-}
-@media (max-width: 540px) {
+@media (max-width: 507px) {
     .card{
-      width: 100%;
+      width: 48%;
     } 
 }
