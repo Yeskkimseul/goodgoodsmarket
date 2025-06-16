@@ -8,9 +8,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 interface CommuBottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
+    userName: string;
 }
 
-const CommuBottomSheet = ({ isOpen, onClose }: CommuBottomSheetProps) => {
+const CommuBottomSheet = ({ isOpen, onClose, userName }: CommuBottomSheetProps) => {
     const navigate = useNavigate();
     const location = useLocation();
     const [isBlockModalOpen, setBlockModalOpen] = useState(false);
@@ -70,7 +71,7 @@ const CommuBottomSheet = ({ isOpen, onClose }: CommuBottomSheetProps) => {
 
             <Modal
                 isOpen={isBlockModalOpen}
-                title="00 님을 차단하시겠습니까?"
+                title={`${userName} 님을 차단하시겠습니까?`}
                 description={<>차단 후, 상대의 게시글 조회와 채팅이<br />불가능합니다.</>}
                 confirmText="차단하기"
                 onConfirm={handleBlock}

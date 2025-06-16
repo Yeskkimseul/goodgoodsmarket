@@ -82,11 +82,11 @@ const Login = () => {
             <div className={Logins.option}>
               <Link to='/join' className='caption'>회원가입</Link>
 
-              <Link to='#' className='caption'>비밀번호 재설정</Link>
+              <Link to='#' className='caption' onClick={() => alert('준비 중입니다~')}>비밀번호 재설정</Link>
 
-              <Link to='#' className='caption'>계정 찾기</Link>
+              <Link to='#' className='caption' onClick={() => alert('준비 중입니다~')}>계정 찾기</Link>
 
-              <Link to='#' className='caption'>문의하기</Link>
+              <Link to='#' className='caption' onClick={() => alert('준비 중입니다~')}>문의하기</Link>
             </div>
           </div>{/* bottom */}
 

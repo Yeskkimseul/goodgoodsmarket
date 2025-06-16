@@ -369,6 +369,7 @@ const CommuDetail = () => {
                 <CommuBottomSheet
                     isOpen={isSheetOpen}
                     onClose={() => setIsSheetOpen(false)}
+                    userName={commu.userName}
                 />
             )}
         </Layout>
