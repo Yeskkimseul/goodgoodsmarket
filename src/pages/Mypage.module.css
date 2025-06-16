@@ -35,3 +35,51 @@
     gap: var(--space16);
     align-items: center;
 }
+
+.profilesetting_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: var(--space40);
+    /* 임시 */
+}
+
+.profilesetting {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilesetting>img {
+    border-radius: 130px;
+    width: clamp(130px, 15vw, 179px);
+}
+
+.edit {
+    background: var(--main-mint);
+    padding: clamp(8px, 2vw, 13px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 130px;
+    cursor: pointer;
+}
+
+.edit>img {
+    width: clamp(18px, 1.5vw, 24px);
+}
+
+.profilesetting_bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.pbw {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
