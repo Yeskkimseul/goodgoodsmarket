@@ -64,7 +64,7 @@
       "title": "아이돌 인형 컬렉션 세트 판매",
       "imageUrl": "/images/mydeals/sale16.png"
     },
-    "recommend": 14
+    "recommend": 7
   },
   {
     "id": "r4",
@@ -88,7 +88,7 @@
       "title": "공백기 시집 홍보 잡지 판매합니다.",
       "imageUrl": "/images/mydeals/sale62.png"
     },
-    "recommend": 14
+    "recommend": 11
   },
   {
     "id": "r5",
@@ -111,6 +111,192 @@
       "title": "엔젤레이 응원봉 판매합니다",
       "imageUrl": "/images/mydeals/sale54.png"
     },
-    "recommend": 14
+    "recommend": 18
+  },
+  {
+    "id": "r6",
+    "sellerName": "아이돌팬",
+    "reviewer": {
+      "name": "하이는헬로",
+      "img": "/images/users/user20.jpg"
+    },
+    "date": "2025-06-13",
+    "reviewimg": [
+      "/images/mydeals/sale44.png"
+    ],
+    "content": "약속시간에 약간 늦으셨는데, 그거말고는 친절하게 답해주셔서 감사합니다",
+    "keywords": [
+      "친절해요",
+      "약속이 늦어요"
+    ],
+    "goods": {
+      "id": "98",
+      "title": "국제의 아이들 미니 앨범 판매합니다",
+      "imageUrl": "/images/mydeals/sale44.png"
+    },
+    "recommend": 4
+  },
+  {
+    "id": "r7",
+    "sellerName": "어디로든문",
+    "reviewer": {
+      "name": "오늘저녁소고기",
+      "img": "/images/users/user21.jpg"
+    },
+    "date": "2025-06-09",
+    "reviewimg": [
+      "/images/mydeals/sale76.png"
+    ],
+    "content": "친절하게 설명 해주시고 급하게 약속 잡았는데 저한테 맞춰주셔서 감사합니다ㅎㅎ 잘쓸게요~!~!",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+    ],
+    "goods": {
+      "id": "162",
+      "title": "기차의 소녀 팬 메이드 키링 판매해요",
+      "imageUrl": "/images/mydeals/sale76.png"
+    },
+    "recommend": 10
+  },
+  {
+    "id": "r8",
+    "sellerName": "뱃지를뺏지",
+    "reviewer": {
+      "name": "오리주둥이",
+      "img": "/images/users/user22.jpg"
+    },
+    "date": "2025-06-09",
+    "reviewimg": [
+      "/images/mydeals/sale33.png"
+    ],
+    "content": "친절하고 빠른 거래 감사합니다. 그리구 세탁해주셨는데 섬유유연제 향 너무 좋아요...ㅋㅋㅋ",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+      
+    ],
+    "goods": {
+      "id": "78",
+      "title": "파티프린세스 티셔츠 팔아요!",
+      "imageUrl": "/images/mydeals/sale33.png"
+    },
+    "recommend": 8
+  },
+  {
+    "id": "r9",
+    "sellerName": "세상은동글동글",
+    "reviewer": {
+      "name": "dkssudgktpdy",
+      "img": "/images/users/user23.jpg"
+    },
+    "date": "2025-06-07",
+    "reviewimg": [
+      "/images/mydeals/sale11.png"
+    ],
+    "content": "어릴때 너무 즐겨보던 신비한 동물사전이 있길래 바로 구매했습니다ㅎ 상태 좋은 제품 거래해주셔서 감사합니다!",
+    "keywords": [
+      "친절해요"
+      
+    ],
+    "goods": {
+      "id": "12",
+      "title": "신비한 동물사전 BOOK CD",
+      "imageUrl": "/images/mydeals/sale11.png"
+    },
+    "recommend": 6
+  },
+  {
+    "id": "r10",
+    "sellerName": "냠냠쩝쩝",
+    "reviewer": {
+      "name": "주머니쥐",
+      "img": "/images/users/user24.jpg"
+    },
+    "date": "2025-06-09",
+    "reviewimg": [
+      "/images/mydeals/sale25.png"
+    ],
+    "content": "친절하고 빠른 거래 감사합니다~",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+      
+    ],
+    "goods": {
+      "id": "56",
+      "title": "토끼 키링 벚꽃 에디션 판매",
+      "imageUrl": "/images/mydeals/sale25.png"
+    },
+    "recommend": 6
+  },
+  {
+    "id": "r11",
+    "sellerName": "야채도꼭꼭",
+    "reviewer": {
+      "name": "맘마미아",
+      "img": "/images/users/user25.jpg"
+    },
+    "date": "2025-06-08",
+    "reviewimg": [
+      "/images/myexchange/exchange25.png"
+    ],
+    "content": "아이들이 좋아해요ㅎ 빠르고 친절한 교환 감사합니다ㅎㅎ",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+    ],
+    "goods": {
+      "id": "72",
+      "title": "야채 굿즈 지우개 교환해요!",
+      "imageUrl": "/images/myexchange/exchange25.png"
+    },
+    "recommend": 8
+  },
+  {
+    "id": "r12",
+    "sellerName": "레드베어",
+    "reviewer": {
+      "name": "저메추해줘잉",
+      "img": "/images/users/user26.jpg"
+    },
+    "date": "2025-06-08",
+    "reviewimg": [
+      "/images/mydeals/sale69.png"
+    ],
+    "content": "마침 보고싶었던 전시회 티켓이였습니다ㅎ 빠르고 친절한 거래 감사해요!",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+    ],
+    "goods": {
+      "id": "147",
+      "title": "전시회 티켓 판매",
+      "imageUrl": "/images/mydeals/sale69.png"
+    },
+    "recommend": 8
+  },
+  {
+    "id": "r13",
+    "sellerName": "아기자기야",
+    "reviewer": {
+      "name": "가나다라마바사",
+      "img": "/images/users/user27.jpg"
+    },
+    "date": "2025-06-08",
+    "reviewimg": [
+      "/images/mydeals/sale76.png"
+    ],
+    "content": "원하는 키링 친절하고 빠른 거래 감사합니다~",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+    ],
+    "goods": {
+      "id": "162",
+      "title": "기차의 소녀 팬 메이드 키링 판매해요",
+      "imageUrl": "/images/mydeals/sale76.png"
+    },
+    "recommend": 8
   }
 ]

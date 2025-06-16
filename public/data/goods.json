@@ -63,9 +63,9 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
+        "sellerimgUrl": "/images/users/user14.jpg",
         "sellerName": "아이돌팬",
-        "sellerTrust": 70,
+        "sellerTrust": 60,
         "isCompleted": false
     },
     {
@@ -85,9 +85,9 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 70,
+        "sellerimgUrl": "/images/users/user15.jpg",
+        "sellerName": "아기자기야",
+        "sellerTrust": 90,
         "isCompleted": false
     },
     {
@@ -107,8 +107,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
+        "sellerimgUrl": "/images/users/user16.jpg",
+        "sellerName": "세상은동글동글",
         "sellerTrust": 70,
         "isCompleted": false
     },
@@ -129,8 +129,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
+        "sellerimgUrl": "/images/users/user17.jpg",
+        "sellerName": "냠냠쩝쩝",
         "sellerTrust": 70,
         "isCompleted": false
     },
@@ -151,9 +151,9 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
-        "sellerTrust": 70,
+        "sellerimgUrl": "/images/users/user18.jpg",
+        "sellerName": "야채도꼭꼭",
+        "sellerTrust": 80,
         "isCompleted": false
     },
     {
@@ -173,8 +173,8 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/user1.png",
-        "sellerName": "아이돌팬",
+        "sellerimgUrl": "/images/users/user19.jpg",
+        "sellerName": "레드베어",
         "sellerTrust": 70,
         "isCompleted": false
     },
@@ -263,11 +263,11 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/users/profile.png",
-        "sellerName": "뱃지가좋아",
+        "sellerimgUrl": "/images/users/user16.jpg",
+        "sellerName": "세상은동글동글",
         "sellerTrust": 70,
         "isExchangeable": false,
-        "isCompleted": false
+        "isCompleted": true
     },
     {
         "id": "13",
@@ -1080,10 +1080,11 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "토끼와 벚꽃은 사랑",
-        "sellerTrust": 100,
-        "isExchangeable": false
+        "sellerimgUrl": "/images/users/user17.jpg",
+        "sellerName": "냠냠쩝쩝",
+        "sellerTrust": 70,
+        "isExchangeable": false,
+        "isCompleted": true
     },
     {
         "id": "57",
@@ -1432,10 +1433,11 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerimgUrl": "/images/users/user18.jpg",
         "sellerName": "야채도꼭꼭",
         "sellerTrust": 70,
-        "isExchangeable": true
+        "isExchangeable": true,
+        "isCompleted": true
     },
     {
         "id": "73",
@@ -1564,10 +1566,12 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "티셔츠수집가",
-        "sellerTrust": 80,
-        "isExchangeable": false
+        "sellerimgUrl": "/images/users/user1.png",
+        "sellerName": "뱃지를뺏지",
+        "sellerTrust": 70,
+        "isExchangeable": false,
+        "isCompleted": true
+
     },
     {
         "id": "79",
@@ -1982,10 +1986,11 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "국제의 아이들",
-        "sellerTrust": 70,
-        "isExchangeable": false
+        "sellerimgUrl": "/images/users/user14.jpg",
+        "sellerName": "아이돌팬",
+        "sellerTrust": 60,
+        "isExchangeable": false,
+        "isCompleted": true
     },
     {
         "id": "99",
@@ -3064,10 +3069,11 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "그림보는고양이",
-        "sellerTrust": 50,
-        "isExchangeable": false
+        "sellerimgUrl": "/images/users/user19.jpg",
+        "sellerName": "레드베어",
+        "sellerTrust": 70,
+        "isExchangeable": false,
+        "isCompleted": true
     },
     {
         "id": "148",
@@ -3394,10 +3400,12 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "굿즈러버",
-        "sellerTrust": 60,
-        "isExchangeable": false
+        "sellerimgUrl": "/images/users/user15.jpg",
+        "sellerName": "아기자기야",
+        "sellerTrust": 90,
+        "isExchangeable": false,
+        "isCompleted": true
+
     },
     {
         "id": "163",
