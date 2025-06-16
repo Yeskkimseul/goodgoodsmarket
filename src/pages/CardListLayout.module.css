@@ -43,10 +43,8 @@
 /* 이거 갭 나중에 수정해야됨 일단 임시로 넣었습니다 (gap빼고 card에 margin값으로 변경 할꺼) -종현- */
 .goodgoodspick {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
-  margin: 20px 0;
+  gap: clamp(8px, 0.7vw, 24px);
 }
 
 
