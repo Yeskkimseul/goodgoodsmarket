@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import styles from './GoodsCategoryItem.module.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const categories = [
     { id: "1", name: "포토카드", imageUrl: "/images/main_imgs/GoodsCategoryItem1.png" },
@@ -79,33 +84,51 @@ const GoodsCategoryItem: React.FC<GoodsCategoryItemProps> = ({ idsToShow }) => {
         }
     };
 
-    return (
-        <ul className={styles.listContainer}
-            ref={containerRef}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}>
-            {filteredCategories.map((category) => (
-                <li key={category.id} className={styles.listItem}>
-                    <Link to={`/home/goodscategory/${category.id}`
-                    } onClick={preventClickOnDrag}>
-                        {category.imageUrl && (
-                            <img
-                                src={category.imageUrl}
-                                alt={category.name}
-                                style={{ borderRadius: "500px", objectFit: "cover" }}
-                            />
-                        )}
-                        <p>{category.name}</p>
-                    </Link>
-                </li>
-            ))}
-        </ul>
-    );
+return (
+  <div className={styles.listContainer}>
+    <Swiper
+      modules={[Navigation, Autoplay]}
+      spaceBetween={24}               // 기존 gap 적용
+      slidesPerView={9}               // 요청대로 9개
+      autoplay={false}
+      loop={false}                    // 무한 루프 해제
+      navigation                      // 필요시 화살표 추가
+      allowTouchMove={true}          // 모바일 스와이프 허용
+        breakpoints={{
+    0:{slidesPerView : 4},
+    550:{slidesPerView : 5},
+    760:{slidesPerView : 7},
+    1080: { slidesPerView: 9 },
+  }}
+        style={{
+    // 여기에서 화살표 색상 지정
+    "--swiper-navigation-color": "#1DC6A7", // 원하는 색상으로 변경
+  } as React.CSSProperties}
+  
+    >
+    
+      {filteredCategories.map((category) => (
+        <SwiperSlide key={category.id}>
+          <Link
+            to={`/home/goodscategory/${category.id}`}
+            onClick={preventClickOnDrag}
+            className={styles.listItem}
+          >
+            {category.imageUrl && (
+              <img
+                src={category.imageUrl}
+                alt={category.name}
+                style={{ borderRadius: "500px", objectFit: "cover" }}
+              />
+            )}
+            <p>{category.name}</p>
+          </Link>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+);
+
 };
 
 export default GoodsCategoryItem;

@@ -38,3 +38,64 @@
 .listContainer::-webkit-scrollbar {
   display: none;
 }
+
+
+
+/* 수정본 이걸로 (swiper)*/
+
+.listItem {
+  display: flex;
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 중앙 정렬 */
+  text-align: center;
+  gap: 8px;                 /* 이미지와 텍스트 사이 간격 */
+  width: 100%;              /* 슬라이드 크기에 맞게 꽉 채움 */
+  box-sizing: border-box;
+}
+
+.listItem img {
+  width: 100px;              /* 이미지 고정 크기 */
+  height: 100px;
+  border-radius: 50%;       /* 원형 */
+  object-fit: cover;
+  flex-shrink: 0;           /* 축소 방지 */
+}
+
+.listItem p {
+  margin: 0;
+  font-size: var(--font-h4);
+  white-space: nowrap;      /* 텍스트 줄바꿈 방지 */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 길면 ... 처리 */
+  width: 100%;              /* 텍스트 너비 고정 */
+}
+
+@media (max-width: 400px) {
+.listItem img {
+  width: 75px;              /* 이미지 고정 크기 */
+  height: 75px;
+}
+.listItem p {
+  font-size: 14px;
+}
+}
+
+@media (min-width: 401px) and (max-width: 550px) {
+.listItem img {
+  width: 80px;              /* 이미지 고정 크기 */
+  height: 80px;
+}
+.listItem p {
+  font-size: 16px;
+}
+}
+
+@media (min-width: 551px) and (max-width: 600px) {
+.listItem img {
+  width: 85px;              /* 이미지 고정 크기 */
+  height: 85px;
+}
+.listItem p {
+  font-size: 18px;
+}
+}
