@@ -17,11 +17,7 @@
         "comments": [
             {
                 "id": "c1",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user28.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "밍키러버",
                 "content": "진짜 예뻐요! 정보 감사합니다~",
                 "commentlikes" : 4,
@@ -29,22 +25,14 @@
             },
             {
                 "id": "c2",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user29.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "굿즈초보",
                 "content": "한정판 세트 어디서 살 수 있나요?",
                 "createdAt": "2025-06-03T11:10:00Z"
             },
             {
                 "id": "c3",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user30.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "굿즈수집가",
                 "content": "악세사리까지 주는 건 처음 알았어요!",
                 "createdAt": "2025-06-03T11:20:00Z"
@@ -70,22 +58,14 @@
         "comments": [
             {
                 "id": "c4",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user31.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "굿즈덕후",
                 "content": "정보 감사합니다! 바로 구매했어요.",
                 "createdAt": "2025-06-02T10:00:00Z"
             },
             {
                 "id": "c5",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user32.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "굿즈초보",
                 "content": "할인 언제까지인가요?",
                 "createdAt": "2025-06-02T10:30:00Z"
@@ -112,22 +92,14 @@
         "comments": [
             {
                 "id": "c6",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user33.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "굿즈러버",
                 "content": "진짜 예뻐요! 어디서 제작하셨나요?",
                 "createdAt": "2025-06-01T16:00:00Z"
             },
             {
                 "id": "c7",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-=======
                 "userimgUrl": "/images/users/user34.jpg",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "userName": "키링수집가",
                 "content": "구매 가능한가요?",
                 "createdAt": "2025-06-01T16:10:00Z"
@@ -154,13 +126,8 @@
         "comments": [
             {
                 "id": "c8",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "뱃지가좋아",
-=======
                 "userimgUrl": "/images/users/user35.jpg",
                 "userName": "전교1등뒤에서",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "content": "저도 있어요! 반갑네요 ㅎㅎ",
                 "createdAt": "2025-05-30T14:00:00Z"
             }
@@ -186,13 +153,8 @@
         "comments": [
             {
                 "id": "c8",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "뱃지가좋아",
-=======
                 "userimgUrl": "/images/users/user36.jpg",
                 "userName": "최애의아이",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "content": "아그거 제트슈프림 펜이에요!",
                 "createdAt": "2025-05-30T14:00:00Z"
             }
@@ -217,25 +179,15 @@
         "comments": [
             {
                 "id": "c9",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "굿즈왕",
-=======
                 "userimgUrl": "/images/users/user37.jpg",
                 "userName": "깃겟굿",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "content": "저도 2주 넘게 걸렸어요ㅠㅠ 힘내세요!",
                 "createdAt": "2025-06-02T19:00:00Z"
             },
             {
                 "id": "c10",
-<<<<<<< HEAD
-                "userimgUrl": "/images/users/user1.png",
-                "userName": "뱃지가좋아",
-=======
                 "userimgUrl": "/images/users/user38.jpg",
                 "userName": "콘서트러버",
->>>>>>> b136a09587382abfb77bce1b0a10077b2fc4d0f6
                 "content": "요즘 배송이 다 느린가봐요...",
                 "createdAt": "2025-06-02T19:10:00Z"
             }
