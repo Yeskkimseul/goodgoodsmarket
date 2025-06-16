@@ -62,19 +62,21 @@ const GoodsCategory = () => {
                 </div>
               </div>
             ) : activeIndex === 1 ? (
-              <div className={styles.cate}>
-                {filteredGoods
-                  .filter(g => g.isExchangeable)
-                  .map(item => (
-                    <GoodsCard
-                      key={item.id}
-                      item={item}
-                      likedIds={likedIds}
-                      setLikedIds={setLikedIds}
-                      goodsList={goodsList}
-                      setGoodsList={setGoodsList}
-                    />
-                  ))}
+              <div className={styles.catewrap}>
+                <div className={styles.cate}>
+                  {filteredGoods
+                    .filter(g => g.isExchangeable)
+                    .map(item => (
+                      <GoodsCard
+                        key={item.id}
+                        item={item}
+                        likedIds={likedIds}
+                        setLikedIds={setLikedIds}
+                        goodsList={goodsList}
+                        setGoodsList={setGoodsList}
+                      />
+                    ))}
+                </div>
               </div>
             ) : null
           )}
