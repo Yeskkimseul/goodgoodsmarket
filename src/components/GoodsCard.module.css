@@ -103,6 +103,20 @@
   height: clamp(24px, 3vw, 38px);
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+  .card {
+    width: clamp(150px, 28vw, 240px);
 
-@media (max-width: 375px) {}
+  }
+}
+@media (max-width: 600px) {
+    .card {
+    width: clamp(150px, 50vw, 240px);
+
+  }
+}
+@media (max-width: 540px) {
+    .card{
+      width: 100%;
+    } 
+}
