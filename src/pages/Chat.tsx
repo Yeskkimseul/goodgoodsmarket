@@ -5,6 +5,7 @@ import ChatList from "../components/ChatList";
 import styles from "./filter.module.css";
 import type { Chatting } from "../types/chatting";
 import { useNavigate } from "react-router-dom";
+import { useChat } from "../context/ChatContext";
 
 const filterList = [
   { label: "전체", value: "전체" },
@@ -16,6 +17,7 @@ const filterList = [
 type TabType = (typeof filterList)[number]["value"];
 
 const Chat = () => {
+  const { chatList } = useChat();
   const [chatData, setChatData] = useState<Chatting[]>([]);
   const [filter, setFilter] = useState<TabType>("전체");
   const navigate = useNavigate();

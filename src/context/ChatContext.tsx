@@ -1,66 +1,89 @@
-import { createContext, useContext, useState } from "react";
-import type { Chatting } from "../types/chatting"; // 너가 제공한 구조
+import { createContext, useContext, useEffect, useState } from "react";
+import type { Chatting } from "../types/chatting";
+import { Message } from "../types/message";
 
 interface ChatContextType {
   chatList: Chatting[];
-  setChatList: React.Dispatch<React.SetStateAction<Chatting[]>>;
   addChat: (chat: Chatting) => void;
-  addMessage: (id: number, msg: { sender: string; content: string; createdAt: string }) => void;
   getChatByProductId: (title: string) => Chatting | undefined;
+  getChatById: (id: number) => Chatting | undefined;
+  getMessagesByChatId: (chatId: number) => Message[];
+  addMessage: (chatId: number, message: Message) => void;
 }
 
 const ChatContext = createContext<ChatContextType | null>(null);
 
 export const useChat = () => {
   const context = useContext(ChatContext);
-  if (!context) {
-    throw new Error("useChat은 반드시 ChatProvider 안에서 사용해야 합니다.");
-  }
+  if (!context) throw new Error("ChatContext는 ChatProvider 안에서 사용되어야 합니다.");
   return context;
 };
 
 export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   const [chatList, setChatList] = useState<Chatting[]>([]);
 
-  // ✅ 새 채팅 추가
+  useEffect(() => {
+    const stored = localStorage.getItem("chatRooms");
+    if (stored) setChatList(JSON.parse(stored));
+  }, []);
+
   const addChat = (chat: Chatting) => {
-    setChatList(prev => [...prev, chat]);
+    setChatList(prev => {
+      const updated = [...prev, chat];
+      localStorage.setItem("chatRooms", JSON.stringify(updated));
+
+      // ✅ 메시지 초기화
+      localStorage.setItem(`chatMessages_${chat.id}`, JSON.stringify([]));
+      return updated;
+    });
   };
 
-  // ✅ 메시지 추가 (채팅 기록 남기기)
-  const addMessage = (
-    id: number,
-    msg: { sender: string; content: string; createdAt: string }
-  ) => {
-    setChatList(prev =>
-      prev.map(chat =>
-        chat.id === id
-          ? {
-              ...chat,
-              sender: msg.sender,
-              message: msg.sender === "me" ? "" : msg.content,
-              userMessage: msg.sender === "me" ? msg.content : "",
-              createdAt: msg.createdAt,
-              unread: msg.sender !== "me", // 내가 보낸 건 읽음 처리
-            }
-          : chat
-      )
-    );
-  };
-
-  // ✅ 상품 제목 기준으로 기존 채팅 찾기 (중복 방지용)
   const getChatByProductId = (title: string) => {
     return chatList.find(chat => chat.title === title);
+  };
+
+  const getChatById = (id: number) => {
+    return chatList.find(chat => chat.id === id);
+  };
+
+  const getMessagesByChatId = (chatId: number): Message[] => {
+    const stored = localStorage.getItem(`chatMessages_${chatId}`);
+    return stored ? JSON.parse(stored) : [];
+  };
+
+  const addMessage = (chatId: number, message: Message) => {
+    const currentMessages = getMessagesByChatId(chatId);
+    const updatedMessages = [...currentMessages, message];
+    localStorage.setItem(`chatMessages_${chatId}`, JSON.stringify(updatedMessages));
+
+    // 최신 메시지 요약도 chatList에 반영
+    setChatList(prev => {
+      const updated = prev.map(chat => {
+        if (chat.id === chatId) {
+          return {
+            ...chat,
+            message: message.sender === "other" ? message.content : chat.message,
+            userMessage: message.sender === "me" ? message.content : chat.userMessage,
+            createdAt: message.createdAt,
+            unread: message.sender === "other",
+          };
+        }
+        return chat;
+      });
+      localStorage.setItem("chatRooms", JSON.stringify(updated));
+      return updated;
+    });
   };
 
   return (
     <ChatContext.Provider
       value={{
         chatList,
-        setChatList,
         addChat,
-        addMessage,
         getChatByProductId,
+        getChatById,
+        getMessagesByChatId,
+        addMessage,
       }}
     >
       {children}

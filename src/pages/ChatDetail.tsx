@@ -8,11 +8,17 @@ import ChatInfo from "../components/chatinfo/ChatInfo";
 import ChatMessages from "../components/ChatMessages";
 import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css";
+import { useChat } from "../context/ChatContext";
+import { Message } from "../types/message";
+
+
 
 function ChatDetail() {
-  const { id } = useParams();
+  const { getMessagesByChatId, addMessage, getChatById } = useChat();
+  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const chatId = Number(id);
+  const [chat, setChat] = useState<Chatting | null>(null);
 
   const [msg, setMsg] = useState("");
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -67,67 +73,61 @@ function ChatDetail() {
     localStorage.setItem("chatRooms", JSON.stringify(chatRooms));
   };
 
+  const [messages, setMessages] = useState<Message[]>([]);
+
+  useEffect(() => {
+    const chat = getChatById(chatId);
+    setChatMeta(chat || null);
+
+    const loadedMessages = getMessagesByChatId(chatId);
+    setMessages(loadedMessages);
+  }, [chatId, getMessagesByChatId, getChatById]);
+
   // 📥 데이터 로딩 (수정된 부분만)
   useEffect(() => {
-  const stored = localStorage.getItem("chatRooms");
-  const chatRooms = stored ? JSON.parse(stored) : [];
+    const stored = localStorage.getItem("chatRooms");
+    const chatRooms = stored ? JSON.parse(stored) : [];
 
-  const localRoom = chatRooms.find((room: any) => room.roomId === id);
+    const localRoom = chatRooms.find((room: any) => room.roomId === id);
 
-  if (localRoom) {
-    setChatList(localRoom.messages || []);
-    setChatMeta(localRoom);
-  } else {
-    fetch("/data/chatting.json")
-      .then(res => res.json())
-      .then((data: Chatting[]) => {
-        const filtered = data
-          .filter(chat => chat.id === chatId)
-          .flatMap(chat => {
-            const list: Chatting[] = [];
+    if (localRoom) {
+      setChatList(localRoom.messages || []);
+      setChatMeta(localRoom);
+    } else {
+      fetch("/data/chatting.json")
+        .then(res => res.json())
+        .then((data: Chatting[]) => {
+          const filtered = data
+            .filter(chat => chat.id === chatId)
+            .map(chat => ({
+              ...chat,
+              sender: chat.userMessage ? "me" : "you" // 🔥 핵심!
+            }));
 
-            if (chat.userMessage) {
-              list.push({
-                ...chat,
-                sender: "me",
-                message: "",
-              });
-            }
+          setChatList(filtered);
 
-            if (chat.message) {
-              list.push({
-                ...chat,
-                sender: "you",
-                userMessage: "",
-              });
-            }
+          const newRoom = {
+            roomId: id,
+            title: filtered[0]?.title || "신규 채팅방",
+            price: filtered[0]?.price || "",
+            productImage: filtered[0]?.productImage || "",
+            sellerName: filtered[0]?.username || "판매자",
+            sellerProfile: filtered[0]?.userProfile || "/images/default.png",
+            type: filtered[0]?.type || "판매",
+            messages: filtered,
+          };
 
-            return list;
-          });
-
-        setChatList(filtered);
-
-        const newRoom = {
-          roomId: id,
-          title: filtered[0]?.title || "신규 채팅방",
-          price: filtered[0]?.price || "",
-          productImage: filtered[0]?.productImage || "",
-          sellerName: filtered[0]?.username || "판매자",
-          sellerProfile: filtered[0]?.userProfile || "/images/default.png",
-          type: filtered[0]?.type || "판매",
-          messages: filtered,
-        };
-
-        const updatedRooms = [...chatRooms, newRoom];
-        setChatMeta(newRoom);
-        localStorage.setItem("chatRooms", JSON.stringify(updatedRooms));
-      });
-  }
-}, [id]);
-
+          const updatedRooms = [...chatRooms, newRoom];
+          setChatMeta(newRoom);
+          localStorage.setItem("chatRooms", JSON.stringify(updatedRooms));
+        });
+    }
+  }, [id]);
 
 
   const chatInfoType = chatList.some(chat => chat.type === "판매") ? "seller" : "default";
+
+
 
   return (
     <Layout2>

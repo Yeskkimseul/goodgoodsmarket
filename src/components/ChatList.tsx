@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
+import { useChat } from "../context/ChatContext";
 
 // 시간 계산 함수
 function getTimeAgo(dateString: string): string {
@@ -20,10 +21,13 @@ type ChatListProps = {
 };
 
 const ChatList = ({ chats, onChatClick }: ChatListProps) => {
+ const { chatList } = useChat();
+
   const [readList, setReadList] = useState<{ [id: number]: boolean }>(() => {
     const saved = localStorage.getItem("chatReadList");
     return saved ? JSON.parse(saved) : {};
   });
+
 
   // 상태가 바뀔 때마다 저장
   useEffect(() => {
@@ -43,7 +47,8 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
     <div className={styles.chatList}>
       <ul className={styles.chatItems}>
         {chats.map((chat) => (
-          <li key={chat.id} className={styles.chatItem}>
+          <li key={chat.id} className={styles.chatItem}
+          onClick={() => onChatClick(chat.id)}>
             <button
               type="button"
               className={styles.link}
