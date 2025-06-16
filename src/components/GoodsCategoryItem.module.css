@@ -122,7 +122,12 @@
 
 
 
-
+@media (min-width: 0px) and (max-width: 399px){
+.swiperWrapper {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+}
 
 @media (max-width: 400px) {
 .listItem img {
@@ -135,6 +140,10 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px) {
+  .swiperWrapper {
+  padding-left: 55px;
+  padding-right: 55px;
+}
 .listItem img {
   width: 80px;              /* 이미지 고정 크기 */
   height: 80px;

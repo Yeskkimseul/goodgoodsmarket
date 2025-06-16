@@ -72,7 +72,7 @@ const GoodsCategoryItem: React.FC<GoodsCategoryItemProps> = ({ idsToShow }) => {
         }}
         allowTouchMove={true}
         breakpoints={{
-          0: { slidesPerView: 4 },
+          0: { slidesPerView: 3 },
           550: { slidesPerView: 5 },
           760: { slidesPerView: 7 },
           1080: { slidesPerView: 9 },
