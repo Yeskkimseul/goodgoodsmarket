@@ -29,12 +29,12 @@ const Alarm = () => {
             <AlarmList
                 title="굿굿지기"
                 leftContent='한강 보물찾기런 초대장🤸‍♀️'
-                to='/'
+                to=''
                 imgSrc='../images/mypage/alarm.png'
                 imgAlt='공지사항'
                 date='15분 전'
                 read={readList[0]}
-                onClick={() => handleRead(0, '/')}
+                onClick={() => handleRead(0, '')}
             />
             <AlarmList
                 title="삼장님"

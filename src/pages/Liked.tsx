@@ -6,7 +6,7 @@ import MultiTab from "../components/exchangebuy/MultiTab";
 import GoodsCard from "../components/GoodsCard";
 import { useGoods } from "../context/GoodsContext";
 import { Goods } from "../types";
-
+import styles from "../components/exchangebuy/Tab.module.css"
 
 
 const Liked = () => {
@@ -75,11 +75,11 @@ const Liked = () => {
             >
                 {(activeIndex) => (
                     activeIndex === 0 ? (
-                        <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
+                        <div>
                             {recentViewed.length === 0 ? (
-                                <div>최근 본 상품이 없습니다.</div>
+                                <div className={styles.cate}>최근 본 상품이 없습니다.</div>
                             ) : (
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+                                <div className={styles.cate}>
                                     {recentViewed.map(item => (
                                         <GoodsCard
                                             key={item.id}
@@ -93,11 +93,11 @@ const Liked = () => {
                             )}
                         </div>
                     ) : activeIndex === 1 ? (
-                        <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
+                        <div>
                             {exchangeLiked.length === 0 ? (
-                                <div>교환 찜 상품이 없습니다.</div>
+                                <div className={styles.cate}>교환 찜 상품이 없습니다.</div>
                             ) : (
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+                                <div className={styles.cate}>
                                     {exchangeLiked.map(item => (
                                         <GoodsCard
                                             key={item.id}
@@ -112,11 +112,11 @@ const Liked = () => {
                             )}
                         </div>
                     ) : activeIndex === 2 ? (
-                        <div style={{ marginTop: 'var(--space24)', display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,2vw,24px)', padding: '0 var(--padding)' }}>
+                        <div>
                             {purchaseLiked.length === 0 ? (
-                                <div>구매 찜 상품이 없습니다.</div>
+                                <div className={styles.cate}>구매 찜 상품이 없습니다.</div>
                             ) : (
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+                                <div className={styles.cate}>
                                     {purchaseLiked.map(item => (
                                         <GoodsCard
                                             key={item.id}
