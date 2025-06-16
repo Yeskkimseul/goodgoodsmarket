@@ -27,21 +27,39 @@ const GoodsDetail = () => {
 
     const handleLike = () => {
         if (!goods) return;
+
         const likes = JSON.parse(localStorage.getItem('likes') || '[]');
         const idStr = String(goods.id);
+
         let updatedLikes;
         let message;
+        let updatedGoods;
+
         if (likes.includes(idStr)) {
-            // 이미 있으면 제거
+            // 찜 해제
             updatedLikes = likes.filter((likeId: string) => likeId !== idStr);
             message = "찜 목록에서 제외되었습니다.";
+
+            updatedGoods = {
+                ...goods,
+                likes: Math.max((goods.likes || 0) - 1, 0), // 음수 방지
+            };
         } else {
-            // 없으면 추가
+            // 찜 추가
             updatedLikes = [...likes, idStr];
             message = "찜 목록에 추가되었습니다.";
+
+            updatedGoods = {
+                ...goods,
+                likes: (goods.likes || 0) + 1,
+            };
         }
+
+        // 상태 반영
+        setGoods(updatedGoods);
         localStorage.setItem('likes', JSON.stringify(updatedLikes));
 
+        // 스낵바 표시
         setSnackbarMessage(message);
         setShowSnackbar(true);
         setSnackbarVisible(true);
@@ -50,6 +68,7 @@ const GoodsDetail = () => {
             setTimeout(() => setShowSnackbar(false), 300);
         }, 1800);
     };
+
 
     const categories = [
         { id: "1", name: "포토카드" },

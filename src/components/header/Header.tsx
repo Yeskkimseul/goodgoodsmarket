@@ -8,15 +8,18 @@ import HeaderType5 from './HeaderType5';
 import HeaderType6 from './HeaderType6';
 import DefaultHeader from './DefaultHeader';
 
+import { Chatting } from '../../types/chatting';
+
 type HeaderType = 'type0' | 'type1' | 'type2' | 'type2-2' | 'type3' | 'type4' | 'type5' | 'type6' | 'type7';
 
 interface HeaderProps {
     type: HeaderType;
     title?: string;
+    chat?: Chatting | undefined;
     onComplete?: () => void;
 }
 
-const Header = ({ type, title, onComplete }: HeaderProps) => {
+const Header = ({ type, chat, title, onComplete }: HeaderProps) => {
     switch (type) {
         case 'type0':
             return <HeaderType0 />;
@@ -31,7 +34,7 @@ const Header = ({ type, title, onComplete }: HeaderProps) => {
         case 'type4':
             return <HeaderType4 />;
         case 'type5':
-            return <HeaderType5 />;
+            return <HeaderType5 chat={chat} />;
         case 'type6':
             return <HeaderType6 />;
         default:

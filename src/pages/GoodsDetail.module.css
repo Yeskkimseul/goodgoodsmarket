@@ -137,7 +137,9 @@
     height: clamp(14px, 2vw, 18px);
     object-fit: cover;
 }
-
+.goodsRateText{
+    width: clamp(24px,2vw,26px);
+}
 .maintit {
     display: flex;
     flex-direction: column;
