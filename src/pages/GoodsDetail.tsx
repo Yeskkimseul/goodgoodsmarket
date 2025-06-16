@@ -129,7 +129,6 @@ const GoodsDetail = () => {
         return `${Math.floor(diff / 86400)}일 전`;
     }
 
-<<<<<<< HEAD
     useEffect(() => {
         if (!goods) return;
 
@@ -154,7 +153,6 @@ const GoodsDetail = () => {
         // 중복 증가 방지 플래그
         sessionStorage.setItem(viewedKey, "1");
     }, [goods]);
-=======
     const handleStartChat = () => {
         if (!goods || goods.isCompleted) return;
 
@@ -177,7 +175,6 @@ const GoodsDetail = () => {
         navigate(`/chat/${roomId}`);
     };
 
->>>>>>> e0fc0803ab952db39f37fd29dfb1f95d41d568a4
 
     return (
         <Layout2>
