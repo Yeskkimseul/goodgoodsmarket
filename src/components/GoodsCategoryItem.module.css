@@ -122,10 +122,17 @@
 
 
 
-@media (min-width: 0px) and (max-width: 399px){
+@media (min-width: 0px) and (max-width: 400px){
 .swiperWrapper {
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.listItem img {
+  width: 75px;              /* 이미지 고정 크기 */
+  height: 75px;
+}
+.listItem p {
+  font-size: 14px;
 }
 }
 
@@ -153,7 +160,7 @@
 }
 }
 
-@media (min-width: 551px) and (max-width: 600px) {
+@media (min-width: 551px) and (max-width: 650px) {
 .listItem img {
   width: 85px;              /* 이미지 고정 크기 */
   height: 85px;

@@ -63,7 +63,7 @@ const GoodsCategoryItem: React.FC<GoodsCategoryItemProps> = ({ idsToShow }) => {
 
       <Swiper
         modules={[Navigation]}
-        spaceBetween={24}
+        spaceBetween={18}
         slidesPerView={9}
         loop={false}
         navigation={{
