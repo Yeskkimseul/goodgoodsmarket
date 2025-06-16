@@ -65,7 +65,9 @@ const CommuCard = ({ item, className }: Props) => {
                         </li>
                     </ul>
                 </div>
-                <img src={item.imageUrl} alt={item.title} className={styles.image} />
+                {item.imageUrl && (
+                    <img src={item.imageUrl} alt={item.title} className={styles.image} />
+                )}
             </Link >
         </div >
     );
