@@ -47,8 +47,7 @@ function ChatMessages({ chats }: ChatMessagesProps) {
                     <div className={styles.meChat}>
                         <div className={`body2 ${styles.meMessage}`}>
                             <p>
-                                안녕하세요. <br />
-                                키링 구매하고싶은데 직거래 되나요?
+                                {chat.userMessage}
                             </p>
                             <span className={`caption ${styles.chatTime}`}>
                                 읽음   16:45

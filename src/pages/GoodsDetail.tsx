@@ -129,6 +129,29 @@ const GoodsDetail = () => {
         return `${Math.floor(diff / 86400)}일 전`;
     }
 
+    const handleStartChat = () => {
+        if (!goods || goods.isCompleted) return;
+
+        const roomId = crypto.randomUUID();
+
+        const newRoom = {
+            roomId,
+            productId: goods.id,
+            title: goods.title,
+            price: goods.isExchangeable ? "교환 희망" : `${goods.price.toLocaleString()}원`,
+            productImage: goods.imageUrl?.[0] ?? "",
+            sellerName: goods.sellerName,
+            sellerProfile: goods.sellerimgUrl,
+            messages: []
+        };
+
+        const existing = JSON.parse(localStorage.getItem("chatRooms") || "[]");
+        localStorage.setItem("chatRooms", JSON.stringify([...existing, newRoom]));
+
+        navigate(`/chat/${roomId}`);
+    };
+
+
     return (
         <Layout2>
             <Header type="type2-2" />
@@ -276,8 +299,9 @@ const GoodsDetail = () => {
                     <div className={form.button_big} style={
                         goods && goods.isCompleted
                             ? { background: 'var(--button-bgdisabled)', color: 'var(--button-textdisabled)', cursor: 'default' }
-                            : undefined
-                    } >
+                            : undefined} 
+                            onClick={handleStartChat} 
+                    >
                         채팅하기
                     </div>
                 </div>
