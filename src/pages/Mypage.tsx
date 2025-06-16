@@ -30,7 +30,7 @@ const Mypage = () => {
                     <div className={mypageStyles.title}>
                         거래
                     </div>{/* //.title */}
-                    <MypageList leftContent={<p>거래내역</p>} to="" />
+                    <MypageList leftContent={<p>거래내역</p>} onClick={() => alert("준비 중입니다~")} />
                     <MypageList leftContent={<p>관심목록</p>}
                         onClick={() => navigate("/liked", { state: { tab: 2 } })} />
                     <MypageList leftContent={<p>최근 본 상품</p>} to="/liked" />
@@ -51,7 +51,7 @@ const Mypage = () => {
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>굿굿마켓 소개</p>} to="/about" />
                     <MypageList leftContent={<p>공지사항</p>} to="/mypage/notice" />
-                    <MypageList leftContent={<p>이용안내</p>} to="" />
+                    <MypageList leftContent={<p>이용안내</p>} onClick={() => alert("준비 중입니다~")} />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.section}>
@@ -59,7 +59,7 @@ const Mypage = () => {
                         고객지원
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>앱 설정</p>} to="/mypage/setting" />
-                    <MypageList leftContent={<p>도움센터</p>} to="" />
+                    <MypageList leftContent={<p>도움센터</p>} onClick={() => alert("준비 중입니다~")} />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.bottom}>
