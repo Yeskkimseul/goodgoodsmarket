@@ -55,7 +55,7 @@ const MainMoreBtn: React.FC<MainMoreBtnProps> = ({ children, popupContent }) => 
                     src="../../../images/icon/book_medium.svg"
                     alt="내거래글보기"
                 />
-                내 거래글 보기
+                내 상품 관리
             </button>
             <button
                 className={`button ${styles.closeBtn}`}

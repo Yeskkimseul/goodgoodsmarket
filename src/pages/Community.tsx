@@ -25,6 +25,9 @@ const Community = () => {
         { label: '자유게시판', value: '자유게시판' },
     ];
     const navigate = useNavigate();
+    const goToDetail = (id: number) => {
+        navigate(`/chat/chatdetail/${id}`);
+    };
 
     useEffect(() => {
         const stored = localStorage.getItem('commuList'); //저장된 커뮤니티 데이터
@@ -51,13 +54,17 @@ const Community = () => {
         if (filter === '자유게시판') return item.category === '자유게시판';
         return true;
     });
-    
+
     // 3. 정렬
     const sortedList = filter === '추천'
         ? [...filteredList].sort((a, b) => b.views - a.views)
         : filter === '인기'
             ? [...filteredList].sort((a, b) => b.likes - a.likes)
             : filteredList;
+
+
+
+    
     return (
         <Layout>
             <Header type="type7" />
@@ -112,7 +119,7 @@ const Community = () => {
                                     src="../../../images/icon/book_medium.svg"
                                     alt="내등록글보기"
                                 />
-                                내 등록글 보기
+                                내가 쓴 글
                             </button>
                             <button
                                 className={morestyles.closeBtn}

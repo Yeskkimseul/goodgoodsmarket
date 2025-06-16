@@ -256,3 +256,8 @@ button.submitButton:hover{
   background-color: var(--sub-lightmint);
 }
 
+@media (max-width: 430px) {
+  .form{
+    padding: 0 16px;
+}
+}

@@ -12,7 +12,6 @@ import Trust from "../components/Trust";
 import ReviewCard from "../components/ReviewCard";
 import { useReview } from "../context/ReviewContext";
 
-
 const GoodsDetail = () => {
     const { reviews } = useReview();
     const navigate = useNavigate();
@@ -136,11 +135,10 @@ const GoodsDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        {goods
+                        {goods && Array.isArray(goods.imageUrl)
                             ? goods.imageUrl.map((img, idx) => (
                                 <SwiperSlide key={idx} className={style.slideimg}>
                                     <img src={img} alt={goods.title} />
-
                                 </SwiperSlide>
                             ))
                             : (

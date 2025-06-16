@@ -30,7 +30,7 @@ import Alarm from "./pages/Alarm"; //알림보기
 import { GoodsProvider } from "./context/GoodsContext";
 import { CommuProvider } from "./context/CommuContext";
 import { ReviewProvider } from "./context/ReviewContext";
-
+import { ChatProvider } from "./context/ChatContext";
 
 /* 수정 전 참고용 페이지들 */
 import Upload from "./pages/Upload"; //업로드
@@ -102,6 +102,7 @@ function App() {
       <GoodsProvider>
         <CommuProvider>
           <ReviewProvider>
+            <ChatProvider>
             {/* ✅ 조건부 삽입 */}
             {/* <>
           {loading ? <SplashScreen /> : <Login />}
@@ -118,7 +119,7 @@ function App() {
               <Route path="/home/goodscategory/:id" element={<GoodsCategory />} />
               <Route path="/home/goodsdetail/:id" element={<GoodsDetail />} />
               <Route path="/home/goodsupload" element={<GoodsUpload />} />
-              
+
 
               <Route path="/home/search" element={<Search />} />
 
@@ -136,7 +137,7 @@ function App() {
 
               } />
               <Route path="/community/commuupload" element={
-              
+
                 <CommuUpload />
 
               } />
@@ -147,11 +148,7 @@ function App() {
                 <Chat />
 
               } />
-              <Route path="/chat/chatdetail" element={
-
-                <ChatDetail />
-
-              } />
+              <Route path="/chat/chatdetail/:id" element={<ChatDetail />} />
 
               <Route path="/mypage" element={<Mypage />} />
               <Route path="/liked" element={<Liked />} />
@@ -165,6 +162,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/upload" element={<Upload />} />
             </Routes>
+            </ChatProvider>
           </ReviewProvider>
         </CommuProvider>
       </GoodsProvider>

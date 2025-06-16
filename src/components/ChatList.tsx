@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
-import { useNavigate } from "react-router-dom";
-
-
-
-
 
 // 시간 계산 함수
 function getTimeAgo(dateString: string): string {
@@ -22,31 +17,26 @@ function getTimeAgo(dateString: string): string {
 type ChatListProps = {
   chats: Chatting[];
   onChatClick: (chatId: number) => void;
-
 };
 
-
-const ChatList = ({ chats }: ChatListProps) => {
+const ChatList = ({ chats, onChatClick }: ChatListProps) => {
   const [readList, setReadList] = useState<{ [id: number]: boolean }>(() => {
     const saved = localStorage.getItem("chatReadList");
     return saved ? JSON.parse(saved) : {};
   });
-
-  const navigate = useNavigate();
 
   // 상태가 바뀔 때마다 저장
   useEffect(() => {
     localStorage.setItem("chatReadList", JSON.stringify(readList));
   }, [readList]);
 
-  // 클릭 시 읽음 처리 및 페이지 이동
+  // 클릭 시 읽음 처리 + 상위에서 넘겨준 클릭 핸들러 실행
   const handleClick = (id: number) => {
     if (!readList[id]) {
       const updated = { ...readList, [id]: true };
       setReadList(updated);
-      localStorage.setItem("chatReadList", JSON.stringify(updated));
     }
-    navigate(`/chat/chatdetail`);
+    onChatClick(id); // 상위에서 넘긴 navigate 실행됨
   };
 
   return (

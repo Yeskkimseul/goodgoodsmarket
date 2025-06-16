@@ -10,6 +10,14 @@
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
 }
 
+
+.info_left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
 .thumb {
     width: 46px;
     height: 46px;
@@ -18,21 +26,27 @@
 }
 
 .info {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
 .top {
+         width: clamp(222px, 50vw, 630px);
+             flex-shrink: 0;
     display: flex;
     gap: 8px;
 }
 
-.info_right {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+.title {
+    width: clamp(148px, 50vw, 630px);
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
+
 
 
 
@@ -55,7 +69,6 @@
     justify-content: space-between;
 }
 
-.arrow {}
 
 .chatSelect {
     position: absolute;
@@ -96,16 +109,17 @@
     color: var(--text-grey);
 }
 
-.subtitle{
+.subtitle {
     color: var(--point-deeppink);
     font-size: var(--font-caption);
     font-weight: 600;
+    white-space: nowrap;
+
 }
 
 .title {
     font-size: var(--font-caption);
     color: var(--text-grey);
-    white-space: nowrap;
 }
 
 .price {
@@ -116,4 +130,6 @@
 .time {
     font-size: var(--font-caption);
     color: var(--text-lightgrey);
+    white-space: nowrap;
+
 }

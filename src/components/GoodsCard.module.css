@@ -5,9 +5,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: clamp(150px, 20vw, 243px);
+  width: clamp(150px, 20vw, 240px);
   height: auto;
-  padding-bottom: var(--space4);
+  padding-bottom: var(--space8);
 }
 
 .link {

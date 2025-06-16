@@ -45,6 +45,7 @@ const GoodsCategory = () => {
         <MultiTab tabs={['구매', '교환']}>
           {(activeIndex) => (
             activeIndex === 0 ? (
+              <div className={styles.catewrap}>
                 <div className={styles.cate}>
                   {filteredGoods
                     .filter(g => !g.isExchangeable)
@@ -59,6 +60,7 @@ const GoodsCategory = () => {
                       />
                     ))}
                 </div>
+              </div>
             ) : activeIndex === 1 ? (
               <div className={styles.cate}>
                 {filteredGoods
