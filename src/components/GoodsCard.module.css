@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 24%;
+  width: 23%;
   height: auto;
   padding-bottom: var(--space8);
 }
@@ -106,12 +106,11 @@
 
 @media (max-width: 678px) {
   .card {
-    width: clamp(150px, 28vw, 240px);
-
+    width: clamp(150px, 30vw, 240px);
   }
 }
 
-@media (max-width: 507px) {
+@media (max-width: 500px) {
   .card {
     width: 48%;
   }
