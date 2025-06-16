@@ -23,6 +23,7 @@ import MyCommu from "./pages/MyCommu"; //내 커뮤니티
 import Mypage from "./pages/Mypage"; //마이페이지
 import MyDeals from "./pages/MyDeals"; //내 거래내역
 import MyReview from "./pages/MyReview"; //내 후기
+import Setting from "./pages/Setting"; //앱 설정
 import WriteReview from "./pages/WriteReview";//리뷰 작성
 import Liked from "./pages/Liked"; //찜
 import Alarm from "./pages/Alarm"; //알림보기
@@ -157,6 +158,7 @@ function App() {
               <Route path="/mypage/alarm" element={<Alarm />} />
               <Route path="/mypage/mydeals" element={<MyDeals />} />
               <Route path="/mypage/myreview" element={<MyReview />} />
+              <Route path="/mypage/setting" element={<Setting />} />
               <Route path="/writereview" element={<WriteReview />} />
               <Route path="/mypage/goodsedit/:id" element={<GoodsEdit />} />
               {/* 수정 전 참고용 페이지들 */}
