@@ -47,7 +47,7 @@
 /* header 제외 mgt 수정-종현- */
 /* home 섹션들 css수정 Home.tsx 참고 */
 .pageContent {
-  margin-top: 40px;
+  margin-top: var(--space32);
 }
 
 .mainThumb {
@@ -58,7 +58,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  margin-bottom: 80px;
+  margin-bottom: var(--space56);
   padding: 0 var(--padding);
   position: relative;
   /* background: #ccc; */
@@ -77,6 +77,17 @@
   justify-content: flex-start;
 
 } */
+.conlist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space8);
+}
+
+.con {
+  background: var(--bg-white);
+  padding: var(--space32) 0;
+}
+
 /* 이거 갭 나중에 수정해야됨 일단 임시로 넣었습니다 (gap빼고 card에 margin값으로 변경 할꺼) -종현- */
 .goodgoodspick {
   display: flex;
@@ -89,9 +100,7 @@
 .goodgoodspicktxt {
   font-family: var(--sokcho);
   font-size: 2rem;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  padding: 0 var(--padding);
+  padding: var(--space24) var(--padding);
 }
 
 .goodgoodspicktxt span {
@@ -148,7 +157,7 @@
     padding-bottom: 0;
     width: 100%;
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: var(--space16);
   }
 
   .mainThumb img {
@@ -157,6 +166,13 @@
     object-fit: cover;
     border-radius: 30px;
     display: block;
+  }
+
+  .conlist {
+    background: #f5f6f8;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
   }
 
   :global(.swiper-pagination) {

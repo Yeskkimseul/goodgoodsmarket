@@ -107,46 +107,51 @@ const Home = () => {
                     <div className="swiper-pagination"></div> {/* Swiper 아래에 직접 배치 */}
                 </div>
 
-                <div>
-                    <GoodsCategoryItem />
-                </div>
+                <div className={styles.conlist}>
+                    <div className={styles.con}>
+                        <GoodsCategoryItem />
+                    </div>
 
-                <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 Pick </div>
+                    <div className={styles.con}>
+                        <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 Pick </div>
+                        <div className={styles.goodgoodspick}>
+                            {
+                                displayedList.slice(0, 8).map((item) => (
+                                    <GoodsCard
+                                        key={item.id}
+                                        item={item}
+                                        likedIds={likedIds}
+                                        setLikedIds={setLikedIds}
+                                        goodsList={goodsList}
+                                        setGoodsList={setGoodsList}
+                                        className={styles.card}
+                                    />
+                                ))
+                            }
+                        </div>
+                    </div>
 
-                <div className={styles.goodgoodspick}>
-                    {
-                        displayedList.slice(0, 8).map((item) => (
-                            <GoodsCard
-                                key={item.id}
-                                item={item}
-                                likedIds={likedIds}
-                                setLikedIds={setLikedIds}
-                                goodsList={goodsList}
-                                setGoodsList={setGoodsList}
-                                className={styles.card}
-                            />
-                        ))
-                    }
-                </div>
+                    <div className={styles.con}>
+                        <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
+                        <div style={{ padding: '0 var(--padding)' }}>
+                            {
+                                visibleCommuList.slice(0, 4).map((item) => {
+                                    const likes = commuLikes[item.id] ?? item.likes;
+                                    const commentsNum = commuComments[item.id] ?? item.commentsNum;
+                                    const views = commuViews[item.id] ?? item.views;
+                                    const newItem = { ...item, likes, commentsNum, views };
 
-                <div className={styles.goodgoodspicktxt}> <span>굿</span>굿즈 커뮤니티 </div>
-                <div style={{ padding: '0 var(--padding)' }}>
-                    {
-                        visibleCommuList.slice(0, 4).map((item) => {
-                            const likes = commuLikes[item.id] ?? item.likes;
-                            const commentsNum = commuComments[item.id] ?? item.commentsNum;
-                            const views = commuViews[item.id] ?? item.views;
-                            const newItem = { ...item, likes, commentsNum, views };
-
-                            return (
-                                <CommuCard
-                                    key={item.id}
-                                    item={newItem}
-                                    className={styles.card}
-                                />
-                            );
-                        })
-                    }
+                                    return (
+                                        <CommuCard
+                                            key={item.id}
+                                            item={newItem}
+                                            className={styles.card}
+                                        />
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
                 </div>
                 <MainMoreBtn />
 
