@@ -102,7 +102,7 @@ const GoodsCategoryItem: React.FC<GoodsCategoryItemProps> = ({ idsToShow }) => {
                 <img
                   src={category.imageUrl}
                   alt={category.name}
-                  style={{ borderRadius: "500px", objectFit: "cover" }}
+                  style={{ borderRadius: "500px", objectFit: "cover", border: '1px solid var(--stroke-lightE)'}}
                 />
               )}
               <p>{category.name}</p>
