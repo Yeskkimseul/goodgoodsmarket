@@ -368,7 +368,7 @@ const CommuDetail = () => {
                                                 }
                                                 alt="좋아요"
                                             />
-                                            <p className={style.commentlike}>{commentLikes[c.id] ?? c.commentlikes} 좋아요</p>
+                                            <p className={style.commentlike}>{commentLikes[c.id] ?? c.commentlikes ?? 0} 좋아요</p>
                                         </div>
                                     </div>
                                 </div>
