@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
-//import { useChat } from "../context/ChatContext";
 
-// 시간 계산 함수
 function getTimeAgo(dateString: string): string {
   const now = new Date();
   const date = new Date(dateString);
@@ -21,49 +19,47 @@ type ChatListProps = {
 };
 
 const ChatList = ({ chats, onChatClick }: ChatListProps) => {
-  //  const { chatList } = useChat();
-
   const [readList, setReadList] = useState<{ [id: number]: boolean }>(() => {
     const saved = localStorage.getItem("chatReadList");
     return saved ? JSON.parse(saved) : {};
   });
 
-
-  // 상태가 바뀔 때마다 저장
-  useEffect(() => {
-    localStorage.setItem("chatReadList", JSON.stringify(readList));
-  }, [readList]);
-
-  // 클릭 시 읽음 처리 + 상위에서 넘겨준 클릭 핸들러 실행
   const handleClick = (id: number) => {
     if (!readList[id]) {
       const updated = { ...readList, [id]: true };
       setReadList(updated);
     }
-    onChatClick(id); // 상위에서 넘긴 navigate 실행됨
+    onChatClick(id);
   };
-  
-  console.log("총 chats 길이:", chats.length);
-  chats.forEach(chat => console.log("chat id:", chat.id));
+
+  useEffect(() => {
+    const ids = chats.map(c => c.chatId);
+    const unique = new Set(ids);
+    if (unique.size !== ids.length) {
+      console.warn("❗ 중복 있음!", ids);
+    }
+  }, [chats]);
 
   return (
     <div className={styles.chatList}>
       <ul className={styles.chatItems}>
         {chats.map((chat) => {
-          // console.log(chat.id);
+          const lastMessage = chat.messages.length > 0
+            ? chat.messages[chat.messages.length - 1].message
+            : "대화를 시작해보세요";
+
           return (
-            <li key={chat.id} className={styles.chatItem}
-          /* onClick={() => onChatClick(chat.id)} */>
+            <li key={chat.chatId} className={styles.chatItem}>
               <button
                 type="button"
                 className={styles.link}
-                onClick={() => handleClick(chat.id)}
+                onClick={() => handleClick(chat.chatId)}
               >
                 <div className={styles.productImage}>
                   <img src={chat.productImage || "/images/default-product.png"} alt="상품" />
                   <span
                     className={
-                      readList[chat.id] ? styles.chatDotRead : styles.chatDot
+                      readList[chat.chatId] ? styles.chatDotRead : styles.chatDot
                     }
                   />
                 </div>
@@ -82,12 +78,12 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
                     </span>
                   </div>
                   <div className={`body2 ${styles.chatMessage}`}>
-                    {chat.message || "대화를 시작해보세요"}
+                    {lastMessage}
                   </div>
                 </div>
               </button>
             </li>
-          )
+          );
         })}
       </ul>
     </div>

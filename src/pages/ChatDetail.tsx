@@ -5,72 +5,78 @@ import HeaderType5 from "../components/header/HeaderType5";
 import ChatBottomSheet from "../components/bottomsheet/ChatBottomSheet";
 import ChatInput from "../components/ChatInput";
 import ChatInfo from "../components/chatinfo/ChatInfo";
-import type { Chatting } from "../types/chatting";
+import type { Chatting, ChatMessage } from "../types/chatting";
 import { useChat } from "../context/ChatContext";
 import styles from "./ChatDetail.module.css";
 import { ChatInfoType } from "../components/chatinfo/ChatInfo";
+
+interface ChatMessagesProps {
+  chats: Chatting[];
+  chatType?: "판매" | "구매" | "교환";
+}
+
+function formatDateOnly(createdAt: string) {
+  const dt = new Date(createdAt);
+  return `${dt.getFullYear()}.${String(dt.getMonth() + 1).padStart(2, "0")}.${String(dt.getDate()).padStart(2, "0")}`;
+}
+
+function formatTimeOnly(timeString: string) {
+  const dt = new Date(timeString);
+  return `${String(dt.getHours()).padStart(2, "0")}:${String(dt.getMinutes()).padStart(2, "0")}`;
+}
 
 function ChatDetail() {
   const { id } = useParams<{ id: string }>();
   const chatId = Number(id);
   const navigate = useNavigate();
 
-  const { getMessagesByChatId, addMessage, getChatById } = useChat();
+  const { getChatById } = useChat();
 
   const [msg, setMsg] = useState("");
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [chatList, setChatList] = useState<Chatting[]>([]);
-  const [chatMeta, setChatMeta] = useState<any | null>(null);
+  const [chatMeta, setChatMeta] = useState<Chatting | null>(null);
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
 
   const openSheet = () => setIsSheetOpen(true);
   const closeSheet = () => setIsSheetOpen(false);
 
+  const sortedChats = [...chatMessages].sort((a, b) => {
+    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+  });
+
   const handleSend = (text: string) => {
     if (!text.trim()) return;
 
-    const newMessage: Chatting = {
-      id: Date.now(),
-      message: "",
-      userMessage: text,
+    const newMessage: ChatMessage = {
+      sendId: Date.now(),
       sender: "me",
+      message: text,
       createdAt: new Date().toISOString(),
-      messageSentAt: new Date().toISOString(),
-      userMessageSentAt: new Date().toISOString(),
-      unread: false,
-      title: chatMeta?.title || "",
-      price: chatMeta?.price || "",
-      productImage: chatMeta?.productImage || "",
-      username: "나",
-      userProfile: "/images/myprofile.png",
-      type: chatMeta?.type || "판매",
     };
 
-    const updatedList = [...chatList, newMessage];
-    setChatList(updatedList);
+    const updatedChat = [...chatMessages, newMessage];
+    setChatMessages(updatedChat);
 
-    // 💾 localStorage에도 저장
     const stored = localStorage.getItem("chatRooms");
     const chatRooms = stored ? JSON.parse(stored) : [];
 
     const updatedRooms = chatRooms.map((room: any) => {
-      if (room.roomId === id) {
-        return { ...room, messages: updatedList };
+      if (room.chatId === chatId) {
+        return { ...room, messages: updatedChat };
       }
       return room;
     });
 
-    localStorage.setItem("chatRooms", JSON.stringify(updatedRooms));
+    localStorage.setItem("chatRooms", JSON.stringify(updatedRooms || []));
   };
 
-  // 📥 첫 로딩: localStorage → 없으면 json fetch
- 
-
-  // 🔄 chatMeta fallback (useChat context or chatList)
   useEffect(() => {
-    const fallback = chatList.find(c => c.id === chatId);
-    const chat = getChatById(chatId) || fallback;
-    setChatMeta(chat || null);
-  }, [chatId, chatList]);
+    const chat = getChatById(chatId);
+    if (chat) {
+      setChatMeta(chat);
+      setChatMessages(chat.messages || []);
+    }
+  }, [chatId]);
 
   if (!chatMeta) return null;
 
@@ -82,24 +88,64 @@ function ChatDetail() {
       <div className={styles.chatContents}>
         <div className={styles.chatTitle}>
           <HeaderType5
-            chat={{
-              id: chatId,
-              message: "",
-              userMessage: "",
-              sender: "you",
-              unread: false,
-              username: chatMeta.username || "판매자",
-              userProfile: chatMeta.userProfile || "/images/default.png",
-              title: chatMeta.title || "신규 채팅방",
-              productImage: chatMeta.productImage || "/images/default-product.png",
-              price: chatMeta.price || "",
-              createdAt: chatMeta.createdAt || new Date().toISOString(),
-              type: chatMeta.type || "판매",
-            }}
+            chat={chatMeta}
             onMoreClick={openSheet}
           />
           <ChatInfo type={chatInfoType} chat={chatMeta} />
           <div className={styles.chat}>
+            <div className={styles.chatMessages}>
+              <div className={styles.warningMessage}>
+                <p className="caption">
+                  사기를 예방하기 위해, 거래 전, 더치트에서 계좌번호를 조회해보세요. <br />
+                  의심 계좌일 경우 거래를 멈추는 것이 안전합니다.
+                </p>
+                <a
+                  href="https://thecheat.co.kr/rb/?mod=_search"
+                  className={styles.theCheat}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  더치트에서 조회하기
+                </a>
+              </div>
+              {sortedChats.map((chat, index) => {
+                const currentDate = formatDateOnly(chat.createdAt);
+                const prevDate =
+                  index === 0
+                    ? null
+                    : formatDateOnly(sortedChats[index - 1].createdAt);
+                const showDate = currentDate !== prevDate;
+
+                return (
+                  <div className={styles.chatMsg} key={chat.sendId}>
+                    {showDate && (
+                      <div className={styles.chatDay}>
+                        <div className={styles.line}></div>
+                        <div className={styles.time}>{currentDate}</div>
+                        <div className={styles.line}></div>
+                      </div>
+                    )}
+
+                    {chat.sender === "you" ? (
+                      <div className={styles.otherChat}>
+                        <img className={styles.chatProfile} src={chatMeta.userProfile} alt="프로필" />
+                        <div className={styles.otherMessage}>
+                          <div className={`body2 ${styles.chatMessage}`}>{chat.message}</div>
+                          <span className={`caption ${styles.chatTime}`}>{formatTimeOnly(chat.createdAt)}</span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className={styles.meChat}>
+                        <div className={`body2 ${styles.meMessage}`}>
+                          <p>{chat.message}</p>
+                          <span className={`caption ${styles.chatTime}`}>{formatTimeOnly(chat.createdAt)}</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <ChatInput

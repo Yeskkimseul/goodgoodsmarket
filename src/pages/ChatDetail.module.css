@@ -15,3 +15,96 @@
     
 }
 
+.chatMessages {
+    width: 100%;
+    color: var(--text-grey);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.warningMessage {
+    width: 100%;
+    background: var(--fields-bgvalidation);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.theCheat {
+    font-size: var(--font-h5);
+    text-decoration: underline;
+    color: var(--text-grey);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.chatMsg {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.chatDay {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: var(--text-lightgrey);
+}
+
+.time {
+    font-size: var(--font-caption);
+    color: var(--text-lightgrey);
+    padding: 0 12px;
+}
+
+.meChat {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.meMessage {
+    width: clamp(277px, 40vw, 370px);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    gap: 4px;
+    background: var(--main-mint);
+    color: var(--text-white);
+    border-radius: 8px 0 8px 8px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chatProfile {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+.otherChat {
+    display: flex;
+    gap: 8px;
+}
+
+.otherMessage {
+    width: clamp(277px, 40vw, 370px);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    gap: 4px;
+    background: var(--bg-white);
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chatTime {
+    display: block;
+    width: 100%;
+    text-align: end;
+}

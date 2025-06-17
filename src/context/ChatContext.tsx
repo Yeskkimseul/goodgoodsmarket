@@ -7,7 +7,7 @@ interface ChatContextType {
   addChat: (chat: Chatting) => void;
   getChatByProductId: (title: string) => Chatting | undefined;
   getChatById: (id: number) => Chatting | undefined;
-  getMessagesByChatId: (chatId: number) => Message[];
+  getMessagesBychatId: (chatId: number) => Message[];
   addMessage: (chatId: number, message: Message) => void;
 }
 
@@ -46,7 +46,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.setItem("chatRooms", JSON.stringify(updated));
 
       // ✅ 메시지 초기화
-      localStorage.setItem(`chatMessages_${chat.id}`, JSON.stringify([]));
+      localStorage.setItem(`chatMessages_${chat.chatId}`, JSON.stringify([]));
       return updated;
     });
   };
@@ -56,27 +56,27 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const getChatById = (id: number) => {
-    return chatList.find(chat => chat.id === id);
+    return chatList.find(chat => chat.chatId === id);
   };
 
-  const getMessagesByChatId = (chatId: number): Message[] => {
+  const getMessagesBychatId = (chatId: number): Message[] => {
     const stored = localStorage.getItem(`chatMessages_${chatId}`);
     return stored ? JSON.parse(stored) : [];
   };
 
   const addMessage = (chatId: number, message: Message) => {
-    const currentMessages = getMessagesByChatId(chatId);
+    const currentMessages = getMessagesBychatId(chatId);
     const updatedMessages = [...currentMessages, message];
     localStorage.setItem(`chatMessages_${chatId}`, JSON.stringify(updatedMessages));
 
     // 최신 메시지 요약도 chatList에 반영
     setChatList(prev => {
       const updated = prev.map(chat => {
-        if (chat.id === chatId) {
+        if (chat.chatId === chatId) {
           return {
             ...chat,
-            message: message.sender === "other" ? message.content : chat.message,
-            userMessage: message.sender === "me" ? message.content : chat.userMessage,
+            message: message.sender === "other" ? message.content : chat.messages,
+            userMessage: message.sender === "me" ? message.content : chat.messages,
             createdAt: message.createdAt,
             unread: message.sender === "other",
           };
@@ -95,7 +95,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
         addChat,
         getChatByProductId,
         getChatById,
-        getMessagesByChatId,
+        getMessagesBychatId,
         addMessage,
       }}
     >

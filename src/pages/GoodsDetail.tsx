@@ -167,34 +167,35 @@ const GoodsDetail = () => {
         // 이미 생성된 채팅 있는지 확인 (optional)
         const exists = getChatByProductId(goods.title);
         if (exists) {
-            navigate(`/chat/${exists.id}`);
+            navigate(`/chat/${exists.chatId}`);
             return;
         }
         // ✅ maxId 계산
         const maxId = chatList.length > 0
-            ? Math.max(...chatList.map(chat => chat.id))
+            ? Math.max(...chatList.map(chat => chat.chatId))
             : 0;
 
         const newChat: Chatting = {
-            id: maxId + 1,
+            chatId: maxId + 1,
             username: goods.sellerName,
             userProfile: goods.sellerimgUrl,
             productImage: goods.imageUrl?.[0] ?? "",
             title: goods.title,
             price: goods.isExchangeable ? "교환 희망" : `${goods.price.toLocaleString()}원`,
-            message: "",
-            userMessage: "",
-            sender: "me",
+            messages: [
+              
+            ],
             createdAt: new Date().toISOString(),
-            unread: false,
             type: goods.isExchangeable ? "교환" : "판매",
-            chatinfotype: "default",
+            chatinfotype: "default"
         };
+
+
 
         addChat(newChat); // ✅ 타입 오류 없음 // ✅ context로 상태 업데이트 + localStorage 반영
         // 바로 navigate 하지 말고 약간 대기
         setTimeout(() => {
-            navigate(`/chat/${newChat.id}`);
+            navigate(`/chat/${newChat.chatId}`);
         }, 30); // 10~30ms 정도면 충분
     };
     /*   const handleStartChat = () => {
