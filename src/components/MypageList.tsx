@@ -24,7 +24,9 @@ const MypageList: React.FC<MypageListProps> = ({
     const navigate = useNavigate();
 
     const handleClick = () => {
-        if (onClick) {
+        if (showToggle && onToggleChange) {
+            onToggleChange(!toggleValue); // ✅ 전체 영역 클릭으로도 토글 작동
+        } else if (onClick) {
             onClick();
         } else if (to) {
             navigate(to);
@@ -38,12 +40,14 @@ const MypageList: React.FC<MypageListProps> = ({
             style={showArrow === false ? { pointerEvents: "none" } : undefined}>
             <div className='body2'>{leftContent}</div>
             {showToggle && (
-                <label className={styles.toggleSwitch}>
+                <label
+                    className={styles.toggleSwitch}
+                    onClick={(e) => e.stopPropagation()} // ✅ 부모 클릭 전파 방지 (토글 클릭 시)
+                >
                     <input
                         type="checkbox"
                         checked={toggleValue}
-                        onChange={e => onToggleChange?.(e.target.checked)}
-                        onClick={e => e.stopPropagation()} // 클릭이 부모로 전파되지 않게
+                        onChange={(e) => onToggleChange?.(e.target.checked)} // ✅ 직접 조작 허용
                         className={styles.toggle}
                     />
                     <span className={styles.slider}></span>
