@@ -25,7 +25,7 @@ const ProfileSetting = () => {
                     <input
                         type='email'
                         className={style.input}
-                        placeholder='닉네임을 입력하세요'
+                        placeholder='닉네임을 입력하세요.'
                         value={name}
                         onChange={e => {
                             setName(e.target.value);
