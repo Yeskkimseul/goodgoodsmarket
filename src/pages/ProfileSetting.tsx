@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Header from "../components/header/Header";
 import styles from "../pages/Mypage.module.css"
-import style from '../pages/form.module.css'
 
 const ProfileSetting = () => {
 
@@ -24,7 +23,7 @@ const ProfileSetting = () => {
                     <h4>닉네임</h4>
                     <input
                         type='email'
-                        className={style.input}
+                        className={styles.input}
                         placeholder='닉네임을 입력하세요.'
                         value={name}
                         onChange={e => {
