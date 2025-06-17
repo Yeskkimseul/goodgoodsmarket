@@ -1,6 +1,6 @@
 .reviewInfo {
     width: 100%;
-    padding: 24px clamp(16px, 10vw, 78px);
+    padding: 24px clamp(16px, 3vw, 78px);
     display: flex;
     gap: 10px;
     align-items: center;
@@ -41,8 +41,55 @@
 
 .reviewUpload {
     width: 100%;
-    padding: 24px clamp(16px, 10vw, 78px);
+    padding: 24px clamp(16px, 3vw, 78px);
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.reviewTag {
+    width: 100%;
+    padding: 0 clamp(8px, 3vw, 78px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.reviewTagList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewtagListTop {
+    display: flex;
+}
+
+.reviewTagListBottom {
+    display: flex;
+
+}
+
+.reveiwWrite {
+    width: 100%;
+    padding: 24px clamp(16px, 3vw, 78px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.inputLength {
+    color: var(--text-lightgrey);
+    text-align: end;
+}
+
+.reviewDescriptionTitle {
+    color: var(--text-lightgrey);
+    margin-bottom: 16px;
+}
+
+.reviewDescriptionBody {
+    color: var(--text-lightgrey);
+
 }
