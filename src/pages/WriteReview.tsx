@@ -7,13 +7,8 @@ import reviewstyles from "./WriteReview.module.css"
 import { uploadToCloudinary } from "../utils/cloudinary";
 import styles from "./form.module.css"
 import ToggleButton from "../components/ToggleButton";
-<<<<<<< HEAD
-import { reverse } from "dns";
-import ReviewTop from "../components/ReviewTop";
-=======
 import { useNavigate } from "react-router-dom";
 
->>>>>>> c347e08a2476a9c6e636d902e3d6e3d2dc8f2a86
 
 
 
@@ -123,11 +118,7 @@ const WriteReview: React.FC = () => {
                     </p>
                 </div>
             </div> */}
-            <ReviewTop
-                image="/images/review/review3.png"
-                title="아이언맨 저금통"
-                date="20250902"
-            />
+
 
             <div className={reviewstyles.line}></div>
             <div className={reviewstyles.reviewUpload}>
