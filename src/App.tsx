@@ -76,8 +76,7 @@ function App() {
       path === "/" ||
       path === "" ||
       path.startsWith("/mypage") ||
-      path.startsWith("/login/email") ||
-      path.startsWith("/login/phone") ||
+      path.startsWith("/login") ||
       path.startsWith("/join") ||
       path.startsWith("/home/goodscategory") ||
       path.startsWith("/home/goodsdetail") ||
