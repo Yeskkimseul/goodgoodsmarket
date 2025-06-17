@@ -1,0 +1,24 @@
+.listwrap {
+    padding: var(--space24) var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
+    border-bottom: 1px solid var(--stroke-lightE);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: var(--space24);
+}
+
+.subsub {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
+
+.date {
+    font-size: var(--font-caption);
+    color: var(--text-grey);
+}
