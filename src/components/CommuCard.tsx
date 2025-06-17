@@ -39,7 +39,7 @@ const CommuCard = ({ item, className }: Props) => {
                     <span className={`caption ${styles.categoryBox}`}
                     >{item.category}
                     </span>
-                    <h4 className={styles.title}>{item.title}</h4>
+                    <h3 className={styles.title}>{item.title}</h3>
                     <p className={styles.userName}>{item.userName}</p>
                     <ul className={styles.underline}>
                         <li className={styles.commuRate}>

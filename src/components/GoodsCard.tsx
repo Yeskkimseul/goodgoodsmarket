@@ -97,14 +97,14 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
                         />
                     </button>
                 </div>
-                <h3 className={styles.title}>{item.title}</h3>
-                <h3 className={styles.price}>
+                <h4 className={styles.title}>{item.title}</h4>
+                <h4 className={styles.price}>
                     {item.isCompleted
                         ? '거래 완료 제품'
                         : item.isExchangeable
                             ? '교환 희망 제품'
                             : (item.price ?? 0).toLocaleString() + '원'}
-                </h3>
+                </h4>
             </Link>
         </div>
     )

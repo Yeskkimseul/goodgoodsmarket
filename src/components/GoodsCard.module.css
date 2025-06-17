@@ -59,8 +59,7 @@
 
 
 .title {
-  font-size: var(--font-h);
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 8px;
   margin-bottom: clamp(4px, 2vw, 8px);
   color: var(--text-grey);
