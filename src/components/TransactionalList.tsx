@@ -58,8 +58,11 @@ const TransactionalList: React.FC<TradeCardProps> = ({
                 </div>
             </div>
             {button && (
-                <div className={style.button_big} onClick={() => navigate("/writereview")}
-                    style={{ cursor: "pointer" }}>
+                <div
+                    className={style.button_big}
+                    onClick={() => navigate("/writereview", { state: { image, title, date } })}
+                    style={{ cursor: "pointer" }}
+                >
                     후기 남기기
                 </div>
             )}

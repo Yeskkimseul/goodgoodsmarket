@@ -7,9 +7,8 @@ import reviewstyles from "./WriteReview.module.css"
 import { uploadToCloudinary } from "../utils/cloudinary";
 import styles from "./form.module.css"
 import ToggleButton from "../components/ToggleButton";
-import { useNavigate } from "react-router-dom";
-
-
+import { useNavigate, useLocation } from "react-router-dom";
+import ReviewTop from "../components/ReviewTop";
 
 
 const WriteReview: React.FC = () => {
@@ -20,6 +19,8 @@ const WriteReview: React.FC = () => {
     const [description, setDescription] = useState('');
     const navigate = useNavigate();
 
+    const location = useLocation();
+    const { image, title, date } = location.state || {};
 
     const reviewOptions = {
         review1: {
@@ -43,17 +44,33 @@ const WriteReview: React.FC = () => {
             date: "2025.04.29",
         },
         review5: {
-            image: "/images/review/pikachu.png",
-            title: "피카츄 인형",
-            date: "2025.06.01",
+            image: "../images/transactional/1-4.png",
+            title: "이세계 전학 굿즈 세트",
+            date: "2025.04.02",
         },
         review6: {
-            image: "/images/review/pikachu.png",
-            title: "피카츄 인형",
-            date: "2025.06.01",
+            image: "../images/transactional/1-5.png",
+            title: "마법쓰는 사무직 굿즈",
+            date: "2025.01.29",
         },
     };
 
+    const review1 = reviewOptions.review1;
+
+    <ReviewTop
+        image={image || review1.image}
+        title={title || review1.title}
+        date={date || review1.date}
+    />
+
+    // title이 일치하는 review key 찾기
+    const matchedKey = Object.keys(reviewOptions).find(
+        key => reviewOptions[key as keyof typeof reviewOptions].title === title
+    ) as keyof typeof reviewOptions | undefined;
+
+    const [selectedReview, setSelectedReview] = useState<
+        'review1' | 'review2' | 'review3' | 'review4' | 'review5' | 'review6'
+    >(matchedKey ?? 'review1');
 
     const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = e.target.files;
@@ -118,7 +135,11 @@ const WriteReview: React.FC = () => {
                     </p>
                 </div>
             </div> */}
-
+            <ReviewTop
+                image={image || review1.image}
+                title={title || review1.title}
+                date={date || review1.date}
+            />
 
             <div className={reviewstyles.line}></div>
             <div className={reviewstyles.reviewUpload}>
@@ -183,9 +204,9 @@ const WriteReview: React.FC = () => {
                         </p>
                     </div>
                     <div className={reviewstyles.submitWrap}>
-                    <button
-                        className={reviewstyles.upload} type="submit"
-                    >후기 작성 완료</button>
+                        <button
+                            className={reviewstyles.upload} type="submit"
+                        >후기 작성 완료</button>
                     </div>
                 </form>
             </div>

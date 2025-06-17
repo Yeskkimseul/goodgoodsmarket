@@ -19,7 +19,7 @@ const ChatBottomSheet = ({ isOpen, onClose }: ChatBottomSheetProps) => {
         {
             label: "후기 작성하기",
             icon: <img src="/images/bottomsheet/bs_pen.svg" alt="후기" />,
-            onClick: () => navigate("/writereview"),
+            onClick: () =>navigate("/writereview"),
         },
         {
             label: "알람끄기",

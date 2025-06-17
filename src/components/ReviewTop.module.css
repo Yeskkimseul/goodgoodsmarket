@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    padding: var(--space16) var(--padding);
+    gap: var(--space16);
+    align-items: center;
+}
+
+.wrapper img {
+    border-radius: 6px;
+    width: clamp(50px, 5vw, 80px);
+}
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
+
+.txt p {
+    color: var(--text-grey);
+}
