@@ -2624,10 +2624,11 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "방탄조끼단",
+        "sellerimgUrl": "/images/users/user13.jpg",
+        "sellerName": "내가만든굿즈",
         "sellerTrust": 80,
-        "isExchangeable": false
+        "isExchangeable": false,
+        "isCompleted": true
     },
     {
         "id": "128",

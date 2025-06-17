@@ -296,5 +296,28 @@
       "imageUrl": "/images/mydeals/sale76.png"
     },
     "recommend": 8
+  },
+  {
+    "id": "r14",
+    "sellerName": "내가만든굿즈",
+    "reviewer": {
+      "name": "3분카레",
+      "img": "/images/users/user68.jpg"
+    },
+    "date": "2025-06-09",
+    "reviewimg": [
+      "/images/mydeals/sale57.png"
+    ],
+    "content": "빠르고 친절한 거래 감사합니다 잘 쓸게요!!",
+    "keywords": [
+      "친절해요",
+      "답장이 빨라요"
+    ],
+    "goods": {
+      "id": "127",
+      "title": "정국 화보 잡지 팝니다",
+      "imageUrl": "/images/mydeals/sale57.png"
+    },
+    "recommend": 5
   }
 ]
