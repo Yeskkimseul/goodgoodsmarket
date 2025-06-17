@@ -10,6 +10,7 @@ import type { Chatting } from "../types/chatting";
 import styles from "./ChatDetail.module.css";
 import { useChat } from "../context/ChatContext";
 import { Message } from "../types/message";
+import { ChatInfoType } from "../components/chatinfo/ChatInfo";
 
 
 
@@ -37,6 +38,8 @@ function ChatDetail() {
       userMessage: text,
       sender: "me",
       createdAt: new Date().toISOString(),
+      messageSentAt: new Date().toISOString(),
+      userMessageSentAt: new Date().toISOString(),
       unread: false,
       title: chatMeta?.title || "",
       price: chatMeta?.price || "",
@@ -90,6 +93,7 @@ function ChatDetail() {
 
     const localRoom = chatRooms.find((room: any) => room.roomId === id);
 
+
     if (localRoom) {
       setChatList(localRoom.messages || []);
       setChatMeta(localRoom);
@@ -102,10 +106,17 @@ function ChatDetail() {
             .filter(chat => chat.id === chatId)
             .map(chat => ({
               ...chat,
-              sender: chat.userMessage ? "me" : "you" // 🔥 핵심!
+               sender: chat.userMessage ? "me" : "you"
             }));
 
-          setChatList(filtered);
+
+          const chattingArray: Chatting[] = filtered.map(item => ({
+            ...item,
+            sender: item.sender === "me" ? "me" : "you"
+          }));
+
+
+          setChatList(chattingArray);
 
           const newRoom = {
             roomId: id,
@@ -130,8 +141,7 @@ function ChatDetail() {
     setChatMeta(chat || null);
   }, [chatId, chatList]);
 
-
-  const chatInfoType = chatList.some(chat => chat.type === "판매") ? "seller" : "default";
+  const chatInfoType: ChatInfoType = chat?.chatinfotype === 'seller' ? 'seller' : 'default';
 
 
   if (!chatMeta) return null;
@@ -159,7 +169,7 @@ function ChatDetail() {
           />
           <ChatInfo type={chatInfoType} chat={chatMeta} />
           <div className={styles.chat}>
-            <ChatMessages chats={chatList} />
+            <ChatMessages chats={chatList} chatType={chatMeta?.type}/>
           </div>
         </div>
         <ChatInput

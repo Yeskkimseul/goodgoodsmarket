@@ -3,12 +3,14 @@ import ChatInfoDefault from "./ChatInfoDefault";
 import ChatInfoSeller from "./ChatInfoSeller";
 import type { Chatting } from "../../types/chatting";
 
-type ChatInfoType = 'default' | 'seller';
+export type ChatInfoType = 'default' | 'seller';
 
 interface ChatInfoProps {
   type: ChatInfoType;
   chat: Chatting;
 }
+
+
 
 const ChatInfo = ({ type, chat }: ChatInfoProps) => {
   switch (type) {

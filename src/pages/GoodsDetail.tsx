@@ -174,6 +174,7 @@ const GoodsDetail = () => {
         const maxId = chatList.length > 0
             ? Math.max(...chatList.map(chat => chat.id))
             : 0;
+
         const newChat: Chatting = {
             id: maxId + 1,
             username: goods.sellerName,
@@ -187,6 +188,7 @@ const GoodsDetail = () => {
             createdAt: new Date().toISOString(),
             unread: false,
             type: goods.isExchangeable ? "교환" : "판매",
+            chatinfotype: "default",
         };
 
         addChat(newChat); // ✅ 타입 오류 없음 // ✅ context로 상태 업데이트 + localStorage 반영
