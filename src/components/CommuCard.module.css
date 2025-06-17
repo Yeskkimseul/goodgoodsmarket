@@ -65,7 +65,7 @@
     display: flex;
     align-items: center;
     gap: clamp(6px, 1vw, 9px);
-
+    color: var(--text-lightgrey);
 }
 
 .commuListIcon {

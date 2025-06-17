@@ -30,6 +30,17 @@ const CommuCard = ({ item, className }: Props) => {
             ? item.comments.length
             : 0;
 
+    function formatDateWithoutDot(dateString: string): string {
+        const date = new Date(dateString);
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; // 0부터 시작하므로 +1
+        const day = date.getDate();
+
+        return `${year}. ${month}. ${day}`;
+    }
+
+
+
 
 
     return (
@@ -42,6 +53,8 @@ const CommuCard = ({ item, className }: Props) => {
                     <h3 className={styles.title}>{item.title}</h3>
                     <p className={styles.userName}>{item.userName}</p>
                     <ul className={styles.underline}>
+
+
                         <li className={styles.commuRate}>
                             <img src="../images/icon/eye_small.svg" alt="작은눈"
                                 className={styles.commuListIcon}
@@ -56,12 +69,18 @@ const CommuCard = ({ item, className }: Props) => {
                             <span className={styles.commuRateText}>{likes}</span>
 
                         </li>
+
                         <li className={styles.commuRate}>
                             <img src="../images/icon/comment_small.svg" alt="
                             작은댓글"
                                 className={styles.commuListIcon}
                             />
                             <span className={styles.commuRateText}>{commentsNum}</span>
+                        </li>
+                        <li className={styles.commuRate}>·
+                            <span className={styles.commuRateText}>
+                                {formatDateWithoutDot(item.createdAt)}
+                            </span>
                         </li>
                     </ul>
                 </div>
