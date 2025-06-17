@@ -62,6 +62,19 @@ const LoginFindId = () => {
                     </div>
                     <div className={Login.inputbox}>
                         <h4>
+                            이름
+                        </h4>
+                        <input type='text' className={style.input} placeholder='이름을 입력해주세요' value={'홍길동'} required />
+                    </div>{/* 이름 입력 */}
+
+                    <div className={Login.inputbox}>
+                        <h4>
+                            생년월일
+                        </h4>
+                        <input type='text' className={style.input} placeholder='생년월일 8자리를 입력해주세요' value={'14430101'} required />
+                    </div>{/* 생년월일 입력 */}
+                    <div className={Login.inputbox}>
+                        <h4>
                             전화번호
                         </h4>
                         <div className={Login.inputboxlist}>
@@ -74,11 +87,10 @@ const LoginFindId = () => {
                             <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' value={'1234'} required />
                         </div>
                     </div>{/*전화번호 입력 */}
-                  
                 </div>{/* inputlist */}
                 <div className={style.button_big}
                     onClick={() => {
-                       navigate('/login/findidresult')
+                        navigate('/login/findidresult')
                     }}
                 >
                     다음

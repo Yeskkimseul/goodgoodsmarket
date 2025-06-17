@@ -61,14 +61,29 @@ const LoginFindIdResult = () => {
                         <h1>계정 찾기</h1>
                     </div>
 
-                  
+                    <div>
+                        <p>
+                            계정찾기가 완료되었습니다.
+                        </p>
+                        <div style={{
+                            borderRadius: '8px', background: 'var(   --bg-lightE)', padding: 'var(--space16)', marginTop: 'var(--space16)', display: 'flex', justifyContent: 'space-between'
+                        }}>
+                            <span className='subtit2' style={{ color: 'var(  --text-black)' }}>
+                                아이디
+                            </span>
+                            <span className='subtit2' style={{ color: 'var(  --text-black)' }}>
+                                ad***@email.com
+                            </span>
+                        </div>
+                    </div>
+
                 </div>{/* inputlist */}
                 <div className={style.button_big}
                     onClick={() => {
-                       navigate('/login/findidresult')
+                        navigate('/')
                     }}
                 >
-                    다음
+                    로그인하기
                 </div>
             </div>{/* inner */}
         </Layout2>
