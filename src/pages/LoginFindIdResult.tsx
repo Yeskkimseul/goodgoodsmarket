@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Layout2 from '../components/Layout2';
 
-const LoginFindId = () => {
+const LoginFindIdResult = () => {
     const [hide, setHide] = useState([true, true]);
     const [email, setEmail] = useState('admin@email.com'); // 기본값 지정
     const [password, setPassword] = useState('1234');      // 기본값 지정
@@ -60,20 +60,7 @@ const LoginFindId = () => {
                         <img src="/images/login/logoimg_small.svg" alt="logo" className={Login.logo} />
                         <h1>계정 찾기</h1>
                     </div>
-                    <div className={Login.inputbox}>
-                        <h4>
-                            전화번호
-                        </h4>
-                        <div className={Login.inputboxlist}>
-                            <div className={Login.phone}>
-                                <input type='text' className={style.input} placeholder='전화번호를 입력해주세요' value={'010000000000'} required />
-                                <button className={Login.phonebtn}
-                                    onClick={handleClick}
-                                    disabled={disabled}>{buttonText}</button>
-                            </div>{/* phone */}
-                            <input type='text' className={style.input} placeholder='인증번호를 입력해주세요' value={'1234'} required />
-                        </div>
-                    </div>{/*전화번호 입력 */}
+
                   
                 </div>{/* inputlist */}
                 <div className={style.button_big}
@@ -87,4 +74,4 @@ const LoginFindId = () => {
         </Layout2>
     )
 }
-export default LoginFindId;
+export default LoginFindIdResult;
