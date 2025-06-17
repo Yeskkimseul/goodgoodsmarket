@@ -82,5 +82,6 @@
 .pbw {
     display: flex;
     flex-direction: column;
+    padding: 0 var(--space16);
     gap: var(--space8);
 }
