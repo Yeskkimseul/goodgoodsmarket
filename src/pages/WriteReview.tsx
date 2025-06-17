@@ -7,17 +7,23 @@ import reviewstyles from "./WriteReview.module.css"
 import { uploadToCloudinary } from "../utils/cloudinary";
 import styles from "./form.module.css"
 import ToggleButton from "../components/ToggleButton";
+<<<<<<< HEAD
 import { reverse } from "dns";
 import ReviewTop from "../components/ReviewTop";
+=======
+import { useNavigate } from "react-router-dom";
+
+>>>>>>> c347e08a2476a9c6e636d902e3d6e3d2dc8f2a86
 
 
 
 const WriteReview: React.FC = () => {
     const [imageUrls, setImageUrls] = useState<string[]>([]);
-    const [selectedKeyword, setSelectedKeyword] = useState("");
-    const isSelected = (text: string) => selectedKeyword === text;
+    const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
+    const isSelected = (text: string) => selectedKeywords.includes(text);
     const [searchValue, setSearchValue] = useState("");
     const [description, setDescription] = useState('');
+    const navigate = useNavigate();
 
 
     const reviewOptions = {
@@ -81,26 +87,25 @@ const WriteReview: React.FC = () => {
 
 
 
-    const handleToggle = (text: string, selected: boolean) => {
-        if (selected) {
-            setSearchValue(text);
-            setSelectedKeyword(text); // 현재 선택된 키워드 기억
-        } else {
-            setSearchValue(""); // 해제 시 input 비움
-            setSelectedKeyword(""); // 선택 해제
-        }
-
-    }
+    const handleToggle = (text: string, _selected: boolean) => {
+        setSelectedKeywords(prev => {
+            return prev.includes(text)
+                ? prev.filter(keyword => keyword !== text) // 선택 해제
+                : [...prev, text];                         // 선택 추가
+        });
+    };
 
     const maxLength = 100;
-
-
     const [value, setValue] = useState("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        if (e.target.value.length <= maxLength) {
-            setValue(e.target.value);
-        }
+        setDescription(e.target.value);
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // ...등록 처리 로직...
+        navigate(-1); // 이전 페이지로 이동
     };
 
     return (
@@ -166,17 +171,17 @@ const WriteReview: React.FC = () => {
             </div>
             <div className={reviewstyles.reveiwWrite}>
                 <h3>리뷰 쓰기</h3>
-                <div>
+                <form onSubmit={handleSubmit}>
                     <label className={styles.goodstxt}>
                         <textarea
                             value={description}
-                            onChange={(e) => setDescription(e.target.value)}
+                            onChange={handleChange}
                             maxLength={maxLength}
                             placeholder="박스 상태도 좋고 마음에 듭니다!
                                 "
                         />
                         <div className={`caption ${reviewstyles.inputLength}`}>
-                            {value.length} / {maxLength}
+                            {description.length} / {maxLength}
                         </div>
                     </label>
                     <div className={reviewstyles.reviewDescription}>
@@ -186,8 +191,12 @@ const WriteReview: React.FC = () => {
                             있습니다. 리뷰 등록은 마케팅 등록 활용에 동의한 것으로 간주합니다.
                         </p>
                     </div>
-                </div>
-                <button className={styles.upload} type="submit">등록완료</button>
+                    <div className={reviewstyles.submitWrap}>
+                    <button
+                        className={reviewstyles.upload} type="submit"
+                    >후기 작성 완료</button>
+                    </div>
+                </form>
             </div>
         </Layout>
     )

@@ -83,6 +83,9 @@
     color: var(--text-lightgrey);
     text-align: end;
 }
+.reviewDescription{
+    margin-bottom: 24px;
+}
 
 .reviewDescriptionTitle {
     color: var(--text-lightgrey);
@@ -93,3 +96,28 @@
     color: var(--text-lightgrey);
 
 }
+
+.submitWrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload{
+    width: 70%;
+    height: clamp(42px, 3vw, 56px) ;
+    padding: 12px 24px;
+    background: var(  --button-bgdefault);
+    font-size: var(--font-button);
+    border-radius: 8px;
+    color: var(--bg-white);
+    flex: 0 0 auto;
+
+}
+
+.upload:hover{
+    background: var( --button-bghover);
+}
+
+
