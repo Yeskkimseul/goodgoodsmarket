@@ -76,6 +76,7 @@
 .profilesetting_bottom {
     display: flex;
     justify-content: center;
+    padding: 0 var(--space16);
 }
 
 .pbw {
