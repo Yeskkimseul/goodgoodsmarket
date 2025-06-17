@@ -6,6 +6,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Login from "./pages/Login"; //로그인
 import LoginEmail from "./pages/LoginEmail"; //이메일 로그인
 import LoginPhone from "./pages/LoginPhone"; //휴대폰 로그인
+import LoginFindPassword from "./pages/LoginFindPassword";//패스워드찾기
+import LoginFindId from "./pages/LoginFindId"; //계정찾기
 import Join from "./pages/Join"; //회원가입
 import Home from "./pages/Home";  //홈
 import GoodsCategory from "./pages/GoodsCategory"; //굿즈 카테고리
@@ -118,6 +120,8 @@ function App() {
                 <Route path="/" element={<Login />} />
                 <Route path="/login/email" element={<LoginEmail />} />
                 <Route path="/login/phone" element={<LoginPhone />} />
+                <Route path="/login/findpassword" element={<LoginFindPassword />} />
+                <Route path="/login/findid" element={<LoginFindId />} />
 
                 <Route path="/join" element={<Join />} />
 
