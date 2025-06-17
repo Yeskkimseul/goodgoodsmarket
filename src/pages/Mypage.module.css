@@ -86,12 +86,11 @@
     padding: 0 var(--space16);
     gap: var(--space8);
     justify-content: center;
-    width: 420px;
+    width: clamp(300px, 40vw, 420px);
 }
 
 .input {
-    flex: 1 1 auto;
-    min-width: 0;
+    width: 100%;
     padding: clamp(14px, 2vh, 16px) clamp(16px, 2vw, 20px);
     border-radius: 8px;
     border: 1px solid var(--fields-form);
