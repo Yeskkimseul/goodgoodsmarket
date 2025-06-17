@@ -1,8 +1,8 @@
 .filterContainer {
     display: flex;
-    gap: 8px;
+    gap: var(--space8);
     background: var(--bg-lightE);
-    padding: 12px var(--padding);
+    padding: var(--space8) var(--padding);
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -20,20 +20,20 @@
 .filterButton {
     border: 1px solid var(--bg-gray);
     background: var(--bg-white);
-    padding: clamp(6px, 6vw, 9px) clamp(16px, 6vw, 24px);
+    padding: var(--space8) var(--space16);
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: var(--font-caption2);
+    font-weight: 400;
     transition: all 0.2s ease;
     flex: 0 0 auto;
     border-radius: 8px;
     font-family: 'Pretendard', sans-serif;
-    font-size: var( --font-button);
+    font-size: var(--font-button);
     color: var(--text-grey);
 }
 
 .active {
-    font-weight: bold;
+    font-weight: 600;
     background: var(--button-bgdefault);
     border: 1px solid #1DC6A7;
     color: var(--text-white);

@@ -195,7 +195,7 @@ body {
 
   --font-button: clamp(1rem, 1.95vw, 1.125rem);
   --font-caption: clamp(0.875rem, 1.69vw, 1rem);
-  --font-caption2: clamp(0.675rem, 1.50vw, 0.875rem);
+  --font-caption2: clamp(0.775rem, 1.50vw, 0.875rem);
 
   /* color */
 

@@ -80,7 +80,7 @@ const Community = () => {
                         </button>
                     ))}
                 </div>
-                <div style={{ padding: 'clamp(64px,7.5vh,68px) var(--padding)' }}>
+                <div style={{ padding: 'clamp(54px,7.5vh,57px) var(--padding)' }}>
                     {
                         sortedList.map((item) => (
                             <CommuCard
