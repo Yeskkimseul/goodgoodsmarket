@@ -23,6 +23,7 @@ import MyCommu from "./pages/MyCommu"; //내 커뮤니티
 import Mypage from "./pages/Mypage"; //마이페이지
 import MyDeals from "./pages/MyDeals"; //내 거래내역
 import MyReview from "./pages/MyReview"; //내 후기
+import Lately from "./pages/Lately";//최근 본 상품
 import ProfileSetting from "./pages/ProfileSetting";
 import Transactional from "./pages/Transactional"; //거래내역
 import Setting from "./pages/Setting"; //앱 설정
@@ -164,6 +165,7 @@ function App() {
                 <Route path="/mypage/setting" element={<Setting />} />
                 <Route path="/mypage/profile" element={<ProfileSetting />} />
                 <Route path="/writereview" element={<WriteReview />} />
+                <Route path="/lately" element={<Lately />} />
                 <Route path="/transactional" element={<Transactional />} />
                 <Route path="/mypage/goodsedit/:id" element={<GoodsEdit />} />
                 <Route path="/mypage/notice" element={<Notice />} />
