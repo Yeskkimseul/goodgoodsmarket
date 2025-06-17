@@ -23,6 +23,46 @@ const MyCommu = () => {
         localStorage.setItem('commuList', JSON.stringify(updated));
     };
 
+
+
+
+    const loadMyData = async () => {
+        const stored = localStorage.getItem("commuList");
+        let data: Commu[] = [];
+
+        if (stored) {
+            data = JSON.parse(stored);
+        } else {
+            const res = await fetch('/data/commu.json');
+            data = await res.json();
+            localStorage.setItem("commuList", JSON.stringify(data));
+        }
+
+        const currentUser = "뱃지가좋아";
+
+        const myPosts = data.filter(item => item.userName === currentUser);
+
+        const myComments: { item: Commu, comment: any }[] = [];
+        data.forEach(item => {
+            if (Array.isArray(item.comments)) {
+                item.comments.forEach(comment => {
+                    if (comment.userName === currentUser) {
+                        myComments.push({ item, comment });
+                    }
+                });
+            }
+        });
+
+        setCommuList(data);
+        setMyPosts(myPosts);
+        setMyPostCount(myPosts.length);
+        setMyComments(myComments);
+        setMyCommentCount(myComments.length);
+    };
+
+    useEffect(() => {
+        loadMyData();
+    }, []);
     // 댓글 삭제
     const handleDeleteComment = (commentId: string) => {
         const updated = commuList.map(item => {
@@ -35,96 +75,12 @@ const MyCommu = () => {
                 commentsNum: newComments.length
             };
         });
-        setCommuList(updated);
 
-        // 내 댓글만 다시 모으기
-        const comments: { item: Commu, comment: any }[] = [];
-        updated.forEach(item => {
-            if (Array.isArray(item.comments)) {
-                (item.comments as any[]).forEach(comment => {
-                    if (comment.userName === "뱃지가좋아") {
-                        comments.push({ item, comment });
-                    }
-                });
-            }
-        });
-        setMyComments(comments);
-        setMyCommentCount(comments.length);
         localStorage.setItem('commuList', JSON.stringify(updated));
+        loadMyData(); // ✅ 이렇게 하면 전체 상태 갱신 일괄 처리됨
     };
 
-    useEffect(() => {
-        const stored = localStorage.getItem("commuList");
-        if (stored) {
-            const data: Commu[] = JSON.parse(stored);
-            // 게시글 수
-            const postCount = data.filter(item => item.userName === "뱃지가좋아").length;
-            // 댓글 수
-            const commentCount = data.reduce((acc, item) => {
-                if (item.comments && Array.isArray(item.comments)) {
-                    return acc + item.comments.filter(c => c.userName === "뱃지가좋아").length;
-                }
-                return acc;
-            }, 0);
-            setMyPostCount(postCount);
-            setMyCommentCount(commentCount);
-            setMyPosts(data.filter(item => item.userName === "뱃지가좋아"));
-            setCommuList(data);
-        } else {
-            fetch('/data/commu.json')
-                .then(res => res.json())
-                .then((data: Commu[]) => {
-                    localStorage.setItem("commuList", JSON.stringify(data)); // 저장
-                    const postCount = data.filter(item => item.userName === "뱃지가좋아").length;
-                    const commentCount = data.reduce((acc, item) => {
-                        if (item.comments && Array.isArray(item.comments)) {
-                            return acc + item.comments.filter(c => c.userName === "뱃지가좋아").length;
-                        }
-                        return acc;
-                    }, 0);
-                    setMyPostCount(postCount);
-                    setMyCommentCount(commentCount);
-                    setMyPosts(data.filter(item => item.userName === "뱃지가좋아"));
-                    setCommuList(data);
-                });
-        }
-    }, []);
-
-    useEffect(() => {
-        const stored = localStorage.getItem("commuList");
-        const loadData = async () => {
-            let data: Commu[] = [];
-            if (stored) {
-                data = JSON.parse(stored);
-            } else {
-                const res = await fetch('/data/commu.json');
-                data = await res.json();
-                localStorage.setItem("commuList", JSON.stringify(data));
-            }
-
-            // 게시글, 댓글 수 세기
-            const myPosts = data.filter(item => item.userName === "뱃지가좋아");
-            const myComments: { item: Commu, comment: any }[] = [];
-            data.forEach(item => {
-                if (item.comments && Array.isArray(item.comments)) {
-                    item.comments.forEach(comment => {
-                        if (comment.userName === "뱃지가좋아") {
-                            myComments.push({ item, comment });
-                        }
-                    });
-                }
-            });
-
-            setCommuList(data);
-            setMyPosts(myPosts);
-            setMyPostCount(myPosts.length);
-            setMyComments(myComments);
-            setMyCommentCount(myComments.length);
-        };
-
-        loadData();
-    }, []);
-
+   
 
     return (
         <Layout>
@@ -142,7 +98,7 @@ const MyCommu = () => {
                             <p>
                                 게시글 수
                             </p>
-                            <p className=".subtit1" style={{ color: 'var(--point-deeppink)' }}>
+                            <p className="subtit1" style={{ color: 'var(--point-deeppink)' }}>
                                 {myPostCount}
                             </p>
                         </div>
@@ -150,7 +106,7 @@ const MyCommu = () => {
                             <p>
                                 댓글 수
                             </p>
-                            <p className=".subtit1" style={{ color: 'var(--point-deeppink)' }}>
+                            <p className="subtit1" style={{ color: 'var(--point-deeppink)' }}>
                                 {myCommentCount}
                             </p>
                         </div>

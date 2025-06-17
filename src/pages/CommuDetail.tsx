@@ -145,37 +145,6 @@ const CommuDetail = () => {
         navigate(-1);
     };
 
-    /* 댓글 등록 함수 */
-    const handleCommentSubmit = () => {
-        if (!commentInput.trim() || !commu) return;
-
-        // 새 댓글 객체 생성
-        const newComment = {
-            id: `c${Date.now()}`,
-            userimgUrl: "/images/users/user1.png",
-            userName: "뱃지가좋아",
-            content: commentInput,
-            createdAt: new Date().toISOString(),
-        };
-
-        // 기존 댓글 불러오기 (localStorage 우선)
-        const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
-        const commuComments = storedComments[commu.id] || commu.comments || [];
-        const updatedComments = [...commuComments, newComment];
-
-        // localStorage에 저장
-        storedComments[commu.id] = updatedComments;
-        localStorage.setItem("comments", JSON.stringify(storedComments));
-
-        // 화면에도 즉시 반영
-        setcommu({
-            ...commu,
-            comments: updatedComments,
-            commentsNum: updatedComments.length,
-        });
-
-        setCommentInput("");
-    };
 
     useEffect(() => {
         // 1. localStorage에서 commuList 불러오기
@@ -239,9 +208,45 @@ const CommuDetail = () => {
                     ? [commu.tags]
                     : [];
 
+
+    const [comments, setComments] = useState<any[]>([]);  // 항상 호출
+
+    useEffect(() => {
+        if (commu) {
+            const stored = JSON.parse(localStorage.getItem("comments") || "{}");
+            const loadedComments = stored[commu.id] || commu.comments || [];
+            setComments(loadedComments);
+        }
+    }, [commu]);
+
+    const handleCommentSubmit = () => {
+        if (!commentInput.trim() || !commu) return;
+
+        const newComment = {
+            id: `c${Date.now()}`,
+            userimgUrl: "/images/users/user1.png",
+            userName: "뱃지가좋아",
+            content: commentInput,
+            createdAt: new Date().toISOString(),
+        };
+
+        const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
+        const commuComments = storedComments[commu.id] || [];
+        const updatedComments = [...commuComments, newComment];
+        storedComments[commu.id] = updatedComments;
+        localStorage.setItem("comments", JSON.stringify(storedComments));
+
+        setComments(updatedComments); // 상태 업데이트
+        setcommu({
+            ...commu,
+            commentsNum: updatedComments.length,
+        });
+
+        setCommentInput("");
+    };
+
+
     if (!commu) return <div>로딩 중...</div>;
-
-
 
     return (
         <Layout>
@@ -285,7 +290,13 @@ const CommuDetail = () => {
                     </div>
                 </div>{/* titlecon */}
                 <div className={style.articlecon}>
-                    <img src={commu.imageUrl} alt={commu.title} className={style.articleimg} />
+                    {commu.imageUrl && (
+                        <img
+                            src={commu.imageUrl}
+                            alt={commu.title}
+                            className={style.articleimg}
+                        />
+                    )}
                     <p className="body2">
                         {commu.description}
                     </p>

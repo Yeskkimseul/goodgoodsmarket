@@ -108,6 +108,13 @@ const CommuUpload = () => {
   let stored = localStorage.getItem('commuList');
   let commuList: Commu[] = stored ? JSON.parse(stored) : [];
 
+  // commuList가 비어 있으면 commu.json에서 불러와 병합
+  if (commuList.length === 0) {
+    const response = await fetch('/data/commu.json');
+    const jsonData = await response.json();
+    commuList = jsonData;
+  }
+
   const updated = [newCommu, ...commuList];
   localStorage.setItem('commuList', JSON.stringify(updated));
   setCommuList(updated);
