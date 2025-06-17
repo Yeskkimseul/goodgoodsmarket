@@ -59,7 +59,7 @@ const Mypage = () => {
                         고객지원
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>앱 설정</p>} to="/mypage/setting" />
-                    <MypageList leftContent={<p>도움센터</p>} onClick={() => alert("준비 중입니다~")} />
+                    <MypageList leftContent={<p>도움센터</p>} to="/mypage/help" />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.bottom}>

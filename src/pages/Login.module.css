@@ -80,6 +80,7 @@ body {
     align-items: center;
     gap: var(--space56);
     justify-content: center;
+    margin-bottom: var(--space56);
 }
 
 .congratulate {

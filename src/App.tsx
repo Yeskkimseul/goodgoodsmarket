@@ -31,6 +31,7 @@ import WriteReview from "./pages/WriteReview";//리뷰 작성
 import Liked from "./pages/Liked"; //찜
 import Alarm from "./pages/Alarm"; //알림보기
 import Notice from "./pages/Notice"; //공지사항
+import Help from "./pages/Help"; //도움센터
 
 
 import { GoodsProvider } from "./context/GoodsContext";
@@ -169,6 +170,7 @@ function App() {
                 <Route path="/mypage/transactional" element={<Transactional />} />
                 <Route path="/mypage/goodsedit/:id" element={<GoodsEdit />} />
                 <Route path="/mypage/notice" element={<Notice />} />
+                <Route path="/mypage/help" element={<Help />} />
                 {/* 수정 전 참고용 페이지들 */}
 
                 <Route path="/popular" element={<Popular />} />
