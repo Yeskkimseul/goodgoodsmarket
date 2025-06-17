@@ -286,6 +286,7 @@
 }
 
 .all p {
+  font-size: 1.1rem;
   width: 133px;
   height: 66px;
   display: flex;
@@ -303,17 +304,17 @@
   border: none;
   border-bottom: 1px solid #efefef;
   transition: all 0.3s ease;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   font-family: "Pretendard Variable";
 }
 
 .productname input::placeholder {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .productname input:focus {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   /* 텍스트 크기 변경 */
   outline: none;
   border-bottom: 1px solid #7e7e7e;
@@ -343,7 +344,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
 }
 
@@ -401,7 +402,7 @@
 .sell input {
   width: 100%;
   height: 66px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   transition: all 0.3s ease;
 }
@@ -433,7 +434,7 @@
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #999;
   gap: 4px;
 }
