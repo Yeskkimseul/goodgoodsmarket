@@ -18,21 +18,23 @@ type TabType = (typeof filterList)[number]["value"];
 
 const Chat = () => {
   const { chatList } = useChat();
-  const [chatData, setChatData] = useState<Chatting[]>([]);
+  //  const [chatData, setChatData] = useState<Chatting[]>([]);
   const [filter, setFilter] = useState<TabType>("전체");
   const navigate = useNavigate();
 
   // 데이터 불러오기
-  useEffect(() => {
-    fetch("/data/chatting.json")
-      .then((res) => res.json())
-      .then((data) => setChatData(data as Chatting[]))
-      .catch((err) => console.error("chatting.json fetch 실패", err));
-  }, []);
+  /*   useEffect(() => {
+      fetch("/data/chatting.json")
+        .then((res) => res.json())
+        .then((data) => setChatData(data as Chatting[]))
+        .catch((err) => console.error("chatting.json fetch 실패", err));
+    }, []); */
+
+
 
   // 필터 적용
   const filteredChats =
-    filter === "전체" ? chatData : chatData.filter((chat) => chat.type === filter);
+    filter === "전체" ? chatList : chatList.filter((chat) => chat.type === filter);
 
   const handleChatClick = (chatId: number) => {
     navigate(`/chat/${chatId}`);
@@ -47,9 +49,8 @@ const Chat = () => {
             <button
               key={value}
               onClick={() => setFilter(value)}
-              className={`${styles.filterButton} ${
-                filter === value ? styles.active : ""
-              }`}
+              className={`${styles.filterButton} ${filter === value ? styles.active : ""
+                }`}
             >
               {label}
             </button>

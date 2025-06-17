@@ -6,10 +6,9 @@ export interface Chatting {
   message: string;
   userMessage: string;
   sender: string;
-  createdAt: string; // ISO 8601 string
+  createdAt: string;
   unread: boolean;
-  type: "판매" | "구매" | "교환";
+  type: "판매" | "구매" | "교환"; // ✅ 이렇게만!
   title: string;
   price: string;
-
 }

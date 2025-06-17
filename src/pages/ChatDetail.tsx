@@ -93,6 +93,7 @@ function ChatDetail() {
     if (localRoom) {
       setChatList(localRoom.messages || []);
       setChatMeta(localRoom);
+      return
     } else {
       fetch("/data/chatting.json")
         .then(res => res.json())
@@ -108,27 +109,32 @@ function ChatDetail() {
 
           const newRoom = {
             roomId: id,
+            id: chatId, // ✅ 필수!
             title: filtered[0]?.title || "신규 채팅방",
             price: filtered[0]?.price || "",
             productImage: filtered[0]?.productImage || "",
-            sellerName: filtered[0]?.username || "판매자",
-            sellerProfile: filtered[0]?.userProfile || "/images/default.png",
+            username: filtered[0]?.username || "판매자", // ✅ 명확히 넣기
+            userProfile: filtered[0]?.userProfile || "/images/default.png", // ✅ 명확히 넣기
             type: filtered[0]?.type || "판매",
             messages: filtered,
           };
-
           const updatedRooms = [...chatRooms, newRoom];
           setChatMeta(newRoom);
           localStorage.setItem("chatRooms", JSON.stringify(updatedRooms));
         });
     }
   }, [id]);
+  useEffect(() => {
+    const fallback = chatList.find(c => c.id === chatId);
+    const chat = getChatById(chatId) || fallback;
+    setChatMeta(chat || null);
+  }, [chatId, chatList]);
 
 
   const chatInfoType = chatList.some(chat => chat.type === "판매") ? "seller" : "default";
 
 
-
+  if (!chatMeta) return null;
   return (
     <Layout2>
       <ChatBottomSheet isOpen={isSheetOpen} onClose={closeSheet} />
@@ -136,22 +142,22 @@ function ChatDetail() {
         <div className={styles.chatTitle}>
           <HeaderType5
             chat={{
-              id: 0,
+              id: chatId,
               message: "",
               userMessage: "",
               sender: "you",
               unread: false,
-              username: chatMeta?.sellerName || "판매자",
-              userProfile: chatMeta?.sellerProfile || "/images/default.png",
-              title: chatMeta?.title || "",
-              productImage: chatMeta?.productImage || "",
+              username: chatMeta?.username || chatMeta?.sellerName || "판매자",
+              userProfile: chatMeta?.userProfile || chatMeta?.sellerProfile || "/images/default.png",
+              title: chatMeta?.title || "신규 채팅방",
+              productImage: chatMeta?.productImage || "/images/default-product.png",
               price: chatMeta?.price || "",
-              createdAt: chatList[0]?.createdAt || new Date().toISOString(),
-              type: "판매",
+              createdAt: chatMeta?.createdAt || new Date().toISOString(),
+              type: chatMeta?.type || "판매",
             }}
             onMoreClick={openSheet}
           />
-          <ChatInfo type={chatInfoType} chat={chatList[0] || chatMeta} />
+          <ChatInfo type={chatInfoType} chat={chatMeta} />
           <div className={styles.chat}>
             <ChatMessages chats={chatList} />
           </div>

@@ -21,7 +21,7 @@ type ChatListProps = {
 };
 
 const ChatList = ({ chats, onChatClick }: ChatListProps) => {
- const { chatList } = useChat();
+//  const { chatList } = useChat();
 
   const [readList, setReadList] = useState<{ [id: number]: boolean }>(() => {
     const saved = localStorage.getItem("chatReadList");
@@ -46,16 +46,18 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
   return (
     <div className={styles.chatList}>
       <ul className={styles.chatItems}>
-        {chats.map((chat) => (
+        {chats.map((chat) => {
+          console.log(chat)
+          return(
           <li key={chat.id} className={styles.chatItem}
-          onClick={() => onChatClick(chat.id)}>
+          /* onClick={() => onChatClick(chat.id)} */>
             <button
               type="button"
               className={styles.link}
               onClick={() => handleClick(chat.id)}
             >
               <div className={styles.productImage}>
-                <img src={chat.productImage} alt="상품" />
+             <img src={chat.productImage || "/images/default-product.png"} alt="상품" />
                 <span
                   className={
                     readList[chat.id] ? styles.chatDotRead : styles.chatDot
@@ -72,17 +74,17 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
                     />
                     <h4 className={styles.username}>{chat.username}</h4>
                   </div>
-                  <span className={`caption ${styles.chatTime}`}>
-                    {getTimeAgo(chat.createdAt)}
-                  </span>
+                <span className={`caption ${styles.chatTime}`}>
+  {chat.createdAt ? getTimeAgo(chat.createdAt) : "방금 전"}
+</span>
                 </div>
-                <div className={`body2 ${styles.chatMessage}`}>
-                  {chat.message}
-                </div>
+             <div className={`body2 ${styles.chatMessage}`}>
+  {chat.message || "대화를 시작해보세요"}
+</div>
               </div>
             </button>
           </li>
-        ))}
+        )})}
       </ul>
     </div>
   );

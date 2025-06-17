@@ -12,7 +12,7 @@ import Trust from "../components/Trust";
 import ReviewCard from "../components/ReviewCard";
 import { useReview } from "../context/ReviewContext";
 import { useChat } from "../context/ChatContext";
-
+import type { Chatting } from "../types/chatting";
 
 
 
@@ -160,32 +160,65 @@ const GoodsDetail = () => {
         sessionStorage.setItem(viewedKey, "1");
     }, [goods]);
 
-    const { addChat, getChatByProductId } = useChat(); // ✅ context 사용
-
+    const { addChat, getChatByProductId, chatList } = useChat(); // ✅ context 사용
     const handleStartChat = () => {
         if (!goods || goods.isCompleted) return;
 
-        const roomId = crypto.randomUUID();
-
-        const newRoom = {
-            roomId,
-            productId: goods.id,
+        // 이미 생성된 채팅 있는지 확인 (optional)
+        const exists = getChatByProductId(goods.title);
+        if (exists) {
+            navigate(`/chat/${exists.id}`);
+            return;
+        }
+        // ✅ maxId 계산
+        const maxId = chatList.length > 0
+            ? Math.max(...chatList.map(chat => chat.id))
+            : 0;
+        const newChat: Chatting = {
+            id: maxId + 1,
+            username: goods.sellerName,
+            userProfile: goods.sellerimgUrl,
+            productImage: goods.imageUrl?.[0] ?? "",
             title: goods.title,
             price: goods.isExchangeable ? "교환 희망" : `${goods.price.toLocaleString()}원`,
-            productImage: goods.imageUrl?.[0] ?? "",
-            sellerName: goods.sellerName,
-            sellerProfile: goods.sellerimgUrl,
-            messages: [],
-            createdAt: goods.createdAt ?? new Date().toISOString()
+            message: "",
+            userMessage: "",
+            sender: "me",
+            createdAt: new Date().toISOString(),
+            unread: false,
+            type: goods.isExchangeable ? "교환" : "판매",
         };
 
-        const existing = JSON.parse(localStorage.getItem("chatRooms") || "[]");
-        localStorage.setItem("chatRooms", JSON.stringify([...existing, newRoom]));
-
-        
-
-        navigate(`/chat/${roomId}`);
+        addChat(newChat); // ✅ 타입 오류 없음 // ✅ context로 상태 업데이트 + localStorage 반영
+        // 바로 navigate 하지 말고 약간 대기
+        setTimeout(() => {
+            navigate(`/chat/${newChat.id}`);
+        }, 30); // 10~30ms 정도면 충분
     };
+    /*   const handleStartChat = () => {
+          if (!goods || goods.isCompleted) return;
+  
+          const roomId = crypto.randomUUID();
+  
+          const newRoom = {
+              roomId,
+              productId: goods.id,
+              title: goods.title,
+              price: goods.isExchangeable ? "교환 희망" : `${goods.price.toLocaleString()}원`,
+              productImage: goods.imageUrl?.[0] ?? "",
+              sellerName: goods.sellerName,
+              sellerProfile: goods.sellerimgUrl,
+              messages: [],
+              createdAt: goods.createdAt ?? new Date().toISOString()
+          };
+  
+          const existing = JSON.parse(localStorage.getItem("chatRooms") || "[]");
+          localStorage.setItem("chatRooms", JSON.stringify([...existing, newRoom]));
+  
+          
+  
+          navigate(`/chat/${roomId}`);
+      }; */
 
     useEffect(() => {
         const stored = localStorage.getItem("goodsList");

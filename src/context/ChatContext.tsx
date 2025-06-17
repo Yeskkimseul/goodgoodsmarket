@@ -22,11 +22,24 @@ export const useChat = () => {
 export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   const [chatList, setChatList] = useState<Chatting[]>([]);
 
+  /*   useEffect(() => {
+      const stored = localStorage.getItem("chatRooms");
+      if (stored) setChatList(JSON.parse(stored));
+    }, []); */
   useEffect(() => {
     const stored = localStorage.getItem("chatRooms");
-    if (stored) setChatList(JSON.parse(stored));
+    if (stored) {
+      setChatList(JSON.parse(stored));
+    } else {
+      fetch("/data/chatting.json")
+        .then((res) => res.json())
+        .then((data) => {
+          localStorage.setItem("chatRooms", JSON.stringify(data));
+          setChatList(data); // 바로 context 상태로 반영
+        })
+        .catch((err) => console.error("chatting.json fetch 실패", err));
+    }
   }, []);
-
   const addChat = (chat: Chatting) => {
     setChatList(prev => {
       const updated = [...prev, chat];

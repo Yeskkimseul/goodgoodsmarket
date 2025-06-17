@@ -23,11 +23,12 @@ const HeaderType5: React.FC<HeaderProps> = ({ chat, onMoreClick }) => {
           <img src="/images/header/header_back.svg" alt="뒤로가기" />
         </li>
         <li className={styles.avatar}>
-          <img 
-          className={styles.userProfile}
-          src={chat?.userProfile}
-          alt="프로필사진" />
-          <h3>{chat?.username}</h3>
+          <img
+            className={styles.userProfile}
+            src={chat?.userProfile || "/images/default.png"} // ✅ 기본 이미지 설정
+            alt="프로필사진"
+          />
+          <h3>{chat?.username || "사용자"}</h3>
         </li>
       </ul>
       {/* onMoreClick props를 이용해서 더보기 클릭 이벤트 전달 */}
