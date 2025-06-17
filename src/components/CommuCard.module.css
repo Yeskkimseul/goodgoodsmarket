@@ -49,10 +49,10 @@
 
 .userName {
     font-size: var(--font-body2);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 125%;
     margin-bottom: clamp(4px, 0.5vw, 9px);
-    color: var(--text-lightgrey);
+    color: var(--text-grey);
 
 }
 
