@@ -8,11 +8,8 @@ const SplashScreen = () => {
         <div className={Splash.wrapper}>
             <div className={Splash.inner}>
                 <img src='/images/splash/logo.svg' alt='굿굿마켓' className={Splash.logo} />
-                <div className={Splash.center}>
-                    <img src="/images/splash/BE.svg" alt="BE" className={Splash.be} />
-                    <img src="/images/splash/centerimg.svg" alt="" className={Splash.centerimg} />
-                    <img src="/images/splash/YOURSELF.svg" alt="YOURSELF" className={Splash.yourself} />
-                </div>
+                <img src='/images/splash/BE.svg' alt='BE' className={Splash.BE} />
+                <img src='/images/splash/YOURSELF.svg' alt='Yourself' className={Splash.YOURSELF} />
             </div>
         </div>
     )

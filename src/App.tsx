@@ -99,7 +99,7 @@ function App() {
       if (bubble) bubble.remove();
       const iframe = document.querySelector('iframe[src*="chatbase.co"]');
       if (iframe) iframe.remove();
-    }, 300);
+    }, 0);
   }, []);
 
 

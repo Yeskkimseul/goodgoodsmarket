@@ -19,7 +19,7 @@ const Login = () => {
       const timer = setTimeout(() => {
         setLoading(false);
         localStorage.setItem('splashShown', 'true'); // 최초 1회만 저장
-      }, 2800);
+      }, 2500);
       return () => clearTimeout(timer);
     }
   }, [loading]);
