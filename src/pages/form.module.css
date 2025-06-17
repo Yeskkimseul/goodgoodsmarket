@@ -709,7 +709,7 @@ button.upload:hover {
   }
 
   .checkboxLabel {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .customCheckbox {
@@ -725,7 +725,14 @@ button.upload:hover {
   }
 
   /* 거래 옵션 */
-
+  .customCheckbox{
+    width: 22px;
+    height: 22px;
+  }
+  .customCheckbox::after{
+    left: 8px;
+    top: 4px;
+  }
   /* 굿즈 설명 글 */
   .goodstxt {
     height: 304px;
