@@ -30,7 +30,7 @@ const Mypage = () => {
                     <div className={mypageStyles.title}>
                         거래
                     </div>{/* //.title */}
-                    <MypageList leftContent={<p>거래내역</p>} onClick={() => alert("준비 중입니다~")} />
+                    <MypageList leftContent={<p>거래내역</p>} onClick={() => navigate('/transactional')} />
                     <MypageList leftContent={<p>관심목록</p>}
                         onClick={() => navigate("/liked", { state: { tab: 2 } })} />
                     <MypageList leftContent={<p>최근 본 상품</p>} to="/liked" />
