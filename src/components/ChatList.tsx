@@ -42,12 +42,15 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
     }
     onChatClick(id); // 상위에서 넘긴 navigate 실행됨
   };
+  
+  console.log("총 chats 길이:", chats.length);
+  chats.forEach(chat => console.log("chat id:", chat.id));
 
   return (
     <div className={styles.chatList}>
       <ul className={styles.chatItems}>
         {chats.map((chat) => {
-          console.log(chat.id);
+          // console.log(chat.id);
           return (
             <li key={chat.id} className={styles.chatItem}
           /* onClick={() => onChatClick(chat.id)} */>
