@@ -51,7 +51,6 @@ const Mypage = () => {
                     </div>{/* //.title */}
                     <MypageList leftContent={<p>굿굿마켓 소개</p>} to="/about" />
                     <MypageList leftContent={<p>공지사항</p>} to="/mypage/notice" />
-                    <MypageList leftContent={<p>이용안내</p>} onClick={() => alert("준비 중입니다~")} />
                 </div>{/* //.section */}
 
                 <div className={mypageStyles.section}>
