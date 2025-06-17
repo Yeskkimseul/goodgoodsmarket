@@ -318,7 +318,6 @@
   /* 텍스트 크기 변경 */
   outline: none;
   border-bottom: 1px solid #7e7e7e;
-
 }
 
 .productname input:focus::placeholder {
@@ -520,7 +519,6 @@
 
 .dealoption button:focus{
   border-bottom: 1px solid #7e7e7e;
-
 }
 
 .options {
@@ -569,7 +567,6 @@ input.directPlaceInput::placeholder {
   font-size: 0.9rem;
   padding: 8px;
   font-family: "Pretendard Variable";
-
 }
 
 input.directPlaceInput:focus {
@@ -577,15 +574,12 @@ input.directPlaceInput:focus {
   padding: 8px;
   outline: none;
   font-family: "Pretendard Variable";
-
-
 }
 
 input.directPlaceInput:focus::placeholder {
   opacity: 0;
   font-size: 0.9rem;
   font-family: "Pretendard Variable";
-
 }
 
 .popup button {
@@ -615,7 +609,6 @@ input.directPlaceInput:focus::placeholder {
   font-family: "Pretendard Variable";
   font-size: 1.1rem;
   padding: 48px;
-
 }
 
 .goodstxt textarea::placeholder {
