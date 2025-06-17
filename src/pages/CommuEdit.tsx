@@ -99,10 +99,7 @@ const CommuEdit = () => {
             alert("내용을 입력해주세요.");
             return;
         }
-        if (imageUrls.length === 0) {
-            alert("이미지를 1장 이상 업로드해주세요.");
-            return;
-        }
+    
 
         // 기존 commuList 불러오기
         let stored = localStorage.getItem('commuList');
