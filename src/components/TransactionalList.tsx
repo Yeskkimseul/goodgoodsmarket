@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './TransactionalList.module.css'
 import style from '../pages/form.module.css'
+import { useNavigate } from "react-router-dom";
 
 type TradeStatus = "거래완료" | "판매완료" | "교환완료";
 
@@ -32,6 +33,8 @@ const TransactionalList: React.FC<TradeCardProps> = ({
     date,
     button,
 }) => {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.listwrap}>
             <div className="subtit2">
@@ -42,7 +45,7 @@ const TransactionalList: React.FC<TradeCardProps> = ({
                 <img src={image} alt={title} style={{
                     width: "150px",
                     minWidth: "75px",
-                   height: "150px",
+                    height: "150px",
                     minHeight: "75px",
                     objectFit: "cover",
                     borderRadius: "6px",
@@ -55,7 +58,8 @@ const TransactionalList: React.FC<TradeCardProps> = ({
                 </div>
             </div>
             {button && (
-                <div className={style.button_big}>
+                <div className={style.button_big} onClick={() => navigate("/writereview")}
+                    style={{ cursor: "pointer" }}>
                     후기 남기기
                 </div>
             )}
