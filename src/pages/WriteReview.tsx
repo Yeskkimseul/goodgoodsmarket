@@ -21,6 +21,40 @@ const WriteReview: React.FC = () => {
     const navigate = useNavigate();
 
 
+    const reviewOptions = {
+        review1: {
+            image: "/images/review/review3.png",
+            title: "아이언맨 저금통",
+            date: "2025.09.02",
+        },
+        review2: {
+            image: "../images/transactional/1-1.png",
+            title: "수국공주수수 피규어",
+            date: "2025.05.17",
+        },
+        review3: {
+            image: "../images/transactional/1-2.png",
+            title: "요술탐정 쥬로링 거울키링",
+            date: "2025.05.04",
+        },
+        review4: {
+            image: "../images/transactional/1-3.jpg",
+            title: "한정 복각미미",
+            date: "2025.04.29",
+        },
+        review5: {
+            image: "/images/review/pikachu.png",
+            title: "피카츄 인형",
+            date: "2025.06.01",
+        },
+        review6: {
+            image: "/images/review/pikachu.png",
+            title: "피카츄 인형",
+            date: "2025.06.01",
+        },
+    };
+
+
     const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = e.target.files;
         if (!files) return;
@@ -72,7 +106,7 @@ const WriteReview: React.FC = () => {
     return (
         <Layout>
             <Header type="type1" title="후기 작성하기" />
-            <div className={reviewstyles.reviewInfo}>
+            {/*             <div className={reviewstyles.reviewInfo}>
                 <img className={reviewstyles.reviewImg} src="
             /images/review/review3.png" alt="리뷰이미지" />
                 <div className={reviewstyles.reviewInfoTxt}>
@@ -83,7 +117,9 @@ const WriteReview: React.FC = () => {
                         2025.05.29
                     </p>
                 </div>
-            </div>
+            </div> */}
+
+
             <div className={reviewstyles.line}></div>
             <div className={reviewstyles.reviewUpload}>
                 <h3>사진 첨부하기</h3>
