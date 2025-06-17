@@ -28,6 +28,8 @@ const MyCommu = () => {
 
     const loadMyData = async () => {
         const stored = localStorage.getItem("commuList");
+        const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
+
         let data: Commu[] = [];
 
         if (stored) {
@@ -38,12 +40,22 @@ const MyCommu = () => {
             localStorage.setItem("commuList", JSON.stringify(data));
         }
 
+        // 🔄 로컬스토리지의 comments를 반영한 commuList 재구성
+        const updatedCommuList = data.map(item => {
+            const updatedComments = storedComments[item.id] ?? item.comments ?? [];
+            return {
+                ...item,
+                comments: updatedComments,
+                commentsNum: updatedComments.length,
+            };
+        });
+
         const currentUser = "뱃지가좋아";
 
-        const myPosts = data.filter(item => item.userName === currentUser);
+        const myPosts = updatedCommuList.filter(item => item.userName === currentUser);
 
         const myComments: { item: Commu, comment: any }[] = [];
-        data.forEach(item => {
+        updatedCommuList.forEach(item => {
             if (Array.isArray(item.comments)) {
                 item.comments.forEach(comment => {
                     if (comment.userName === currentUser) {
@@ -53,7 +65,7 @@ const MyCommu = () => {
             }
         });
 
-        setCommuList(data);
+        setCommuList(updatedCommuList);
         setMyPosts(myPosts);
         setMyPostCount(myPosts.length);
         setMyComments(myComments);
@@ -65,10 +77,21 @@ const MyCommu = () => {
     }, []);
     // 댓글 삭제
     const handleDeleteComment = (commentId: string) => {
+        // 🔹 기존 comments 불러오기
+        const storedComments = JSON.parse(localStorage.getItem('comments') || '{}');
+
+        // 🔹 댓글 ID에 해당하는 comment를 찾아서 제거
+        const updatedComments = Object.entries(storedComments).reduce((acc, [postId, comments]: any) => {
+            const filtered = comments.filter((c: any) => c.id !== commentId);
+            if (filtered.length > 0) {
+                acc[postId] = filtered;
+            }
+            return acc;
+        }, {} as Record<string, any[]>);
+
+        // 🔹 커뮤니티 리스트도 업데이트 (view용)
         const updated = commuList.map(item => {
-            const newComments = Array.isArray(item.comments)
-                ? (item.comments as any[]).filter((c) => c.id !== commentId)
-                : [];
+            const newComments = updatedComments[item.id] ?? [];
             return {
                 ...item,
                 comments: newComments,
@@ -76,11 +99,15 @@ const MyCommu = () => {
             };
         });
 
+        // 🔹 localStorage에 반영
+        localStorage.setItem('comments', JSON.stringify(updatedComments));
         localStorage.setItem('commuList', JSON.stringify(updated));
-        loadMyData(); // ✅ 이렇게 하면 전체 상태 갱신 일괄 처리됨
+
+        // 🔄 상태 갱신
+        loadMyData();
     };
 
-   
+
 
     return (
         <Layout>
