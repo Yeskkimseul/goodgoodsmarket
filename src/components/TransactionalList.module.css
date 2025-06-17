@@ -9,7 +9,7 @@
 .title {
     display: flex;
     align-items: center;
-    gap: var(--space24);
+    gap: clamp(16px, 2vw, 24px);
 }
 
 .subsub {
