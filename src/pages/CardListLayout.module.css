@@ -99,7 +99,7 @@
 
 .goodgoodspicktxt {
   font-family: var(--sokcho);
-  font-size: 2rem;
+  font-size: clamp(1.6rem,4vw,1.8rem);
   padding: var(--space24) var(--padding);
 }
 
