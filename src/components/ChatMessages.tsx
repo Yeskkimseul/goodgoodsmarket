@@ -42,7 +42,8 @@ function ChatMessages({ chats }: ChatMessagesProps) {
     const sortedChats = [...chats].sort((a, b) => {
         const aTime = getMostRecentTime(a);
         const bTime = getMostRecentTime(b);
-        return bTime - aTime; // 🔽 최신 메시지가 아래로
+        console.log("aTime:", aTime, "bTime:", bTime);
+        return aTime - bTime; // 🔽 최신 메시지가 아래로
     });
 
  /*    function getMostRecentTime(chat: Chatting) {
