@@ -231,20 +231,30 @@ const CommuDetail = () => {
         };
 
         const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
-        const commuComments = storedComments[commu.id] || [];
-        const updatedComments = [...commuComments, newComment];
-        storedComments[commu.id] = updatedComments;
+
+        // 기존 로컬스토리지 댓글 + commu.comments 병합 (중복 제거)
+        const existingComments = storedComments[commu.id] ?? commu.comments ?? [];
+
+        // 댓글 ID 기준 중복 제거
+        const mergedComments = [
+            ...existingComments.filter(
+                (comment: any, index: number, self: any[]) =>
+                    index === self.findIndex((c) => c.id === comment.id)
+            ),
+            newComment,
+        ];
+
+        storedComments[commu.id] = mergedComments;
         localStorage.setItem("comments", JSON.stringify(storedComments));
 
-        setComments(updatedComments); // 상태 업데이트
+        setComments(mergedComments);
         setcommu({
             ...commu,
-            commentsNum: updatedComments.length,
+            commentsNum: mergedComments.length,
         });
 
         setCommentInput("");
     };
-
 
     if (!commu) return <div>로딩 중...</div>;
 
