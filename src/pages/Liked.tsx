@@ -17,19 +17,6 @@ const Liked = () => {
     const [tabIndex, setTabIndex] = useState(initialTab);
 
     const { goodsList } = useGoods();
-    const [recentViewed, setRecentViewed] = useState<Goods[]>([]);
-
-    useEffect(() => {
-        const ids = JSON.parse(localStorage.getItem('recentViewed') || '[]');
-        // 최근 본 상품 id 순서대로 goodsList에서 찾아서 배열로 만듦
-        const recent = ids
-            .map((id: string) => goodsList.find((item: Goods) => item.id === id))
-            .filter((item: Goods | undefined): item is Goods => {
-                return !!item && item.sellerName !== "뱃지가좋아";
-            });
-
-        setRecentViewed(recent);
-    }, [goodsList]);
 
     const { setGoodsList } = useGoods();
 
@@ -65,29 +52,32 @@ const Liked = () => {
         g => !g.isExchangeable && likedIds.includes(String(g.id)) && g.sellerName !== "뱃지가좋아"
     );
 
+    const allLiked = [...exchangeLiked, ...purchaseLiked];
+
     return (
         <Layout>
             <Header type="type1" title="관심목록" />
             <MultiTab
-                tabs={['최근 본 상품', '교환', '구매']}
+                tabs={['전체', '교환', '구매']}
                 activeIndex={tabIndex}
                 setActiveIndex={setTabIndex}
             >
                 {(activeIndex) => (
                     activeIndex === 0 ? (
                         <div>
-                            {recentViewed.length === 0 ? (
-                                <div className={styles.cate}>최근 본 상품이 없습니다.</div>
+                            {allLiked.length === 0 ? (
+                                <div className={styles.cate}>찜한 상품이 없습니다.</div>
                             ) : (
                                 <div className={styles.cate}>
-                                    {recentViewed.map(item => (
+                                    {allLiked.map(item => (
                                         <GoodsCard
                                             key={item.id}
                                             item={item}
                                             likedIds={likedIds}
                                             setLikedIds={setLikedIds}
                                             goodsList={goodsList}
-                                            setGoodsList={setGoodsList} />
+                                            setGoodsList={setGoodsList}
+                                        />
                                     ))}
                                 </div>
                             )}
