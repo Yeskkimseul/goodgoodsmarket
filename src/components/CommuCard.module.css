@@ -85,6 +85,7 @@
     font-size: var(--font-caption);
     font-weight: 400;
     line-height: 125%;
+    word-break: keep-all;
 }
 
 /*  @media (max-width: 375px) {

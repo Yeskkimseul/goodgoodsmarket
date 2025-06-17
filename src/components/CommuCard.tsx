@@ -30,13 +30,20 @@ const CommuCard = ({ item, className }: Props) => {
             ? item.comments.length
             : 0;
 
-    function formatDateWithoutDot(dateString: string): string {
-        const date = new Date(dateString);
-        const year = date.getFullYear();
-        const month = date.getMonth() + 1; // 0부터 시작하므로 +1
-        const day = date.getDate();
+    function getTimeAgo(dateString: string): string {
+        const now = new Date();
+        const past = new Date(dateString);
+        const diffMs = now.getTime() - past.getTime();
 
-        return `${year}. ${month}. ${day}`;
+        const seconds = Math.floor(diffMs / 1000);
+        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(minutes / 60);
+        const days = Math.floor(hours / 24);
+
+        if (seconds < 60) return '방금 전';
+        if (minutes < 60) return `${minutes}분 전`;
+        if (hours < 24) return `${hours}시간 전`;
+        return `${days}일 전`; // ✅ 무조건 상대 시간으로 표시
     }
 
 
@@ -77,9 +84,9 @@ const CommuCard = ({ item, className }: Props) => {
                             />
                             <span className={styles.commuRateText}>{commentsNum}</span>
                         </li>
-                        <li className={styles.commuRate}>·
+                        <li className={styles.commuRate}> ·
                             <span className={styles.commuRateText}>
-                                {formatDateWithoutDot(item.createdAt)}
+                                {getTimeAgo(item.createdAt)}
                             </span>
                         </li>
                     </ul>
