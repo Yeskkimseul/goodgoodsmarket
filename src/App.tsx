@@ -165,8 +165,8 @@ function App() {
                 <Route path="/mypage/setting" element={<Setting />} />
                 <Route path="/mypage/profile" element={<ProfileSetting />} />
                 <Route path="/writereview" element={<WriteReview />} />
-                <Route path="/lately" element={<Lately />} />
-                <Route path="/transactional" element={<Transactional />} />
+                <Route path="/mypage/lately" element={<Lately />} />
+                <Route path="/mypage/transactional" element={<Transactional />} />
                 <Route path="/mypage/goodsedit/:id" element={<GoodsEdit />} />
                 <Route path="/mypage/notice" element={<Notice />} />
                 {/* 수정 전 참고용 페이지들 */}
