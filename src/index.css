@@ -195,6 +195,7 @@ body {
 
   --font-button: clamp(1rem, 1.95vw, 1.125rem);
   --font-caption: clamp(0.875rem, 1.69vw, 1rem);
+  --font-caption2: clamp(0.675rem, 1.50vw, 0.875rem);
 
   /* color */
 
@@ -332,6 +333,12 @@ button {
 
 .caption {
   font-size: var(--font-caption);
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.caption2 {
+  font-size: var(--font-caption2);
   font-weight: 400;
   line-height: 125%;
 }
