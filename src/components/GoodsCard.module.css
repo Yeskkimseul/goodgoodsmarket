@@ -6,7 +6,7 @@
   justify-content: space-between;
   width: 23%;
   height: auto;
-  padding-bottom: var(--space8);
+  padding-bottom: var(--space24);
 }
 
 .small-count .card {}
