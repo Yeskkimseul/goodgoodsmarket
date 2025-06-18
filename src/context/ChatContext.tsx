@@ -46,7 +46,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.setItem("chatRooms", JSON.stringify(updated));
 
       // ✅ 메시지 초기화
-      localStorage.setItem(`chatMessages_${chat.chatId}`, JSON.stringify([]));
+      // localStorage.setItem(`chatMessages_${chat.chatId}`, JSON.stringify([]));
       return updated;
     });
   };

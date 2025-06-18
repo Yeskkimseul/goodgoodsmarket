@@ -9,6 +9,7 @@ import type { Chatting, ChatMessage } from "../types/chatting";
 import { useChat } from "../context/ChatContext";
 import styles from "./ChatDetail.module.css";
 import { ChatInfoType } from "../components/chatinfo/ChatInfo";
+import { Console } from "console";
 
 interface ChatMessagesProps {
   chats: Chatting[];
@@ -58,6 +59,9 @@ function ChatDetail() {
     setChatMessages(updatedChat);
 
     const stored = localStorage.getItem("chatRooms");
+
+    console.log(newMessage);
+    
     const chatRooms = stored ? JSON.parse(stored) : [];
 
     const updatedRooms = chatRooms.map((room: any) => {
