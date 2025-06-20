@@ -9,7 +9,6 @@ import type { Chatting, ChatMessage } from "../types/chatting";
 import { useChat } from "../context/ChatContext";
 import styles from "./ChatDetail.module.css";
 import { ChatInfoType } from "../components/chatinfo/ChatInfo";
-import { Console } from "console";
 
 interface ChatMessagesProps {
   chats: Chatting[];
@@ -61,7 +60,7 @@ function ChatDetail() {
     const stored = localStorage.getItem("chatRooms");
 
     console.log(newMessage);
-    
+
     const chatRooms = stored ? JSON.parse(stored) : [];
 
     const updatedRooms = chatRooms.map((room: any) => {
@@ -82,7 +81,10 @@ function ChatDetail() {
     }
   }, [chatId]);
 
-  if (!chatMeta) return null;
+  if (!chatMeta) {
+    console.warn("chatMeta is null. chatId:", chatId);
+    return <div className="loading">잠시만 기다려주세요...</div>;
+  }
 
   const chatInfoType: ChatInfoType = chatMeta.chatinfotype === "seller" ? "seller" : "default";
 

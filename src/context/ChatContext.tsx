@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import type { Chatting } from "../types/chatting";
+import type { Chatting, ChatMessage } from "../types/chatting"; // ✅ 여기도 수정
 import { Message } from "../types/message";
 
 interface ChatContextType {
@@ -26,20 +26,47 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
       const stored = localStorage.getItem("chatRooms");
       if (stored) setChatList(JSON.parse(stored));
     }, []); */
+  /*  useEffect(() => {
+     const stored = localStorage.getItem("chatRooms");
+     if (stored) {
+       setChatList(JSON.parse(stored));
+     } else {
+       fetch("/data/chatting.json")
+         .then((res) => res.json())
+         .then((data) => {
+           localStorage.setItem("chatRooms", JSON.stringify(data));
+           setChatList(data); // 바로 context 상태로 반영
+         })
+         .catch((err) => console.error("chatting.json fetch 실패", err));
+     }
+   }, []); */
+
   useEffect(() => {
     const stored = localStorage.getItem("chatRooms");
     if (stored) {
-      setChatList(JSON.parse(stored));
+      try {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed)) {
+          console.log("[✅ localStorage 로드됨]:", parsed);
+          setChatList(parsed);
+        } else {
+          console.warn("[❌ chatRooms 타입 문제]:", parsed);
+        }
+      } catch (err) {
+        console.error("❌ chatRooms 파싱 실패:", err);
+      }
     } else {
       fetch("/data/chatting.json")
         .then((res) => res.json())
         .then((data) => {
+          console.log("[📦 chatting.json 로드됨]:", data);
           localStorage.setItem("chatRooms", JSON.stringify(data));
-          setChatList(data); // 바로 context 상태로 반영
+          setChatList(data);
         })
         .catch((err) => console.error("chatting.json fetch 실패", err));
     }
   }, []);
+
   const addChat = (chat: Chatting) => {
     setChatList(prev => {
       const updated = [...prev, chat];
@@ -55,13 +82,18 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
     return chatList.find(chat => chat.title === title);
   };
 
-  const getChatById = (id: number) => {
-    return chatList.find(chat => chat.chatId === id);
+  const getChatById = (id: number): Chatting | undefined => {
+    const fromContext = chatList.find(chat => chat.chatId === id);
+    if (fromContext) return fromContext;
+
+    // localStorage fallback
+    const fromLocal = JSON.parse(localStorage.getItem("chatRooms") || "[]");
+    return fromLocal.find((chat: any) => chat.chatId === id);
   };
 
   const getMessagesBychatId = (chatId: number): Message[] => {
     const stored = localStorage.getItem(`chatMessages_${chatId}`);
-    return stored ? JSON.parse(stored) : [];
+    return stored ? JSON.parse(stored) as Message[] : [];
   };
 
   const addMessage = (chatId: number, message: Message) => {

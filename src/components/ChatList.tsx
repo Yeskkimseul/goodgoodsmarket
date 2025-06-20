@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ChatList.module.css";
 import type { Chatting } from "../types/chatting";
+import { useChat } from "../context/ChatContext";
 
 function getTimeAgo(dateString: string): string {
   const now = new Date();
@@ -28,6 +29,7 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
     if (!readList[id]) {
       const updated = { ...readList, [id]: true };
       setReadList(updated);
+      localStorage.setItem("chatReadList", JSON.stringify(updated)); // ✅ 추가
     }
     onChatClick(id);
   };
