@@ -40,16 +40,26 @@ const MyCommu = () => {
             localStorage.setItem("commuList", JSON.stringify(data));
         }
 
+        // 🔄 중복 댓글 제거 함수
+        const deduplicateComments = (comments: any[]) => {
+            const seen = new Set();
+            return comments.filter(comment => {
+                if (seen.has(comment.id)) return false;
+                seen.add(comment.id);
+                return true;
+            });
+        };
+
         // 🔄 로컬스토리지의 comments를 반영한 commuList 재구성
         const updatedCommuList = data.map(item => {
-            const updatedComments = storedComments[item.id] ?? item.comments ?? [];
+            const rawComments = storedComments[item.id] ?? item.comments ?? [];
+            const deduped = deduplicateComments(rawComments);
             return {
                 ...item,
-                comments: updatedComments,
-                commentsNum: updatedComments.length,
+                comments: deduped,
+                commentsNum: deduped.length,
             };
         });
-
         const currentUser = "뱃지가좋아";
 
         const myPosts = updatedCommuList.filter(item => item.userName === currentUser);
@@ -71,6 +81,8 @@ const MyCommu = () => {
         setMyComments(myComments);
         setMyCommentCount(myComments.length);
     };
+
+   
 
     useEffect(() => {
         loadMyData();
@@ -106,6 +118,8 @@ const MyCommu = () => {
         // 🔄 상태 갱신
         loadMyData();
     };
+
+
 
 
 
@@ -151,7 +165,8 @@ const MyCommu = () => {
                             ) : activeIndex === 1 ? (
                                 <div style={{ padding: '0 var(--padding)' }}>
                                     {myComments.map(({ item, comment }) => (
-                                        <MyCommentItem key={comment.id} item={item} comment={comment} onDelete={handleDeleteComment} />
+                                        <MyCommentItem key={`${item.id}-${comment.id}`} // ✅ key 중복 방지
+                                            item={item} comment={comment} onDelete={handleDeleteComment} />
                                     ))}
                                 </div>
                             ) : null

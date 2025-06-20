@@ -192,10 +192,7 @@ const CommuDetail = () => {
         sessionStorage.setItem(viewedKey, "1");
     }, [commu?.id]);
 
-    /* 로컬스토리지에 저장된 코멘트 우선 적용 */
-    const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
-    const commentsToShow = commu ? (storedComments[commu.id] || commu.comments || []) : [];
-    const commentsCount = commentsToShow.length;
+
 
     /* 로컬스토리지의 태그 불러오기 */
     const storedTags = JSON.parse(localStorage.getItem('commuTags') || '{}');
@@ -223,7 +220,7 @@ const CommuDetail = () => {
         if (!commentInput.trim() || !commu) return;
 
         const newComment = {
-            id: `c${Date.now()}`,
+            id: `c-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`,
             userimgUrl: "/images/users/user1.png",
             userName: "뱃지가좋아",
             content: commentInput,
@@ -233,18 +230,11 @@ const CommuDetail = () => {
         const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
 
         // 기존 로컬스토리지 댓글 + commu.comments 병합 (중복 제거)
-        const existingComments = storedComments[commu.id] ?? commu.comments ?? [];
-
-        // 댓글 ID 기준 중복 제거
-        const mergedComments = [
-            ...existingComments.filter(
-                (comment: any, index: number, self: any[]) =>
-                    index === self.findIndex((c) => c.id === comment.id)
-            ),
-            newComment,
-        ];
-
+        const existingComments = storedComments[commu.id] ?? [];
+        // 댓글 합치기 (중복 제거 없이 단순 추가)
+        const mergedComments = [...existingComments, newComment];
         storedComments[commu.id] = mergedComments;
+
         localStorage.setItem("comments", JSON.stringify(storedComments));
 
         setComments(mergedComments);
@@ -255,6 +245,12 @@ const CommuDetail = () => {
 
         setCommentInput("");
     };
+    
+
+    /* 로컬스토리지에 저장된 코멘트 우선 적용 */
+    const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
+    const commentsToShow = commu ? (storedComments[commu.id] ?? []) : [];
+    const commentsCount = comments.length;
 
     if (!commu) return <div>로딩 중...</div>;
 
@@ -345,7 +341,7 @@ const CommuDetail = () => {
                     </div>
                     <div className={style.commentlist}>
                         {/* 댓글 출력 예시 */}
-                        {commentsToShow.map((c: any) => (
+                        {comments.map((c: any) => (
                             <div key={c.id} className={style.commentitem}>
                                 <div className={style.cUser}>
                                     <img src={c.userimgUrl} alt={c.userName} className={style.cUserimg} />

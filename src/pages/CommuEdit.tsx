@@ -122,7 +122,7 @@ const CommuEdit = () => {
         localStorage.setItem('commuList', JSON.stringify(commuList));
         setCommuList(commuList); // 컨텍스트 업데이트
         alert('게시글이 수정되었습니다.');
-        navigate('/community');
+        navigate('/community/mycommu');
     };
 
     return (
