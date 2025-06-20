@@ -225,8 +225,8 @@
     },
     {
         "id": "11",
-        "title": "틴틴팅클 베리",
-        "description": "틴틴팅클의 상큼 발랄한 매력이 가득한 베리 굿즈입니다! 🍓✨\n선명한 컬러와 귀여운 디자인이 돋보여 소장 가치가 높아요.\n작은 디테일까지 정성 들여 만들어 팬들의 마음을 사로잡는 아이템이며,\n일상에 활력을 더해주는 특별한 선물이 될 거예요.\n팬분들과 교환하며 즐거운 추억을 쌓고 싶으신 분께 추천드립니다! 🎀💖",
+        "title": "틴틴팅클 베리 미니로 교환구해요",
+        "description": "틴틴팅클의 상큼 발랄한 매력이 가득한 베리예요!!\n너무 귀여운데 중복으로 나와서ㅜㅜ\n미니로 교환 희망합니다!!!!ㅜㅡㅠ",
         "category": "기타",
         "price": 13200,
         "imageUrl": [
@@ -241,7 +241,7 @@
             "안전거래"
         ],
         "sellerimgUrl": "/images/mypage/profile.png",
-        "sellerName": "베리베리스트로베리",
+        "sellerName": "베리베리",
         "sellerTrust": 60,
         "isExchangeable": true
     },
@@ -3867,8 +3867,8 @@
     },
     {
         "id": "185",
-        "title": "캐릭캐릭체인지 포카앨범",
-        "description": "캐릭캐릭체인지의 사랑스러운 캐릭터들이 가득한 포카앨범입니다! 🌈💖\n다채로운 색감과 귀여운 일러스트가 돋보여 팬들에게 큰 인기를 얻고 있어요.\n앨범 하나로 소중한 포카들을 안전하고 깔끔하게 보관할 수 있답니다.\n다꾸뿐만 아니라 특별한 선물용으로도 안성맞춤이며,\n팬분들과 추억을 나누고 싶은 분께 적극 추천드려요! 🎀✨",
+        "title": "캐릭캐릭체인지 세라버전 포카앨범",
+        "description": "다이아인 줄 알고 샀는데 세라였어요ㅠㅜ\n다이아랑 교환하실 분 있나여\n",
         "category": "기타",
         "price": 13200,
         "imageUrl": [
@@ -3898,6 +3898,50 @@
         ],
         "likes": 11,
         "createdAt": "2025-05-25T12:00:00Z",
+        "views": 68,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "187",
+        "title": "팝업 한정 스티커 교환해요",
+        "description": "팝업 한정 포스트잇으로 교환 구합니다ㅠㅠ",
+        "category": "문구류",
+        "price": 13500,
+        "imageUrl": [
+            "/images/myexchange/exchange86.jpg"
+        ],
+        "likes": 8,
+        "createdAt": "2025-06-03T12:00:00Z",
+        "views": 24,
+        "options": [
+            "미개봉",
+            "직거래",
+            "안전거래"
+        ],
+        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerName": "뱃지가좋아",
+        "sellerTrust": 70,
+        "isExchangeable": true
+    },
+    {
+        "id": "188",
+        "title": "뱃지 교환 구해요",
+        "description": "팝업에서 룰렛돌려 얻은 뱃지\n연두색 버전과 교환 구해요",
+        "category": "기타",
+        "price": 13500,
+        "imageUrl": [
+            "/images/myexchange/exchange87.jpg"
+        ],
+        "likes": 11,
+        "createdAt": "2025-05-30T12:00:00Z",
         "views": 68,
         "options": [
             "미개봉",
