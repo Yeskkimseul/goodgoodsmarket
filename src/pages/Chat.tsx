@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Layout from "../components/Layout";
 import Header from "../components/header/Header";
 import ChatList from "../components/ChatList";
@@ -33,8 +33,11 @@ const Chat = () => {
 
 
   // 필터 적용
-  const filteredChats =
-    filter === "전체" ? chatList : chatList.filter((chat) => chat.type === filter);
+  const filteredChats = useMemo(() => {
+    return filter === "전체"
+      ? chatList
+      : chatList.filter((chat) => chat.type === filter);
+  }, [chatList, filter]); // ✅ chatList 바뀌면 자동 업데이트
 
   const handleChatClick = (chatId: number) => {
     navigate(`/chat/${chatId}`);

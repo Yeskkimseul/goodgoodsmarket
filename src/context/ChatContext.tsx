@@ -1,14 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import type { Chatting, ChatMessage } from "../types/chatting"; // ✅ 여기도 수정
-import { Message } from "../types/message";
+import type { Chatting, ChatMessage } from "../types/chatting";
 
 interface ChatContextType {
   chatList: Chatting[];
   addChat: (chat: Chatting) => void;
   getChatByProductId: (title: string) => Chatting | undefined;
   getChatById: (id: number) => Chatting | undefined;
-  getMessagesBychatId: (chatId: number) => Message[];
-  addMessage: (chatId: number, message: Message) => void;
+  getMessagesBychatId: (chatId: number) => ChatMessage[];
+  addMessage: (chatId: number, message: ChatMessage) => void;
 }
 
 const ChatContext = createContext<ChatContextType | null>(null);
@@ -22,25 +21,7 @@ export const useChat = () => {
 export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   const [chatList, setChatList] = useState<Chatting[]>([]);
 
-  /*   useEffect(() => {
-      const stored = localStorage.getItem("chatRooms");
-      if (stored) setChatList(JSON.parse(stored));
-    }, []); */
-  /*  useEffect(() => {
-     const stored = localStorage.getItem("chatRooms");
-     if (stored) {
-       setChatList(JSON.parse(stored));
-     } else {
-       fetch("/data/chatting.json")
-         .then((res) => res.json())
-         .then((data) => {
-           localStorage.setItem("chatRooms", JSON.stringify(data));
-           setChatList(data); // 바로 context 상태로 반영
-         })
-         .catch((err) => console.error("chatting.json fetch 실패", err));
-     }
-   }, []); */
-
+  // 로컬스토리지에서 데이터를 로드하고 없으면 기본 데이터 사용
   useEffect(() => {
     const stored = localStorage.getItem("chatRooms");
     if (stored) {
@@ -56,6 +37,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
         console.error("❌ chatRooms 파싱 실패:", err);
       }
     } else {
+      // 기본 데이터 로드 (실제 데이터로 바꾸세요)
       fetch("/data/chatting.json")
         .then((res) => res.json())
         .then((data) => {
@@ -67,21 +49,27 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, []);
 
+  
+
+  // 새로운 채팅방 추가
   const addChat = (chat: Chatting) => {
     setChatList(prev => {
-      const updated = [...prev, chat];
+      const newChat = {
+        ...chat,
+        messages: [], // 🔥 undefined 방지
+      };
+      const updated = [...prev, newChat];
       localStorage.setItem("chatRooms", JSON.stringify(updated));
-
-      // ✅ 메시지 초기화
-      // localStorage.setItem(`chatMessages_${chat.chatId}`, JSON.stringify([]));
       return updated;
     });
   };
 
+  // productId로 채팅방 찾기
   const getChatByProductId = (title: string) => {
     return chatList.find(chat => chat.title === title);
   };
 
+  // chatId로 채팅방 찾기 (context + localStorage에서)
   const getChatById = (id: number): Chatting | undefined => {
     const fromContext = chatList.find(chat => chat.chatId === id);
     if (fromContext) return fromContext;
@@ -91,12 +79,14 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
     return fromLocal.find((chat: any) => chat.chatId === id);
   };
 
-  const getMessagesBychatId = (chatId: number): Message[] => {
+  // chatId로 메시지 목록 가져오기
+  const getMessagesBychatId = (chatId: number): ChatMessage[] => {
     const stored = localStorage.getItem(`chatMessages_${chatId}`);
-    return stored ? JSON.parse(stored) as Message[] : [];
+    return stored ? JSON.parse(stored) as ChatMessage[] : [];
   };
 
-  const addMessage = (chatId: number, message: Message) => {
+  // 새로운 메시지 추가
+  const addMessage = (chatId: number, message: ChatMessage) => {
     const currentMessages = getMessagesBychatId(chatId);
     const updatedMessages = [...currentMessages, message];
     localStorage.setItem(`chatMessages_${chatId}`, JSON.stringify(updatedMessages));
@@ -107,10 +97,9 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
         if (chat.chatId === chatId) {
           return {
             ...chat,
-            message: message.sender === "other" ? message.content : chat.messages,
-            userMessage: message.sender === "me" ? message.content : chat.messages,
+            messages: updatedMessages,
             createdAt: message.createdAt,
-            unread: message.sender === "other",
+            unread: message.sender === "you",
           };
         }
         return chat;

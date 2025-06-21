@@ -10,10 +10,8 @@ import { useChat } from "../context/ChatContext";
 import styles from "./ChatDetail.module.css";
 import { ChatInfoType } from "../components/chatinfo/ChatInfo";
 
-interface ChatMessagesProps {
-  chats: Chatting[];
-  chatType?: "판매" | "구매" | "교환";
-}
+
+
 
 function formatDateOnly(createdAt: string) {
   const dt = new Date(createdAt);
@@ -29,8 +27,7 @@ function ChatDetail() {
   const { id } = useParams<{ id: string }>();
   const chatId = Number(id);
   const navigate = useNavigate();
-
-  const { getChatById } = useChat();
+const { getChatById, addMessage } = useChat(); // ✅ addMessage도 같이 불러오기
 
   const [msg, setMsg] = useState("");
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -69,6 +66,10 @@ function ChatDetail() {
       }
       return room;
     });
+
+    addMessage(chatId, newMessage);
+
+    
 
     localStorage.setItem("chatRooms", JSON.stringify(updatedRooms || []));
   };

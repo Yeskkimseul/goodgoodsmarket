@@ -8,7 +8,7 @@
     "title": "BTS 방탄소년단 투어 슬로건",
     "price": "12,000원",
     "createdAt": "2025-06-10T09:45:00",
-    "chatinfotype": "default",
+    "chatinfotype": "seller",
     "messages": [
       {
         "sendId": 101,
@@ -83,20 +83,21 @@
     "title": "아이브 이서 콘서트 MD 포토카드",
     "price": "5,000원",
     "createdAt": "2025-06-07T16:30:00",
-    "chatinfotype": "default",
+    "chatinfotype": "seller",
     "messages": [
       {
         "sendId": 401,
-        "sender": "you",
-        "message": "이번 주말에 가능합니다~",
-        "createdAt": "2025-06-07T16:31:00"
-      },
-      {
-        "sendId": 402,
         "sender": "me",
         "message": "직거래 언제 가능하신가요?",
         "createdAt": "2025-06-07T16:30:00"
+      },
+      {
+        "sendId": 402,
+        "sender": "you",
+        "message": "이번 주말에 가능합니다~",
+        "createdAt": "2025-06-07T16:31:00"
       }
+      
     ]
   },
   {

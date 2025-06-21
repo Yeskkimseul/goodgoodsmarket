@@ -170,10 +170,15 @@ const GoodsDetail = () => {
             navigate(`/chat/${exists.chatId}`);
             return;
         }
-        // ✅ maxId 계산
+        // ✅ maxId 계산 ❗️메시지 입력 안 했으면 생성 안 함 — chatId 예약만 해놓음
         const maxId = chatList.length > 0
             ? Math.max(...chatList.map(chat => chat.chatId))
             : 0;
+
+        const reservedId = maxId + 1;
+        sessionStorage.setItem("reservedChatId", String(reservedId));
+        sessionStorage.setItem("reservedChatGoods", JSON.stringify(goods));
+        navigate(`/chat/${reservedId}`);
 
         const newChat: Chatting = {
             chatId: maxId + 1,
@@ -182,17 +187,21 @@ const GoodsDetail = () => {
             productImage: goods.imageUrl?.[0] ?? "",
             title: goods.title,
             price: goods.isExchangeable ? "교환 희망" : `${goods.price.toLocaleString()}원`,
-            messages: [
-              
-            ],
+            messages: [],
             createdAt: new Date().toISOString(),
-            type: goods.isExchangeable ? "교환" : "판매",
+            type: "구매",
             chatinfotype: "default"
         };
 
 
 
         addChat(newChat); // ✅ 타입 오류 없음 // ✅ context로 상태 업데이트 + localStorage 반영
+
+        // ✅ 새로 만든 채팅방은 읽음 상태로 처리
+        const readList = JSON.parse(localStorage.getItem("chatReadList") || "{}");
+        readList[newChat.chatId] = true;
+        localStorage.setItem("chatReadList", JSON.stringify(readList));
+
         // 바로 navigate 하지 말고 약간 대기
         setTimeout(() => {
             navigate(`/chat/${newChat.chatId}`);

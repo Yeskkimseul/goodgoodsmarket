@@ -29,26 +29,35 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
     if (!readList[id]) {
       const updated = { ...readList, [id]: true };
       setReadList(updated);
-      localStorage.setItem("chatReadList", JSON.stringify(updated)); // ✅ 추가
+      localStorage.setItem("chatReadList", JSON.stringify(updated));
     }
     onChatClick(id);
   };
 
-  useEffect(() => {
-    const ids = chats.map(c => c.chatId);
-    const unique = new Set(ids);
-    if (unique.size !== ids.length) {
-      console.warn("❗ 중복 있음!", ids);
-    }
-  }, [chats]);
+  // 🔽 최신 메시지 기준으로 정렬
+  const sortedChats = [...chats].sort((a, b) => {
+    const aTime = a.messages.length > 0
+      ? new Date(a.messages[a.messages.length - 1].createdAt).getTime()
+      : new Date(a.createdAt).getTime();
+
+    const bTime = b.messages.length > 0
+      ? new Date(b.messages[b.messages.length - 1].createdAt).getTime()
+      : new Date(b.createdAt).getTime();
+
+    return bTime - aTime; // 내림차순
+  });
 
   return (
     <div className={styles.chatList}>
       <ul className={styles.chatItems}>
-        {chats.map((chat) => {
-          const lastMessage = chat.messages.length > 0
-            ? chat.messages[chat.messages.length - 1].message
-            : "대화를 시작해보세요";
+        {sortedChats.map((chat) => {
+          const hasMessages = chat.messages.length > 0;
+          const lastMessageObj = hasMessages
+            ? chat.messages[chat.messages.length - 1]
+            : null;
+
+          const lastMessage = lastMessageObj?.message || "대화를 시작해보세요";
+          const lastTime = lastMessageObj?.createdAt || chat.createdAt;
 
           return (
             <li key={chat.chatId} className={styles.chatItem}>
@@ -60,9 +69,7 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
                 <div className={styles.productImage}>
                   <img src={chat.productImage || "/images/default-product.png"} alt="상품" />
                   <span
-                    className={
-                      readList[chat.chatId] ? styles.chatDotRead : styles.chatDot
-                    }
+                    className={readList[chat.chatId] ? styles.chatDotRead : styles.chatDot}
                   />
                 </div>
                 <div className={styles.chatContent}>
@@ -76,7 +83,7 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
                       <h4 className={styles.username}>{chat.username}</h4>
                     </div>
                     <span className={`caption ${styles.chatTime}`}>
-                      {chat.createdAt ? getTimeAgo(chat.createdAt) : "방금 전"}
+                      {getTimeAgo(lastTime)}
                     </span>
                   </div>
                   <div className={`body2 ${styles.chatMessage}`}>
@@ -91,5 +98,6 @@ const ChatList = ({ chats, onChatClick }: ChatListProps) => {
     </div>
   );
 };
+
 
 export default ChatList;
