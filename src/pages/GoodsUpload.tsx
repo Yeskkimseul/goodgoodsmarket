@@ -185,7 +185,7 @@ const GoodsUpload = () => {
         const updated = [newGoods, ...existing];
         localStorage.setItem('goodsList', JSON.stringify(updated));
         setGoodsList(updated); // 컨텍스트 업데이트
-        navigate('/home'); // 홈으로 이동
+        navigate(`/home/goodsdetail/${newGoods.id}`); // 상세페이지로 이동
     };
 
     // setGoodsList((prev) => [...prev, newGoods]);
