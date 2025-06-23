@@ -83,7 +83,7 @@ const { getChatById, addMessage } = useChat(); // ✅ addMessage도 같이 불�
   }, [chatId]);
 
   if (!chatMeta) {
-    console.warn("chatMeta is null. chatId:", chatId);
+    // console.warn("chatMeta is null. chatId:", chatId);
     return <div className="loading">잠시만 기다려주세요...</div>;
   }
 
