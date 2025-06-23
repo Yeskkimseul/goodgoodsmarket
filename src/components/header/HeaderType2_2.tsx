@@ -18,7 +18,7 @@ const HeaderType2_2: React.FC = () => {
                 </div>
                 <div className={styles.back}>
                     <Link to="/home">
-                        <img src="/images/header/header_home.svg" alt="search" />
+                        <img src="/images/header/header_home.svg" alt="home" />
                     </Link>
                 </div>
 
