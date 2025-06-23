@@ -49,7 +49,6 @@ const GoodsCard = ({ item, likedIds, setLikedIds, goodsList, setGoodsList, class
         localStorage.setItem('goodsList', JSON.stringify(updatedGoodsList));
     };
 
-    console.log(item)
     return (
         <div className={`${styles.card} ${className ?? ''}`}> {/* classname이 없을 경우 빈 문자열로 대체해 undefind 방지 */}
             <Link to={`/home/goodsdetail/${item.id}`} className={styles.link}
