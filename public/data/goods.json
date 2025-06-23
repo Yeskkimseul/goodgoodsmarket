@@ -505,7 +505,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/noiconuser.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -659,7 +659,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/noiconuser.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -703,7 +703,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/noiconuser.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false,
@@ -749,7 +749,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/noiconuser.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -771,7 +771,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/noiconuser.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "미래에서온사람",
         "sellerTrust": 70,
         "isExchangeable": false
@@ -1410,7 +1410,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/noiconuser.png",
+        "sellerimgUrl":"/images/users/noiconuser.png",
         "sellerName": "미래에서온사람",
         "sellerTrust": 60,
         "isExchangeable": true
@@ -2007,7 +2007,7 @@
             "직거래",
             "안전거래"
         ],
-        "sellerimgUrl": "/images/mypage/profile.png",
+        "sellerimgUrl": "/images/users/noiconuser.png",
         "sellerName": "사이보그는미래다",
         "sellerTrust": 50,
         "isExchangeable": false
