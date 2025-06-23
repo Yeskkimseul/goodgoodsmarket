@@ -92,6 +92,7 @@ li.avatar {
 .done {
     font-size: var(--font-body1);
     color: var(--main-mint);
+    cursor: pointer;
 }
 
 .search {

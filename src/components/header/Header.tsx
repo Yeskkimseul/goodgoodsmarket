@@ -34,7 +34,7 @@ const Header = ({ type, chat, title, onComplete , searchValue = '', setSearchVal
         case 'type3':
             return <HeaderType3 onComplete={onComplete} />;
         case 'type4':
-            return <HeaderType4 />;
+            return <HeaderType4 onComplete={onComplete}/>;
         case 'type5':
             return <HeaderType5 chat={chat} />;
         case 'type6':

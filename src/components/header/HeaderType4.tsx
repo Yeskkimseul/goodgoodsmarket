@@ -3,24 +3,17 @@ import styles from './Header.module.css';
 import { useNavigate, Link } from 'react-router-dom';
 
 
-const HeaderType1: React.FC = () => {
+const HeaderType4: React.FC<{ onComplete?: () => void }> = ({ onComplete }) => {
     const navigate = useNavigate();
-
-    const handleBack = () => {
-        navigate(-1); // ← 바로 이전 페이지로 이동
-    };
-
+    const handleBack = () => { navigate(-1); };
     return (
         <header className={styles.header}>
             <div className={styles.back} onClick={handleBack} style={{ cursor: 'pointer', justifyContent: 'center' }}>
                 <img src="/images/header/header_back.svg" alt="뒤로가기" />
             </div>
             <h3>프로필 관리</h3>
-            <Link to="/mypage">
-                <div className={styles.done}>완료</div>
-            </Link>
+            <div className={styles.done} onClick={onComplete}>완료</div>
         </header>
     );
 };
-
-export default HeaderType1;
+export default HeaderType4;

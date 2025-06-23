@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Header from "../components/header/Header";
 import formStyles from "./form.module.css";
@@ -12,14 +12,25 @@ const Mypage = () => {
     const navigate = useNavigate();
     const [isLogoutModalOpen, setLogoutModalOpen] = useState(false);
     const myTrust = 85;
+
+    const [profileImg, setProfileImg] = useState("/images/mypage/profile.png");
+    const [profileName, setProfileName] = useState("뱃지가좋아");
+
+    useEffect(() => {
+        const savedImg = localStorage.getItem("profileImg");
+        const savedName = localStorage.getItem("profileName");
+        if (savedImg) setProfileImg(savedImg);
+        if (savedName) setProfileName(savedName);
+    }, []);
+
     return (
         <Layout>
-            <Header type="type7"></Header>
+            <Header type="type7" />
             <div>
                 <div className={mypageStyles.profile}>
-                    <img src="/images/mypage/profile.png" alt="프로필사진" className={mypageStyles.profileImage} />
+                    <img src={profileImg} alt="프로필사진" className={mypageStyles.profileImage} />
                     <div className={mypageStyles.right}>
-                        <h3 className={mypageStyles.name}>뱃지가좋아</h3>
+                        <h3 className={mypageStyles.name}>{profileName}</h3>
                         <div className={`${formStyles.button_big} ${formStyles.width40}`} onClick={() => navigate("/mypage/profile")}>프로필 관리</div>
 
                     </div>{/* //.right */}

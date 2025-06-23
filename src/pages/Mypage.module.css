@@ -8,6 +8,9 @@
 
 .profileImage {
     width: clamp(91px, 12vw, 150px);
+    height: clamp(91px, 12vw, 150px);
+    border-radius: 130px;
+    object-fit: cover;
 }
 
 .right {
