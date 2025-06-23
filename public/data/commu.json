@@ -249,7 +249,7 @@
   {
     "id": "9",
     "title": "아기자기한 굿즈 수집가 모여라!",
-    "description": "저 처럼 한 캐릭터 굿즈 수집하시는 분들 계신가요? 저도 밍키 왕국 굿즈를 모으고 있어요! 같이 정보 공유해요~",
+    "description": "저처럼 한 캐릭터 굿즈 수집하시는 분들 계신가요? 저도 밍키 왕국 굿즈를 모으고 있어요! 같이 정보 공유해요~",
     "category": "굿즈 소식",
     "imageUrl": "/images/commuimgs/commuimg8.png",
     "likes": 61,
@@ -267,7 +267,7 @@
         "id": "c9",
         "userimgUrl": "/images/users/user40.jpg",
         "userName": "미니텀블러",
-        "content": "밍키 이번에 신상나온데요!!",
+        "content": "밍키 이번에 신상나온대요!!",
         "createdAt": "2025-06-03T15:00:00Z"
       }
     ]
