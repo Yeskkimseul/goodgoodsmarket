@@ -227,25 +227,21 @@ const CommuDetail = () => {
             createdAt: new Date().toISOString(),
         };
 
+        const updatedComments = [...comments, newComment]; // ✅ 기존 상태 기반 추가
+
         const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
-
-        // 기존 로컬스토리지 댓글 + commu.comments 병합 (중복 제거)
-        const existingComments = storedComments[commu.id] ?? [];
-        // 댓글 합치기 (중복 제거 없이 단순 추가)
-        const mergedComments = [...existingComments, newComment];
-        storedComments[commu.id] = mergedComments;
-
+        storedComments[commu.id] = updatedComments;
         localStorage.setItem("comments", JSON.stringify(storedComments));
 
-        setComments(mergedComments);
+        setComments(updatedComments);
         setcommu({
             ...commu,
-            commentsNum: mergedComments.length,
+            commentsNum: updatedComments.length,
         });
 
         setCommentInput("");
     };
-    
+
 
     /* 로컬스토리지에 저장된 코멘트 우선 적용 */
     const storedComments = JSON.parse(localStorage.getItem("comments") || "{}");
