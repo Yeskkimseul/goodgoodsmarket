@@ -56,7 +56,7 @@ const { getChatById, addMessage } = useChat(); // ✅ addMessage도 같이 불�
 
     const stored = localStorage.getItem("chatRooms");
 
-    console.log(newMessage);
+    // console.log(newMessage);
 
     const chatRooms = stored ? JSON.parse(stored) : [];
 

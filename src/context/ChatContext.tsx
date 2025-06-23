@@ -6,7 +6,6 @@ interface ChatContextType {
   addChat: (chat: Chatting) => void;
   getChatByProductId: (title: string) => Chatting | undefined;
   getChatById: (id: number) => Chatting | undefined;
-  getMessagesBychatId: (chatId: number) => ChatMessage[];
   addMessage: (chatId: number, message: ChatMessage) => void;
 }
 
@@ -21,14 +20,14 @@ export const useChat = () => {
 export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
   const [chatList, setChatList] = useState<Chatting[]>([]);
 
-  // 로컬스토리지에서 데이터를 로드하고 없으면 기본 데이터 사용
+  // 로컬스토리지 데이터 로드
   useEffect(() => {
     const stored = localStorage.getItem("chatRooms");
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed)) {
-          console.log("[✅ localStorage 로드됨]:", parsed);
+          // console.log("[✅ localStorage 로드됨]:", parsed);
           setChatList(parsed);
         } else {
           console.warn("[❌ chatRooms 타입 문제]:", parsed);
@@ -37,7 +36,7 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
         console.error("❌ chatRooms 파싱 실패:", err);
       }
     } else {
-      // 기본 데이터 로드 (실제 데이터로 바꾸세요)
+      // 최초 데이터 로드
       fetch("/data/chatting.json")
         .then((res) => res.json())
         .then((data) => {
@@ -49,15 +48,10 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, []);
 
-  
-
   // 새로운 채팅방 추가
   const addChat = (chat: Chatting) => {
     setChatList(prev => {
-      const newChat = {
-        ...chat,
-        messages: [], // 🔥 undefined 방지
-      };
+      const newChat = { ...chat, messages: [] };
       const updated = [...prev, newChat];
       localStorage.setItem("chatRooms", JSON.stringify(updated));
       return updated;
@@ -69,32 +63,17 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
     return chatList.find(chat => chat.title === title);
   };
 
-  // chatId로 채팅방 찾기 (context + localStorage에서)
+  // chatId로 채팅방 찾기
   const getChatById = (id: number): Chatting | undefined => {
-    const fromContext = chatList.find(chat => chat.chatId === id);
-    if (fromContext) return fromContext;
-
-    // localStorage fallback
-    const fromLocal = JSON.parse(localStorage.getItem("chatRooms") || "[]");
-    return fromLocal.find((chat: any) => chat.chatId === id);
-  };
-
-  // chatId로 메시지 목록 가져오기
-  const getMessagesBychatId = (chatId: number): ChatMessage[] => {
-    const stored = localStorage.getItem(`chatMessages_${chatId}`);
-    return stored ? JSON.parse(stored) as ChatMessage[] : [];
+    return chatList.find(chat => chat.chatId === id);
   };
 
   // 새로운 메시지 추가
   const addMessage = (chatId: number, message: ChatMessage) => {
-    const currentMessages = getMessagesBychatId(chatId);
-    const updatedMessages = [...currentMessages, message];
-    localStorage.setItem(`chatMessages_${chatId}`, JSON.stringify(updatedMessages));
-
-    // 최신 메시지 요약도 chatList에 반영
     setChatList(prev => {
       const updated = prev.map(chat => {
         if (chat.chatId === chatId) {
+          const updatedMessages = [...chat.messages, message];
           return {
             ...chat,
             messages: updatedMessages,
@@ -116,7 +95,6 @@ export const ChatProvider = ({ children }: { children: React.ReactNode }) => {
         addChat,
         getChatByProductId,
         getChatById,
-        getMessagesBychatId,
         addMessage,
       }}
     >
