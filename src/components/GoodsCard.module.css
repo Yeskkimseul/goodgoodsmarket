@@ -40,8 +40,10 @@
   /* padding: 6px 12px; */
   /* font-size: 0.8rem; */
   /* background-color: #ff6b81; */
+  height: clamp(24px, 3vw, 28px);
   color: white;
   border: none;
+  padding: 0;
   border-radius: 6px;
   cursor: pointer;
   white-space: nowrap;
@@ -89,8 +91,9 @@
   transition: 0.15s ease;
   background: none;
   position: absolute;
-  bottom: clamp(11px, 2vw, 16px);
-  right: clamp(11px, 2vw, 16px);
+  bottom: clamp(8px, 2vw, 10px);
+  right: clamp(8px, 2vw, 10px);
+ 
 }
 
 .likeButton:hover {
@@ -99,8 +102,8 @@
 }
 
 .heartIcon {
-  width: clamp(24px, 3vw, 38px);
-  height: clamp(24px, 3vw, 38px);
+  width: clamp(24px, 3vw, 28px);
+  height: clamp(24px, 3vw, 28px);
 }
 
 @media (max-width: 678px) {
